@@ -22,7 +22,6 @@
 	<item>
 		<title>8&#215;8 RGB LED Display</title>
 		<link>/2010/06/28/8x8-rgb-led-display/</link>
-					<comments>/2010/06/28/8x8-rgb-led-display/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 29 Jun 2010 02:21:23 +0000</pubDate>
@@ -51,15 +50,12 @@
 <a href="/wp-content/uploads/2010/06/VideoDisplay.zip">VideoDisplay</a> (includes the .pde file and the video used)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/06/28/8x8-rgb-led-display/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>4 RGB LED Controller Update</title>
 		<link>/2010/02/16/4-rgb-led-controller-update/</link>
-					<comments>/2010/02/16/4-rgb-led-controller-update/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 16 Feb 2010 17:44:18 +0000</pubDate>
@@ -100,15 +96,12 @@
 <p>I will make sure to post when I have the full array put together (I currently only have 12 of the 16 boards I need for the 4&#215;4 array).</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/02/16/4-rgb-led-controller-update/feed/</wfw:commentRss>
-			<slash:comments>13</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 4 LED PWM DR1r6</title>
 		<link>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/</link>
-					<comments>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 05 Dec 2008 19:33:16 +0000</pubDate>
@@ -131,15 +124,12 @@
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 4 LED PWM</title>
 		<link>/2008/10/06/pic16f628-serial-4-led-pwm/</link>
-					<comments>/2008/10/06/pic16f628-serial-4-led-pwm/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 06 Oct 2008 15:37:00 +0000</pubDate>
@@ -159,15 +149,12 @@
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/10/06/pic16f628-serial-4-led-pwm/feed/</wfw:commentRss>
-			<slash:comments>9</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 8 RGB LED Controller</title>
 		<link>/2006/01/31/pic16f628-serial-8-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:59 +0000</pubDate>
@@ -187,15 +174,12 @@
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBblinkenlightsDR1r1.zip">8RGBblinkenlightsDR1r1.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>15</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 8 RGB LED Controller</title>
 		<link>/2006/01/31/pic16f628-8-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic16f628-8-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:36 +0000</pubDate>
@@ -213,15 +197,12 @@
 &#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.jal">8RGBRAM.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.hex">hex</a>)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-8-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>20</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 1 RGB LED PWM Controller</title>
 		<link>/2006/01/31/serial-1-rgb-led-pwm-controller/</link>
-					<comments>/2006/01/31/serial-1-rgb-led-pwm-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:32 +0000</pubDate>
@@ -242,15 +223,12 @@
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/628SendRGBTestDR1r3.zip">628SendRGBTestDR1r3.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/serial-1-rgb-led-pwm-controller/feed/</wfw:commentRss>
-			<slash:comments>10</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 8 RGB LED PWM Controller</title>
 		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/</link>
-					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:21 +0000</pubDate>
@@ -269,8 +247,6 @@
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBpwmblinkenlightsDR1r1.zip">8RGBpwmblinkenlightsDR1r1</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>

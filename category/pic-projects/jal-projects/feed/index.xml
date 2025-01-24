@@ -22,7 +22,6 @@
 	<item>
 		<title>PIC16F628 Serial 8 RGB LED Controller</title>
 		<link>/2006/01/31/pic16f628-serial-8-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:59 +0000</pubDate>
@@ -42,15 +41,12 @@
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBblinkenlightsDR1r1.zip">8RGBblinkenlightsDR1r1.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>15</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>JAL Libraries</title>
 		<link>/2006/01/31/jal-libraries/</link>
-					<comments>/2006/01/31/jal-libraries/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:53 +0000</pubDate>
@@ -89,15 +85,12 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 </table>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/jal-libraries/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 8 RGB LED Controller</title>
 		<link>/2006/01/31/pic16f628-8-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic16f628-8-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:36 +0000</pubDate>
@@ -115,15 +108,12 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 &#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.jal">8RGBRAM.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.hex">hex</a>)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-8-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>20</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC12F675 Oscilloscope</title>
 		<link>/2006/01/31/pic12f675-oscilloscope/</link>
-					<comments>/2006/01/31/pic12f675-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:35 +0000</pubDate>
@@ -141,15 +131,12 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 <p>Visual Basic code example: <a href="http://semifluid.com/wp-content/uploads/2006/01/675OscilloscopeDR1r1.zip">675OscilloscopeDR1r1.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic12f675-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>31</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 1 RGB LED PWM Controller</title>
 		<link>/2006/01/31/serial-1-rgb-led-pwm-controller/</link>
-					<comments>/2006/01/31/serial-1-rgb-led-pwm-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:32 +0000</pubDate>
@@ -170,15 +157,12 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/628SendRGBTestDR1r3.zip">628SendRGBTestDR1r3.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/serial-1-rgb-led-pwm-controller/feed/</wfw:commentRss>
-			<slash:comments>10</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 8 RGB LED PWM Controller</title>
 		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/</link>
-					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:21 +0000</pubDate>
@@ -197,15 +181,12 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 <p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBpwmblinkenlightsDR1r1.zip">8RGBpwmblinkenlightsDR1r1</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC12F675 Single RGB LED Controller</title>
 		<link>/2006/01/31/pic12f675-single-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic12f675-single-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:15 +0000</pubDate>
@@ -222,8 +203,6 @@ Simple library to shift data in using a clock and a data pin. Can provide the cl
 &#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.jal">1RGBLED.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.hex">hex</a>)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic12f675-single-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>

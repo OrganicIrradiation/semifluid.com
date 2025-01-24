@@ -22,7 +22,6 @@
 	<item>
 		<title>2019 VSS DNA</title>
 		<link>/2019/04/27/2019-vss-dna/</link>
-					<comments>/2019/04/27/2019-vss-dna/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 27 Apr 2019 16:00:00 +0000</pubDate>
@@ -42,15 +41,12 @@
 <p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors on an abstract, and dark blue dots correspond to the other author(s). You can view an interactive version <a href="http://steven.cholewiak.com/code/visvssrelationships_2019/">here</a>.<br /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2019/04/27/2019-vss-dna/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>2015 VSS DNA</title>
 		<link>/2015/03/23/2015-vss-dna/</link>
-					<comments>/2015/03/23/2015-vss-dna/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 23 Mar 2015 19:54:41 +0000</pubDate>
@@ -71,15 +67,12 @@
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2015/03/23/2015-vss-dna/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Calories as a function of alcohol in popular beers</title>
 		<link>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/</link>
-					<comments>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 14 Dec 2014 15:23:36 +0000</pubDate>
@@ -105,15 +98,12 @@
 <p></center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>2 Degrees of Academic Separation using Google Scholar v1</title>
 		<link>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/</link>
-					<comments>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Thu, 19 Jun 2014 09:15:40 +0000</pubDate>
@@ -165,15 +155,12 @@
 <p><strong>UPDATE June 20, 2014</strong>: I removed the co-author labels from the lead image because I don&#8217;t want to give the false impression that specific co-authors are better connected than others.  Since this visualization is dependent on a 3rd party scraping service, it is problematic to draw any conclusions about &#8220;connectedness&#8221; from this representation.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>VSS 2014 &#8220;DNA&#8221; v1</title>
 		<link>/2014/05/03/vss-2014-dna-v1/</link>
-					<comments>/2014/05/03/vss-2014-dna-v1/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 03 May 2014 18:20:29 +0000</pubDate>
@@ -190,15 +177,12 @@
 <p>Here&#8217;s the code on GitHub: <a href="https://github.com/OrganicIrradiation/visvssrelationships">visvssrelationships</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/05/03/vss-2014-dna-v1/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Equirectangular to Stereographic Projections (Little Planets) in MATLAB</title>
 		<link>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/</link>
-					<comments>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 20 Apr 2014 10:40:28 +0000</pubDate>
@@ -226,15 +210,12 @@
 <p><script src="https://gist.github.com/OrganicIrradiation/6087cb900352c7a6e2ce.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Batch Handbrake video file conversion with Python</title>
 		<link>/2014/04/11/batch-handbrake-video-file-conversion-with-python/</link>
-					<comments>/2014/04/11/batch-handbrake-video-file-conversion-with-python/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 11 Apr 2014 07:01:15 +0000</pubDate>
@@ -253,15 +234,12 @@
 <p><script src="https://gist.github.com/OrganicIrradiation/9343ca746807a71693c9.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/04/11/batch-handbrake-video-file-conversion-with-python/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>GoPro SuperView-like adaptive aspect ratio</title>
 		<link>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/</link>
-					<comments>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 16 Mar 2014 19:41:11 +0000</pubDate>
@@ -335,8 +313,6 @@ Created using the following code (from the below function):</p>
 <p><script src="https://gist.github.com/OrganicIrradiation/e0759d84106084fea0e5.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>

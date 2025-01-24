@@ -22,7 +22,6 @@
 	<item>
 		<title>Boodle &#8211; A stolen iPhone locator</title>
 		<link>/2008/05/13/boodle-a-stolen-iphone-locator/</link>
-					<comments>/2008/05/13/boodle-a-stolen-iphone-locator/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 13 May 2008 05:16:40 +0000</pubDate>
@@ -98,8 +97,6 @@ twitterPassword &#8211; Twitter password</p>
 7. Resizes any new photos, archives them, and sends them to the $toEmail address</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/05/13/boodle-a-stolen-iphone-locator/feed/</wfw:commentRss>
-			<slash:comments>7</slash:comments>
 		
 		
 			</item>

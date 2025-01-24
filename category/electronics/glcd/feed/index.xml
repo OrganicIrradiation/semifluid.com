@@ -22,7 +22,6 @@
 	<item>
 		<title>WiFi-Enabled Arduino Fio using the WiFly RN-XV (RN171XV)</title>
 		<link>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/</link>
-					<comments>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 20 Oct 2013 17:31:12 +0000</pubDate>
@@ -82,15 +81,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/cf225ac77c26fe001f39.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO Graphical LCD Console</title>
 		<link>/2013/08/29/arduino-fio-graphical-lcd-console/</link>
-					<comments>/2013/08/29/arduino-fio-graphical-lcd-console/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Thu, 29 Aug 2013 07:29:18 +0000</pubDate>
@@ -120,15 +116,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/21422d7cec87ebe5ef7b.js?file=u8glib_FioConsole.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/08/29/arduino-fio-graphical-lcd-console/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO 2 Channel LCD Oscilloscope</title>
 		<link>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/</link>
-					<comments>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 02 Aug 2013 23:25:42 +0000</pubDate>
@@ -155,15 +148,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/e6cc9f132bc17ab97243.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO LCD Oscilloscope</title>
 		<link>/2013/05/28/arduino-fio-lcd-oscilloscope/</link>
-					<comments>/2013/05/28/arduino-fio-lcd-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 28 May 2013 15:08:23 +0000</pubDate>
@@ -213,15 +203,12 @@ Display: Blue on White
 <p><script src="https://gist.github.com/OrganicIrradiation/e8cda31673fc12509fd0.js?file=arduino_square_wave_gen.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/05/28/arduino-fio-lcd-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>32</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18F2550 KS0108 Graphical LCD Oscilloscope</title>
 		<link>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/</link>
-					<comments>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 21 Aug 2006 17:00:56 +0000</pubDate>
@@ -278,15 +265,12 @@ Here is untested firmware for the PIC18F252 and PIC18F452 without the bootloader
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>168</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18F2550 KS0108 Graphical LCD Oscilloscope Videos</title>
 		<link>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/</link>
-					<comments>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 21 Aug 2006 17:00:18 +0000</pubDate>
@@ -309,8 +293,6 @@ Here is untested firmware for the PIC18F252 and PIC18F452 without the bootloader
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/feed/</wfw:commentRss>
-			<slash:comments>25</slash:comments>
 		
 		
 			</item>

@@ -22,7 +22,6 @@
 	<item>
 		<title>Calculating the COM of a Spherical Plot</title>
 		<link>/2010/06/30/calculating-the-com-of-a-spherical-plot/</link>
-					<comments>/2010/06/30/calculating-the-com-of-a-spherical-plot/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 30 Jun 2010 21:15:39 +0000</pubDate>
@@ -95,15 +94,12 @@ So, using our good buddy, Wolfram Mathworld, we know that the spherical coordina
 <p style="text-align: center;"><a href="/wp-content/uploads/2010/06/Weird1.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-366" title="Weird1" src="/wp-content/uploads/2010/06/Weird1-251x300.png" alt="" width="251" height="300" /></a><a href="/wp-content/uploads/2010/06/Weird2.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-367" title="Weird2" src="/wp-content/uploads/2010/06/Weird2-251x300.png" alt="" width="251" height="300" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/06/30/calculating-the-com-of-a-spherical-plot/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Calculating the COM of a 3D Surface of Revolution</title>
 		<link>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/</link>
-					<comments>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 29 Jun 2010 20:10:53 +0000</pubDate>
@@ -153,8 +149,6 @@ A conical frustum will be defined with attributes $latex R_{1}$ (the top radius)
 <p>Not very pretty, ehh? Well, in the meantime, I&#8217;ll leave the final calculations for you to work on. Suffice to say, it is a pain in the butt.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

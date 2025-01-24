@@ -22,7 +22,6 @@
 	<item>
 		<title>Orientation Fields of a Rotating &#8220;Blobby&#8221; Object</title>
 		<link>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/</link>
-					<comments>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 08 May 2013 10:20:26 +0000</pubDate>
@@ -57,15 +56,12 @@
 <p>Finally, a video illustrating all the aforementioned visualization techniques simultaneously.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Effect of Environment Map Blur on Perceived Surface Properties</title>
 		<link>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/</link>
-					<comments>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 18 Dec 2012 22:45:22 +0000</pubDate>
@@ -109,15 +105,12 @@
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>3D MATLAB noise &#8211; effect of changing Gaussian convolution kernel size</title>
 		<link>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/</link>
-					<comments>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Thu, 06 Dec 2012 23:00:59 +0000</pubDate>
@@ -248,15 +241,12 @@
 <a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap64_k1_31.mat" target="_blank">noise3Dwrap64_k1_31.mat</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>3D MATLAB noise (continued)</title>
 		<link>/2012/12/06/3d-matlab-noise-continued/</link>
-					<comments>/2012/12/06/3d-matlab-noise-continued/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Thu, 06 Dec 2012 15:00:53 +0000</pubDate>
@@ -296,15 +286,12 @@
 <p><script src="https://gist.github.com/OrganicIrradiation/34f1fc4355bb76ef5fd5.js?file=noise_moviegen.m"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/12/06/3d-matlab-noise-continued/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>2D and 3D Perlin Noise in MATLAB</title>
 		<link>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/</link>
-					<comments>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 05 Dec 2012 13:45:04 +0000</pubDate>
@@ -453,8 +440,6 @@
 <p>The contrast still isn&#8217;t as good as the &#8220;true&#8221; Perlin noise, so I&#8217;ll try to see how <a href="http://en.wikipedia.org/wiki/Simplex_noise" target="_blank">simplex noise</a> is implemented..</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/feed/</wfw:commentRss>
-			<slash:comments>4</slash:comments>
 		
 		
 			</item>

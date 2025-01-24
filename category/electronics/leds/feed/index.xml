@@ -22,7 +22,6 @@
 	<item>
 		<title>8&#215;8 RGB LED Display</title>
 		<link>/2010/06/28/8x8-rgb-led-display/</link>
-					<comments>/2010/06/28/8x8-rgb-led-display/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 29 Jun 2010 02:21:23 +0000</pubDate>
@@ -51,15 +50,12 @@
 <a href="/wp-content/uploads/2010/06/VideoDisplay.zip">VideoDisplay</a> (includes the .pde file and the video used)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/06/28/8x8-rgb-led-display/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>4 RGB LED Controller Update</title>
 		<link>/2010/02/16/4-rgb-led-controller-update/</link>
-					<comments>/2010/02/16/4-rgb-led-controller-update/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 16 Feb 2010 17:44:18 +0000</pubDate>
@@ -100,15 +96,12 @@
 <p>I will make sure to post when I have the full array put together (I currently only have 12 of the 16 boards I need for the 4&#215;4 array).</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/02/16/4-rgb-led-controller-update/feed/</wfw:commentRss>
-			<slash:comments>13</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 4 RGB LED PWM Controller</title>
 		<link>/2009/01/06/pic16f628-4-rgb-led-pwm-controller/</link>
-					<comments>/2009/01/06/pic16f628-4-rgb-led-pwm-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 06 Jan 2009 19:36:53 +0000</pubDate>
@@ -202,15 +195,12 @@ Byte 4 = theAddress</li>
 <p style="text-align: center;"><a href="/wp-content/uploads/2009/01/pic16f628-4-rgb-led-dr1r2-schematic.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-175" title="pic16f628-4-rgb-led-dr1r2-schematic" src="/wp-content/uploads/2009/01/pic16f628-4-rgb-led-dr1r2-schematic-150x150.png" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2009/01/pic16f628-4-rgb-led-dr1r2-board.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-176" title="pic16f628-4-rgb-led-dr1r2-board" src="/wp-content/uploads/2009/01/pic16f628-4-rgb-led-dr1r2-board-150x150.png" alt="" width="150" height="150" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2009/01/06/pic16f628-4-rgb-led-pwm-controller/feed/</wfw:commentRss>
-			<slash:comments>29</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 4 LED PWM DR1r6</title>
 		<link>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/</link>
-					<comments>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 05 Dec 2008 19:33:16 +0000</pubDate>
@@ -233,15 +223,12 @@ Byte 4 = theAddress</li>
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F628 Serial 4 LED PWM</title>
 		<link>/2008/10/06/pic16f628-serial-4-led-pwm/</link>
-					<comments>/2008/10/06/pic16f628-serial-4-led-pwm/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 06 Oct 2008 15:37:00 +0000</pubDate>
@@ -261,15 +248,12 @@ Byte 4 = theAddress</li>
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/10/06/pic16f628-serial-4-led-pwm/feed/</wfw:commentRss>
-			<slash:comments>9</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>AMC7135 Driver Boards &#038; Luxeon K2s</title>
 		<link>/2008/01/29/amc7135-driver-boards-luxeon-k2s/</link>
-					<comments>/2008/01/29/amc7135-driver-boards-luxeon-k2s/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 30 Jan 2008 03:26:54 +0000</pubDate>
@@ -286,15 +270,12 @@ Byte 4 = theAddress</li>
 <p>I also finally mounted the K2 emitters on aluminum breakout boards/heatsinks that I purchased from SparkFun, although admittedly the SparkFun boards are way too expensive at <a href="http://www.sparkfun.com/products/8475" target="_blank">$2.95</a> each.  DealExtreme sells similar boards for <a href="http://www.dealextreme.com/p/star-connection-board-for-cree-led-emiters-5-pack-4512" target="_blank">$1.91</a> for a 5 pack, but they appear to be <a href="http://www.dealextreme.com/feedbacks/browseCustomerPhotos.dx/sku.4512~id.2817" target="_blank">too small</a> for Luxeon K2s&#8230; I purchased the SparkFun breakout boards using a gift certificate that I won from <a href="http://hackedgadgets.com/2007/06/16/name-the-thing-contest-8/" target="_blank">Hacked Gadgets</a>, so I&#8217;m happy (thanks <a href="http://alan-parekh.com/" target="_blank">Alan</a>!).</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2008/01/29/amc7135-driver-boards-luxeon-k2s/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Royal Blue Luxeon K2</title>
 		<link>/2007/01/09/royal-blue-luxeon-k2/</link>
-					<comments>/2007/01/09/royal-blue-luxeon-k2/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 09 Jan 2007 17:35:13 +0000</pubDate>
@@ -318,15 +299,12 @@ Byte 4 = theAddress</li>
 <a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/351744817/"><img loading="lazy" decoding="async" width="500" height="375" alt="Magazines - Royal Blue" src="http://farm1.static.flickr.com/141/351744817_b60b2c47f8.jpg" /></a></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2007/01/09/royal-blue-luxeon-k2/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Luxeon K2 LED show-off</title>
 		<link>/2006/11/15/luxeon-k2-led-show-off/</link>
-					<comments>/2006/11/15/luxeon-k2-led-show-off/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 15 Nov 2006 15:54:25 +0000</pubDate>
@@ -350,8 +328,6 @@ Byte 4 = theAddress</li>
 <p><a href="http://semifluid.com/wp-content/uploads/2006/11/Close-up.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/11/Close-up-300x191.jpg" alt="" title="Luxeon K2 LED Close-up" width="300" height="191" class="aligncenter size-medium wp-image-988" srcset="/wp-content/uploads/2006/11/Close-up-300x191.jpg 300w, /wp-content/uploads/2006/11/Close-up.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/11/15/luxeon-k2-led-show-off/feed/</wfw:commentRss>
-			<slash:comments>15</slash:comments>
 		
 		
 			</item>

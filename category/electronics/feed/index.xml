@@ -22,7 +22,6 @@
 	<item>
 		<title>Raspberry Pi Camera Comparison</title>
 		<link>/2017/01/23/raspberry-pi-camera-comparison/</link>
-					<comments>/2017/01/23/raspberry-pi-camera-comparison/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 23 Jan 2017 14:46:36 +0000</pubDate>
@@ -205,15 +204,12 @@
 <p><!-- I also tested the accuracy of the advertised FOVs for most of the lenses (&lt;170°). I used OpenCV to calculate the [intrinsic camera matrix](https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters) and [lens distortion parameters](https://en.wikipedia.org/wiki/Distortion_(optics)). To do this, I took 40 images of a calibration grid at different orientations and locations and then bootstrap 1000 samples of the 40 images (with replacement) to calculate the camera's horizontal, vertical, and diagonal field of view, focal length, [principal point](https://en.wikipedia.org/wiki/Pinhole_camera_model#The_geometry_and_mathematics_of_the_pinhole_camera), and aspect ratio. The 5MP OV5647 modules were tested at 1296x972 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)) and the Raspberry Pi v2 Camera was tested at 1640x1232 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)). Both picture modes record at the full field of view. --></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/23/raspberry-pi-camera-comparison/feed/</wfw:commentRss>
-			<slash:comments>17</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Replacing Battery in Apple MacBook Pro Retina (Late 2012)</title>
 		<link>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/</link>
-					<comments>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 14 Jan 2017 05:03:05 +0000</pubDate>
@@ -248,15 +244,12 @@
 <p><a href="/wp-content/uploads/2017/01/battery_replacement_system_info.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png" alt="" width="648" height="494" class="aligncenter size-large wp-image-5912" srcset="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png 1024w, /wp-content/uploads/2017/01/battery_replacement_system_info-300x229.png 300w, /wp-content/uploads/2017/01/battery_replacement_system_info-768x586.png 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>WiFi-Enabled Arduino Fio using the WiFly RN-XV (RN171XV)</title>
 		<link>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/</link>
-					<comments>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 20 Oct 2013 17:31:12 +0000</pubDate>
@@ -316,15 +309,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/cf225ac77c26fe001f39.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO Graphical LCD Console</title>
 		<link>/2013/08/29/arduino-fio-graphical-lcd-console/</link>
-					<comments>/2013/08/29/arduino-fio-graphical-lcd-console/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Thu, 29 Aug 2013 07:29:18 +0000</pubDate>
@@ -354,15 +344,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/21422d7cec87ebe5ef7b.js?file=u8glib_FioConsole.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/08/29/arduino-fio-graphical-lcd-console/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO 2 Channel LCD Oscilloscope</title>
 		<link>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/</link>
-					<comments>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 02 Aug 2013 23:25:42 +0000</pubDate>
@@ -389,15 +376,12 @@ reboot<br />
 <p><script src="https://gist.github.com/OrganicIrradiation/e6cc9f132bc17ab97243.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO LCD Oscilloscope</title>
 		<link>/2013/05/28/arduino-fio-lcd-oscilloscope/</link>
-					<comments>/2013/05/28/arduino-fio-lcd-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 28 May 2013 15:08:23 +0000</pubDate>
@@ -447,15 +431,12 @@ Display: Blue on White
 <p><script src="https://gist.github.com/OrganicIrradiation/e8cda31673fc12509fd0.js?file=arduino_square_wave_gen.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/05/28/arduino-fio-lcd-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>32</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO DS18B20 Temperature Logger</title>
 		<link>/2012/09/10/arduino-fio-ds18b20-temperature-logge/</link>
-					<comments>/2012/09/10/arduino-fio-ds18b20-temperature-logge/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 11 Sep 2012 00:04:51 +0000</pubDate>
@@ -754,15 +735,12 @@ timeKeeper = 0;
 [/code]</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/09/10/arduino-fio-ds18b20-temperature-logge/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO Internal Voltmeter and Thermometer</title>
 		<link>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/</link>
-					<comments>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 09 Sep 2012 19:06:15 +0000</pubDate>
@@ -839,8 +817,6 @@ timeKeeper = 0;
 <p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=SuperSleepyTempAndVolts.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>

@@ -22,7 +22,6 @@
 	<item>
 		<title>PIC18F2550 USB HID IO</title>
 		<link>/2006/03/28/pic18f2550-usb-hid-io/</link>
-					<comments>/2006/03/28/pic18f2550-usb-hid-io/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 28 Mar 2006 17:00:43 +0000</pubDate>
@@ -71,15 +70,12 @@ Here are untested PIC18F4550 firmwares:</p>
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/03/28/pic18f2550-usb-hid-io/feed/</wfw:commentRss>
-			<slash:comments>90</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18F2550 USB HID Oscilloscope</title>
 		<link>/2006/03/27/pic18f2550-usb-hid-oscilloscope/</link>
-					<comments>/2006/03/27/pic18f2550-usb-hid-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 27 Mar 2006 17:00:35 +0000</pubDate>
@@ -127,8 +123,6 @@ Here are untested PIC18F4550 firmwares:</p>
 </table>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/03/27/pic18f2550-usb-hid-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>170</slash:comments>
 		
 		
 			</item>

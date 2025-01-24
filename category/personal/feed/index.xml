@@ -22,7 +22,6 @@
 	<item>
 		<title>Raspberry Pi Camera Comparison</title>
 		<link>/2017/01/23/raspberry-pi-camera-comparison/</link>
-					<comments>/2017/01/23/raspberry-pi-camera-comparison/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 23 Jan 2017 14:46:36 +0000</pubDate>
@@ -205,15 +204,12 @@
 <p><!-- I also tested the accuracy of the advertised FOVs for most of the lenses (&lt;170°). I used OpenCV to calculate the [intrinsic camera matrix](https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters) and [lens distortion parameters](https://en.wikipedia.org/wiki/Distortion_(optics)). To do this, I took 40 images of a calibration grid at different orientations and locations and then bootstrap 1000 samples of the 40 images (with replacement) to calculate the camera's horizontal, vertical, and diagonal field of view, focal length, [principal point](https://en.wikipedia.org/wiki/Pinhole_camera_model#The_geometry_and_mathematics_of_the_pinhole_camera), and aspect ratio. The 5MP OV5647 modules were tested at 1296x972 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)) and the Raspberry Pi v2 Camera was tested at 1640x1232 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)). Both picture modes record at the full field of view. --></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/23/raspberry-pi-camera-comparison/feed/</wfw:commentRss>
-			<slash:comments>17</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Replacing Battery in Apple MacBook Pro Retina (Late 2012)</title>
 		<link>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/</link>
-					<comments>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 14 Jan 2017 05:03:05 +0000</pubDate>
@@ -248,15 +244,12 @@
 <p><a href="/wp-content/uploads/2017/01/battery_replacement_system_info.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png" alt="" width="648" height="494" class="aligncenter size-large wp-image-5912" srcset="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png 1024w, /wp-content/uploads/2017/01/battery_replacement_system_info-300x229.png 300w, /wp-content/uploads/2017/01/battery_replacement_system_info-768x586.png 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Upgrading SSD in Apple MacBook Pro Retina (Late 2012)</title>
 		<link>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</link>
-					<comments>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 04 Apr 2016 05:37:51 +0000</pubDate>
@@ -296,15 +289,12 @@
 <p>If you have an older MacBook Pro that&#8217;s running out of space, this is an easy and very worthwhile upgrade.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
-			<slash:comments>39</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Backpack and Canon T3i lost/stolen in Frankfurt (Main) Hauptbahnhof</title>
 		<link>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/</link>
-					<comments>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 31 Dec 2014 13:52:36 +0000</pubDate>
@@ -343,15 +333,12 @@
 <p><center><small>(note: product photos are from Amazon.com, except for backpack photos, which are from <a href="http://thenorthfaceonline.blogspot.de/p/hotshot.html">thenorthfaceonline.blogspot.de</a>)</small></center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>HTML to Markdown Converter</title>
 		<link>/2014/07/12/html-to-markdown-converter/</link>
-					<comments>/2014/07/12/html-to-markdown-converter/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 12 Jul 2014 07:54:28 +0000</pubDate>
@@ -377,15 +364,12 @@
 <p>The code can be found on GitHub at <a href="https://github.com/domchristie/to-markdown">to-markdown</a> and Dom has a <a href="http://domchristie.github.io/to-markdown/">live demo</a> available too.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/07/12/html-to-markdown-converter/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Cinnamon Buns</title>
 		<link>/2014/03/15/cinnamon-buns/</link>
-					<comments>/2014/03/15/cinnamon-buns/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 15 Mar 2014 19:01:26 +0000</pubDate>
@@ -437,15 +421,12 @@
 </ol>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/03/15/cinnamon-buns/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Chocolate &#038; Hazelnut Chip Cookies</title>
 		<link>/2013/10/07/chocolate-hazelnut-chip-cookies/</link>
-					<comments>/2013/10/07/chocolate-hazelnut-chip-cookies/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 07 Oct 2013 19:16:14 +0000</pubDate>
@@ -479,15 +460,12 @@ Here&#8217;s the recipe (adapted from the <a href="http://www.verybestbaking.com
 </ol>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/10/07/chocolate-hazelnut-chip-cookies/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Magic Lantern HDR video to tonemapped video with MATLAB scripts</title>
 		<link>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/</link>
-					<comments>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 05 Oct 2013 20:40:06 +0000</pubDate>
@@ -533,8 +511,6 @@ Here&#8217;s the recipe (adapted from the <a href="http://www.verybestbaking.com
 <p><script src="https://gist.github.com/OrganicIrradiation/4d63a870c3ac852f4a0f.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		<enclosure url="/wp-content/uploads/2013/10/MVI_7961.MOV" length="87059684" type="video/quicktime" />
 

@@ -22,7 +22,6 @@
 	<item>
 		<title>8&#215;8 RGB LED Display</title>
 		<link>/2010/06/28/8x8-rgb-led-display/</link>
-					<comments>/2010/06/28/8x8-rgb-led-display/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 29 Jun 2010 02:21:23 +0000</pubDate>
@@ -51,8 +50,6 @@
 <a href="/wp-content/uploads/2010/06/VideoDisplay.zip">VideoDisplay</a> (includes the .pde file and the video used)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2010/06/28/8x8-rgb-led-display/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>

@@ -22,7 +22,6 @@
 	<item>
 		<title>2019 VSS DNA</title>
 		<link>/2019/04/27/2019-vss-dna/</link>
-					<comments>/2019/04/27/2019-vss-dna/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 27 Apr 2019 16:00:00 +0000</pubDate>
@@ -42,15 +41,12 @@
 <p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors on an abstract, and dark blue dots correspond to the other author(s). You can view an interactive version <a href="http://steven.cholewiak.com/code/visvssrelationships_2019/">here</a>.<br /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2019/04/27/2019-vss-dna/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Raspberry Pi Camera Comparison</title>
 		<link>/2017/01/23/raspberry-pi-camera-comparison/</link>
-					<comments>/2017/01/23/raspberry-pi-camera-comparison/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 23 Jan 2017 14:46:36 +0000</pubDate>
@@ -233,15 +229,12 @@
 <p><!-- I also tested the accuracy of the advertised FOVs for most of the lenses (&lt;170°). I used OpenCV to calculate the [intrinsic camera matrix](https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters) and [lens distortion parameters](https://en.wikipedia.org/wiki/Distortion_(optics)). To do this, I took 40 images of a calibration grid at different orientations and locations and then bootstrap 1000 samples of the 40 images (with replacement) to calculate the camera's horizontal, vertical, and diagonal field of view, focal length, [principal point](https://en.wikipedia.org/wiki/Pinhole_camera_model#The_geometry_and_mathematics_of_the_pinhole_camera), and aspect ratio. The 5MP OV5647 modules were tested at 1296x972 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)) and the Raspberry Pi v2 Camera was tested at 1640x1232 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)). Both picture modes record at the full field of view. --></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/23/raspberry-pi-camera-comparison/feed/</wfw:commentRss>
-			<slash:comments>17</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Replacing Battery in Apple MacBook Pro Retina (Late 2012)</title>
 		<link>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/</link>
-					<comments>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 14 Jan 2017 05:03:05 +0000</pubDate>
@@ -276,15 +269,12 @@
 <p><a href="/wp-content/uploads/2017/01/battery_replacement_system_info.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png" alt="" width="648" height="494" class="aligncenter size-large wp-image-5912" srcset="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png 1024w, /wp-content/uploads/2017/01/battery_replacement_system_info-300x229.png 300w, /wp-content/uploads/2017/01/battery_replacement_system_info-768x586.png 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
-			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>2016 VSS DNA</title>
 		<link>/2016/05/12/2016-vss-dna/</link>
-					<comments>/2016/05/12/2016-vss-dna/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 13 May 2016 03:34:17 +0000</pubDate>
@@ -301,15 +291,12 @@
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2016/05/12/2016-vss-dna/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Upgrading SSD in Apple MacBook Pro Retina (Late 2012)</title>
 		<link>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</link>
-					<comments>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 04 Apr 2016 05:37:51 +0000</pubDate>
@@ -349,15 +336,12 @@
 <p>If you have an older MacBook Pro that&#8217;s running out of space, this is an easy and very worthwhile upgrade.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
-			<slash:comments>39</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>2015 VSS DNA</title>
 		<link>/2015/03/23/2015-vss-dna/</link>
-					<comments>/2015/03/23/2015-vss-dna/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 23 Mar 2015 19:54:41 +0000</pubDate>
@@ -378,15 +362,12 @@
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2015/03/23/2015-vss-dna/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Backpack and Canon T3i lost/stolen in Frankfurt (Main) Hauptbahnhof</title>
 		<link>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/</link>
-					<comments>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Wed, 31 Dec 2014 13:52:36 +0000</pubDate>
@@ -425,15 +406,12 @@
 <p><center><small>(note: product photos are from Amazon.com, except for backpack photos, which are from <a href="http://thenorthfaceonline.blogspot.de/p/hotshot.html">thenorthfaceonline.blogspot.de</a>)</small></center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Calories as a function of alcohol in popular beers</title>
 		<link>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/</link>
-					<comments>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/#respond</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 14 Dec 2014 15:23:36 +0000</pubDate>
@@ -459,8 +437,6 @@
 <p></center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

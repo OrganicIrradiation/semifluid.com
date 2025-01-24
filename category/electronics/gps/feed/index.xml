@@ -22,7 +22,6 @@
 	<item>
 		<title>On GPS Accuracy with the Tripmate</title>
 		<link>/2007/06/16/on-gps-accuracy-with-the-tripmate/</link>
-					<comments>/2007/06/16/on-gps-accuracy-with-the-tripmate/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sat, 16 Jun 2007 04:01:22 +0000</pubDate>
@@ -47,15 +46,12 @@
 <p>Or I can buy a new GPS receiver.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2007/06/16/on-gps-accuracy-with-the-tripmate/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Tracking a Bike Ride &#038; PIC16F88 GPS Logger DR1r7</title>
 		<link>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/</link>
-					<comments>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 15 Jun 2007 22:36:20 +0000</pubDate>
@@ -110,15 +106,12 @@
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/feed/</wfw:commentRss>
-			<slash:comments>6</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F88 Delorme Tripmate GPS Logger with Time and Speed</title>
 		<link>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/</link>
-					<comments>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 02 Feb 2007 04:47:26 +0000</pubDate>
@@ -172,15 +165,12 @@ fprintf(PC,&#8221;%03Lu.%03Lurn&#8221;, GPRMC.speedH, GPRMC.speedL);<br />
 <p><a href="http://semifluid.com/wp-content/uploads/2007/02/2007-02-01.jpg"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2007/02/2007-02-01-300x225.jpg" alt="" title="2007-02-01" width="300" height="225" class="aligncenter size-medium wp-image-1034" srcset="/wp-content/uploads/2007/02/2007-02-01-300x225.jpg 300w, /wp-content/uploads/2007/02/2007-02-01.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC16F88 Delorme Tripmate GPS Logger</title>
 		<link>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/</link>
-					<comments>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 26 Jan 2007 22:05:56 +0000</pubDate>
@@ -260,8 +250,6 @@ The microcontroller used is a Microchip PIC16F88.  I initially programmed the PI
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/feed/</wfw:commentRss>
-			<slash:comments>40</slash:comments>
 		
 		
 			</item>

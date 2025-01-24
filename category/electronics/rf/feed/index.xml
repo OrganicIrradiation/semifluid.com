@@ -22,7 +22,6 @@
 	<item>
 		<title>Arduino FIO DS18B20 Temperature Logger</title>
 		<link>/2012/09/10/arduino-fio-ds18b20-temperature-logge/</link>
-					<comments>/2012/09/10/arduino-fio-ds18b20-temperature-logge/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 11 Sep 2012 00:04:51 +0000</pubDate>
@@ -321,15 +320,12 @@ timeKeeper = 0;
 [/code]</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/09/10/arduino-fio-ds18b20-temperature-logge/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO Internal Voltmeter and Thermometer</title>
 		<link>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/</link>
-					<comments>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Sun, 09 Sep 2012 19:06:15 +0000</pubDate>
@@ -406,15 +402,12 @@ timeKeeper = 0;
 <p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=SuperSleepyTempAndVolts.ino"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Arduino FIO Low Power Setup</title>
 		<link>/2012/09/07/arduino-fio-low-power-setup/</link>
-					<comments>/2012/09/07/arduino-fio-low-power-setup/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Fri, 07 Sep 2012 21:39:31 +0000</pubDate>
@@ -479,15 +472,12 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 <p><script src="https://gist.github.com/OrganicIrradiation/b31a6699d3f7c41a9ae2.js"></script></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2012/09/07/arduino-fio-low-power-setup/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18LF2550 Wireless Servo Controller Under Color Tracking Control Videos</title>
 		<link>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/</link>
-					<comments>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 28 Feb 2006 17:00:45 +0000</pubDate>
@@ -506,15 +496,12 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/feed/</wfw:commentRss>
-			<slash:comments>5</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18LF2550 Wireless Servo Controller Under Manual Control Videos</title>
 		<link>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/</link>
-					<comments>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 28 Feb 2006 17:00:12 +0000</pubDate>
@@ -533,15 +520,12 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 </center></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/feed/</wfw:commentRss>
-			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18LF2550 Wireless 3-axis Accelerometer</title>
 		<link>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/</link>
-					<comments>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 27 Feb 2006 17:00:17 +0000</pubDate>
@@ -585,15 +569,12 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 &#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/RF-24G_6-byte.c'>RF-24G_6-byte.c</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/feed/</wfw:commentRss>
-			<slash:comments>16</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18LF2550 Wireless Servo Controller</title>
 		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/</link>
-					<comments>/2006/02/27/pic18lf2550-wireless-servo-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 27 Feb 2006 17:00:01 +0000</pubDate>
@@ -640,15 +621,12 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 <p>Here are two videos of my camera pan/tilt system under manual control: <a href="http://semifluid.com/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/">Manual Control</a>. Here are two videos of my camera pan/tilt system under the control of a simple color tracking algorithm (which is configured to track the brightest red in the room): <a href="http://semifluid.com/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/">Color Tracking</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/02/27/pic18lf2550-wireless-servo-controller/feed/</wfw:commentRss>
-			<slash:comments>26</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC18LF2550 2.4GHz Serial Link</title>
 		<link>/2006/01/30/pic18lf2550-24ghz-serial-link/</link>
-					<comments>/2006/01/30/pic18lf2550-24ghz-serial-link/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 30 Jan 2006 17:00:49 +0000</pubDate>
@@ -686,8 +664,6 @@ CTS goes low. This assures that there is time for the data to enter the DI buffe
 &#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/RF-24G.c">RF-24G.c</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/30/pic18lf2550-24ghz-serial-link/feed/</wfw:commentRss>
-			<slash:comments>34</slash:comments>
 		
 		
 			</item>

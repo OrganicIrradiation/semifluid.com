@@ -22,7 +22,6 @@
 	<item>
 		<title>PIC12F675 Oscilloscope</title>
 		<link>/2006/01/31/pic12f675-oscilloscope/</link>
-					<comments>/2006/01/31/pic12f675-oscilloscope/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:35 +0000</pubDate>
@@ -40,15 +39,12 @@
 <p>Visual Basic code example: <a href="http://semifluid.com/wp-content/uploads/2006/01/675OscilloscopeDR1r1.zip">675OscilloscopeDR1r1.zip</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic12f675-oscilloscope/feed/</wfw:commentRss>
-			<slash:comments>31</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>PIC12F675 Single RGB LED Controller</title>
 		<link>/2006/01/31/pic12f675-single-rgb-led-controller/</link>
-					<comments>/2006/01/31/pic12f675-single-rgb-led-controller/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Tue, 31 Jan 2006 17:00:15 +0000</pubDate>
@@ -65,8 +61,6 @@
 &#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.jal">1RGBLED.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.hex">hex</a>)</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/01/31/pic12f675-single-rgb-led-controller/feed/</wfw:commentRss>
-			<slash:comments>12</slash:comments>
 		
 		
 			</item>

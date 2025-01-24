@@ -22,7 +22,6 @@
 	<item>
 		<title>PIC12F683 High Voltage Flyback Transformer Driver</title>
 		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/</link>
-					<comments>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comments</comments>
 		
 		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
 		<pubDate>Mon, 13 Nov 2006 19:00:01 +0000</pubDate>
@@ -54,8 +53,6 @@ Here are a couple of pictures from experimenting with the driver:</p>
 <div align="center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/229774372/"><img fetchpriority="high" decoding="async" src="http://static.flickr.com/97/229774372_6cd271ffd9.jpg" alt="High Voltage Sparks" width="273" height="500" /></a></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/feed/</wfw:commentRss>
-			<slash:comments>25</slash:comments>
 		
 		
 			</item>
