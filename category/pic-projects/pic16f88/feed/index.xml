@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PIC16F88 &#8211; semifluid.com</title>
+	<atom:link href="/category/pic-projects/pic16f88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:28:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Tracking a Bike Ride &#038; PIC16F88 GPS Logger DR1r7</title>
+		<link>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/</link>
+					<comments>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 15 Jun 2007 22:36:20 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GPS]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F88]]></category>
+		<guid isPermaLink="false">/?p=80</guid>
+
+					<description><![CDATA[My original intention for my PIC16F88 Delorme Tripmate GPS Logger and GPS Logger with Time and Speed was to log my runs around Lafayette and West Lafayette. However, I&#8217;ve found that the weight of the GPS makes it a real pain to lug it around. Running around with a weight bouncing around in my backpack [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>My original intention for my <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a> and <a href="http://semifluid.com/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/">GPS Logger with Time and Speed</a> was to log my runs around <a href="http://www.lafayette.in.gov/" target="_blank">Lafayette</a> and <a href="http://www.westlafayette.in.gov/" target="_blank">West Lafayette</a>.  However, I&#8217;ve found that the weight of the GPS makes it a real pain to lug it around.  Running around with a weight bouncing around in my backpack is no fun.  Now that it has gotten warmer and the sun is shining &#8217;til 9 PM (really more like <a href="http://www.gaisma.com/en/location/west-lafayette-indiana.html" target="_blank">9:30 PM</a>), I&#8217;ve been biking quite a bit.  The lower impact nature of bike riding makes it much easier to carry the Tripmate GPS receiver.  So I took went out this afternoon for a ride to see how it performs:</p>
+<p style="text-align: center"><a href="/wp-content/uploads/2007/06/2007-06-15-bike-ride.jpg" title="2007-06-15 Bike Ride Path" target="_blank"><img decoding="async" src="/wp-content/uploads/2007/06/2007-06-15-bike-ride-thumb.jpg" alt="2007-06-15 Bike Ride Path Thumbnail" /></a></p>
+<p>And the ride did not turn out too bad!  (Click the image above to see a better view of the route, outlined in yellow.)  There are some problems with the logging, but this can be attributed to the quality of the fix (most likely 2-D for most of the ride) and the tendency for the GPS to loose its fix when the sky was occluded.  See the upper right of the path where I went biking through the woods and you can see that it lost the fix from the time I entered the woods to the time I left them.  Continue to the post for more information and the updated firmware.<span id="more-80"></span></p>
+<p>A few weeks ago, I talked with an individual about modifying the firmware for use with PC GPS software.  One major problem is the current size of the firmware.  There are so many function calls at this point that is difficult to add much more.  However, I was able to manipulate the output format to make it compatible with some software that reads NMEA sentences.</p>
+<p><strong>What are the functional changes in the firmware?</strong></p>
+<p>The updated firmware, which can be found at the bottom of the post, uses the same circuit as my <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a> and <a href="http://semifluid.com/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/">GPS Logger with Time and Speed</a>.  The output format is modified:<br />
+<em>$GPRMC,123456,A,4234.4594,N,11233.2892,W,78910</em></p>
+<p>This sentence contains the following information:</p>
+<ul>
+<li><strong>123456</strong> UTC Time of fix 12:34:56</li>
+<li><strong>A</strong> Navigation receiver warning (A = Valid, V = Invalid)</li>
+<li><strong>4234.4594,N</strong> Latitude 42 degrees, 34.4594 minutes North</li>
+<li><strong>11233.2892,W</strong> Longitude 112 degrees, 33.2892 minutes West</li>
+<li><strong>78910</strong> EEPROM end address of the sentence (for determination of where the sentence was stored)</li>
+</ul>
+<p>In addition, the serial baud rate has been increased to 38400 baud.  This was done to decrease the read time; however, it may be a good idea to revert to 4800 baud if you plan on directly reading the data with a dedicated GPS program (like <a href="https://en.wikipedia.org/wiki/Microsoft_Streets_%26_Trips" target="_blank">Microsoft Streets &amp; Trips</a> or <a href="http://shop.delorme.com/OA_HTML/DELibeCCtpSctDspRte.jsp?section=10120&amp;minisite=10020" target="_blank">Delorme Street Atlas USA</a>) Therefore to read data, you must:</p>
+<ol>
+<li>Use a normal serial cable to connect computer and circuit</li>
+<li>Open serial terminal application with settings: 38400, 8, N, 1 and enable recording data</li>
+<li>Power circuit with mode switch depressed to read back GPS data stored on EEPROM</li>
+<li>Disconnect circuit power to stop reading data</li>
+</ol>
+<p>Once the data has been captured, you can directly open the file with a NMEA processing program such as <a href="http://4river.a.la9.jp/gps/file/nmea2kmz.htm" target="_blank">Nmea2kmz</a>.  If you use Nmea2kmz, make sure to use the following settings:</p>
+<p style="text-align: center"><a href="/wp-content/uploads/2007/06/2007-06-15-nmea2kmz.jpg" title="2007-06-15 Bike Ride Nmea2kmz settings"><img decoding="async" src="/wp-content/uploads/2007/06/2007-06-15-nmea2kmz.jpg" alt="2007-06-15 Bike Ride Nmea2kmz settings" /></a></p>
+<p>After the KML file is created, you can open it directly in <a href="http://www.google.com/earth/index.html" target="_blank">Google Earth</a>.  If you are interested in more information about the route, look on the left-hand side and you can get information about the total trip time and the total distance followed.  For example, today I biked 28.839 km (17.920 miles) in 1 hour, 23 minutes, and 53 seconds:</p>
+<p align="center"> <a href="/wp-content/uploads/2007/06/2007-06-15-distance.jpg" target="_blank"><img decoding="async" src="/wp-content/uploads/2007/06/2007-06-15-distance-thumb.jpg" alt="2007-06-15 Bike Ride Path Time and Distance Thumbnail" /></a></p>
+<p>Here are the raw data file from this GPS logger firmware (DR1r7), the KML file created by Nmea2kml, and a KMZ file created by Google Earth for my bike ride this afternoon:</p>
+<ul>
+<li><a href="/wp-content/uploads/2007/06/2007-06-15-gps.TXT" title="2007-06-15-gps.TXT">2007-06-15-gps.TXT</a> (234 KB)</li>
+<li><a href="/wp-content/uploads/2007/06/14_55_32.kml" target="_blank">14_55_32.kml</a> (1.2 MB)<a href="/wp-content/uploads/2007/06/14_55_32.kml" target="_blank"><br />
+</a></li>
+<li><a href="/wp-content/uploads/2007/06/14_55_32.kmz" target="_blank">14_55_32.kmz</a> (78 KB)<a href="/wp-content/uploads/2007/06/14_55_32.kmz" target="_blank"><br />
+</a></li>
+</ul>
+<p><strong>Source Code<br />
+</strong>As with the original <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a> and <a href="http://semifluid.com/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/">GPS Logger with Time and Speed</a>, the PIC16F88 must be initially programmed with the â€˜tinybld16F88_i8MHz _19200.HEXâ€<img src="https://s.w.org/images/core/emoji/15.0.3/72x72/2122.png" alt="™" class="wp-smiley" style="height: 1em; max-height: 1em;" /> hex file to program the GPS logger firmware onto the PIC. If you have already programmed the bootloader onto the PIC then all you need is to load the newest firmware below.</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/06/tinybld16F88_i8MHz-_19200.hex'>tinybld16F88_i8MHz _19200.hex</a></li>
+<li><a href="/wp-content/uploads/2007/06/16f88-24lc1025-gps-compress-dr1r7.c" target="_blank">16f88-24lc1025-gps-compress-dr1r7.c</a> (<a href="/wp-content/uploads/2007/06/16f88-24lc1025-gps-compress-dr1r7.hex" target="_blank">HEX</a>)</li>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/06/241025multi.c'>241025multi.c</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F88 Delorme Tripmate GPS Logger with Time and Speed</title>
+		<link>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/</link>
+					<comments>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 02 Feb 2007 04:47:26 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GPS]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F88]]></category>
+		<guid isPermaLink="false">/?p=46</guid>
+
+					<description><![CDATA[I&#8217;ve updated my PIC16F88 Delorme Tripmate GPS Logger, so it now includes time and speed logging. Using the trip information recorded by the GPS logger, you now have even more variables to play with. For example, using time and velocity information, one can plot not only the speed, but also the acceleration of the car [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve updated my <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a>, so it now includes time and speed logging. Using the trip information recorded by the GPS logger, you now have even more variables to play with. For example, using time and velocity information, one can plot not only the speed, but also the acceleration of the car (dv/dt) for a trip:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2007/02/Accel-and-Speed.gif"><img fetchpriority="high" decoding="async" src="http://semifluid.com/wp-content/uploads/2007/02/Accel-and-Speed-300x170.gif" alt="" title="Accel-and-Speed" width="300" height="170" class="aligncenter size-medium wp-image-1028" srcset="/wp-content/uploads/2007/02/Accel-and-Speed-300x170.gif 300w, /wp-content/uploads/2007/02/Accel-and-Speed-1024x583.gif 1024w, /wp-content/uploads/2007/02/Accel-and-Speed.gif 1186w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Continue to the post for more information about the updated firmware, usage instructions, and limitations of this firmware.<span id="more-46"></span></p>
+<p>This PIC16F88 Delorme Tripmate GPS Logger with Time and Speed firmware uses the exact same hardware and software of the <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a>, so please follow the instructions on the PIC16F88 Delorme Tripmate GPS Logger page for information about component selection and circuit construction. This firmware is intended solely as an update to allow for speed and time logging.</p>
+<p>The firmware was rewritten to accommodate the variable logging changes, so the structure is quite different. Unfortunately I had to move most of the processing commands to functions outside of main() because of page size limitations. This clutters the code quite a bit, but I needed to do it to fit all of the code onto a PIC16F88. I&#8217;m planning on moving this firmware to a PIC18F series microcontroller at some point to take advantage of the larger program space and RAM. However, for the time being this current iteration will stand as my exercise monitor.</p>
+<p><strong>What are the functional changes in the firmware?</strong></p>
+<ol>
+<li>The microcontroller now records Time, Latitude, Longitude, and Speed when valid data being received (as opposed to just Latitude and Longitude). Unfortunately, due to the program memory restrictions of the PIC16F88, I was unable to include date and/or Course Made Good (heading) recording.  Please note that the date and heading are stored in RAM but are not written to the EEPROM.</li>
+<li>The read mode no longer outputs nice, Google-friendly Latitude and Longitude coordinates. Again, due to program memory restrictions, I removed all floating point math. Therefore, the Latitude and Longitude are now presented in the original NMEA HHMM.MMMM format. This requires some post processing, but it is very minimal.  Please see the Excel file included with the example below.</li>
+<li>Any previously recorded data will return nonsense information.  This is due to the new storage format.</li>
+</ol>
+<p>Other than these functional changes, the firmware should be drop-in compatible.</p>
+<p><strong>Source Code<br />
+</strong>As with the original <a href="http://semifluid.com/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">PIC16F88 Delorme Tripmate GPS Logger</a>, the PIC16F88 must be initially programmed with the â€˜tinybld16F88_i8MHz _19200.HEXâ€<img src="https://s.w.org/images/core/emoji/15.0.3/72x72/2122.png" alt="™" class="wp-smiley" style="height: 1em; max-height: 1em;" /> hex file to program the GPS logger firmware onto the PIC. If you have already programmed the bootloader onto the PIC then all you need is to load the newest firmware below.</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/02/tinybld16F88_i8MHz-_19200.hex'>tinybld16F88_i8MHz _19200.hex</a></li>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/02/16F88-24LC1025-GPS-Compress-DR1r6.c'>16F88 &#8211; 24LC1025 GPS Compress DR1r6.c</a> (<a href='http://semifluid.com/wp-content/uploads/2007/02/16F88-24LC1025-GPS-Compress-DR1r6.hex'>hex</a>)</li>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/02/241025multi.c'>241025multi.c</a></li>
+</ul>
+<p><strong><em>UPDATE (February 27, 2007)</em></strong><br />
+Terry pointed out the following issue with the source code:</p>
+<blockquote><p>Found one bug. In socal, the longitude is &gt; 99, so the fprintf needs to be changed from:</p>
+<p>void sendDataToSerial() {<br />
+fprintf(PC,&#8221;%06Lu,&#8221;, GPRMC.time);<br />
+fprintf(PC,&#8221;%04Lu.%04Lu,%C,&#8221;, GPRMC.latHandM, GPRMC.latFractM, GPRMC.latDir);<br />
+fprintf(PC,&#8221;%04Lu.%04Lu,%C,&#8221;, GPRMC.lonHandM, GPRMC.lonFractM, GPRMC.lonDir);<br />
+fprintf(PC,&#8221;%03Lu.%03Lurn&#8221;, GPRMC.speedH, GPRMC.speedL);<br />
+}</p>
+<p>To:</p>
+<p>void sendDataToSerial() {<br />
+fprintf(PC,&#8221;%06Lu,&#8221;, GPRMC.time);<br />
+fprintf(PC,&#8221;%04Lu.%04Lu,%C,&#8221;, GPRMC.latHandM, GPRMC.latFractM, GPRMC.latDir);<br />
+fprintf(PC,&#8221;%05Lu.%04Lu,%C,&#8221;, GPRMC.lonHandM, GPRMC.lonFractM, GPRMC.lonDir);<br />
+fprintf(PC,&#8221;%03Lu.%03Lurn&#8221;, GPRMC.speedH, GPRMC.speedL);<br />
+}</p></blockquote>
+<p><strong>Example Output</strong></p>
+<ul>
+<li>Raw data output from PIC16F88 Delorme Tripmate GPS Logger: <a href='http://semifluid.com/wp-content/uploads/2007/02/2007-02-01.txt'>2007-02-01.txt</a></li>
+</ul>
+<p><a href="http://semifluid.com/wp-content/uploads/2007/02/2007-02-01.jpg"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2007/02/2007-02-01-300x225.jpg" alt="" title="2007-02-01" width="300" height="225" class="aligncenter size-medium wp-image-1034" srcset="/wp-content/uploads/2007/02/2007-02-01-300x225.jpg 300w, /wp-content/uploads/2007/02/2007-02-01.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F88 Delorme Tripmate GPS Logger</title>
+		<link>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/</link>
+					<comments>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2007 22:05:56 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GPS]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F88]]></category>
+		<guid isPermaLink="false">/?p=43</guid>
+
+					<description><![CDATA[This project focused on creating a simple serial data logger for the Delorme Tripmate (also known as the GPSTripmate). The Tripmate is an older GPS receiver that can be purchased on eBay for &#60;$20. I happen to have one that my family used a couple of years ago and it is still in great shape. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="http://semifluid.com/wp-content/uploads/2007/01/PIC16F88_GPS_Logger.jpg"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2007/01/PIC16F88_GPS_Logger.jpg" alt="" title="PIC16F88 Delorme Tripmate GPS Logger" width="240" height="180" class="alignleft size-full wp-image-1019" /></a>This project focused on creating a simple serial data logger for the <a href="http://www.bevhoward.com/TripMate.htm" target="_blank">Delorme Tripmate</a> (also known as the GPSTripmate).  The Tripmate is an older GPS receiver that can be purchased on eBay for &lt;$20.  I happen to have one that my family used a couple of years ago and it is still in great shape.  It has been sitting in the back of my car for the past four years, so I finally decided to put it to good use.  The plan was to create a GPS data logger that would record the position of the unit and allow me to read back the latitude and longitude after acquiring the data.  My ultimate goal will be to use a small backpack to record my runs (once the weather warms up).  This was a fun experiment because not only did I need to interface the PIC16F88 to the Tripmate, but I also needed to parse the output and implement an efficient storage solution.  Read on to find out more information about the project, see the schematic and soure code I wrote, and find out how the data was visualized.<span id="more-43"></span></p>
+<p><strong>Delorme Tripmate<br />
+</strong>The Tripmate was a GPS receiver manufactured by <a href="http://info.delorme.com/" target="_blank">Delorme</a> that was originally intended for use with their Street Atlas USA computer program.  The Tripmate uses an RS-232 serial connection to send and receive data using  the <a href="https://en.wikipedia.org/wiki/NMEA_0183" target="_blank">NMEA 0183</a> standard (i.e. 4800 baud, 8 data bits, 1 stop bit, no parity).  The one interesting quirk about the Tripmate is that it needed to receive the string &#8220;ASTRAL&#8221; before it would output any information.  I modified my Tripmate to self-start using a loopback modification.  Now the Tripmate will output the NMEA strings whenever it is powered.  More information about the self-start modification can be found on these websites:</p>
+<ul>
+<li>Modify the Delorme Tripmate to selfstart</li>
+<li><a href="http://www.ke4nyv.com/gpsstuff.htm" target="_blank">Tripmate Self-Start and External Power Mod</a></li>
+</ul>
+<p>Once the Tripmate is modified to self-start, it will automatically output position and satellite information when power is applied.  The sentences that the Tripmate outputs are GPRMC (Recommended minimum specific GPS/Transit data), GPGSA (GPS DOP and active satellites) GPGGA (GPS Fix Data), and GPGSV (GPS Satellites in view).  We are specifically interested in the GPRMC sentence for this project.</p>
+<p><strong>$GPRMC sentence information<br />
+</strong>An example $GPRMC sentence sent by the Tripmate would be:<br />
+<em>$GPRMC,123456,A,4234.4594,N,11233.2892,W,010.0,022.7,220107,015.5,W*77</em></p>
+<p>This sentence contains the following information:</p>
+<blockquote><p><strong>123456</strong> UTC Time of fix 12:34:56<br />
+<strong>A</strong>            Navigation receiver warning (A = Valid, V = Invalid)<br />
+<strong>4234.4594,N</strong>    Latitude 42 degrees, 34.4594 minutes North<br />
+<strong>11233.2892,W</strong>   Longitude 112 degrees, 33.2892 minutes West<br />
+<strong>010.0</strong>        Speed (Knots)<br />
+<strong>022.7</strong>        Course Made Good (Degrees)<br />
+<strong>220107       </strong>UTC Date of fix January 22, 2007<br />
+<strong>015.5,W</strong>      Magnetic variation, 20.3 deg. East<br />
+<strong>*77</strong> Checksum</p></blockquote>
+<p>The job of the microchip will now be to parse this data, discard any irrelevant information, and store the variables of interest (Latitude and Longitude).</p>
+<p><strong>Schematic</strong><a href="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.gif" target="_blank" title="PIC16F88 Delorme Tripmate GPS Logger Schematic"><img decoding="async" src="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.thumbnail.gif" title="PIC16F88 Delorme Tripmate GPS Logger Schematic" alt="PIC16F88 Delorme Tripmate GPS Logger Schematic" align="right" /></a><br />
+<a href="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.gif" target="_blank">Here</a> is the full schematic for the driver.  I chose to use a PIC16F88 as the microcontroller it is cheap, has a high speed internal oscillator (8MHz), an internal USART, and is bootloadable.  I will discuss each of the components below. As always, the part numbers for the components are linked to websites for data and more information when available.<br />
+<em><strong>UPDATE (February 9, 2007)</strong></em><br />
+Terry pointed out that there is a mistake in the schematic.  Pin 8 on the PIC16F88 (USART RX) should go to pin 3 on the MAX233 instead of pin 2.<br />
+<em><strong>UPDATE (February 20, 2007)</strong></em><br />
+The schematic has been corrected.<br />
+<em><strong>UPDATE (May 10, 2007)</strong></em><br />
+Rogerio pointed out another mistake in the schematic.  Pin 11 on the PIC16F88 (USART TX) should go to pin 2 on the MAX233 instead of pin 1.  It looks like the original mistake that I made was to shift the two lines one pin up when drawing up the schematic. The schematic has been corrected.</p>
+<p><strong>Power Supply</strong><br />
+This is the only component that is ambiguous in the schematic.  I use 4 AA NiMH batteries in series, giving me a supply voltage of approximately 4.8V (<a href="https://en.wikipedia.org/wiki/NiMH" target="_blank">NiMH</a> AA batteries are ~1.2V cells).  This is very convenient because I can recharge 4 AA batteries for the Tripmate and 4 for the logger circuit and so far I have found that they last quite a while.  However, if you want to use a 9V battery or alkaline batteries, I would suggest using a <a href="https://en.wikipedia.org/wiki/Low_dropout_regulator" target="_blank">low-dropout voltage regulator</a> to ensure that you don&#8217;t burn out the ICs.</p>
+<p><strong>MAX233<br />
+</strong>I use a <a href="http://www.maxim-ic.com/datasheet/index.mvp/id/1798" target="_blank">MAX233</a> as I do in my <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a>.  You are more than welcome to substitute any suitable RS-232 level converter; however, the MAX233 is nice because it has internal capacitors.  The MAX233 is used to convert the logic level signals of the PIC microcontroller to RS-232 compatible voltage levels for both the Tripmate and the computer.  Although the MAX233 should nominally be run at 5 Volts, I have found that it works perfectly fine at 4.8V.  The serial connection in the schematic is set up for a computer connection.  To log data from the Tripmate, you must use a <a href="http://www.microchipc.com/make_a_solderless_RS232_crossover_cable/" target="_blank">crossover cable</a> that swaps the TX and RX serial data lines.</p>
+<p><strong>PIC16F88</strong><br />
+The microcontroller used is a Microchip PIC16F88.  I initially programmed the PIC with the <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> (<a href='http://semifluid.com/wp-content/uploads/2007/01/tinybld16F88_i8MHz-_19200.hex'>tinybld16F88_i8MHz _19200.hex</a>) so that the PIC would run at 8MHz using its internal oscillator.  Whenever the firmware is updated, I can re-flash the PIC using the Tiny PIC Bootloader program.  This allows for quick and easy debugging.  R1 is a pull-up resistor necessary for operation. R4 and R5 are resistors for the status LEDs (LED1 and LED2). R6 is a pull-down resistor for the mode switch (S1).</p>
+<p><strong>24LC1025<br />
+</strong>The 24LC1025 is the EEPROM used in this project to store the latitude and longitude information.  The 24LC1025 is a 1024K bit Serial EEPROM.  The 24LC1025 can be read with a clock frequency of   400 kHz and has a 5 ms write speed.  It has a rewrite endurance of 1,000,000 cycles and can operate between 2.5V and 5.5V.  The 24AA1025 or the 24FC1025 can be substituted for the 24LC1025 in this project if necessary.   I used a custom library to read and write bytes to the EEPROM.  R2 and R3 are pull-up resistors for the Serial Data and Clock lines.</p>
+<p><strong>Theory of Operation (Aquiring and Recording GPS Data)</strong></p>
+<ol>
+<li>Crossover cable is used to connect Tripmate and circuit</li>
+<li>Tripmate is turned on (batteries are put into the case)</li>
+<li>Circuit is turned on</li>
+<li>Mode switch is pressed after power is connected to begin data logging</li>
+<li>LED1 (pinLEDSTATUS) will turn on when the GPS unit has aquired a fix (i.e. Navigation receiver warning = &#8216;A&#8217;) and is recording data to the EEPROM (Please note that it can take over 5 minutes for the Tripmate to aquire a fix)</li>
+<li>Disconnect circuit power to end data logging</li>
+<li>Turn off Tripmate</li>
+</ol>
+<p><strong>Theory of Operation (Reading GPS Data)</strong></p>
+<ol>
+<li> Normal serial cable is used to connect computer and circuit</li>
+<li>Open serial terminal application to record Latitude and Longitude data</li>
+<li>Power circuit with mode switch depressed to read back GPS data stored on EEPROM</li>
+<li> Disconnect circuit power to stop reading data</li>
+</ol>
+<p><strong>Source Code<br />
+</strong>The PIC16F88 must initially programmed with the â€˜tinybld16F88_i8MHz _19200.HEXâ€<img src="https://s.w.org/images/core/emoji/15.0.3/72x72/2122.png" alt="™" class="wp-smiley" style="height: 1em; max-height: 1em;" /> hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a>. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/01/tinybld16F88_i8MHz-_19200.hex'>tinybld16F88_i8MHz _19200.hex</a></li>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/01/16F88-24LC1025-GPS-Compress-DR1r4.c'>16F88 &#8211; 24LC1025 GPS Compress DR1r4.c</a> (<a href='http://semifluid.com/wp-content/uploads/2007/01/16F88-24LC1025-GPS-Compress-DR1r4.hex'>hex</a>)</li>
+<li><a href='http://semifluid.com/wp-content/uploads/2007/01/241025multi.c'>241025multi.c</a></li>
+</ul>
+<p><strong>Example Output</strong></p>
+<ul>
+<li>Raw data output from PIC16F88 Delorme Tripmate GPS Logger: <a href='http://semifluid.com/wp-content/uploads/2007/01/TestCapture.txt'>TestCapture.txt</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/01/26/pic16f88-delorme-tripmate-gps-logger/feed/</wfw:commentRss>
+			<slash:comments>40</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

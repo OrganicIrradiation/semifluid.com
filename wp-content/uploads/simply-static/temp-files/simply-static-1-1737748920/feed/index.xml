@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>semifluid.com</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Fri, 26 Apr 2019 22:11:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>2019 VSS DNA</title>
+		<link>/2019/04/27/2019-vss-dna/</link>
+					<comments>/2019/04/27/2019-vss-dna/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 27 Apr 2019 16:00:00 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=6345</guid>
+
+					<description><![CDATA[It&#8217;s been a while since I last posted one, but here&#8217;s a new Vision Sciences Society force-directed diagram of co-authorships (see past graphs here: 2014, 2015, &#38; 2016). This year has 1293 abstracts for analysis. The graph was generated in Python using NetworkX, with authors and abstracts as nodes and edges corresponding to authorship. Individuals [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>It&#8217;s been a while since I last posted one, but here&#8217;s a new <a href="http://www.visionsciences.org/">Vision Sciences Society</a> force-directed diagram of co-authorships (see past graphs here: <a href="/2014/05/03/vss-2014-dna-v1/">2014</a>, <a href="/2015/03/23/2015-vss-dna/">2015</a>, &amp; <a href="/2016/05/12/2016-vss-dna/">2016</a>). This year has 1293 abstracts for analysis. The graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1024" height="1024" src="/wp-content/uploads/2019/04/vss2019-1024x1024.png" alt="" class="wp-image-6347" srcset="/wp-content/uploads/2019/04/vss2019-1024x1024.png 1024w, /wp-content/uploads/2019/04/vss2019-150x150.png 150w, /wp-content/uploads/2019/04/vss2019-300x300.png 300w, /wp-content/uploads/2019/04/vss2019-768x768.png 768w, /wp-content/uploads/2019/04/vss2019-60x60.png 60w, /wp-content/uploads/2019/04/vss2019.png 1820w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors on an abstract, and dark blue dots correspond to the other author(s). You can view an interactive version <a href="http://steven.cholewiak.com/code/visvssrelationships_2019/">here</a>.<br /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2019/04/27/2019-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Raspberry Pi Camera Comparison</title>
+		<link>/2017/01/23/raspberry-pi-camera-comparison/</link>
+					<comments>/2017/01/23/raspberry-pi-camera-comparison/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 23 Jan 2017 14:46:36 +0000</pubDate>
+				<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=5916</guid>
+
+					<description><![CDATA[I use a number of Raspberry Pi 3 Model B ARM-based Linux computers to help simplify my day-to-day life. Because I live in an urban area, I have been interested in setting up a security camera that could alert me to any issues that might arise when I&#8217;m not in the house. Most recent Raspberry [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I use a number of <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B</a> ARM-based Linux computers to help simplify my day-to-day life. Because I live in an urban area, I have been interested in setting up a security camera that could alert me to any issues that might arise when I&#8217;m not in the house. Most recent Raspberry Pis also include a <a href="https://en.wikipedia.org/wiki/Camera_Serial_Interface">CSI</a> connector, meaning that it is easy to connect a high-resolution camera that can be easily accessed via <a href="https://picamera.readthedocs.io/">python</a> or via <a href="https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md">bash</a>. This would also be helpful for any other computer vision setup, including <a href="http://octoprint.org/">OctoPrint</a>. Since the <a href="http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/">Raspberry Pi runs OpenCV</a>, I can use open source computer vision source code to quick and easily setup a security system. The first step is selecting a camera.</p>
+<p>I plan on using a <a href="http://amzn.to/2jH3h5K">Raspberry Pi 3</a> or <a href="http://amzn.to/2iq8YDZ">Raspberry Pi Zero v1.3 (with camera connector)</a> as the base machine. However, there are a number of 3rd party cameras available. As is often the case, I was not able to find a comparison of the options available online, so today I am going to do a quick and dirty look at the following cameras:</p>
+<table  class=" table table-hover" >
+<thead>
+<tr>
+<th>Model</th>
+<th>Chipset</th>
+<th>Megapixels</th>
+<th>Advertised FOV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://amzn.to/2iqbMRo" title="Raspberry Pi Camera">Raspberry Pi Camera</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>54° (h) x 41° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGTeO6" title="Raspberry Pi v2 Camera">Raspberry Pi v2 Camera</a></td>
+<td>IMX219</td>
+<td>8MP</td>
+<td>62.2° (h) x 48.8° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>54° (h) x 41° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGUktd" title="Waveshare RPi Camera (I)">Waveshare RPi Camera (I)</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>170°</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>222°</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>75.7°</td>
+</tr>
+</tbody>
+</table>
+<p><a href="/wp-content/uploads/2017/01/rpi-cameras-in-a-row.jpg"><img decoding="async" src="/wp-content/uploads/2017/01/rpi-cameras-in-a-row-1024x557.jpg" alt="" width="648" height="352" class="aligncenter size-large wp-image-6008" srcset="/wp-content/uploads/2017/01/rpi-cameras-in-a-row-1024x557.jpg 1024w, /wp-content/uploads/2017/01/rpi-cameras-in-a-row-300x163.jpg 300w, /wp-content/uploads/2017/01/rpi-cameras-in-a-row-768x418.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></a></p>
+<p>In this post, I provide some demonstration photos for outdoor, indoor, and low-light scenarios for the modules.</p>
+<p><span id="more-5916"></span></p>
+<p>The basic testing rig uses a <a href="http://amzn.to/2jH3h5K">Raspberry Pi 3</a> as the processor. I mounted the cameras onto a piece of cardboard so that they would have roughly the same origin and orientation. Images were captured through an SSH connection to my laptop and transferred via <a href="http://www.hypexr.org/linux_scp_help.php"><code>scp</code></a>. Finally, I strapped on a portable battery (<a href="https://www.amazon.com/gp/product/B00SSY1AJU">AUKEY 12000mAh powerbank</a>) and the entire setup was portable. Since this is a headless machine, I streamed video from the Raspberry Pi to my laptop with the <a href="http://www.linux-projects.org/uv4l/tutorials/rtsp-server/">UV4L</a> package to make sure that the image was sharp, especially for the Waveshare cameras, which required some focusing. Here&#8217;s a photo of the &#8220;test setup&#8221;:</p>
+<p><a href="/wp-content/uploads/2017/01/rpi-cameras-setup.jpg"><img decoding="async" src="/wp-content/uploads/2017/01/rpi-cameras-setup-1024x599.jpg" alt="" width="648" height="379" class="aligncenter size-large wp-image-6009" srcset="/wp-content/uploads/2017/01/rpi-cameras-setup-1024x599.jpg 1024w, /wp-content/uploads/2017/01/rpi-cameras-setup-300x176.jpg 300w, /wp-content/uploads/2017/01/rpi-cameras-setup-768x449.jpg 768w, /wp-content/uploads/2017/01/rpi-cameras-setup.jpg 1993w" sizes="(max-width: 648px) 100vw, 648px" /></a></p>
+<p>Each module has different specifications and features, so it&#8217;s worthwhile to weigh the pros and cons when choosing one for your application. All of the modules are effectively plug-and-play with the CSI connector; however, the <a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a> also has a neat feature where the LED signal toggles a mechanical IR filter. This means that with some creative coding, you can use it as a day and night camera (it even includes high power IR LEDs, which I did not include in the comparison shots). However, the image quality is a bit worse and the IR filter is not terribly effective (meaning colors are washed-out in daytime shots).</p>
+<p>All photos were taken with:</p>
+<pre><code>raspistill -o photo.jpg --vflip --hflip
+</code></pre>
+<p>Here are all of photos in a mosaic for quick comparison:</p>
+<p><a href="/wp-content/uploads/2017/01/semifluid.com-camera-comparison.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/semifluid.com-camera-comparison-1024x635.jpg" alt="" width="648" height="402" class="aligncenter size-large wp-image-6007" srcset="/wp-content/uploads/2017/01/semifluid.com-camera-comparison-1024x635.jpg 1024w, /wp-content/uploads/2017/01/semifluid.com-camera-comparison-300x186.jpg 300w, /wp-content/uploads/2017/01/semifluid.com-camera-comparison-768x476.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p>Image quality for the <a href="http://amzn.to/2iqbMRo" title="Raspberry Pi Camera">Raspberry Pi Camera</a> and the <a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a> were practically identical, which would be expected since they share the same sensor and lens setup. The <a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a> was disappointing and even after dialing in the focus there were still regions that were blurry when the IR filter was enabled. I really liked the field-of-view for the <a href="http://amzn.to/2jGUktd" title="Waveshare RPi Camera (I)">Waveshare RPi Camera (I)</a> and <a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a> and the image was quite sharp once the focus was adjusted. These would be ideal cameras for a home security solution. The <a href="http://amzn.to/2jGTeO6" title="Raspberry Pi v2 Camera">Raspberry Pi v2 Camera</a> performance was anti-climactic. Its dynamic range appears to be a bit wider, but it would often under-expose photos. This could probably be corrected by adjusting the parameters in <code>raspistill</code>.  Bang for buck, the <a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a> is best, but for shear field-of-view, the <a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a> is pretty awesome.</p>
+<p>And here are the full-resolution shots in each of the situations:</p>
+<h3>Outdoor (day)</h3>
+<table  class=" table table-hover" >
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_day_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5998" srcset="/wp-content/uploads/2017/01/cam_day_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi Camera</td>
+<td><a href="/wp-content/uploads/2017/01/cam_day_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5997" srcset="/wp-content/uploads/2017/01/cam_day_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_day_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6001" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (on)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_day_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6002" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_day_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6000" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (I)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_day_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6003" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_day_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5999" srcset="/wp-content/uploads/2017/01/cam_day_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_day_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Outdoor (night)</h3>
+<table  class=" table table-hover" >
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5989" srcset="/wp-content/uploads/2017/01/cam_carport_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi Camera</td>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5988" srcset="/wp-content/uploads/2017/01/cam_carport_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5992" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (on)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5993" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5991" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (I)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5994" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_carport_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5990" srcset="/wp-content/uploads/2017/01/cam_carport_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_carport_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Indoor (day)</h3>
+<table  class=" table table-hover" >
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5961" srcset="/wp-content/uploads/2017/01/cam_indoors_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a> <br /> Raspberry Pi Camera</td>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5960" srcset="/wp-content/uploads/2017/01/cam_indoors_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a> <br /> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5964" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (on)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5965" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5963" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (I)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5966" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_indoors_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5962" srcset="/wp-content/uploads/2017/01/cam_indoors_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Indoor (night)</h3>
+<table  class=" table table-hover" >
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5981" srcset="/wp-content/uploads/2017/01/cam_nightindoors_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi Camera</td>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5980" srcset="/wp-content/uploads/2017/01/cam_nightindoors_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5984" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (on)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5985" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5983" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (I)</td>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5986" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td><a href="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5982" srcset="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><br /> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><!-- I also tested the accuracy of the advertised FOVs for most of the lenses (&lt;170°). I used OpenCV to calculate the [intrinsic camera matrix](https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters) and [lens distortion parameters](https://en.wikipedia.org/wiki/Distortion_(optics)). To do this, I took 40 images of a calibration grid at different orientations and locations and then bootstrap 1000 samples of the 40 images (with replacement) to calculate the camera's horizontal, vertical, and diagonal field of view, focal length, [principal point](https://en.wikipedia.org/wiki/Pinhole_camera_model#The_geometry_and_mathematics_of_the_pinhole_camera), and aspect ratio. The 5MP OV5647 modules were tested at 1296x972 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)) and the Raspberry Pi v2 Camera was tested at 1640x1232 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)). Both picture modes record at the full field of view. --></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2017/01/23/raspberry-pi-camera-comparison/feed/</wfw:commentRss>
+			<slash:comments>17</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Replacing Battery in Apple MacBook Pro Retina (Late 2012)</title>
+		<link>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/</link>
+					<comments>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 14 Jan 2017 05:03:05 +0000</pubDate>
+				<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=5897</guid>
+
+					<description><![CDATA[The battery on my Late 2012 Apple MacBook Pro Retina is garbage. It holds a charge for no more than 20 minutes, completely dies at approximately 50% reported battery charge remaining, and the menu has an exclamation point noting that I need to service my battery. Admittedly, this is after over four years of continuous [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The battery on my Late 2012 Apple MacBook Pro Retina is garbage. It holds a charge for no more than 20 minutes, completely dies at approximately 50% reported battery charge remaining, and the menu has an <a href="https://support.apple.com/en-us/HT204054">exclamation point</a> noting that I need to service my battery. Admittedly, this is after over four years of continuous usage for my research and studies and I&#8217;ve downplayed the warnings for almost a year now. I have avoided replacing the battery because I was nowhere near the maximum number of cycles that <a href="https://support.apple.com/en-us/HT201585">Apple claims</a> I should be able to reach before the battery is considered &#8220;consumed&#8221; (~600 charge cycles vs. Apple&#8217;s stated max. of 1000). But I could not stand the fact that I can&#8217;t use my laptop without a power cable and none of the fixes suggested online were working (e.g., <a href="https://support.apple.com/en-us/HT201295">resetting the SMC</a>). So, it was time to replace the battery.</p>
+<p><a href="/wp-content/uploads/2017/01/battery_replacement_open_overview.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_open_overview-1024x575.jpg" alt="" width="648" height="364" class="aligncenter size-large wp-image-5904" srcset="/wp-content/uploads/2017/01/battery_replacement_open_overview-1024x575.jpg 1024w, /wp-content/uploads/2017/01/battery_replacement_open_overview-300x169.jpg 300w, /wp-content/uploads/2017/01/battery_replacement_open_overview-768x431.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p><span id="more-5897"></span></p>
+<p>Apple charges <a href="https://support.apple.com/mac-notebooks/repair/service/pricing">$199</a> (+ tax) to replace a 13-inch/15-inch MacBook Pro with Retina display battery. However there are a number of 3rd party batteries available on Amazon that cost ~<a href="http://amzn.to/2jBqCWl">$50</a>&#8211;<a href="http://amzn.to/2jBsqP3">$80</a> with Prime shipping, meaning that I could save $125+ by doing the repair myself. After a <a href="/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/">very successful SSD transplant</a>, I decided to try out iFixit&#8217;s <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+Battery+Replacement/13076">MacBook Pro 13&#8243; Retina Display Late 2012 Battery Replacement guide</a>.</p>
+<p>My old batteries are from September 2012 and have gotten some good use out of them, so it&#8217;s about time for retirement:</p>
+<p><a href="/wp-content/uploads/2017/01/battery_replacement_old_cell.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_old_cell-1024x577.jpg" alt="" width="648" height="365" class="aligncenter size-large wp-image-5902" srcset="/wp-content/uploads/2017/01/battery_replacement_old_cell-1024x577.jpg 1024w, /wp-content/uploads/2017/01/battery_replacement_old_cell-300x169.jpg 300w, /wp-content/uploads/2017/01/battery_replacement_old_cell-768x432.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p>There are a number of batteries available, but all appear to be from no-name 3rd parties:</p>
+<ul>
+<li><a href="http://amzn.to/2jBgDQK">LQM New Laptop Battery for Apple MacBook Pro Retina 13&#8243; A1437 A1425,Compatible 020-7652-A MD101 MD101LL/A MD101ZP/A MD102 MD102LL/A MD102ZP/A MD212 MD213 ME662 with Four Free Screwdrivers</a> &#8211; $79.99</li>
+<li><a href="http://amzn.to/2jcD9D2">Lizone New Laptop Battery for Apple MacBook Pro 13 inch Retina Mid 2012 A1425 MD212 MD213 MD212LL/A MD213CH/A / Apple A1437 Laptop Notebook battery / Li-Polymer 11.21V 74Wh</a> &#8211; $69.99</li>
+<li><a href="http://amzn.to/2jBrB8Z">SIKER11.21V 74WH High Performance Battery for Apple Macbook Pro Retina 13&#8243; A1437 A1425 020-7652-A , fits MD101, MD101LL/A, MD101ZP/A, MD102, MD102LL/A, MD102ZP/A, MD212, MD213, ME662</a> &#8211; $69.99</li>
+<li><a href="http://amzn.to/2jBjJUR">Egoway MacBook Pro Retina 13&#8243; Battery for Apple A1437 A1425 (Late 2012, Early 2013 Version) &#8211; [Li-Polymer 11.21V 74Wh]</a> &#8211; $59.99</li>
+<li><a href="http://amzn.to/2jBn9Hk">BRTONG® High Performance New Laptop Battery for Apple MacBook Pro Retina 13&#8243; A1437 A1425 020-7652-A 020-7653-A MD212CH/A MD212 MD213 MD212LL/A MD213CH/A [Li-ion 11.21V 74Wh/6600mAh] &#8211; 18 Months Warranty</a> &#8211; $49.99</li>
+</ul>
+<p>Many of the links have the same product photos, so I suspect there are a number of &#8220;companies&#8221; reselling the same batteries. I ended up purchasing the <a href="http://amzn.to/2jBn9Hk">BRTONG battery</a> for $49.99 with a credit card that offers an additional 1 year extended warranty, so if I have any issues in 30 months (2.5 years), I should be covered for repair/replacement. My one complaint is that the battery I received has a manufacture date from 2013(!). Hopefully there are no issues, but I&#8217;ll keep an eye on it.</p>
+<p><a href="/wp-content/uploads/2017/01/battery_replacement_new_cell.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_new_cell-1024x768.jpg" alt="" width="648" height="486" class="aligncenter size-large wp-image-5901" srcset="/wp-content/uploads/2017/01/battery_replacement_new_cell-1024x768.jpg 1024w, /wp-content/uploads/2017/01/battery_replacement_new_cell-300x225.jpg 300w, /wp-content/uploads/2017/01/battery_replacement_new_cell-768x576.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p>There are also some oddities with the controller (note the white epoxy and the replacement information sticker), so I am suspecting that the battery may be remanufactured:</p>
+<p><a href="/wp-content/uploads/2017/01/connector_comparison.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/connector_comparison-1024x576.jpg" alt="" width="648" height="365" class="aligncenter size-large wp-image-5906" srcset="/wp-content/uploads/2017/01/connector_comparison-1024x576.jpg 1024w, /wp-content/uploads/2017/01/connector_comparison-300x169.jpg 300w, /wp-content/uploads/2017/01/connector_comparison-768x432.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p>One more weird aspect is that the batteries were very difficult to remove from the protective backing, leaving quite a bit of remnants on the protective sheet:</p>
+<p><a href="/wp-content/uploads/2017/01/battery_replacement_leftover_residue.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_leftover_residue-1024x576.jpg" alt="" width="648" height="365" class="aligncenter size-large wp-image-5900" srcset="/wp-content/uploads/2017/01/battery_replacement_leftover_residue-1024x576.jpg 1024w, /wp-content/uploads/2017/01/battery_replacement_leftover_residue-300x169.jpg 300w, /wp-content/uploads/2017/01/battery_replacement_leftover_residue-768x432.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+<p>Following the <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+Battery+Replacement/13076">iFixit guide</a>, I disassembled the laptop, carefully removed the old battery, and installed the new one.</p>
+<p>And it worked!  The hardest part of the procedure was removing the old batteries and the old adhesive from the Macbook&#8217;s case. However, it took about 30 minutes to complete, so I would highly recommend this fix for anyone having battery issues with their older Macbook Pro Retina.</p>
+<p>Here&#8217;s my battery stats from the Apple System Information, with the old battery on the left and the new battery on the right (interesting info highlighted in yellow):</p>
+<p><a href="/wp-content/uploads/2017/01/battery_replacement_system_info.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png" alt="" width="648" height="494" class="aligncenter size-large wp-image-5912" srcset="/wp-content/uploads/2017/01/battery_replacement_system_info-1024x781.png 1024w, /wp-content/uploads/2017/01/battery_replacement_system_info-300x229.png 300w, /wp-content/uploads/2017/01/battery_replacement_system_info-768x586.png 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>2016 VSS DNA</title>
+		<link>/2016/05/12/2016-vss-dna/</link>
+					<comments>/2016/05/12/2016-vss-dna/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 13 May 2016 03:34:17 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=5832</guid>
+
+					<description><![CDATA[This year, I am not attending the Vision Sciences Society annual meeting. Although I wish I could be there, a number of life events meant that I was not able to submit an abstract this year. However, I was able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s 2015 VSS DNA and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>This year, I am not attending the <a href="http://www.visionsciences.org/">Vision Sciences Society</a> annual meeting. Although I wish I could be there, a number of life events meant that I was not able to submit an abstract this year. However, I <strong>was</strong> able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s <a href="/2015/03/23/2015-vss-dna/">2015 VSS DNA</a> and the year before&#8217;s <a href="/2014/05/03/vss-2014-dna-v1/">2014 VSS DNA</a>).  This year, we have 1462 abstracts being analyzed (43 more than last year). As with the previous visualizations, the graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/05/VSS2016DNA.png" alt="Illustration of the co-authorships for the Vision Sciences Society 2016 annual meeting abstracts." width="700" height="700" class="size-full wp-image-5835" srcset="/wp-content/uploads/2016/05/VSS2016DNA.png 700w, /wp-content/uploads/2016/05/VSS2016DNA-150x150.png 150w, /wp-content/uploads/2016/05/VSS2016DNA-300x300.png 300w, /wp-content/uploads/2016/05/VSS2016DNA-60x60.png 60w" sizes="auto, (max-width: 700px) 100vw, 700px" /></p>
+<p>In this visualization, orange dots are abstracts, light blue dots correspond to individuals who are first authors, and dark blue dots correspond to the other author(s). You can view an interactive force-directed d3.js version <a href="http://steven.cholewiak.com/code/visvssrelationships_2016">here</a>. The code for the graph and force-directed diagram generation is available on GitHub <a href="https://github.com/OrganicIrradiation/visvssrelationships">here</a>. The scraping is notably faster this year because I am using Python 3.4+&#8217;s <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> package. The notebooks can also be viewed using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a>:</p>
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships_scrape.ipynb">visvssrelationships_scrape.ipynb</a></li>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships.ipynb">visvssrelationships.ipynb</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2016/05/12/2016-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Upgrading SSD in Apple MacBook Pro Retina (Late 2012)</title>
+		<link>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</link>
+					<comments>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 04 Apr 2016 05:37:51 +0000</pubDate>
+				<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=5798</guid>
+
+					<description><![CDATA[For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, but Apple decided to use a proprietary connector for the SSD (rather than using the mSATA or, more recently, the M.2 standards), which has made upgrading more difficult/expensive than it should be. However, even though there were a few minor roadblocks, I ended up successfully upgrading the SSD using a combination of 3rd party modules. Since I could not find anecdotal reports of similar upgrades, I wanted to throw mine out into the ether.<br />
+<span id="more-5798"></span></p>
+<p>In late 2012, iFixit.com posted a teardown of the <a href="https://www.ifixit.com/Teardown/MacBook+Pro+13-Inch+Retina+Display+Late+2012+Teardown/11225">MacBook Pro 13&#8243; Retina Display Late 2012</a> and noted that:</p>
+<blockquote>
+<ul>
+<li>The most striking layout change resulting from the shrink from a 15&#8243; to 13&#8243; form factor is the rearranged battery cells. This allowed Apple&#8217;s designers to cleverly tuck the SSD away underneath the trackpad assembly.</li>
+<li>The empty space next to the SSD is very un-Apple. It&#8217;s not like them to leave big air gaps in their newest, sleekest designs.</li>
+<li>Our first thought was that a standard 2.5&#8243; laptop drive might fit in this space, and it almost looks like this little nook was designed with that in mind.</li>
+<li>Our 9.5mm Crucial SSD didn&#8217;t allow the bottom cover to be closed, but just by a smidge. We&#8217;ll see if a 7 mm or 5 mm super-slim hard drive could be incorporated into the space.</li>
+</ul>
+</blockquote>
+<p>iFixit later posted a guide to <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">replacing the SSD</a> in early 2013, but at the time, the only SSD alternatives appeared to be 3rd party modules like the <a href="http://amzn.to/1N4A9NF">Transcend JetDrive</a> ($280 for 480GB drive and external USB 3.0 case) or the <a href="http://eshop.macsales.com/shop/SSD/OWC/Air-Retina/Apple-MacBook-Pro-Retina-2012-Drive-Internal-Flash">OWC Aura</a> ($218 for 480GB drive only).</p>
+<p>These 3rd party options, which have been designed specifically for the MacBook Pro&#8217;s SSD form factor, have been outside of my price range. However, recently, I&#8217;ve seen adapters available that would allow me to use smaller form factor SSDs with my A1425 MacBook Pro. For example:</p>
+<ul>
+<li>mSATA SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="https://amzn.to/2J5T5Rh">Amazon</a>, <a href="http://www.dx.com/p/msata-to-apple-2012-laptop-pc-7-17-ssd-a1425-a1398-mc975-me662-419710?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+<li>M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="http://amzn.to/1SLVDmS">Amazon</a>, <a href="http://www.dx.com/p/m-2-ngff-ssd-to-2012-version-apple-macbook-pro-a1425-a1398-ssd-adapter-card-22-x-60mm-420132?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+</ul>
+<p>Combine these adapters with either a <a href="http://amzn.to/25FCni7">Samsung 850 EVO mSATA SSD</a> or a <a href="http://amzn.to/25FCoCu">Transcend M.2 SSD</a> (respectively) and you could potentially upgrade the SSD for significantly less than the designed-from-scratch modules offered by Transcend and OWC. I researched the adapters a bit more and found that if I chose to go the M.2 route, that I would need to make sure the new drive was SATA rather than PCIe (such as the <a href="http://amzn.to/1SLVHDa">Samsung 950 PRO</a>). At the end of the day, I ordered a <a href="http://amzn.to/1SLVDmS">M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter</a> and a <a href="http://amzn.to/25FCoCu">512GB Transcend M.2 SSD</a> from Amazon and decided to see if I could get it up and running.</p>
+<p>I wasn&#8217;t sure if there were going to be any performance gains/penalties, so I checked the speed of the original OEM 256GB SSD using <a href="https://itunes.apple.com/us/app/blackmagic-disk-speed-test/id425264550?mt=12">Blackmagic Disk Speed Test</a>:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Apple SSD" width="648" height="697" class="aligncenter size-large wp-image-5805" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD.png 1260w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>Not too bad.</p>
+<p>When I received the adapter and new SSD in the mail, I backed up my old SSD onto an external drive using Time Machine. I also created an <a href="http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/">El Capitan boot drive</a> so that I could wipe the old drive and restore the Time Machine backup to the new SSD. I erased the old drive and although I tried securely wiping the drive, there are some <a href="http://apple.stackexchange.com/questions/6278/how-to-securely-erase-an-ssd-drive">lingering issues with wiping SSDs</a>. Now I was ready for the transplant. Using the iFixit <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">SSD Replacement guide</a>, I removed the old SSD in preparation for the new module.</p>
+<p>The M.2 drive fit perfectly into the adapter:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg" alt="Transcend 512GB M.2 in A1425 Adapter" width="648" height="367" class="aligncenter size-large wp-image-5809" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-300x170.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-768x435.jpg 768w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>And I threw the whole shebang into the MacBook&#8217;s drive caddy:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg" alt="Transcend 512GB M.2 in A1425 Adapter in HDD caddy" width="648" height="573" class="aligncenter size-large wp-image-5811" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-300x265.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-768x680.jpg 768w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy.jpg 1808w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>After reassembling the machine, I started up the computer using the boot disk and&#8230; It worked. Awesome. I restored the time machine backup onto the new drive and it booted up without any issues. One little hiccup is that Apple disables <a href="https://en.wikipedia.org/wiki/Trim_(computing)">TRIM</a> for 3rd party SSDs, so you need to make sure to enable it after-the-fact using <a href="http://osxdaily.com/2015/10/29/use-trimforce-trim-ssd-mac-os-x/">trimforce</a>. It&#8217;s also faster than the original OEM SSD:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Transcend SSD" width="648" height="697" class="aligncenter size-large wp-image-5812" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD.png 1260w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>If you have an older MacBook Pro that&#8217;s running out of space, this is an easy and very worthwhile upgrade.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
+			<slash:comments>39</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>2015 VSS DNA</title>
+		<link>/2015/03/23/2015-vss-dna/</link>
+					<comments>/2015/03/23/2015-vss-dna/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 23 Mar 2015 19:54:41 +0000</pubDate>
+				<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=5660</guid>
+
+					<description><![CDATA[Another year, another Vision Sciences Society force-directed diagram of co-authorships (see last year&#8217;s 2014 VSS DNA). This year, we have 1419 abstracts being analyzed. The graph was generated in Python using NetworkX, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Another year, another <a href="http://www.visionsciences.org/">Vision Sciences Society</a> force-directed diagram of co-authorships (see last year&#8217;s <a href="/2014/05/03/vss-2014-dna-v1/">2014 VSS DNA</a>).  This year, we have 1419 abstracts being analyzed. The graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2015/03/VSS2015DNA.png" alt="Illustrating co-authorship for the Vision Sciences Society abstracts" width="700" height="700" class="aligncenter size-full wp-image-5677" srcset="/wp-content/uploads/2015/03/VSS2015DNA.png 700w, /wp-content/uploads/2015/03/VSS2015DNA-150x150.png 150w, /wp-content/uploads/2015/03/VSS2015DNA-300x300.png 300w" sizes="auto, (max-width: 700px) 100vw, 700px" /></p>
+<p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors, and dark blue dots correspond to the other author(s). This visualisation should not to be interpreted as sets of in-groups/out-groups. It ignores past/future VSS co-authorships, casual collaborations, professional collaborations outside of VSS, and likely has inaccuracies due to the way authors&#8217; names are analysed (see after the break for more). I am intrigued by the &#8220;scholarly social network&#8221; and this visualization is just one piece of a very incomplete puzzle.</p>
+<p><span id="more-5660"></span></p>
+<p>There are often inconsistencies in author names (e.g., &#8220;Steven Cholewiak&#8221; vs. &#8220;Steven A. Cholewiak&#8221; vs. &#8220;Stëvèn Chólëwìäk&#8221;), so I use the <a href="https://docs.python.org/2/library/difflib.html">difflib</a> <a href="https://docs.python.org/2/library/difflib.html#sequencematcher-objects">SequenceMatcher</a> to calculate ratios of the names&#8217; similarities and names that are very similar (a ratio of 0.9 or higher) are assumed to be the same.  That is admittedly a very naïve method of dealing with naming inconsistencies (e.g., is &#8220;John Smith&#8221; the same person as &#8220;John Q. Smith&#8221; or &#8220;John H. Smith&#8221;?) but I&#8217;d love to see a favourable alternative.</p>
+<p>You can view an interactive force-directed d3.js version <a href="http://steven.cholewiak.com/code/visvssrelationships_2015">here</a>. The code for the graph and force-directed diagram generation is available on GitHub <a href="https://github.com/OrganicIrradiation/visvssrelationships">here</a>.  The notebooks can also be viewed using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a>:</p>
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships_scrape.ipynb">visvssrelationships_scrape.ipynb</a></li>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships.ipynb">visvssrelationships.ipynb</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2015/03/23/2015-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Backpack and Canon T3i lost/stolen in Frankfurt (Main) Hauptbahnhof</title>
+		<link>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/</link>
+					<comments>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 31 Dec 2014 13:52:36 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Photos]]></category>
+		<guid isPermaLink="false">/?p=5364</guid>
+
+					<description><![CDATA[I had a red and black The North Face backpack/Rucksack taken from a train in Frankfurt, Germany this past Monday, so I&#8217;m posting this online with the hope, however remote, to contact the individual(s) who removed the bag from the train and to see if they can contact me to return it. It contained my [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I had a red and black The North Face backpack/Rucksack taken from a train in Frankfurt, Germany this past Monday, so I&#8217;m posting this online with the hope, however remote, to contact the individual(s) who removed the bag from the train and to see if they can contact me to return it.  It contained my DSLR camera, lenses, and a number of personal keepsakes that have really hurt to lose.</p>
+<p><a href="/wp-content/uploads/2014/12/BackpackOnSteve.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/12/BackpackOnSteve-233x300.jpg" alt="Lost/Stolen The North Face Hot Shot Backpack" width="233" height="300" class="aligncenter size-medium wp-image-5462" srcset="/wp-content/uploads/2014/12/BackpackOnSteve-233x300.jpg 233w, /wp-content/uploads/2014/12/BackpackOnSteve.jpg 634w" sizes="auto, (max-width: 233px) 100vw, 233px" /></a></p>
+<p>Here is a short run-down of what happened: On Monday, December 29th, 2014, I went down to the Frankfurt central train station (Hauptbahnhof) with my wife and friends to go ice skating at the Eissporthalle Frankfurt.  We took a Deutsche Bahn (DB) train from Giessen, Germany to Frankfurt, Germany, departing at 3:22 PM and  arriving at 4:02 PM. At the beginning of the trip, I placed my backpack on the  luggage rack above the seat. About 10 minutes after exiting the train, after having taken an S-Bahn train to Hauptwache, I realized I did not have my bag. I immediately took another S-Bahn back to Frankfurt Hbf, ran up to the train platform, and found my train still waiting at the track (total time from departing the train to returning was approximately 20 minutes).  I quickly searched the train because it was about to leave to head northward, but the backpack was gone.</p>
+<p>I immediately notified the DB lost property office (Fundbüro) and made a  claim. I also notified the police but will need to wait 1 week before I can officially file a police report (which I plan on doing on Monday if the bag has not been found).</p>
+<p>Unfortunately, I don&#8217;t know how much identifying information was in the backpack (it did not contain any IDs), but in the future, I will make sure to <a href="http://mrandrewmcdonald.com/a-pictorial-guide-to-avoiding-camera-loss/">include contact information on the camera</a> to help the person who finds my things to reach out to me, if this were to ever happen again.</p>
+<p><span id="more-5364"></span></p>
+<p>Here is an incomplete inventory:</p>
+<ul>
+<li>The North Face Hot Shot backpack in red and black</li>
+<li><a href="http://www.amazon.com/gp/product/B001TZWNF0/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001TZWNF0&amp;linkCode=as2&amp;tag=semifluidcom-20&amp;linkId=OECNHA5QXH6TTTR6">Case Logic SLRC-202 SLR Camera Bag</a></li>
+<li><a href="http://www.amazon.com/gp/product/B00IB1BTWI/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00IB1BTWI&amp;linkCode=as2&amp;tag=semifluidcom-20&amp;linkId=67NY6FQJXKYS5UH4">Canon T3i body</a> with memory cards (serial #162037009896)</li>
+<li><a href="http://www.amazon.com/gp/product/B00009XVCZ/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00009XVCZ&amp;linkCode=as2&amp;tag=semifluidcom-20&amp;linkId=4Q22XQPAXMOAWYDQ">Canon EF 50mm f/1.4 USM lens</a></li>
+<li><a href="http://www.amazon.com/gp/product/B008B48AAE/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008B48AAE&amp;linkCode=as2&amp;tag=semifluidcom-20&amp;linkId=GH7X3X4BB3KT63Q4">Sigma 18-250mm f3.5-6.3 DC MACRO OS HSM lens</a></li>
+<li>Quite a few other personal effects (that I am omitting in the hope that the bag is found so that I can provide some form of identification)</li>
+</ul>
+<p>Here are some representative images of the items lost (the backpack at the top of the page the actual bag stolen):</p>
+<p>
+<a href='/wp-content/uploads/2014/12/HotShot_red.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/HotShot_red-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/HotShot_back.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/HotShot_back-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/HotShot_inside.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/HotShot_inside-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/CaseLogicCase.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/CaseLogicCase-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/CanonBody1.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/CanonBody1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2014/12/CanonBody1-150x150.jpg 150w, /wp-content/uploads/2014/12/CanonBody1-300x300.jpg 300w, /wp-content/uploads/2014/12/CanonBody1.jpg 1000w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+<a href='/wp-content/uploads/2014/12/CanonBody2.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/CanonBody2-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2014/12/CanonBody2-150x150.jpg 150w, /wp-content/uploads/2014/12/CanonBody2-300x300.jpg 300w, /wp-content/uploads/2014/12/CanonBody2.jpg 1000w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+<a href='/wp-content/uploads/2014/12/CanonBody3.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/CanonBody3-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/CanonLens.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/CanonLens-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+<a href='/wp-content/uploads/2014/12/SigmaLens.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="/wp-content/uploads/2014/12/SigmaLens-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+</p>
+<p><center><small>(note: product photos are from Amazon.com, except for backpack photos, which are from <a href="http://thenorthfaceonline.blogspot.de/p/hotshot.html">thenorthfaceonline.blogspot.de</a>)</small></center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/12/31/backpack-and-canon-t3i-loststolen-in-frankfurt-main-hauptbahnhof/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Calories as a function of alcohol in popular beers</title>
+		<link>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/</link>
+					<comments>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 14 Dec 2014 15:23:36 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=5329</guid>
+
+					<description><![CDATA[In the USA, a standard drink is defined as including 0.6 fluid ounce (18 mL or 14 g) of ethanol (see Alcohol equivalence), meaning that a &#8220;standard&#8221; 12 oz beer has about 5% ABV. However, beers vary quite a bit in their alcohol content as well as their caloric content, so it seems reasonable to [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>In the USA, a standard drink is defined as including 0.6 fluid ounce (18 mL or 14 g) of ethanol (see <a href="https://en.wikipedia.org/wiki/Alcohol_equivalence#United_States">Alcohol equivalence</a>), meaning that a &#8220;standard&#8221; 12 oz beer has about 5% ABV.  However, beers vary quite a bit in their alcohol content as well as their caloric content, so it seems reasonable to ask: If I have a beer with a given ABV, approximately how many calories does it have?</p>
+<p>While browsing the web, I found a <a href="http://www.beer100.com/calories_in_beer.htm">table</a> listing the calories in a number of beers and thought it would be interesting to visualize using Python and <a href="http://www.plot.ly/">plot.ly</a>. It is a simple visualization, but one I find neat. Without further adieu:</p>
+<p><center></p>
+<p><iframe loading="lazy" width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/97.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+<p>Each blue point on the plot is a beer from the beer100.com domestic and international tables &#8212; feel free to explore the plot with your mouse. As you can see, unsurprisingly, as a beer&#8217;s alcohol content increases, so do the number of calories. Fitting a linear regression to the data, we see that a linear trend fits quite well: $latex f(x) = (28.2)*x + (8.25)$, where $latex x$ is the beer&#8217;s ABV (in percent).  This means that if a beer has an alcoholic content of 5%, we can expect it to have approximately 150 calories (149.25 as predicted by the fit).  However, there is quite a bit of variability between different beers of the same ABV. For example, Bud Ice Light and Kronenbourg Imported Dark Beer (whose label is a bit ambiguous, but I am assuming may be Kronenbourg 1664 Brune) are both 5% ABV, but have 115 and 163 calories per 12 oz, respectively.</p>
+<p><span id="more-5329"></span></p>
+<p>In addition to the data points, I&#8217;ve also included a line illustrating the <a href="http://getdrunknotfat.com/info/">calories for pure ethanol</a> as a function of ABV (assuming it is mixed with water to dilute it). This could be considered the &#8220;alcohol purity line&#8221; for empty calories (i.e., this would be the closest to a neutral spirit). If you compare light to non-light beers (done using a simple if &#8220;Light&#8221; is in <em>name</em>), you can see that the light beers are shifted closer to the pure ethanol line:</p>
+<p><center></p>
+<p><iframe loading="lazy" width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/99.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+<p>This simple string comparison misses a number of light beers (like Miller Genuine Draft 64 and Budweiser Select 55 which are also closest to the &#8220;alcohol purity line&#8221;), but captures the general trend. However, note that the more (in my humble opinion) flavorful and interesting beers lie above the original linear fit line.</p>
+<p>Finally, I wanted to quickly compare the beer100.com data to brewer-supplied information. Unfortunately, most brewers avoid disclosing their nutritional facts; however, <a href="http://www.anheuser-busch.com/s/uploads/Anheuser-Busch-Nutritional-Information.pdf">Anheuser-Busch</a> and <a href="http://www.millercoors.com/our-beers/nutrition-facts-codes.aspx">MillerCoors</a> are relatively transparent, providing some facts about their beers and malt beverages.  After normalizing the data to a 12oz serving size, we can see that, like the beer100.com data, there is quite a bit of variability.</p>
+<p><center></p>
+<p><iframe loading="lazy" width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/102.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

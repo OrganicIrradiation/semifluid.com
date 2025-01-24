@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PIC18F2550 USB HID IO	</title>
+	<atom:link href="/2006/03/28/pic18f2550-usb-hid-io/feed/" rel="self" type="application/rss+xml" />
+	<link>/2006/03/28/pic18f2550-usb-hid-io/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:20:58 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: fabio		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-211585</link>
+
+		<dc:creator><![CDATA[fabio]]></dc:creator>
+		<pubDate>Sat, 06 Aug 2016 00:26:11 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-211585</guid>
+
+					<description><![CDATA[ola,poderia alterar o projeto pra receber uma variavel pelo vb6,e depois me enviar?]]></description>
+			<content:encoded><![CDATA[<p>ola,poderia alterar o projeto pra receber uma variavel pelo vb6,e depois me enviar?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: AndrejK		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-210377</link>
+
+		<dc:creator><![CDATA[AndrejK]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2015 16:42:15 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-210377</guid>
+
+					<description><![CDATA[Project was flashed successfull with WinPic-&#062;FT232BL-&#062;COM84 analog of JDM ( Extra Pic  ) with buffers on KT315B,LM7812,LM7805 (2&lt;em&gt;1N4148 after line Vpp ,68nf to GND and 2.2k to Vcc5v, 100nF on Vusb (pin 14), 20MHz quartz and 2&lt;/em&gt;15...22 pF ) . OpenProg 0.9.0 was flashed successfull   also (12 MHz).]]></description>
+			<content:encoded><![CDATA[<p>Project was flashed successfull with WinPic-&gt;FT232BL-&gt;COM84 analog of JDM ( Extra Pic  ) with buffers on KT315B,LM7812,LM7805 (2<em>1N4148 after line Vpp ,68nf to GND and 2.2k to Vcc5v, 100nF on Vusb (pin 14), 20MHz quartz and 2</em>15&#8230;22 pF ) . OpenProg 0.9.0 was flashed successfull   also (12 MHz).</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tee Dee		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-208809</link>
+
+		<dc:creator><![CDATA[Tee Dee]]></dc:creator>
+		<pubDate>Wed, 11 Feb 2015 02:31:17 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-208809</guid>
+
+					<description><![CDATA[Just for clarity...
+The hex files are in separate links from the .c code. Click on the words &quot;(hex)&quot; and you will be taken to the hex file(s).]]></description>
+			<content:encoded><![CDATA[<p>Just for clarity&#8230;<br />
+The hex files are in separate links from the .c code. Click on the words &#8220;(hex)&#8221; and you will be taken to the hex file(s).</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Carlo		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-208779</link>
+
+		<dc:creator><![CDATA[Carlo]]></dc:creator>
+		<pubDate>Tue, 10 Feb 2015 20:28:20 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-208779</guid>
+
+					<description><![CDATA[Thanks for sharing your project but couldn&#039;t help to spot a few problems:
+Code:
+    if (theCRC = in_data[7]) {
+Classic &#039;=&#039; instead of &#039;==&#039;.
+Now the test for a valid CRC will always succeed, except for a CRC value zero, then the program won&#039;t do what you expect.
+
+Consequent use of &#039;&#038;&#039; instead of &#039;&#038;&#038;&#039;. The code works but doesn&#039;t show its intention.
+
+Inside the serial interrupt routine it is not required to disable the Global interrupt as the hardware is doing this automatically. A few lines lower however, enabling the Global interrupt again is a bug. Normally the hardware handles this too. If another interrupt is waiting to be served then it would fire immediately, not allowing the current interrupt to restore its saved context with undefined behaviour as a result]]></description>
+			<content:encoded><![CDATA[<p>Thanks for sharing your project but couldn&#8217;t help to spot a few problems:<br />
+Code:<br />
+    if (theCRC = in_data[7]) {<br />
+Classic &#8216;=&#8217; instead of &#8216;==&#8217;.<br />
+Now the test for a valid CRC will always succeed, except for a CRC value zero, then the program won&#8217;t do what you expect.</p>
+<p>Consequent use of &#8216;&amp;&#8217; instead of &#8216;&amp;&amp;&#8217;. The code works but doesn&#8217;t show its intention.</p>
+<p>Inside the serial interrupt routine it is not required to disable the Global interrupt as the hardware is doing this automatically. A few lines lower however, enabling the Global interrupt again is a bug. Normally the hardware handles this too. If another interrupt is waiting to be served then it would fire immediately, not allowing the current interrupt to restore its saved context with undefined behaviour as a result</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: AndrejK		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-82344</link>
+
+		<dc:creator><![CDATA[AndrejK]]></dc:creator>
+		<pubDate>Sun, 07 Sep 2014 12:30:30 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-82344</guid>
+
+					<description><![CDATA[How to create full  parallel port (LPTx) and RS232 port  emulator  using PIC18F2550/PIC18F4550 with opensource driver?]]></description>
+			<content:encoded><![CDATA[<p>How to create full  parallel port (LPTx) and RS232 port  emulator  using PIC18F2550/PIC18F4550 with opensource driver?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: AndrejK		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-82341</link>
+
+		<dc:creator><![CDATA[AndrejK]]></dc:creator>
+		<pubDate>Sun, 07 Sep 2014 12:24:05 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-82341</guid>
+
+					<description><![CDATA[How to interate into project  universal IIC/SPI tester -master/slave device emulator ( with script editor, received/transmitted  data logger/editor, mode switching (master/slave) )   ?]]></description>
+			<content:encoded><![CDATA[<p>How to interate into project  universal IIC/SPI tester -master/slave device emulator ( with script editor, received/transmitted  data logger/editor, mode switching (master/slave) )   ?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: vicky		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-17583</link>
+
+		<dc:creator><![CDATA[vicky]]></dc:creator>
+		<pubDate>Mon, 03 Jun 2013 11:13:27 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-17583</guid>
+
+					<description><![CDATA[Hi everyone,
+
+I&#039;m trying to display the waveform in PC using PIC18F2550 via USB.I&#039;m not good for write program on oshon software(basic or assembly)please help me if u know how to write the program circuit connection or else suggest some models.
+
+
+Thanks
+by 
+viki]]></description>
+			<content:encoded><![CDATA[<p>Hi everyone,</p>
+<p>I&#8217;m trying to display the waveform in PC using PIC18F2550 via USB.I&#8217;m not good for write program on oshon software(basic or assembly)please help me if u know how to write the program circuit connection or else suggest some models.</p>
+<p>Thanks<br />
+by<br />
+viki</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: PLAAHemantha		</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/#comment-13602</link>
+
+		<dc:creator><![CDATA[PLAAHemantha]]></dc:creator>
+		<pubDate>Sun, 17 Jun 2012 02:45:15 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23#comment-13602</guid>
+
+					<description><![CDATA[hi everybody!
+i&#039;m trying to sending a data from PIC and get and display it from PC using VB6(such as numeric value). But i could not success. I could not find correct Schematic and vb program. I have some knowledge about VB6 but i have little knowledge about PIC.
+I want to send a numeric value from PIC and get and display it on PC, or send pulse from PIC then get and count pulses given time interval and display it on PC
+Anyone can help me?
+Hemantha]]></description>
+			<content:encoded><![CDATA[<p>hi everybody!<br />
+i&#8217;m trying to sending a data from PIC and get and display it from PC using VB6(such as numeric value). But i could not success. I could not find correct Schematic and vb program. I have some knowledge about VB6 but i have little knowledge about PIC.<br />
+I want to send a numeric value from PIC and get and display it on PC, or send pulse from PIC then get and count pulses given time interval and display it on PC<br />
+Anyone can help me?<br />
+Hemantha</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

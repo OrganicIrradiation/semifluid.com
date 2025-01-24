@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PIC16F628 &#8211; semifluid.com</title>
+	<atom:link href="/category/pic-projects/pic16f628/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 21 Jan 2016 05:19:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>8&#215;8 RGB LED Display</title>
+		<link>/2010/06/28/8x8-rgb-led-display/</link>
+					<comments>/2010/06/28/8x8-rgb-led-display/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 02:21:23 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Controller]]></category>
+		<category><![CDATA[LED]]></category>
+		<category><![CDATA[Processing]]></category>
+		<category><![CDATA[RGB]]></category>
+		<guid isPermaLink="false">/?p=213</guid>
+
+					<description><![CDATA[So, this project was sidelined until I had to make another BatchPCB purchase.  Thankfully it wasn&#8217;t too long until I had the opportunity to work on it again! The current setup is basically 4 of the original 4 RGB LED Controller boards and 12 of the updated DR1r3 boards. All 16 are wired in parallel [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="text-align: left;">So, this project was sidelined until I had to make another BatchPCB purchase.  Thankfully it wasn&#8217;t too long until I had the opportunity to work on it again!  The current setup is basically 4 of the <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/">original 4 RGB LED Controller boards</a> and 12 of the <a href="http://semifluid.com/2010/02/16/4-rgb-led-controller-update/">updated DR1r3 boards</a>.  All 16 are wired in parallel and being controlled by my desktop machine.  You can see an extended version of this RGB test sequence after the break and I&#8217;m also including the (uncommented, sorry!) <a href="http://processing.org/" target="_blank">Processing 1.1</a> code that I used to control the boards.</p>
+<p><center><br />
+<iframe title="8x8 RGB LED Display - Closeup" width="648" height="486" src="https://www.youtube.com/embed/ImFNgAgYKUY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-213"></span></p>
+<p>Here&#8217;s an extended cut of the video display (which is displaying an RGB Test Sequence).  Note that the current maximum throughput is approximately 12-13 frames per second due to the RS-232 baud rate bottleneck, but I&#8217;m looking for ways to speed up the data transfer without requiring a faster oscillator.:</p>
+<p><center><br />
+<iframe title="8x8 RGB LED Display" width="648" height="486" src="https://www.youtube.com/embed/gtfMJSERY3o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The <a href="http://processing.org/" target="_blank">Processing 1.1</a> code:<br />
+<a href="/wp-content/uploads/2010/06/VideoDisplay.zip">VideoDisplay</a> (includes the .pde file and the video used)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/06/28/8x8-rgb-led-display/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>4 RGB LED Controller Update</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/</link>
+					<comments>/2010/02/16/4-rgb-led-controller-update/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 16 Feb 2010 17:44:18 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Controller]]></category>
+		<category><![CDATA[LED]]></category>
+		<category><![CDATA[Lights]]></category>
+		<category><![CDATA[RGB]]></category>
+		<guid isPermaLink="false">/?p=191</guid>
+
+					<description><![CDATA[I recently began working on a consulting project that required the creation of some PCBs.  Since I have had such great success with BatchPCB.com in the past, I decided to use them again to fab the custom PCBs.  The BatchPCB purchasing system adds a few static fees (set-up, handling, and shipping), so I felt that [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently began working on a consulting project that required the creation of some PCBs.  Since I have had such great success with BatchPCB.com in the <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/" target="_self">past</a>, I decided to use them again to fab the custom PCBs.  The BatchPCB purchasing system adds a few static fees (set-up, handling, and shipping), so I felt that this was as good a time as any to make some additional of my <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/" target="_self">PIC16F628 4 RGB LED PWM Controller</a> boards with a couple of modifications.</p>
+<p><a href="/wp-content/uploads/2010/02/DSC_1877.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-medium wp-image-197" title="4 RGB LED Controller Boards" src="/wp-content/uploads/2010/02/DSC_1877-300x200.jpg" alt="" width="300" height="200" /></a></p>
+<p><span id="more-191"></span>As I noted in the previous post, there was an error on the first revision of the board and a pull-up resistor on RA5 (pin 4 in the schematic above) was necessary.  I added the MCLR resistor to the board along with a couple of other modifications:</p>
+<ul>
+<li>Removed the extraneous capacitors, we only need one.</li>
+<li>Added a breakout for the one remaining I/O pin.</li>
+<li>Added a small perfboard to the PCB with +5V and ground lines.</li>
+<li>Relocated the resistors to make them <em>much easier </em>to solder.  I may use a SIL resistor array in the future.</li>
+</ul>
+<p>I kept the LED locations exactly the same because, hey, if I put all of the time and effort into the 4 boards that I previously ordered, then I might as well keep the same form factor.  My scheme for the short-term is to create a 4&#215;4 array of the 4 RGB LED Controller boards, which will give me a 20cmx20cm 8&#215;8 RGB LED display.</p>
+<p>Here are some pictures of the boards:</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/02/DSC_1874.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-196 alignnone" title="4 RGB LED Controller Board Front" src="/wp-content/uploads/2010/02/DSC_1874-150x150.jpg" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/DSC_1872.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-195 alignnone" title="4 RGB LED Controller Board Back" src="/wp-content/uploads/2010/02/DSC_1872-150x150.jpg" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/DSC_1871.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-194 alignnone" title="4 RGB LED Controller Board Front and Back" src="/wp-content/uploads/2010/02/DSC_1871-150x150.jpg" alt="" width="150" height="150" /></a><a href="/wp-content/uploads/2010/02/DSC_1868.jpg"> <img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-193" title="4 RGB LED Controller Boards Group" src="/wp-content/uploads/2010/02/DSC_1868-150x150.jpg" alt="" width="150" height="150" /></a></p>
+<p style="text-align: left;">Here is the updated schematic and board (note, you can open the BRD and SCH files in <a href="http://www.cadsoftusa.com/" target="_blank">Eagle Layout Editor</a>):</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Schematic.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-206" title="PIC16F628 4 RGB LED DR1r3 Eagle Schematic" src="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Schematic-150x150.png" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Board.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-205" title="PIC16F628 4 RGB LED DR1r3 Eagle Board" src="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Board-150x150.png" alt="" width="150" height="150" /></a></p>
+<ul>
+<li><a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3.brd">PIC16F628 4 RGB LED DR1r3 Eagle Board</a></li>
+</ul>
+<p style="text-align: left;">And finally, here is an updated firmware that improves the PWM performance:</p>
+<ul>
+<li><a href="/wp-content/uploads/2010/02/16F628-Serial-4-LED-PWM-4-bit-exp-DR1r8.c">16F628 Serial 4 LED PWM &#8211; 4-bit exp DR1r8.c</a></li>
+<li><a href="/wp-content/uploads/2010/02/16F628-Serial-4-LED-PWM-4-bit-exp-DR1r8.hex">16F628 Serial 4 LED PWM &#8211; 4-bit exp DR1r8.hex</a></li>
+</ul>
+<p>I will make sure to post when I have the full array put together (I currently only have 12 of the 16 boards I need for the 4&#215;4 array).</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/02/16/4-rgb-led-controller-update/feed/</wfw:commentRss>
+			<slash:comments>13</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 4 LED PWM DR1r6</title>
+		<link>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/</link>
+					<comments>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 05 Dec 2008 19:33:16 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=139</guid>
+
+					<description><![CDATA[I&#8217;ve been working on a project in my spare time with two friends to create some ambient light controllers, so I thought I&#8217;d just post two short videos to demonstrate the current state of the project.  In the current iteration, they can be used as wall-washers or they can be enclosed to create ambient light [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="text-align: left;">I&#8217;ve been working on a <a href="http://semifluid.com/2008/10/06/pic16f628-serial-4-led-pwm/" target="_self">project</a> in my spare time with two friends to create some ambient light controllers, so I thought I&#8217;d just post two short videos to demonstrate the current state of the project.  In the current iteration, they can be used as wall-washers or they can be enclosed to create ambient light cubes/spheres/<a href="http://en.wikipedia.org/wiki/Pentagonal_cupola" target="_self">pentagonal cupolas</a>/<a href="http://en.wikipedia.org/wiki/Rhombo-hexagonal_dodecahedron" target="_blank">rhombo-hexagonal dodecahedrons</a>/etc.  Each module is addressable and uses a PIC16F628 to control each of the RGB LEDs (which were purchased from the eBay seller <a href="http://myworld.ebay.com/jeledhk/" target="_blank">jeledhk</a> with the description &#8220;Superflux RGB 5mm R/H LEDLamp 8Kmcd COMMON CATHODE&#8221;).  The PCBs were created using BatchPCB.com for $5 each (+ ~$15 total for S&amp;H and setup) and are beautifully etched, drilled, and silkscreened (although it took about 1.5 months to receive them).  Ok, less talk, more videos; one video on the front page and another after the jump:</p>
+<p><center><br />
+<iframe loading="lazy" title="PIC16F628 Serial 4 LED PWM DR1r6 Demo" width="648" height="486" src="https://www.youtube.com/embed/iiQMxkn_BJo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-139"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC16F628 Serial 4 LED PWM DR1r6 Random Noise" width="648" height="486" src="https://www.youtube.com/embed/Zky58Ku6aD0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 4 LED PWM</title>
+		<link>/2008/10/06/pic16f628-serial-4-led-pwm/</link>
+					<comments>/2008/10/06/pic16f628-serial-4-led-pwm/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 06 Oct 2008 15:37:00 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">/?p=127</guid>
+
+					<description><![CDATA[It has been a long time since I&#8217;ve done any microcontroller work, so I decided to get back into the swing of things when 2 of my friends and I decided on collaborating on an interactive &#8220;art&#8221; piece.  Details are forthcoming, but in the meantime, a photo and a video of one of the LED [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>It has been a long time since I&#8217;ve done any microcontroller work, so I decided to get back into the swing of things when 2 of my friends and I decided on collaborating on an interactive &#8220;art&#8221; piece.  Details are forthcoming, but in the meantime, a photo and a video of one of the LED components (video after the break):</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/10/cimg9028.jpg" target="_blank"><img loading="lazy" decoding="async" class="size-full wp-image-128 aligncenter" title="cimg9028_tn" src="/wp-content/uploads/2008/10/cimg9028_tn.jpg" alt="" width="500" height="509" /></a></p>
+<p style="text-align: left;"><span id="more-127"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC16F628 Serial 4 LED PWM 4-bit exp DR1r2" width="648" height="486" src="https://www.youtube.com/embed/XIAShJc-6vI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/10/06/pic16f628-serial-4-led-pwm/feed/</wfw:commentRss>
+			<slash:comments>9</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 8 RGB LED Controller</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:59 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=12</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. It is controlled by sending 3 bytes to the internal USART for the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u8RGBLED1.jpg" alt="" title="PIC16F628 Serial 8 RGB LED Controller" width="280" height="200" class="alignleft size-full wp-image-798" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. It is controlled by sending 3 bytes to the internal USART for the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time.</p>
+<p><span id="more-12"></span></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic3.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-696" title="PIC16F628 Serial 8 RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic3-300x231.gif" alt="" width="300" height="231" srcset="/wp-content/uploads/2006/01/Schematic3-300x231.gif 300w, /wp-content/uploads/2006/01/Schematic3.gif 932w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm.jal">u8RGBm.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm.hex">hex</a>) (less optimized but higher refresh rate)<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm2.jal">u8RGBm2.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm2.hex">hex</a>) (better optimized but lower refresh rate)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBblinkenlightsDR1r1.zip">8RGBblinkenlightsDR1r1.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>15</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 8 RGB LED Controller</title>
+		<link>/2006/01/31/pic16f628-8-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic16f628-8-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:36 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=10</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. The pattern is determined by the data in the EEPROM. Upon startup, the controller loads the data into RAM and starts up the sequence. The operation is very simple and so is the wiring. The PIC selects each LED then [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_8RGBLED1.jpg" alt="" title="PIC16F628 8 RGB LED Controller" width="280" height="200" class="alignleft size-full wp-image-706" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. The pattern is determined by the data in the EEPROM. Upon startup, the controller loads the data into RAM and starts up the sequence. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. Currently the max number of display patterns is 20 (because the bank array is 80 bytes and each pattern is 4 bytes).</p>
+<p><span id="more-10"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic4.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-707" title="PIC16F628 8 RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic4-300x259.gif" alt="" width="300" height="259" srcset="/wp-content/uploads/2006/01/Schematic4-300x259.gif 300w, /wp-content/uploads/2006/01/Schematic4.gif 832w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.jal">8RGBRAM.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.hex">hex</a>)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-8-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>20</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 1 RGB LED PWM Controller</title>
+		<link>/2006/01/31/serial-1-rgb-led-pwm-controller/</link>
+					<comments>/2006/01/31/serial-1-rgb-led-pwm-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:32 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=11</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 1 LED using a PIC16F628 that has PWM control for the LED. It is controlled by sending 2 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-675" title="PIC16F628 Serial 1 RGB LED PWM Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u1RGBpwm.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 1 LED using a PIC16F628 that has PWM control for the LED. It is controlled by sending 2 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC loops and turns on the respective colors if they are less than or equal to theCount. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. The 4-bit code below has 15 linear values of PWM. The 8-bit code has 255 linear values of PWM. The 4-bit exponential PWM code has 15 values fit to an exponential curve. This allows for more &#8220;even&#8221; color levels because the human eye does not readily perceive linear changes in light intensity. For LED applications, the 4-bit exponential code is recommended.</p>
+<p><span id="more-11"></span></p>
+<p style="text-align: center;"><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic2.gif"><img loading="lazy" decoding="async" class="size-medium wp-image-676 aligncenter" title="Serial 1 RGB LED PWM Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic2-300x245.gif" alt="" width="300" height="245" srcset="/wp-content/uploads/2006/01/Schematic2-300x245.gif 300w, /wp-content/uploads/2006/01/Schematic2.gif 653w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; 4-bit PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm.jal">u1RGBpwm.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm.hex">hex</a>)<br />
+&#8211; 8-bit PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm8bit.jal">u1RGBpwm8bit.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm8bit.hex">hex</a>)<br />
+&#8211; 4-bit exponential PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwmE.jal">u1RGBpwmE</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwmE.hex">hex</a>)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/628SendRGBTestDR1r3.zip">628SendRGBTestDR1r3.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/serial-1-rgb-led-pwm-controller/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 8 RGB LED PWM Controller</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/</link>
+					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:21 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628 that has PWM control for the LEDs. It is controlled by sending 12 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-662" title="PIC16F628 Serial 8 RGB LED PWM Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u8RGBLED.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628 that has PWM control for the LEDs. It is controlled by sending 12 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED and turns on the respective colors if they are less than or equal to theCount then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. However, because this is running off the internal OSC (4MHz) and the code is not optimized, there is some flickering evident when moving one&#8217;s head from side to side.</p>
+<p><span id="more-13"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic1.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-663" title="PIC16F628 Serial 8 RGB LED PWM Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic1-300x231.gif" alt="" width="300" height="231" srcset="/wp-content/uploads/2006/01/Schematic1-300x231.gif 300w, /wp-content/uploads/2006/01/Schematic1.gif 932w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBpwm4.jal">u8RGBpwm4.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBpwm4.hex">hex</a>)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBpwmblinkenlightsDR1r1.zip">8RGBpwmblinkenlightsDR1r1</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

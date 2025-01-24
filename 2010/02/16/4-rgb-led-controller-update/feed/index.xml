@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 4 RGB LED Controller Update	</title>
+	<atom:link href="/2010/02/16/4-rgb-led-controller-update/feed/" rel="self" type="application/rss+xml" />
+	<link>/2010/02/16/4-rgb-led-controller-update/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Sat, 28 Sep 2013 18:00:48 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: andreas ioannides		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-19076</link>
+
+		<dc:creator><![CDATA[andreas ioannides]]></dc:creator>
+		<pubDate>Sat, 28 Sep 2013 18:00:48 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-19076</guid>
+
+					<description><![CDATA[16F628 Serial 4 LED PWM – 4-bit exp DR1r8.c
+
+HELLO I DO LIKE TO PLAY WITH PICS .. I DO LIKE THIS PROJECT 
+
+I NEED TO HELP ME ABOUT HOW TO COMPILE THE ABOVE C FILE ??I TRIED WITH MPLAM AND GIVE ME ERRORS .. please show me the way 
+
+andreas ioannides]]></description>
+			<content:encoded><![CDATA[<p>16F628 Serial 4 LED PWM – 4-bit exp DR1r8.c</p>
+<p>HELLO I DO LIKE TO PLAY WITH PICS .. I DO LIKE THIS PROJECT </p>
+<p>I NEED TO HELP ME ABOUT HOW TO COMPILE THE ABOVE C FILE ??I TRIED WITH MPLAM AND GIVE ME ERRORS .. please show me the way </p>
+<p>andreas ioannides</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: &#187; 8&#215;8 RGB LED Display semifluid.com		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-1387</link>
+
+		<dc:creator><![CDATA[&#187; 8&#215;8 RGB LED Display semifluid.com]]></dc:creator>
+		<pubDate>Tue, 10 Jan 2012 00:44:17 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-1387</guid>
+
+					<description><![CDATA[[...] again! The current setup is basically 4 of the original 4 RGB LED Controller boards and 12 of the updated DR1r3 boards. All 16 are wired in parallel and being controlled by my desktop machine. You can see an extended [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] again! The current setup is basically 4 of the original 4 RGB LED Controller boards and 12 of the updated DR1r3 boards. All 16 are wired in parallel and being controlled by my desktop machine. You can see an extended [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steve		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-744</link>
+
+		<dc:creator><![CDATA[Steve]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 01:49:07 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-744</guid>
+
+					<description><![CDATA[@Alan Parekh: (I&#039;m addressing all of these messages in the wrong order, I&#039;m sure...), I hand-routed the board.  It&#039;s more time-consuming but tons of fun.]]></description>
+			<content:encoded><![CDATA[<p>@Alan Parekh: (I&#8217;m addressing all of these messages in the wrong order, I&#8217;m sure&#8230;), I hand-routed the board.  It&#8217;s more time-consuming but tons of fun.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steve		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-743</link>
+
+		<dc:creator><![CDATA[Steve]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 01:47:48 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-743</guid>
+
+					<description><![CDATA[@Peter: I&#039;ve actually run into a speed barrier with the current generation of boards.  The problem is that 4MHz internal oscillator will only allow a maximum of 19200 baud (due to the SPBRG settings).  I can only achieve a maximum of ~12 FPS on the display due to the slow RS-232 speed.  This is because I am transmitting 144 bytes to update the entire display, so the maximum theoretical throughput at 19200 baud would be 16 fps.  If I could run these at 115200, I could have  a theoretical max of 100 fps.  If you plan on using these in a very timing-dependent manner, then you might want to consider increasing the clock speed to 20MHz (using a crystal or resonator) and increasing the RS-232 baud rate to 115200.  The newer 18F series would be even better, but frankly, the cost could be prohibitive for a larger-scale display.]]></description>
+			<content:encoded><![CDATA[<p>@Peter: I&#8217;ve actually run into a speed barrier with the current generation of boards.  The problem is that 4MHz internal oscillator will only allow a maximum of 19200 baud (due to the SPBRG settings).  I can only achieve a maximum of ~12 FPS on the display due to the slow RS-232 speed.  This is because I am transmitting 144 bytes to update the entire display, so the maximum theoretical throughput at 19200 baud would be 16 fps.  If I could run these at 115200, I could have  a theoretical max of 100 fps.  If you plan on using these in a very timing-dependent manner, then you might want to consider increasing the clock speed to 20MHz (using a crystal or resonator) and increasing the RS-232 baud rate to 115200.  The newer 18F series would be even better, but frankly, the cost could be prohibitive for a larger-scale display.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steve		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-742</link>
+
+		<dc:creator><![CDATA[Steve]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 01:43:07 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-742</guid>
+
+					<description><![CDATA[@Peter: The boards are currently being powered by my franken-supply, which is a PC power supply that I cannibalized.  The modules themselves are wired in parallel, so they share common +5V, GND, and serial RX bus.]]></description>
+			<content:encoded><![CDATA[<p>@Peter: The boards are currently being powered by my franken-supply, which is a PC power supply that I cannibalized.  The modules themselves are wired in parallel, so they share common +5V, GND, and serial RX bus.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steve		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-741</link>
+
+		<dc:creator><![CDATA[Steve]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 01:41:20 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-741</guid>
+
+					<description><![CDATA[@Peter: You are absolutely correct.  It turns out that the EAGLE library I was using to generate the boards had drill sizes that were just too small.  I was able to solder the sockets onto the board, it just was a little bit awkward because they are not placed through-hole!]]></description>
+			<content:encoded><![CDATA[<p>@Peter: You are absolutely correct.  It turns out that the EAGLE library I was using to generate the boards had drill sizes that were just too small.  I was able to solder the sockets onto the board, it just was a little bit awkward because they are not placed through-hole!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Peter		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-740</link>
+
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Mon, 28 Jun 2010 11:25:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-740</guid>
+
+					<description><![CDATA[Just got my boards back, and i have found that the holes for the pic pins are to small. Looks like your boards are the same. ah well. next time i will need to change the part]]></description>
+			<content:encoded><![CDATA[<p>Just got my boards back, and i have found that the holes for the pic pins are to small. Looks like your boards are the same. ah well. next time i will need to change the part</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Peter		</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/#comment-739</link>
+
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Fri, 18 Jun 2010 04:10:27 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-739</guid>
+
+					<description><![CDATA[Hi,
+
+Im wondering about the interface between the PC and the boards. what are ypou doing there, how are you powering the boards etc.
+
+its one thing to have a few running on a project board. i think its a different story to get em running in a 4x4 grid thats standalone.]]></description>
+			<content:encoded><![CDATA[<p>Hi,</p>
+<p>Im wondering about the interface between the PC and the boards. what are ypou doing there, how are you powering the boards etc.</p>
+<p>its one thing to have a few running on a project board. i think its a different story to get em running in a 4&#215;4 grid thats standalone.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

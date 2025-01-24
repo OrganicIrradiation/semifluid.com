@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PIC16F628 Serial 8 RGB LED PWM Controller	</title>
+	<atom:link href="/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/feed/" rel="self" type="application/rss+xml" />
+	<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 05 Jan 2012 19:45:40 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: Uttam Dutta		</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comment-88</link>
+
+		<dc:creator><![CDATA[Uttam Dutta]]></dc:creator>
+		<pubDate>Fri, 17 Jun 2011 14:33:29 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13#comment-88</guid>
+
+					<description><![CDATA[Can you please provide video for 8 RGB LED project, and expecting a RGB LED CUBE project and its details.
+regards,
+Uttam Dutta/India]]></description>
+			<content:encoded><![CDATA[<p>Can you please provide video for 8 RGB LED project, and expecting a RGB LED CUBE project and its details.<br />
+regards,<br />
+Uttam Dutta/India</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Sputnik		</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comment-87</link>
+
+		<dc:creator><![CDATA[Sputnik]]></dc:creator>
+		<pubDate>Wed, 04 Jun 2008 01:10:16 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13#comment-87</guid>
+
+					<description><![CDATA[How about making it where it stores the pattern in EEPROM and plays it back without need for serial connection?]]></description>
+			<content:encoded><![CDATA[<p>How about making it where it stores the pattern in EEPROM and plays it back without need for serial connection?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: RES		</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comment-86</link>
+
+		<dc:creator><![CDATA[RES]]></dc:creator>
+		<pubDate>Mon, 03 Mar 2008 00:08:10 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13#comment-86</guid>
+
+					<description><![CDATA[You could also charlieplex the rgb leds.]]></description>
+			<content:encoded><![CDATA[<p>You could also charlieplex the rgb leds.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Htoo Naing Win		</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comment-85</link>
+
+		<dc:creator><![CDATA[Htoo Naing Win]]></dc:creator>
+		<pubDate>Sun, 10 Dec 2006 08:20:06 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13#comment-85</guid>
+
+					<description><![CDATA[your projects are good, but I think it is better to write programs in assembly because I&#039;m not familar with jal very well. Thank you.]]></description>
+			<content:encoded><![CDATA[<p>your projects are good, but I think it is better to write programs in assembly because I&#8217;m not familar with jal very well. Thank you.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Matt Bates		</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comment-84</link>
+
+		<dc:creator><![CDATA[Matt Bates]]></dc:creator>
+		<pubDate>Fri, 08 Dec 2006 02:58:34 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13#comment-84</guid>
+
+					<description><![CDATA[Would you send me an example of your fantastic idea? SChematic and code of any type would be great! I just happen to have a free copy of BASIC for the pic so that would be nice.
+
+Thnaks for any help,
+
+Matt]]></description>
+			<content:encoded><![CDATA[<p>Would you send me an example of your fantastic idea? SChematic and code of any type would be great! I just happen to have a free copy of BASIC for the pic so that would be nice.</p>
+<p>Thnaks for any help,</p>
+<p>Matt</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

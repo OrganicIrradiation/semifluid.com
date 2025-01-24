@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mac OS X &#8211; semifluid.com</title>
+	<atom:link href="/category/software/mac-os-x/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:28:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Upgrading SSD in Apple MacBook Pro Retina (Late 2012)</title>
+		<link>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</link>
+					<comments>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 04 Apr 2016 05:37:51 +0000</pubDate>
+				<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=5798</guid>
+
+					<description><![CDATA[For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, but Apple decided to use a proprietary connector for the SSD (rather than using the mSATA or, more recently, the M.2 standards), which has made upgrading more difficult/expensive than it should be. However, even though there were a few minor roadblocks, I ended up successfully upgrading the SSD using a combination of 3rd party modules. Since I could not find anecdotal reports of similar upgrades, I wanted to throw mine out into the ether.<br />
+<span id="more-5798"></span></p>
+<p>In late 2012, iFixit.com posted a teardown of the <a href="https://www.ifixit.com/Teardown/MacBook+Pro+13-Inch+Retina+Display+Late+2012+Teardown/11225">MacBook Pro 13&#8243; Retina Display Late 2012</a> and noted that:</p>
+<blockquote>
+<ul>
+<li>The most striking layout change resulting from the shrink from a 15&#8243; to 13&#8243; form factor is the rearranged battery cells. This allowed Apple&#8217;s designers to cleverly tuck the SSD away underneath the trackpad assembly.</li>
+<li>The empty space next to the SSD is very un-Apple. It&#8217;s not like them to leave big air gaps in their newest, sleekest designs.</li>
+<li>Our first thought was that a standard 2.5&#8243; laptop drive might fit in this space, and it almost looks like this little nook was designed with that in mind.</li>
+<li>Our 9.5mm Crucial SSD didn&#8217;t allow the bottom cover to be closed, but just by a smidge. We&#8217;ll see if a 7 mm or 5 mm super-slim hard drive could be incorporated into the space.</li>
+</ul>
+</blockquote>
+<p>iFixit later posted a guide to <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">replacing the SSD</a> in early 2013, but at the time, the only SSD alternatives appeared to be 3rd party modules like the <a href="http://amzn.to/1N4A9NF">Transcend JetDrive</a> ($280 for 480GB drive and external USB 3.0 case) or the <a href="http://eshop.macsales.com/shop/SSD/OWC/Air-Retina/Apple-MacBook-Pro-Retina-2012-Drive-Internal-Flash">OWC Aura</a> ($218 for 480GB drive only).</p>
+<p>These 3rd party options, which have been designed specifically for the MacBook Pro&#8217;s SSD form factor, have been outside of my price range. However, recently, I&#8217;ve seen adapters available that would allow me to use smaller form factor SSDs with my A1425 MacBook Pro. For example:</p>
+<ul>
+<li>mSATA SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="https://amzn.to/2J5T5Rh">Amazon</a>, <a href="http://www.dx.com/p/msata-to-apple-2012-laptop-pc-7-17-ssd-a1425-a1398-mc975-me662-419710?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+<li>M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="http://amzn.to/1SLVDmS">Amazon</a>, <a href="http://www.dx.com/p/m-2-ngff-ssd-to-2012-version-apple-macbook-pro-a1425-a1398-ssd-adapter-card-22-x-60mm-420132?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+</ul>
+<p>Combine these adapters with either a <a href="http://amzn.to/25FCni7">Samsung 850 EVO mSATA SSD</a> or a <a href="http://amzn.to/25FCoCu">Transcend M.2 SSD</a> (respectively) and you could potentially upgrade the SSD for significantly less than the designed-from-scratch modules offered by Transcend and OWC. I researched the adapters a bit more and found that if I chose to go the M.2 route, that I would need to make sure the new drive was SATA rather than PCIe (such as the <a href="http://amzn.to/1SLVHDa">Samsung 950 PRO</a>). At the end of the day, I ordered a <a href="http://amzn.to/1SLVDmS">M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter</a> and a <a href="http://amzn.to/25FCoCu">512GB Transcend M.2 SSD</a> from Amazon and decided to see if I could get it up and running.</p>
+<p>I wasn&#8217;t sure if there were going to be any performance gains/penalties, so I checked the speed of the original OEM 256GB SSD using <a href="https://itunes.apple.com/us/app/blackmagic-disk-speed-test/id425264550?mt=12">Blackmagic Disk Speed Test</a>:</p>
+<p><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Apple SSD" width="648" height="697" class="aligncenter size-large wp-image-5805" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD.png 1260w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>Not too bad.</p>
+<p>When I received the adapter and new SSD in the mail, I backed up my old SSD onto an external drive using Time Machine. I also created an <a href="http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/">El Capitan boot drive</a> so that I could wipe the old drive and restore the Time Machine backup to the new SSD. I erased the old drive and although I tried securely wiping the drive, there are some <a href="http://apple.stackexchange.com/questions/6278/how-to-securely-erase-an-ssd-drive">lingering issues with wiping SSDs</a>. Now I was ready for the transplant. Using the iFixit <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">SSD Replacement guide</a>, I removed the old SSD in preparation for the new module.</p>
+<p>The M.2 drive fit perfectly into the adapter:</p>
+<p><img decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg" alt="Transcend 512GB M.2 in A1425 Adapter" width="648" height="367" class="aligncenter size-large wp-image-5809" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-300x170.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-768x435.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>And I threw the whole shebang into the MacBook&#8217;s drive caddy:</p>
+<p><img decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg" alt="Transcend 512GB M.2 in A1425 Adapter in HDD caddy" width="648" height="573" class="aligncenter size-large wp-image-5811" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-300x265.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-768x680.jpg 768w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy.jpg 1808w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>After reassembling the machine, I started up the computer using the boot disk and&#8230; It worked. Awesome. I restored the time machine backup onto the new drive and it booted up without any issues. One little hiccup is that Apple disables <a href="https://en.wikipedia.org/wiki/Trim_(computing)">TRIM</a> for 3rd party SSDs, so you need to make sure to enable it after-the-fact using <a href="http://osxdaily.com/2015/10/29/use-trimforce-trim-ssd-mac-os-x/">trimforce</a>. It&#8217;s also faster than the original OEM SSD:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Transcend SSD" width="648" height="697" class="aligncenter size-large wp-image-5812" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD.png 1260w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>If you have an older MacBook Pro that&#8217;s running out of space, this is an easy and very worthwhile upgrade.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
+			<slash:comments>39</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Magic Lantern HDR video to tonemapped video with MATLAB scripts</title>
+		<link>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/</link>
+					<comments>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2013 20:40:06 +0000</pubDate>
+				<category><![CDATA[Cooking]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3713</guid>
+
+					<description><![CDATA[I have a Canon T3i with a Canon EF 50mm f1.4 lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called Magic Lantern that provides a some interesting (and useful!) functions. One of them is HDR video. Here&#8217;s a beautiful example [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have a <a href="http://www.amazon.com/gp/product/B004J3V90Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004J3V90Y&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon T3i</a> with a <a href="http://www.amazon.com/gp/product/B00009XVCZ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00009XVCZ&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon EF 50mm f1.4</a> lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called <a href="http://www.magiclantern.fm/">Magic Lantern</a> that provides a some interesting (and useful!) <a href="http://www.magiclantern.fm/features.html">functions</a>.  One of them is HDR video.  Here&#8217;s a beautiful example of what can be done:</p>
+<p>http://www.youtube.com/watch?v=bLxYTT_0GEI</p>
+<p>I tried my hand at processing the HDR video output and was able to get a reasonably nice tone-mapped video:</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>After the break, you&#8217;ll find how I processed the initial Magic Lantern video using MATLAB and exiftool and tone-mapped the output using Luminance HDR.</p>
+<p><span id="more-3713"></span></p>
+<p>First, we need to process the video with a function I (poorly) named &#8216;Step1MovieToInterpolatedFrames.m&#8217; to separate the dark and light frames.  The video is first loaded using the VideoReader object.  Then we check to see if the first frame is darker or lighter than the second. This is admittedly a bit of a hack, but given the gross differences in exposure, seems to work well enough.  After determining whether the first is light or dark, we then loop through all the frames of the movie, saving the real frames and appending an &#8220;L&#8221; to signify they are &#8220;light&#8221; and, also, interpolate between the frames.  Why go through the bother of interpolation? Well, there will be image registration problems with the tone-mapping if we assume that a given dark frame matches the earlier or later light frame, especially with high-speed motion. Interpolation helps us &#8220;smooth&#8221; these errors out. Note that ideally we would use a morphing algorithm (similar to the one used by Twixtor), but this is the quickest method for the time being. After saving each frame, I use <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a> to assign an aperture value.  Note that this has <em>nothing</em> to do with the real aperture value, but helps Luminance HDR tonemap the composite image. We do this for the dark frames as well, but now we take into account the EV shift in the video&#8217;s ISO when writing the aperture value using exiftool.</p>
+<p>The second function, &#8216;Step2FramesToHDRFrames.m&#8217;, takes the individual light and dark frames and generates tone-mapped images.  We go through every frame and use the Luminance HDR CLI (command line interface) to generate an HDR image and tone-map it (here using the mantiuk08 tone-mapping operator).</p>
+<p>And the final function (&#8216;Step3HDRFramesToVideos.m&#8217;) compiles all of the tone-mapped images into videos (one for the light frames, one for the dark frames, and one for the tonemapped frames).</p>
+<p>The code can be found at the bottom of the post.</p>
+<p>So, what do each of the Luminance HDR <a href="http://osp.wikidot.com/parameters-for-photographers">tonemapping operators</a> look like (with their default parameters) when applied to a video?  Here&#8217;s the source (note that YouTube strips out the alternating frames, you can find the original MOV <a href="/wp-content/uploads/2013/10/MVI_7961.MOV">here</a>):</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - RAW" width="648" height="365" src="https://www.youtube.com/embed/HxZaAu9Y2KQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Ashikhmin</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Ashikmin" width="648" height="365" src="https://www.youtube.com/embed/L43U3v2Eg_o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Drago</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Drago" width="648" height="365" src="https://www.youtube.com/embed/ZahHcLbSieg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Durand</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Durand" width="648" height="365" src="https://www.youtube.com/embed/TAgFLnN038g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Fattal</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Fattal" width="648" height="365" src="https://www.youtube.com/embed/3GeijU30Uu8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 06</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk06" width="648" height="365" src="https://www.youtube.com/embed/NnG-rZrbAGA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 08</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk08" width="648" height="365" src="https://www.youtube.com/embed/r16tT6ZO8os?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Pattanaik</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Pattanaik" width="648" height="365" src="https://www.youtube.com/embed/gqaQjkBCvtc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 02</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 05</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard05" width="648" height="365" src="https://www.youtube.com/embed/6HeQBwKgzB0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><script src="https://gist.github.com/OrganicIrradiation/4d63a870c3ac852f4a0f.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="/wp-content/uploads/2013/10/MVI_7961.MOV" length="87059684" type="video/quicktime" />
+
+			</item>
+	</channel>
+</rss>

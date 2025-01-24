@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PIC12F683 High Voltage Flyback Transformer Driver	</title>
+	<atom:link href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/feed/" rel="self" type="application/rss+xml" />
+	<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:21:46 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: M		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-21924</link>
+
+		<dc:creator><![CDATA[M]]></dc:creator>
+		<pubDate>Sun, 08 Dec 2013 06:57:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-21924</guid>
+
+					<description><![CDATA[I had good success with this after changing PIN_A1 to PIN_A4 in the code. Initially I made a mistake in my PCB layout based on the schematic for pin 3 signal out.  PIN_A4 corresponds to the pin shown in the schematic.
+
+I see super good efficiency running .6 amps from 15v across the primary with a 5/8&quot; arc.  I&#039;m very impressed by how well this works with a N channel irf840 mosfet, sony color tv flyback xformer and delay_us (28) ; 
+
+Great design.]]></description>
+			<content:encoded><![CDATA[<p>I had good success with this after changing PIN_A1 to PIN_A4 in the code. Initially I made a mistake in my PCB layout based on the schematic for pin 3 signal out.  PIN_A4 corresponds to the pin shown in the schematic.</p>
+<p>I see super good efficiency running .6 amps from 15v across the primary with a 5/8&#8243; arc.  I&#8217;m very impressed by how well this works with a N channel irf840 mosfet, sony color tv flyback xformer and delay_us (28) ; </p>
+<p>Great design.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: m		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-21863</link>
+
+		<dc:creator><![CDATA[m]]></dc:creator>
+		<pubDate>Thu, 05 Dec 2013 02:49:43 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-21863</guid>
+
+					<description><![CDATA[should i leave all the other pins floating like in the schematic? I have no oscillation from pin 3 / gp4.]]></description>
+			<content:encoded><![CDATA[<p>should i leave all the other pins floating like in the schematic? I have no oscillation from pin 3 / gp4.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: atlandic		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-19660</link>
+
+		<dc:creator><![CDATA[atlandic]]></dc:creator>
+		<pubDate>Sat, 02 Nov 2013 09:34:15 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-19660</guid>
+
+					<description><![CDATA[GOOD WORK PLEASE DO IT ONLY THING IS THE SKY LIMIT 
+GOOD DAY]]></description>
+			<content:encoded><![CDATA[<p>GOOD WORK PLEASE DO IT ONLY THING IS THE SKY LIMIT<br />
+GOOD DAY</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Aristotle		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-14049</link>
+
+		<dc:creator><![CDATA[Aristotle]]></dc:creator>
+		<pubDate>Wed, 07 Nov 2012 09:04:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-14049</guid>
+
+					<description><![CDATA[Hi
+most mains-operated CRT-TVs used bipolar transistors for H-output stage, with Vcs ratings of 1100-1500V. I suggest take a good hard look at Service Manuals and any other supporting literature of large TVs, with particular attention to the base-drive arrangements because it is crucial to survival of these devices.
+The many auxiliary windings are variously used to drive dynamic-convergence, East-West modulator/vertical output stage, etc. Partly for cost reasons but also in absence of perfect regulation o fEHT, the deflection-circuits need to DECREASE their output as EHT load increases with brightness - this maintains picture at correct size (more or less!) as picture-content and user-set brightness varies.
+TV scanning uses roughly 52 us scan (&quot;ON&quot;) time and 12us flyback (&quot;OFF&quot;) - this is probably the best way to run these LOPTs.]]></description>
+			<content:encoded><![CDATA[<p>Hi<br />
+most mains-operated CRT-TVs used bipolar transistors for H-output stage, with Vcs ratings of 1100-1500V. I suggest take a good hard look at Service Manuals and any other supporting literature of large TVs, with particular attention to the base-drive arrangements because it is crucial to survival of these devices.<br />
+The many auxiliary windings are variously used to drive dynamic-convergence, East-West modulator/vertical output stage, etc. Partly for cost reasons but also in absence of perfect regulation o fEHT, the deflection-circuits need to DECREASE their output as EHT load increases with brightness &#8211; this maintains picture at correct size (more or less!) as picture-content and user-set brightness varies.<br />
+TV scanning uses roughly 52 us scan (&#8220;ON&#8221;) time and 12us flyback (&#8220;OFF&#8221;) &#8211; this is probably the best way to run these LOPTs.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: &#187; Website Host Transfer Complete + Sparks semifluid.com		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-4912</link>
+
+		<dc:creator><![CDATA[&#187; Website Host Transfer Complete + Sparks semifluid.com]]></dc:creator>
+		<pubDate>Thu, 01 Mar 2012 00:55:03 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-4912</guid>
+
+					<description><![CDATA[[...] an added bonus, I&#8217;ve attached some pictures of sparks generated with my high voltage power supply, which I was able to fix. It appears as though the old MOSFET had blown, so I was able to recreate [...]
+
+[WORDPRESS HASHCASH] The comment&#039;s actual post text did not contain your blog url (http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver) and so is spam.]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] an added bonus, I&#8217;ve attached some pictures of sparks generated with my high voltage power supply, which I was able to fix. It appears as though the old MOSFET had blown, so I was able to recreate [&#8230;]</p>
+<p>[WORDPRESS HASHCASH] The comment&#8217;s actual post text did not contain your blog url (<a href="http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver" rel="nofollow ugc">http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver</a>) and so is spam.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: &#187; Some More High Voltage Videos semifluid.com		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-4907</link>
+
+		<dc:creator><![CDATA[&#187; Some More High Voltage Videos semifluid.com]]></dc:creator>
+		<pubDate>Wed, 29 Feb 2012 20:56:53 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-4907</guid>
+
+					<description><![CDATA[[...] flyback transformer driver was working intermittently for a period of time then suddenly stopped working. It seems as though [...]
+
+[WORDPRESS HASHCASH] The comment&#039;s actual post text did not contain your blog url (http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver) and so is spam.]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] flyback transformer driver was working intermittently for a period of time then suddenly stopped working. It seems as though [&#8230;]</p>
+<p>[WORDPRESS HASHCASH] The comment&#8217;s actual post text did not contain your blog url (<a href="http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver" rel="nofollow ugc">http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver</a>) and so is spam.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: &#187; High Voltage Flyback Transformer Videos semifluid.com		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-4904</link>
+
+		<dc:creator><![CDATA[&#187; High Voltage Flyback Transformer Videos semifluid.com]]></dc:creator>
+		<pubDate>Wed, 29 Feb 2012 20:38:40 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-4904</guid>
+
+					<description><![CDATA[[...] Here are a couple of videos from my high voltage flyback transformer driver. [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] Here are a couple of videos from my high voltage flyback transformer driver. [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Santiago		</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-590</link>
+
+		<dc:creator><![CDATA[Santiago]]></dc:creator>
+		<pubDate>Tue, 06 Apr 2010 15:43:10 +0000</pubDate>
+		<guid isPermaLink="false">/?p=34#comment-590</guid>
+
+					<description><![CDATA[FBPri = Flyback primary winding (thin pins on the bottom of the flyback, you must find it out wich pair to use)
+
+FBSec = Flyback secondary winding (one thick wire that comes out on the top of the flyback, and the other, the ground, is a pin located on the bottom of the flyback, you must find this too)
+
+to find the pairs that match, use a voltimeter, you should read a very low resistance for the primary, i think that should have less than 5 ohms, becouse the primary has less than 100 turns of wire, it works with 150v, and more than 20 ohm for the secondary, becouse has more than 1000 turns of wire, the relation between primary and secondary is how much the flyback will amplify the voltage, i don&#039;t have a flyback right here to test it. there are special pins on the bottom for different propouses, this give us different voltages too, but not as much as 10kv. some flybacks has a voltage doubler / triplier to elevate even more the voltage up to 25kv / 30kv, also if you wish to increase even more the voltage you can use the marx generator at the output of the secondary... it&#039;s very interesting.
+
+i&#039;m sorry if my english is not clear enough, i&#039;m out of practice...
+
+regards from argentina!!!
+
+PD: steven, very good ideas, i&#039;m learning a lot reading all your projects, i&#039;m making the osciloscope and other stuff too...]]></description>
+			<content:encoded><![CDATA[<p>FBPri = Flyback primary winding (thin pins on the bottom of the flyback, you must find it out wich pair to use)</p>
+<p>FBSec = Flyback secondary winding (one thick wire that comes out on the top of the flyback, and the other, the ground, is a pin located on the bottom of the flyback, you must find this too)</p>
+<p>to find the pairs that match, use a voltimeter, you should read a very low resistance for the primary, i think that should have less than 5 ohms, becouse the primary has less than 100 turns of wire, it works with 150v, and more than 20 ohm for the secondary, becouse has more than 1000 turns of wire, the relation between primary and secondary is how much the flyback will amplify the voltage, i don&#8217;t have a flyback right here to test it. there are special pins on the bottom for different propouses, this give us different voltages too, but not as much as 10kv. some flybacks has a voltage doubler / triplier to elevate even more the voltage up to 25kv / 30kv, also if you wish to increase even more the voltage you can use the marx generator at the output of the secondary&#8230; it&#8217;s very interesting.</p>
+<p>i&#8217;m sorry if my english is not clear enough, i&#8217;m out of practice&#8230;</p>
+<p>regards from argentina!!!</p>
+<p>PD: steven, very good ideas, i&#8217;m learning a lot reading all your projects, i&#8217;m making the osciloscope and other stuff too&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

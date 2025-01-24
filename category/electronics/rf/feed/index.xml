@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>RF &#8211; semifluid.com</title>
+	<atom:link href="/category/electronics/rf/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:20:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Arduino FIO DS18B20 Temperature Logger</title>
+		<link>/2012/09/10/arduino-fio-ds18b20-temperature-logge/</link>
+					<comments>/2012/09/10/arduino-fio-ds18b20-temperature-logge/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 11 Sep 2012 00:04:51 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1337</guid>
+
+					<description><![CDATA[We have a Arduino Fio temperature logger, so now maybe we can increase the accuracy by adding an external temperature sensor. I have a couple of DS18B20 Programmable Resolution 1-Wire Digital Thermometers, so I thought, heck, let&#8217;s try one out! These temperature sensors are much more accurate out-of-the-box, so I don&#8217;t need to deal with [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have a <a href="http://semifluid.com/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer">Arduino Fio temperature logger</a>, so now maybe we can increase the accuracy by adding an external temperature sensor.  I have a couple of <a href="http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18B20</a> Programmable Resolution 1-Wire Digital Thermometers, so I thought, heck, let&#8217;s try one out!</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0246.jpg"><img fetchpriority="high" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0246-1024x768.jpg" alt="" title="Arduino Fio DS18B20" width="600" height="450" class="aligncenter size-large wp-image-1357" srcset="/wp-content/uploads/2012/09/IMG_0246-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0246-300x225.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>These temperature sensors are much more accurate out-of-the-box, so I don&#8217;t need to deal with calibration (which I did need to worry about with the internal thermometer).  In addition, using separate, discrete components allows for the possibility of putting temperature sensors directly on/in whatever you may want to measure (rather than merely measuring the ambient temperature) and the potential for multiple temperature sensors with a single Arduino Fio (which are available at <a href="https://www.amazon.com/dp/B005K0O1PA/ref=as_li_ss_til?tag=semifluidcom-20&#038;camp=0&#038;creative=0&#038;linkCode=as4&#038;creativeASIN=B005K0O1PA&#038;adid=1KB2CEGSB0E1856D3DXX&#038;" target="_blank">Amazon.com</a>).</p>
+<p><span id="more-1337"></span></p>
+<p>So, the most important addition is the <a href="http://www.arduino.cc/playground/Learning/OneWire">Arduino OneWire.h library</a>.  Once we have that, all that&#8217;s needed is two simple declarations:</p>
+<p>[code lang=&#8221;arduino&#8221;]<br />
+#include &lt;OneWire.h&gt; // Get here: http://www.arduino.cc/playground/Learning/OneWire<br />
+OneWire ds(DS18B20Data);<br />
+[/code]</p>
+<p>And a modified readTemp function:</p>
+<p>[code lang=&#8221;arduino&#8221;]<br />
+// See: http://www.arduino.cc/playground/Learning/OneWire<br />
+float readTempDS18B20() {<br />
+  int HighByte, LowByte, TReading, SignBit, Tc_100;<br />
+  byte i;<br />
+  byte present = 0;<br />
+  byte data[12];<br />
+  byte addr[8];<br />
+  float resultTempFloat;</p>
+<p>digitalWrite(DS18B20Power,HIGH);     // Power up the DS18B20<br />
+  delay(250);</p>
+<p>ds.search(addr);<br />
+  if ( OneWire::crc8( addr, 7) != addr[7]) {<br />
+      return 0.0;                      // CRC is not valid!<br />
+  }</p>
+<p>ds.reset();<br />
+  ds.select(addr);<br />
+  ds.write(0x44,1);                   // Start conversion, with parasite power on at the end</p>
+<p>delay(1000);                        // Maybe 750ms is enough, maybe not<br />
+                                      // We might do a ds.depower() here,<br />
+                                      // but the reset will take care of it.</p>
+<p>present = ds.reset();<br />
+  ds.select(addr);<br />
+  ds.write(0xBE);                     // Read Scratchpad</p>
+<p>for ( i = 0; i &lt; 9; i++) {          // we need 9 bytes<br />
+    data[i] = ds.read();<br />
+  }<br />
+  LowByte = data[0];<br />
+  HighByte = data[1];<br />
+  TReading = (HighByte &lt;&lt; 8) + LowByte;<br />
+  SignBit = TReading &amp; 0x8000;        // Test most sig bit<br />
+  if (SignBit)                        // Negative<br />
+  {<br />
+    TReading = (TReading ^ 0xffff) + 1;    // Take 2&#8217;s comp<br />
+  }</p>
+<p>ds.reset_search();<br />
+  digitalWrite(DS18B20Power,LOW);     // Turn off DS18B20</p>
+<p>resultTempFloat = (float) (6 * TReading) + TReading / 4;  // Multiply by (100 * 0.0625) or 6.25<br />
+  resultTempFloat = resultTempFloat/100;<br />
+  resultTempFloat = resultTempFloat * 1.8 + 32.0;  // Convert to F<br />
+  return resultTempFloat;<br />
+}<br />
+[/code]</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0247.jpg"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0247-1024x768.jpg" alt="" title="Arduino Fio DS18B20 Close-up" width="600" height="450" class="aligncenter size-large wp-image-1358" srcset="/wp-content/uploads/2012/09/IMG_0247-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0247-300x225.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>And we are ready to read!  Note that the measurement times are a bit longer (I measured ~75 seconds in between transmissions) because of the 1 second settling time for the DS18B20.  Here is some example output from <a href="https://ttssh2.osdn.jp/index.html.en">TeraTerm</a> (I measured the ambient temperature for measurements 1-10, then put my thumb onto the DS18B20 for measurements 11 &amp; 12, and then allowed the DS18B20 to return to ambient for readings 13-20):</p>
+<p>[code gutter=&#8221;false&#8221;]<br />
+ª       0       0       0<br />
+~<br />
+ Aª     1       3.303   71.70<br />
+~<br />
+ Aª     2       3.303   71.14<br />
+~<br />
+ @ª     3       3.303   71.22<br />
+~<br />
+ @ª     4       3.303   71.07<br />
+~<br />
+ ?ª     5       3.303   71.30<br />
+~<br />
+ @ª     6       3.303   70.95<br />
+~<br />
+ @ª     7       3.303   71.26<br />
+~<br />
+ ?ª     8       3.303   71.60<br />
+~<br />
+ ?ª     9       3.303   71.35<br />
+~<br />
+ 0ª     10      3.303   71.01<br />
+~<br />
+ 7ª     11      3.303   77.35<br />
+~<br />
+ 6ª     12      3.303   77.35<br />
+~<br />
+ Aª     13      3.303   73.72<br />
+~<br />
+ Aª     14      3.303   72.14<br />
+~<br />
+ Aª     15      3.303   71.66<br />
+~<br />
+ Aª     16      3.303   71.49<br />
+~<br />
+ Aª     17      3.303   71.27<br />
+~<br />
+ Aª     18      3.303   71.40<br />
+~<br />
+ Aª     19      3.303   71.23<br />
+~<br />
+ Aª     20      3.303   70.91<br />
+[/code]</p>
+<p>I stored the data for another 40 readings, cut out all of the trash data between the carriage returns (deliminating the readings) and sync characters (which visually show up as &#8220;ª&#8221; in TeraTerm), removed the initial sync reading, and <a href="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyDS18B20.nb">plotted the temperature data in Mathematica</a> (voltage was constant):</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyDS18B20.png"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyDS18B20-300x177.png" alt="" title="SuperSleepyDS18B20" width="300" height="177" class="aligncenter size-medium wp-image-1347" srcset="/wp-content/uploads/2012/09/SuperSleepyDS18B20-300x177.png 300w, /wp-content/uploads/2012/09/SuperSleepyDS18B20.png 360w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Compare to the temperature results of the <a href="http://semifluid.com/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer">Arduino Fio internal temperature sensor</a>:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyTempAndVolts.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyTempAndVolts-300x177.png" alt="" title="SuperSleepyTempAndVolts" width="300" height="177" class="aligncenter size-medium wp-image-1334" srcset="/wp-content/uploads/2012/09/SuperSleepyTempAndVolts-300x177.png 300w, /wp-content/uploads/2012/09/SuperSleepyTempAndVolts.png 360w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0248.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0248-1024x768.jpg" alt="" title="Arduino Fio DS18B20 DOF" width="600" height="450" class="aligncenter size-large wp-image-1359" srcset="/wp-content/uploads/2012/09/IMG_0248-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0248-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Here&#8217;s all of the Arduino Fio SuperSleepyDS18B20 code:</p>
+<p>[code lang=&#8221;arduino&#8221;]<br />
+/*<br />
+ * SuperSleepyDS18B20 SuperSleepyDS18B20.ino<br />
+ * Steven A Cholewiak &#8211; www.semifluid.com<br />
+ *<br />
+ * This sketch takes advantage of the XBee&#8217;s hibernation mode as<br />
+ * well as the Ardunio Fio&#8217;s Power Save Mode to grossly reduce power<br />
+ * consumption.  It impliments a temperature logging IC (DS18B20)<br />
+ * That has been connected to D3,D4,D5.  Provides a much more<br />
+ * accurate temperature measurement than the internal thermometer<br />
+ * (see SuperSleepyTempAndVolts.ino).<br />
+ *<br />
+ */</p>
+<p>#include &lt;avr/wdt.h&gt;<br />
+#include &lt;avr/sleep.h&gt;<br />
+#include &lt;avr/interrupt.h&gt;<br />
+#include &lt;OneWire.h&gt; // Get here: http://www.arduino.cc/playground/Learning/OneWire</p>
+<p>const int ledPin = 13;<br />
+const int DS18B20Ground = 3;           // DS18B20 Pin 1<br />
+const int DS18B20Data = 4;             // DS18B20 Pin 2 NOTE: 4.7k pull-up resistor required between data and power<br />
+const int DS18B20Power = 5;            // DS18B20 Pin 3<br />
+const int XBeeSleep = 2;               // Connect to XBee DTR<br />
+const int waitPeriod = 8;              // Number of 8 second cycles before waking<br />
+                                       // up XBee and sending data (8*8 = 64 seconds)</p>
+<p>OneWire ds(DS18B20Data);               // Setup DS18S20 Temperature chip I/O</p>
+<p>// See: http://code.google.com/p/tinkerit/wiki/SecretVoltmeter<br />
+float readVcc() {<br />
+  signed long resultVcc;<br />
+  float resultVccFloat;<br />
+  // Read 1.1V reference against AVcc<br />
+  ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);<br />
+  delay(10);                           // Wait for Vref to settle<br />
+  ADCSRA |= _BV(ADSC);                 // Convert<br />
+  while (bit_is_set(ADCSRA,ADSC));<br />
+  resultVcc = ADCL;<br />
+  resultVcc |= ADCH&lt;&lt;8;<br />
+  resultVcc = 1126400L / resultVcc;    // Back-calculate AVcc in mV<br />
+  resultVccFloat = (float) resultVcc / 1000.0; // Convert to Float<br />
+  return resultVccFloat;<br />
+}</p>
+<p>// See: http://www.arduino.cc/playground/Learning/OneWire<br />
+float readTempDS18B20() {<br />
+  int HighByte, LowByte, TReading, SignBit, Tc_100;<br />
+  byte i;<br />
+  byte present = 0;<br />
+  byte data[12];<br />
+  byte addr[8];<br />
+  float resultTempFloat;</p>
+<p>digitalWrite(DS18B20Power,HIGH);     // Power up the DS18B20<br />
+  delay(250);</p>
+<p>ds.search(addr);<br />
+  if ( OneWire::crc8( addr, 7) != addr[7]) {<br />
+      return 0.0;                      // CRC is not valid!<br />
+  }</p>
+<p>ds.reset();<br />
+  ds.select(addr);<br />
+  ds.write(0x44,1);                   // Start conversion, with parasite power on at the end</p>
+<p>delay(1000);                        // Maybe 750ms is enough, maybe not<br />
+                                      // We might do a ds.depower() here,<br />
+                                      // but the reset will take care of it.</p>
+<p>present = ds.reset();<br />
+  ds.select(addr);<br />
+  ds.write(0xBE);                     // Read Scratchpad</p>
+<p>for ( i = 0; i &lt; 9; i++) {          // we need 9 bytes<br />
+    data[i] = ds.read();<br />
+  }<br />
+  LowByte = data[0];<br />
+  HighByte = data[1];<br />
+  TReading = (HighByte &lt;&lt; 8) + LowByte;<br />
+  SignBit = TReading &amp; 0x8000;        // Test most sig bit<br />
+  if (SignBit)                        // Negative<br />
+  {<br />
+    TReading = (TReading ^ 0xffff) + 1;    // Take 2&#8217;s comp<br />
+  }</p>
+<p>ds.reset_search();<br />
+  digitalWrite(DS18B20Power,LOW);     // Turn off DS18B20</p>
+<p>resultTempFloat = (float) (6 * TReading) + TReading / 4;  // Multiply by (100 * 0.0625) or 6.25<br />
+  resultTempFloat = resultTempFloat/100;<br />
+  resultTempFloat = resultTempFloat * 1.8 + 32.0;  // Convert to F<br />
+  return resultTempFloat;<br />
+}</p>
+<p>void sleepNow()<br />
+{<br />
+  /* Now is the time to set the sleep mode. In the Atmega8 datasheet<br />
+   * http://www.atmel.com/dyn/resources/prod_documents/doc2486.pdf on page 35<br />
+   * there is a list of sleep modes which explains which clocks and<br />
+   * wake up sources are available in which sleep modus.<br />
+   *<br />
+   * In the avr/sleep.h file, the call names of these sleep modus are to be found:<br />
+   *<br />
+   * The 5 different modes are:<br />
+   *     SLEEP_MODE_IDLE         -the least power savings<br />
+   *     SLEEP_MODE_ADC<br />
+   *     SLEEP_MODE_PWR_SAVE<br />
+   *     SLEEP_MODE_STANDBY<br />
+   *     SLEEP_MODE_PWR_DOWN     -the most power savings<br />
+   *<br />
+   *  the power reduction management &lt;avr/power.h&gt;  is described in<br />
+   *  http://www.nongnu.org/avr-libc/user-manual/group__avr__power.html<br />
+   */</p>
+<p>set_sleep_mode(SLEEP_MODE_PWR_SAVE); // Sleep mode is set here</p>
+<p>sleep_enable();                      // Enables the sleep bit in the mcucr register<br />
+                                       // so sleep is possible. just a safety pin<br />
+  sleep_mode();                        // Here the device is actually put to sleep!!<br />
+                                       // THE PROGRAM CONTINUES FROM HERE AFTER WAKING UP<br />
+  sleep_disable();                     // Dirst thing after waking from sleep:<br />
+                                       // disable sleep&#8230;<br />
+}</p>
+<p>ISR (WDT_vect) {                       // WDT Wakeup<br />
+  cli();<br />
+  wdt_disable();<br />
+  sei();<br />
+}</p>
+<p>// Variable Definition<br />
+volatile int MeasurementID = 1;<br />
+volatile int timeKeeper = 0;<br />
+volatile float averageVcc = 0.0;<br />
+volatile float averageTemp = 0.0;</p>
+<p>void setup(void) {<br />
+  Serial.begin(57600);<br />
+  pinMode(DS18B20Ground, OUTPUT);<br />
+  digitalWrite(DS18B20Ground, 0);      // Ground the DS18B20 GND pin<br />
+  pinMode(XBeeSleep, OUTPUT);</p>
+<p>digitalWrite(XBeeSleep, 0);          // Enable XBee<br />
+  digitalWrite(ledPin, 1);             // Turn on Notification LED<br />
+  delay(4000);                         // 4 second LED blink, good for wireless programming<br />
+  digitalWrite(ledPin, 0);             // Turn off Notification LED</p>
+<p>Serial.write( 170 );                 // Sync Byte<br />
+  Serial.print( &#8216;\t&#8217; );                // Tab<br />
+  Serial.print( &#8216;0&#8217; );                 // Reading # (0)<br />
+  Serial.print( &#8216;\t&#8217; );                // Tab<br />
+  Serial.print( &#8216;0&#8217; );                 // Voltage (unmeasured, so 0)<br />
+  Serial.print( &#8216;\t&#8217; );                // Tab<br />
+  Serial.println( &#8216;0&#8217; );               // Temperature (unmeasured, so 0)</p>
+<p>digitalWrite(XBeeSleep, 1);          // Disable XBee<br />
+}</p>
+<p>void loop(void) {<br />
+  averageVcc = averageVcc + (float) readVcc();<br />
+  averageTemp = averageTemp + (float) readTempDS18B20();</p>
+<p>if (timeKeeper == (waitPeriod-1)) {  // Transmit every 8*8 (64) seconds<br />
+    digitalWrite(XBeeSleep, 0);        // Enable XBee<br />
+    delay(50);                         // Wait for XBee Wakeup</p>
+<pre><code>Serial.write( 170 );               // Sync Byte
+Serial.print( '\t' );
+Serial.print( MeasurementID, DEC );
+Serial.print( '\t' );
+Serial.print( (float) (averageVcc/waitPeriod) , 3);
+Serial.print( '\t' );
+Serial.println( (float) (averageTemp/waitPeriod) , 2);
+MeasurementID++;
+
+digitalWrite(ledPin, 1);           // Turn on Notification LED
+delay(50);                         // Blink LED
+digitalWrite(ledPin, 0);           // Turn off Notification LED
+
+digitalWrite(XBeeSleep, 1);        // Disable XBee
+
+averageVcc = 0;                    // Reset voltage for new measurements
+averageTemp = 0;                   // Reset temperature for new measurements
+timeKeeper = 0;
+</code></pre>
+<p>} else {                             // Add a reading to the average<br />
+    digitalWrite(ledPin, 1);           // Turn on Notification LED<br />
+    delay(1);                          // Blink LED very quickly<br />
+    digitalWrite(ledPin, 0);           // Turn off Notification LED</p>
+<pre><code>timeKeeper++;
+</code></pre>
+<p>}</p>
+<p>wdt_reset();                         // Get ready to go to sleep&#8230;<br />
+  watchdogEnable();                    // Turn on the watchdog timer<br />
+  sleepNow();                          // Go to sleep, watchdog timer will wake later<br />
+}</p>
+<p>void watchdogEnable() {                // Turn on watchdog timer; interrupt mode every 8.0s<br />
+  cli();<br />
+  MCUSR = 0;<br />
+  WDTCSR |= B00011000;<br />
+  //WDTCSR = B01000111;                // 2 Second Timeout<br />
+  //WDTCSR = B01100000;                // 4 Second Timeout<br />
+  WDTCSR = B01100001;                  // 8 Second Timeout<br />
+  sei();<br />
+}<br />
+[/code]</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/10/arduino-fio-ds18b20-temperature-logge/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Arduino FIO Internal Voltmeter and Thermometer</title>
+		<link>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/</link>
+					<comments>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 09 Sep 2012 19:06:15 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1324</guid>
+
+					<description><![CDATA[Let&#8217;s extend the low power Ardunio Fio + Xbee setup that I previously blogged about. &#160;I wanted to see if I could create a simple wireless temperature sensor that could allow for long(er) term logging. &#160;Interestingly, the&#160;ATmega328P&#160;on the Arduino Fio has both a &#8220;secret&#8221; internal thermometer and internal voltmeter, meaning that I could (potentially) create [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Let&#8217;s extend the low power Ardunio Fio + Xbee setup that I <a href="http://semifluid.com/2012/09/07/arduino-fio-low-power-setup/">previously blogged about</a>. &nbsp;I wanted to see if I could create a simple wireless temperature sensor that could allow for long(er) term logging. &nbsp;Interestingly, the&nbsp;<a href="http://www.atmel.com/devices/atmega328p.aspx">ATmega328P</a>&nbsp;on the Arduino Fio has both a &#8220;secret&#8221; <a href="http://code.google.com/p/tinkerit/wiki/SecretThermometer">internal thermometer</a> and <a href="http://code.google.com/p/tinkerit/wiki/SecretVoltmeter">internal voltmeter</a>, meaning that I could (potentially) create a wireless sensor with no external additional external components (other than the Fio, XBee, and battery).</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0243.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0243-1024x768.jpg" alt="" title="Arduino Fio Internal Thermometer" width="600" height="450" class="aligncenter size-large wp-image-1352" srcset="/wp-content/uploads/2012/09/IMG_0243-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0243-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>So, taking advantage of the available hardware and the code available, I went about creating a wireless  temperature logger using an Arduino Fio (available from <a href="https://www.amazon.com/dp/B005K0O1PA/ref=as_li_ss_til?tag=semifluidcom-20&#038;camp=0&#038;creative=0&#038;linkCode=as4&#038;creativeASIN=B005K0O1PA&#038;adid=1KB2CEGSB0E1856D3DXX&#038;" target="_blank">Amazon.com</a>) and two XBees (one for the Fio and one for the coordinator).</p>
+<p><span id="more-1324"></span></p>
+<p>I already have code for a very low power logger setup that takes advantage of the Arduino Fio&#8217;s sleep mode as well as the XBee&#8217;s hibernation mode (see <a href="http://semifluid.com/2012/09/07/arduino-fio-low-power-setup/">here</a>). &nbsp;So, all I needed to do was to add the thermometer and voltmeter code that <a href="http://code.google.com/p/tinkerit/">tinkerit</a> documented.</p>
+<p>Here is their <a href="http://code.google.com/p/tinkerit/wiki/SecretThermometer">internal thermometer</a> example code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=readTemp.ino"></script></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0244.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0244-1024x768.jpg" alt="" title="Arduino Fio Internal Thermometer Close-up" width="600" height="450" class="aligncenter size-large wp-image-1353" srcset="/wp-content/uploads/2012/09/IMG_0244-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0244-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>I modified the readTemp() function so that it returned a &#8220;human-readable&#8221; float in Fahrenheit (my local method of measuring temperature).  In addition, I added a small calculation to return a more accurate temperature (calibrated against a thermometer at my house).  If you want to calibrate the internal thermometer, put the Arduino Fio into a glass of ice water (I recommend putting it into a plastic bag and vacuuming out as much air as possible!), measure the values it returns, then put it into a cup of hot water, of known temperature, and measure the values it returns.  It would be best to have multiple measurements along a series of temperatures, confirmed with a pre-calibrated thermometer (i.e., mercury thermometer).  After making the measurements, you can fit a linear model (i.e., best fit line) to the data to get the slope and y-intercept for your device.</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=readTemp_human.ino"></script></p>
+<p>I also added their <a href="http://code.google.com/p/tinkerit/wiki/SecretVoltmeter">internal voltmeter</a> example code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=readVcc.ino"></script></p>
+<p>The only modification was to convert the decimal to a float for (again) human readable format:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=readVcc_human.ino"></script></p>
+<p>And last, but not least, I&#8217;ve been finding &#8220;trash data&#8221; that can be transmitted when the XBee is woken from hibernation, so I added a sync byte (DEC 170), that allows for easier parsing of the data.  Here is some example output from <a href="https://ttssh2.osdn.jp/index.html.en">TeraTerm</a> (I measured the ambient temperature for measurements 1-10, then put my thumb onto the ATmega328P for measurements 11 &amp; 12, and then allowed the Arduino to return to ambient for readings 13-20):</p>
+<p>[code gutter=&#8221;false&#8221;]<br />
+ª       0       0       0<br />
+~<br />
+ ?ª     1       3.303   69.83<br />
+~<br />
+ ?ª     2       3.303   69.62<br />
+~<br />
+ ?ª     3       3.303   69.62<br />
+~<br />
+ @ª     4       3.303   69.41<br />
+~<br />
+ ?ª     5       3.303   69.41<br />
+~<br />
+ ?ª     6       3.303   69.83<br />
+~<br />
+ ?ª     7       3.303   69.41<br />
+~<br />
+ ?ª     8       3.303   68.78<br />
+~<br />
+ ?ª     9       3.303   69.20<br />
+~<br />
+ #ª     10      3.303   69.20<br />
+~<br />
+ &#8216;ª     11      3.303   72.35<br />
+~<br />
+ (ª     12      3.303   72.77<br />
+~<br />
+ #ª     13      3.303   72.14<br />
+~<br />
+ &gt;ª     14      3.303   72.35<br />
+~<br />
+ ?ª     15      3.303   70.88<br />
+~<br />
+ &gt;ª     16      3.303   70.25<br />
+~<br />
+ &gt;ª     17      3.303   69.62<br />
+~<br />
+ &gt;ª     18      3.303   69.41<br />
+~<br />
+ &gt;ª     19      3.303   69.41<br />
+~<br />
+ &gt;ª     20      3.303   68.36<br />
+[/code]</p>
+<p>Yes, I have poor circulation in my hands (hence only a 3 degree jump).  I stored the data for another 30 readings, cut out all of the trash data between the carriage returns (deliminating the readings) and sync characters (which visually show up as &#8220;ª&#8221; in TeraTerm), removed the initial sync reading, and <a href="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyTempAndVolts.nb">plotted the temperature data in Mathematica</a> (voltage was constant for the ~50 minutes while I wrote this post):</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyTempAndVolts.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/SuperSleepyTempAndVolts-300x177.png" alt="" title="SuperSleepyTempAndVolts" width="300" height="177" class="aligncenter size-medium wp-image-1334" srcset="/wp-content/uploads/2012/09/SuperSleepyTempAndVolts-300x177.png 300w, /wp-content/uploads/2012/09/SuperSleepyTempAndVolts.png 360w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>Nice!</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0245.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0245-1024x768.jpg" alt="" title="Arduino Fio Overall" width="600" height="450" class="aligncenter size-large wp-image-1354" srcset="/wp-content/uploads/2012/09/IMG_0245-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0245-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Here&#8217;s all of the Arduino Fio SuperSleepyTempAndVolts code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/9e51a0a6c3bcc8ff3871.js?file=SuperSleepyTempAndVolts.ino"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/09/arduino-fio-internal-voltmeter-and-thermometer/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Arduino FIO Low Power Setup</title>
+		<link>/2012/09/07/arduino-fio-low-power-setup/</link>
+					<comments>/2012/09/07/arduino-fio-low-power-setup/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 07 Sep 2012 21:39:31 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">/?p=624</guid>
+
+					<description><![CDATA[As usually, I have been very sporadic in posting new/updated projects due to my prioritization of my doctoral work (i.e., not much time for fun little electronics projects!). &#160;However, I&#8217;ve been playing around with the Arduino Fio (available from Amazon.com) in my free time for a little while now, so I wanted to post some [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>As usually, I have been very sporadic in posting new/updated projects due to my prioritization of my doctoral work (i.e., not much time for fun little electronics projects!). &nbsp;However, I&#8217;ve been playing around with the <a href="http://arduino.cc/en/Main/ArduinoBoardFio">Arduino Fio</a> (available from <a href="https://www.amazon.com/dp/B005K0O1PA/ref=as_li_ss_til?tag=semifluidcom-20&#038;camp=0&#038;creative=0&#038;linkCode=as4&#038;creativeASIN=B005K0O1PA&#038;adid=1KB2CEGSB0E1856D3DXX&#038;" target="_blank">Amazon.com</a>) in my free time for a little while now, so I wanted to post some notes on a very low power usage setup that I was able to put together.</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0240.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0240-1024x768.jpg" alt="" title="Arduino Fio with XBee - Front Shot" width="600" height="450" class="aligncenter size-large wp-image-1293" srcset="/wp-content/uploads/2012/09/IMG_0240-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0240-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>As my free hobby time has dwindled, so has the time I&#8217;ve been able to devote to debugging programs written for my little Microchip PICs. &nbsp;So, given my limited time, I decided to dive right into Arduinos &#8212; which utilize a higher-level programming language, making things a little quicker and easier for me to tinker &#8212; and try to get some wireless communication working. &nbsp;After looking through the possibilities, I settled on the Arduino Fio. &nbsp;The Arduino Fio is a great little Arduino-compatible board that includes a socket for an XBee&nbsp;802.15.4 wireless module along with a <a href="http://en.wikipedia.org/wiki/Lithium-ion_polymer_battery">LiPo</a> plug and charger circuit.</p>
+<p><span id="more-624"></span></p>
+<p>I picked up a pair of Arduino Fios from sparkfun.com (my <a href="https://www.sparkfun.com/products/9712">older revision</a> was recently <a href="https://www.sparkfun.com/products/10116?">updated</a> with a newer battery charging IC), along with an <a href="https://www.sparkfun.com/products/8687">XBee Explorer USB</a> (to directly interface/program the XBee modules with my desktop computer) and 3 XBee XB24-AWI-001 modules&nbsp;(XBee 802.15.4 low-power modules with wire antennas).</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0242.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0242-1024x768.jpg" alt="" title="Arduino Fios" width="600" height="450" class="aligncenter size-large wp-image-1299" srcset="/wp-content/uploads/2012/09/IMG_0242-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0242-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>I may go into a bit more &#8220;nitty-gritty detail&#8221; for this post, but this is partially because I wanted to recreate all of the steps for this blog post (since I&nbsp;actually&nbsp;last worked on this about a year ago). &nbsp;After receiving all of the components in the mail, I first updated XBee firmware using <a href="http://www.digi.com/support/productdetail?pid=3352&amp;osvid=57&amp;type=utilities">X-CTU</a> to 17ED using the firmware image from digi.com,&nbsp;<a href="ftp://ftp1.digi.com/support/firmware/update/xbee/xb24_15_4_10ed.zip">xb24_15_4_10ed.zip</a>&nbsp;(available here:&nbsp;<a href="ftp://ftp1.digi.com/support/firmware/update/xbee/">ftp://ftp1.digi.com/support/firmware/update/xbee/</a>). &nbsp;Digi has some <a href="http://ftp1.digi.com/support/firmware/Instructions%20for%20firmware%20upgrades.pdf">firmware upgrade instructions</a> that spell everything out.</p>
+<p>After pressing &#8220;Restore&#8221; in X-CTU, the baud rate is reverted to 9600. BD (Interface Data Rate) needed to be changed from &#8220;3 &#8211; 9600&#8221; to &#8220;6 &#8211; 57600&#8221; for use with the Arduino Fio.&nbsp; Selecting &#8220;Always update firmware&#8221; and pressing &#8220;Write&#8221; updated the firmware and adjusted the baud rate.</p>
+<p>I initially setup the programming and slave XBee modems using the funnel-1.0-r806&nbsp;XBeeConfigTool&nbsp;available at <a href="http://funnel.cc/Hardware/FIO">http://funnel.cc/Hardware/FIO</a>&nbsp;(direct link to the downloads <a href="http://code.google.com/p/funnel/downloads/list">here</a>, after unzipping, the config tool is in &#8220;funnel-1.0-r806\tools\XBeeConfigTool\application.windows64\XBeeConfigTool.exe&#8221;). &nbsp;Here are the specific settings for my setup of 3 XBees:</p>
+<p>For the coordinator/programming XBee (<a href="http://semifluid.com/wp-content/uploads/2012/09/XBeeCoordinator.pro">X-CTU configuration profile</a>):</p>
+<ul>
+<li>Mode: Programming radio</li>
+<li>Baud rate: 57600</li>
+<li>PAN ID (The ID of the network these two devices will share) = 8484</li>
+<li>MY ID (The unique ID of the device on the PAN network) = 0000</li>
+<li>DL ID (Destination Address, FFFF means broadcast to all) = FFFF</li>
+</ul>
+<p>For the XBee slave 1 (<a href="http://semifluid.com/wp-content/uploads/2012/09/XBeeSlave1.pro">X-CTU configuration profile</a>):</p>
+<ul>
+<li>Mode: Arduino Fio radio</li>
+<li>Baud rate: 57600</li>
+<li>PAN ID (The ID of the network these two devices will share) = 8484</li>
+<li>MY ID (The unique ID of the device on the PAN network) = 0001</li>
+<li>DL ID (Destination Address, 0000 means send only to coordinator radio) = 0000</li>
+</ul>
+<p>For the XBee slave 2 (<a href="http://semifluid.com/wp-content/uploads/2012/09/XBeeSlave2.pro">X-CTU configuration profile</a>):</p>
+<ul>
+<li>Mode: Arduino Fio radio</li>
+<li>Baud rate: 57600</li>
+<li>PAN ID (The ID of the network these two devices will share) = 8484</li>
+<li>MY ID (The unique ID of the device on the PAN network) = 0002</li>
+</ul>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0241.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0241-1024x768.jpg" alt="" title="XBees" width="600" height="450" class="aligncenter size-large wp-image-1298" srcset="/wp-content/uploads/2012/09/IMG_0241-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0241-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>In order to use the XBEEs in low-power pin-controlled sleep mode, go into X-CTU and set SM (Sleep Mode) to &#8220;1 &#8211; PIN HIBERNATE&#8221;. &nbsp;Here&#8217;s the relevant information from the <a href="http://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Datasheet.pdf">XBee datasheet</a>:</p>
+<blockquote><p><strong>Pin Hibernate (SM = 1)</strong></p>
+<ul>
+<li>Pin/Host-controlled</li>
+<li>Typical power-down current: &lt; 10 µA (@3.0 VCC)</li>
+<li>Wake-up time: 13.2 msec</li>
+</ul>
+<p>Pin Hibernate Mode minimizes quiescent power (power consumed when in a state of rest or inactivity). This mode is voltage level-activated; when Sleep_RQ (pin 9) is asserted, the module will<br />
+finish any transmit, receive or association activities, enter Idle Mode, and then enter a state of<br />
+sleep. The module will not respond to either serial or RF activity while in pin sleep.</p>
+<p>To wake a sleeping module operating in Pin Hibernate Mode, de-assert Sleep_RQ (pin 9). The<br />
+module will wake when Sleep_RQ is de-asserted and is ready to transmit or receive when the CTS<br />
+line is low. When waking the module, the pin must be de-asserted at least two &#8216;byte times&#8217; after<br />
+CTS goes low. This assures that there is time for the data to enter the DI buffer.</p></blockquote>
+<p>In addition, D3 (DIO3 Configuration) to &#8220;5 &#8211; DO HIGH&#8221; and IU (I/O Output Enable) to &#8220;0 &#8211; DISABLED&#8221;. &nbsp;I&#8217;ve attached the X-CTU configuration profiles for each of the XBees above. &nbsp;Now&#8230; onto the Arduino!</p>
+<p>The DTR line on the Ardunio FIO is connected to pin 9 on the XBee (Sleep_RQ), so in order to take advantage of the pin hibernation, it needs to be pulled to ground and tied to the Arduino FIO D2 &nbsp;to control the XBee&#8217;s hibernation. &nbsp;I soldered a header onto the CTS and DTR pins on the FIO, connected D2 to DTR using a wire and pulled the line to ground using a resistor:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/09/IMG_0239.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/IMG_0239-1024x768.jpg" alt="" title="Arduino Fio with XBee" width="600" height="450" class="aligncenter size-large wp-image-1291" srcset="/wp-content/uploads/2012/09/IMG_0239-1024x768.jpg 1024w, /wp-content/uploads/2012/09/IMG_0239-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Finally, I took advantage of the Ardunio power-save&nbsp;sleep mode of the&nbsp;ATmega328P to lower the power usage further (see the&nbsp;ATmega328P&nbsp;datasheet). &nbsp;Here is some barebones code, where the Arduino puts the radio to sleep and wakes up every 8 seconds, checks if the  timekeeper variable has hit 8, and, if so, transmits an increasing variable (MeasurementID).  Basically, MeasurementID is transmitted every approximately 64 seconds.</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/b31a6699d3f7c41a9ae2.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/07/arduino-fio-low-power-setup/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18LF2550 Wireless Servo Controller Under Color Tracking Control Videos</title>
+		<link>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/</link>
+					<comments>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 28 Feb 2006 17:00:45 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=27</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 Wireless Servo Controller Color Tracker Software" width="648" height="486" src="https://www.youtube.com/embed/6yk5wQYHD4E?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 Wireless Servo Controller Color Tracker Tracking" width="648" height="486" src="https://www.youtube.com/embed/OsKgk0J6hEY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18LF2550 Wireless Servo Controller Under Manual Control Videos</title>
+		<link>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/</link>
+					<comments>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 28 Feb 2006 17:00:12 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=26</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 Wireless Servo Controller Close-Up" width="648" height="486" src="https://www.youtube.com/embed/00jjoWG3R5Y?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 Wireless Servo Controller Manual Control" width="648" height="486" src="https://www.youtube.com/embed/1DXlgUn4ELE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18LF2550 Wireless 3-axis Accelerometer</title>
+		<link>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/</link>
+					<comments>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 27 Feb 2006 17:00:17 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=28</guid>
+
+					<description><![CDATA[Having a 2.4GHz Serial Link is helpful, but what kind of applications could it be utilized for? Well, I had a number of 1-axis accelerometers from Freescale (graciously provided by their samples department for my electronics lab projects), which I could use detect object orientation. Making the accelerometers wireless would allow for remote sensing of [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/PIC18LF2550_wireless_3axis.jpg" alt="" title="PIC18LF2550 Wireless 3-axis Accelerometer" width="280" height="200" class="alignleft size-full wp-image-766" />Having a <a href="http://semifluid.com/2006/01/30/pic18lf2550-24ghz-serial-link/">2.4GHz Serial Link</a> is helpful, but what kind of applications could it be utilized for?  Well, I had a number of 1-axis accelerometers from Freescale (graciously provided by their samples department for my electronics lab projects), which I could use detect object orientation. Making the accelerometers wireless would allow for remote sensing of object orientation, which could be applied to virtual reality or possibly <a href="http://www.hci.international/">augmented cognition</a>.  In any case, it allows for some fun experimentation!<span id="more-28"></span></p>
+<p><strong>Transmitter Circuit</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Full-Circuit.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Full-Circuit-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer Schematic" width="300" height="168" class="alignright size-medium wp-image-777" srcset="/wp-content/uploads/2006/02/Full-Circuit-300x168.gif 300w, /wp-content/uploads/2006/02/Full-Circuit-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The source and firmware for the transmitter circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic. All of the sections and their components are described and discussed below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Transmitter Power Supply</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Power-Supply.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Power-Supply-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer Power Supply" width="300" height="168" class="alignright size-medium wp-image-779" srcset="/wp-content/uploads/2006/02/Power-Supply-300x168.gif 300w, /wp-content/uploads/2006/02/Power-Supply-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The power supply uses a 9 volt battery and a TC1264-3.0V high-accuracy low-dropout linear voltage regulator to provide a stable 3 volt supply for the microcontroller and the transceiver. An additional TC1262-5.0V high-accuracy low-dropout linear voltage regulator is used to provide a stable 5 volt supply for the accelerometers. 1uF (microFarad) polarized decoupling capacitors are necessary on the outputs of the voltage regulators to prevent spikes or ripples. A <a href="https://en.wikipedia.org/wiki/Wall_wart">wall wart</a> power supply as low as 5.3V can be substituted for the 9 Volt battery.</p>
+<p><strong>Transmitter Accelerometers</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Accelerometers.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Accelerometers-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer Accelerometers" width="300" height="168" class="alignright size-medium wp-image-776" srcset="/wp-content/uploads/2006/02/Accelerometers-300x168.gif 300w, /wp-content/uploads/2006/02/Accelerometers-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>To sense the position of the board, I used 3 single axis accelerometers in an X-Y-Z configuration.  I used two MMA2260D Low-G X-axis accelerometers and one   MMA1260D Low-G Z-axis accelerometer. The two X-axis accelerometers were positioned in an X-Y configuration and the Z-axis accelerometer was used to sense gravity in the Z-direction. The resistors below the accelerometers are used as a voltage divider so that the PIC, which is running at 3V, can read the voltage, which will vary from 0V to 2.5V. With this configuration, for each accelerometer 1.85V is +1G, 1.25V is 0G, and 0.65V is -1G.</p>
+<p><strong>Transmitter RF-24G Transceiver</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/RF-24G-Transceiver.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/RF-24G-Transceiver-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer RF-24G Transeiver" width="300" height="168" class="alignright size-medium wp-image-770" srcset="/wp-content/uploads/2006/02/RF-24G-Transceiver-300x168.gif 300w, /wp-content/uploads/2006/02/RF-24G-Transceiver-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The Laipac TRW-24G 2.4GHz transceiver uses a Nordic Semiconductor nRF2401a transceiver chip and includes all of the necessary components. The TRW-24G (also called the RF-24G and TXRX24G) requires a 3 Volt power supply and 3 Volt logic, so running the transceiver at 5 volts is not a viable option. Information on the chip&#8217;s interface cam be found in the following data sheets:<br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf">http://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf</a></p>
+<p><strong>Transmitter Microcontroller</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Microcontroller.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Microcontroller-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer Microcontroller" width="300" height="168" class="alignright size-medium wp-image-778" srcset="/wp-content/uploads/2006/02/Microcontroller-300x168.gif 300w, /wp-content/uploads/2006/02/Microcontroller-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller used was a Microchip PIC18LF2550. I  modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 10MHz crystal/resonator at 57,600 baud (the modified bootloader can be found at the bottom of the page). The PIC18LF2550 runs at a maximum speed of 16MHz (4 <a href="https://en.wikipedia.org/wiki/Million_instructions_per_second">MIPs</a>) with a 3 Volt power supply; however, I had 10MHz and 20MHz ceramic resonators on-hand, so I ran at the fastest &#8216;safe&#8217; speed possible (I could overclock the PIC by running it at 20MHz with a 3 volt supply, but it would be running out of spec. so it may not operate reliably). The firmware was written in C (using CCS PICC) and can be found at the bottom of the page, in addition to a generic RF-24G driver for Laipac TRW-24G 2.4GHz transceivers. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator (which is not utilized in this project). The component marked &#8216;RES&#8217; is a 10MHz resonator.</p>
+<p><strong>Transmitter RS232 Level Converter</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/RS232-Level-Converter.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/RS232-Level-Converter-300x168.gif" alt="" title="PIC18F2550 Wireless 3-axis Accelerometer RS232 Level Converter" width="300" height="168" class="alignright size-medium wp-image-771" srcset="/wp-content/uploads/2006/02/RS232-Level-Converter-300x168.gif 300w, /wp-content/uploads/2006/02/RS232-Level-Converter-1024x575.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller USART pins need to be connected to a <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a> to connect to a PC for firmware updates using the Tiny PIC Bootloader. Otherwise, after initial programming they can be left disconnected.</p>
+<p><strong>Receiver Circuit</strong></p>
+<p><a href="http://semifluid.com/2006/01/30/pic18lf2550-24ghz-serial-link/"><img loading="lazy" decoding="async" class="size-medium wp-image-644 alignright" title="PIC18LF2550 2.4GHz Serial Link" src="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif 300w, /wp-content/uploads/2006/01/RF-24G-serial.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The circuit for the receiver is exactly the same as the circuit for the <a href="http://semifluid.com/2006/01/30/pic18lf2550-24ghz-serial-link/">2.4GHz Serial Link</a>; however, the receiver code is different because it expects a 6-byte payload from the RF-24G. The source code for the receiver can be found below.</p>
+<p><strong>Source and Firmware</strong></p>
+<p>The PIC must initially programmed with the &#8216;SAC_tinybld18F2550_10MHz_57600&#8217; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex files can be placed on the chips using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu.<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.asm'>SAC_tinybld18F2550_10MHz_57600.asm</a> (<a href='http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Accelerometer-Transmitter.c'>18LF2550 RF-24G Accelerometer Transmitter.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Accelerometer-Transmitter.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Accelerometer-Receiver.c'>18LF2550 RF-24G Accelerometer Receiver.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Accelerometer-Receiver.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/RF-24G_6-byte.c'>RF-24G_6-byte.c</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/02/27/pic18lf2550-wireless-3-axis-accelerometer/feed/</wfw:commentRss>
+			<slash:comments>16</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18LF2550 Wireless Servo Controller</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/</link>
+					<comments>/2006/02/27/pic18lf2550-wireless-servo-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 27 Feb 2006 17:00:01 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25</guid>
+
+					<description><![CDATA[I&#8217;ve wanted to make a remote control pan&#8211;tilt controller for my wireless camera for some time now. It can be used for remote monitoring, as a webcam, or for color/object tracking. The basis for a pan-tilt configuration is the PIC18LF2550 Wireless Servo Controller, which allows me to control two servos remotely with very little latency [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/PIC18LF2550_wireless_servo.jpg" alt="" title="PIC18LF2550 Wireless Servo Controller" width="280" height="200" class="alignleft size-full wp-image-767" />I&#8217;ve wanted to make a remote control <a href="https://en.wikipedia.org/wiki/Panning#Cinematography">pan</a>&#8211;<a href="https://en.wikipedia.org/wiki/Tilt_%28camera%29">tilt</a> controller for my wireless camera for some time now. It can be used for remote monitoring, as a webcam, or for color/object tracking. The basis for a pan-tilt configuration is the PIC18LF2550 Wireless Servo Controller, which allows me to control two servos remotely with very little <a href="https://en.wikipedia.org/wiki/Latency_%28engineering%29">latency</a> (a majority of which is due to the slow response of the hobby servos being used).<span id="more-25"></span></p>
+<p><strong>Receiver Circuit</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Full-Circuit1.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Full-Circuit1-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller Schematic" width="300" height="160" class="alignright size-medium wp-image-786" srcset="/wp-content/uploads/2006/02/Full-Circuit1-300x160.gif 300w, /wp-content/uploads/2006/02/Full-Circuit1-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The source and firmware for the receiver circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic. All of the sections and their components are described and discussed below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Receiver Power Supply</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Power-Supply1.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Power-Supply1-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller Power Supply" width="300" height="160" class="alignright size-medium wp-image-788" srcset="/wp-content/uploads/2006/02/Power-Supply1-300x160.gif 300w, /wp-content/uploads/2006/02/Power-Supply1-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The power supply uses a 9 volt battery and a TC1264-3.0V high-accuracy low-dropout linear voltage regulator to provide a stable 3 volt supply for the microcontroller and the transceiver. An additional TC1262-5.0V high-accuracy low-dropout linear voltage regulator is used to provide a stable 5 volt supply for the servos. 1uF (microFarad) polarized decoupling capacitors are necessary on the outputs of the voltage regulators to prevent spikes or ripples. A <a href="https://en.wikipedia.org/wiki/Wall_wart">wall wart</a> power supply as low as 5.3V can be substituted for the 9 Volt battery.</p>
+<p><strong>Receiver Servos</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Servos.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Servos-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller Servos" width="300" height="160" class="alignright size-medium wp-image-791" srcset="/wp-content/uploads/2006/02/Servos-300x160.gif 300w, /wp-content/uploads/2006/02/Servos-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>I used two standard hobby servos that were bought on eBay. Any servos that conform to the standard RC servo <a href="http://www.societyofrobots.com/actuators_servos.shtml">control scheme</a> can be used with this circuit.</p>
+<p><strong>Receiver RF-24G Transceiver</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/RF-24G.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/RF-24G-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller RF-24G Transceiver" width="300" height="160" class="alignright size-medium wp-image-789" srcset="/wp-content/uploads/2006/02/RF-24G-300x160.gif 300w, /wp-content/uploads/2006/02/RF-24G-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The Laipac TRW-24G 2.4GHz transceiver uses a Nordic Semiconductor nRF2401a transceiver chip and includes all of the necessary components. The TRW-24G (also called the RF-24G and TXRX24G) requires a 3 Volt power supply and 3 Volt logic, so running the transceiver at 5 volts is not a viable option. Information on the chip&#8217;s interface cam be found in the following data sheets:<br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf">http://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G.pdf">https://www.sparkfun.com/datasheets/RF/RF-24G.pdf</a></p>
+<p><strong>Receiver Microcontroller</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/Microcontroller1.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/Microcontroller1-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller Microcontroller" width="300" height="160" class="alignright size-medium wp-image-787" srcset="/wp-content/uploads/2006/02/Microcontroller1-300x160.gif 300w, /wp-content/uploads/2006/02/Microcontroller1-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller used was a Microchip PIC18LF2550. I  modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 10MHz crystal/resonator at 57,600 baud (the modified bootloader can be found at the bottom of the page). The PIC18LF2550 runs at a maximum speed of 16MHz (4 <a href="https://en.wikipedia.org/wiki/Million_instructions_per_second">MIPs</a>) with a 3 Volt power supply; however, I had 10MHz and 20MHz ceramic resonators on-hand, so I ran at the fastest &#8216;safe&#8217; speed possible (I could overclock the PIC by running it at 20MHz with a 3 volt supply, but it would be running out of spec. so it may not operate reliably). The firmware was written in C (using CCS PICC) and can be found at the bottom of the page, in addition to a generic RF-24G driver for Laipac TRW-24G 2.4GHz transceivers. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator (which is not utilized in this project). The component marked &#8216;RES&#8217; is a 10MHz resonator. The LED connected to pin C4 is used to indicate data reception and can be omitted if necessary (although it is helpful for debugging).</p>
+<p><strong>Receiver RS232 Level Converter</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/02/RS232-Level-Converter1.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/02/RS232-Level-Converter1-300x160.gif" alt="" title="PIC18F2550 Wireless Servo Controller RS232 Level Converter" width="300" height="160" class="alignright size-medium wp-image-790" srcset="/wp-content/uploads/2006/02/RS232-Level-Converter1-300x160.gif 300w, /wp-content/uploads/2006/02/RS232-Level-Converter1-1024x547.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller USART pins need to be connected to a <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a> to connect to a PC for firmware updates using the Tiny PIC Bootloader. Otherwise, after initial programming they can be left disconnected.</p>
+<p><strong>Transmitter Circuit</strong></p>
+<p><a href="http://semifluid.com/2006/01/30/pic18lf2550-24ghz-serial-link/"><img loading="lazy" decoding="async" class="size-medium wp-image-644 alignright" title="PIC18LF2550 2.4GHz Serial Link" src="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif 300w, /wp-content/uploads/2006/01/RF-24G-serial.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The circuit for the transmitter is exactly the same as the circuit for the <a href="http://semifluid.com/2006/01/30/pic18lf2550-24ghz-serial-link/">2.4GHz Serial Link</a>; however, a custom firmware is used for the 2-byte payload of the RF-24G (1 byte for each servo). The firmware for the transmitter can be found below.</p>
+<p><strong>Source and Firmware</strong></p>
+<p>The PIC must initially programmed with the &#8216;SAC_tinybld18F2550_10MHz_57600&#8217; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex files can be placed on the chips using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.asm'>SAC_tinybld18F2550_10MHz_57600.asm</a> (<a href='http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Serial-Servo-Transmitter.c'>18LF2550 RF-24G Serial Servo Transmitter.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Serial-Servo-Transmitter.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Serial-Servo-Receiver.c'>18LF2550 RF-24G Serial Servo Receiver.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/02/18LF2550-RF-24G-Serial-Servo-Receiver.hex'>hex</a>)<br />
+&#8211; <a href='http://semifluid.com/wp-content/uploads/2006/02/RF-24G.c'>RF-24G.c</a></p>
+<p><strong>Update &#8211; 02/28/2006</strong></p>
+<p>Here are two videos of my camera pan/tilt system under manual control: <a href="http://semifluid.com/2006/02/28/pic18lf2550-wireless-servo-controller-under-manual-control-videos/">Manual Control</a>. Here are two videos of my camera pan/tilt system under the control of a simple color tracking algorithm (which is configured to track the brightest red in the room): <a href="http://semifluid.com/2006/02/28/pic18lf2550-wireless-servo-controller-under-color-tracking-control-videos/">Color Tracking</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/02/27/pic18lf2550-wireless-servo-controller/feed/</wfw:commentRss>
+			<slash:comments>26</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18LF2550 2.4GHz Serial Link</title>
+		<link>/2006/01/30/pic18lf2550-24ghz-serial-link/</link>
+					<comments>/2006/01/30/pic18lf2550-24ghz-serial-link/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 30 Jan 2006 17:00:49 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[RF]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=19</guid>
+
+					<description><![CDATA[I wanted to make a wireless serial link that would allow me to send and receive data between Microchip PIC microcontrollers and a computer. I found some very useful information and some helpful code for utilizing a Laipac TRW-24G 2.4GHz wireless transceiver with a PIC16F88 as a wireless serial link. The PIC16F88 is a nice [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-643" title="PIC18LF2550_RF-24G_serial" src="http://semifluid.com/wp-content/uploads/2006/01/PIC18LF2550_RF-24G_serial.jpg" alt="" width="280" height="200" />I wanted to make a wireless serial link that would allow me to send and receive data between Microchip PIC microcontrollers and a computer. I found some very useful information and some helpful code for utilizing a Laipac TRW-24G 2.4GHz wireless transceiver with a <a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010243" target="_blank">PIC16F88</a> as a wireless serial link. The PIC16F88 is a nice little chip that provides a number of useful features (including an onboard USART and the ability to use a bootloader). I am a fan of the PIC16F88; however, I believe that the PIC18 series are much more robust, so I created a circuit that would allow much more flexibility in design and deployment. This project is a relatively simple circuit that utilizes a <a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010280" target="_blank">PIC18LF2550</a> microcontroller and the Laipac TRW-24G 2.4GHz transceiver to create a wireless serial link.<span id="more-19"></span></p>
+<p><strong>Full circuit</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-serial.gif"><img loading="lazy" decoding="async" class="size-medium wp-image-644 alignright" title="PIC18LF2550 2.4GHz Serial Link" src="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/RF-24G-serial-300x124.gif 300w, /wp-content/uploads/2006/01/RF-24G-serial.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The source and firmware for the circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic above. All of the sections and their components are described below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Power Supply</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Power-Supply.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-645" title="PIC18LF2550 2.4GHz Serial Link Power Supply" src="http://semifluid.com/wp-content/uploads/2006/01/Power-Supply-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/Power-Supply-300x124.gif 300w, /wp-content/uploads/2006/01/Power-Supply.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The power supply uses a 9 volt battery and a TC1264-3.0V high-accuracy low-dropout linear voltage regulator to provide a stable 3 volt supply for the microcontroller and the transceiver. A 1uF (microFarad) polarized decoupling capacitor is necessary on the output of the voltage regulator to prevent spikes or ripples. A <a href="https://en.wikipedia.org/wiki/Wall_wart">wall wart</a> power supply as low as 3.3V can be substituted for the 9 Volt battery.</p>
+<p><strong>RF-24G Transceiver</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-Transceiver.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-646" title="PIC18LF2550 2.4GHz Serial Link RF-24G Transceiver" src="http://semifluid.com/wp-content/uploads/2006/01/RF-24G-Transceiver-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/RF-24G-Transceiver-300x124.gif 300w, /wp-content/uploads/2006/01/RF-24G-Transceiver.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The Laipac TRW-24G 2.4GHz transceiver uses a Nordic Semiconductor nRF2401a transceiver chip and includes all of the necessary components. The TRW-24G (also called the RF-24G and TXRX24G) requires a 3 Volt power supply and 3 Volt logic, so running the circuit at 5 volts is not a viable option. Information on the chip&#8217;s interface cam be found in the following data sheets:<br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G_datasheet.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G.pdf">http://www.sparkfun.com/datasheets/RF/RF-24G.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf">http://www.sparkfun.com/datasheets/RF/nRF2401rev1_1.pdf</a><br />
+&#8211; <a href="https://www.sparkfun.com/datasheets/RF/RF-24G.pdf">https://www.sparkfun.com/datasheets/RF/RF-24G.pdf</a></p>
+<p><strong>Microcontroller</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Microcontroller.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-647" title="PIC18LF2550 2.4GHz Serial Link Microcontroller" src="http://semifluid.com/wp-content/uploads/2006/01/Microcontroller-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/Microcontroller-300x124.gif 300w, /wp-content/uploads/2006/01/Microcontroller.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller used was a Microchip PIC18LF2550. I modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 10MHz crystal/resonator at 57,600 baud (the modified bootloader can be found at the bottom of the page). The PIC18LF2550 runs at a maximum speed of 16MHz (4 <a href="https://en.wikipedia.org/wiki/Million_instructions_per_second">MIPs</a>) with a 3 Volt power supply; however, I had 10MHz and 20MHz ceramic resonators on-hand, so I ran at the fastest &#8216;safe&#8217; speed possible (I could overclock the PIC by running it at 20MHz with a 3 volt supply, but it would be running out of spec. so it may not operate reliably). The firmware was written in C (using CCS PICC) and can be found at the bottom of the page, in addition to a generic RF-24G driver for Laipac TRW-24G 2.4GHz transceivers. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator (which is not utilized in this project). The component marked &#8216;RES&#8217; is a 10MHz resonator.</p>
+<p><strong>RS232 Level Converter</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/RS232-Level-Converter.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-648" title="PIC18LF2550 2.4GHz Serial Link RS232 Level Converter" src="http://semifluid.com/wp-content/uploads/2006/01/RS232-Level-Converter-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/RS232-Level-Converter-300x124.gif 300w, /wp-content/uploads/2006/01/RS232-Level-Converter.gif 800w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>A <a href="http://www.maxim-ic.com/datasheet/index.mvp/id/1798">MAX233</a> was used to convert the logic level signals of the PIC18F2550 to RS-232 compatible voltage levels. The MAX233 is running at 3 Volts, which is under the nominal operating voltage of 5 Volts; however, the circuit design would necessitate an additional voltage regulator (for the 5 Volt supply) and repeated testing found no problems with communication performance. It is a little hypocritical of me to use the &#8220;running out of spec.&#8221; argument for the microcontroller, but not for the RS232 level converter; however, the MAX233 was the only chip I had on-hand and there are 3V RS-232 transceivers available (including the <a href="http://www.maxim-ic.com/datasheet/index.mvp/id/3612/ln/">MAX3323E</a>), which can easily be substituted.</p>
+<p><strong>Source and Firmware</strong></p>
+<p>The PIC must initially programmed with the &#8216;SAC_tinybld18F2550_10MHz_57600&#8242; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the &#8217;18LF2550 RF-24G Serial&#8217; hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.asm">SAC_tinybld18F2550_10MHz_57600.asm</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/SAC_tinybld18F2550_10MHz_57600.hex">hex</a>)<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/18LF2550-RF-24G-Serial.c">18LF2550 RF-24G Serial.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/18LF2550-RF-24G-Serial.hex">hex</a>)<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/RF-24G.c">RF-24G.c</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/30/pic18lf2550-24ghz-serial-link/feed/</wfw:commentRss>
+			<slash:comments>34</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

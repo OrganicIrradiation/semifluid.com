@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MATLAB &#8211; semifluid.com</title>
+	<atom:link href="/category/programming/matlab/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:22:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Equirectangular to Stereographic Projections (Little Planets) in MATLAB</title>
+		<link>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/</link>
+					<comments>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 20 Apr 2014 10:40:28 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">/?p=4798</guid>
+
+					<description><![CDATA[The camera included in Google&#8217;s Android mobile OS has a feature called &#8220;Photo Spheres&#8221; that allows you to take a series of photos and create a full spherical panorama. The Photo Sphere feature is included on Google Play Edition (GPE) phones &#8211;phones that incorporate Google&#8217;s version of unadulterated Android&#8211; including my Nexus 5. When you [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The camera included in Google&#8217;s Android mobile OS has a feature called &#8220;<a href="http://www.google.com/maps/about/contribute/photosphere/">Photo Spheres</a>&#8221; that allows you to take a series of photos and create a full spherical panorama. The Photo Sphere feature is included on Google Play Edition (GPE) phones &#8211;phones that incorporate Google&#8217;s version of unadulterated Android&#8211; including my Nexus 5.  When you take a Photo Sphere, the camera seamlessly stitches the individual photos into an <a href="https://en.wikipedia.org/wiki/Equirectangular_projection">Equirectangular</a> panorama.  For example, here is a panorama I took of the <a href="https://en.wikipedia.org/wiki/Rapeseed">rapeseed</a> fields in central Germany:</p>
+<p><a href="/wp-content/uploads/2014/04/smallRapeseed.jpg"><img decoding="async" src="/wp-content/uploads/2014/04/smallRapeseed-1024x512.jpg" alt="Generated using Android's Photo Sphere function" /></a></p>
+<p>There is  a bit of distortion (see <a href="https://en.wikipedia.org/wiki/Tissot%27s_indicatrix" title="Tissot">Tissot&#8217;s indicatrix</a>), especially at the top and bottom of the image, but this is due to the problem of <a href="http://mathworld.wolfram.com/MapProjection.html">projecting a sphere onto a plane</a>.  On the Nexus 5 (and other GPE phones), the Gallery application includes a feature that allows you to either view the resulting Photo Spheres as spherical panoramas or to create &#8220;Little Planets&#8221;/&#8221;Tiny Planets&#8221;, which are actually <a href="https://en.wikipedia.org/wiki/Stereographic_projection">Stereographic Projections</a> of the spherical panorama.  I found the effect really neat, so I wanted to see if I could recreate the projection in MATLAB.</p>
+<p>As a teaser, here&#8217;s the output for my code:</p>
+<p><a href="/wp-content/uploads/2014/04/worldRapeseed.jpg"><img decoding="async" src="/wp-content/uploads/2014/04/worldRapeseed-1024x575.jpg" alt="MATLAB Little Planet of German Rapeseed Field" /></a></p>
+<p>Click through to get more information on the MATLAB implementation.<br />
+<span id="more-4798"></span></p>
+<p>I found some Flash code that performs a similar function to what I wanted to achieve, so I have to send a big thanks to nicoptere for providing his code for <a href="http://barradeau.com/hidiho/index7d3e.html?p=315">PIXEL BENDER #4 projections</a>.  Thanks to the examples provided in his code, I was able to translate the projection conversion into MATLAB.</p>
+<p>The actual calculation of stereographic projections is well documented on Wolfram Mathworld&#8217;s <a href="http://mathworld.wolfram.com/StereographicProjection.html">Stereographic Projection</a> page, but basically we only need the last bit dealing with the inverse formulas for latitude $latex \phi$ and longitude $latex \lambda$.  We can then use that to map the points onto our Equirectangular projection produced by the Photo Sphere function to points on a Stereographic projection.  I am including the MATLAB code for the function at the end of the post, but here are a couple of examples of the conversion.</p>
+<p>First, just to illustrate how the stereographic projection affects the <a href="https://en.wikipedia.org/wiki/Tissot%27s_indicatrix" title="Tissot">Tissot&#8217;s indicatrix</a>, here is an example based upon a equirectangular world projection from Wikipedia user <a href="https://en.wikipedia.org/wiki/File:Tissot_indicatrix_world_map_equirectangular_proj.svg">Eric Gaba</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>):</p>
+<p><a href="/wp-content/uploads/2014/04/2000px-Tissot_indicatrix_world_map_equirectangular_proj.svg_.png"><img decoding="async" src="/wp-content/uploads/2014/04/2000px-Tissot_indicatrix_world_map_equirectangular_proj.svg_-1024x512.png" alt="2000px-Tissot_indicatrix_world_map_equirectangular_proj.svg" /></a></p>
+<p><a href="/wp-content/uploads/2014/04/2000px-Tissot_indicatrix_world_map_equirectangular_proj_steregraphic.png"><img decoding="async" src="/wp-content/uploads/2014/04/2000px-Tissot_indicatrix_world_map_equirectangular_proj_steregraphic-1024x575.png" alt="2000px-Tissot_indicatrix_world_map_equirectangular_proj_steregraphic" /></a></p>
+<p>As you can tell, the output is a function of the latitude and longitude, with the &#8220;lowest&#8221; latitude in the middle of the image and the &#8220;highest&#8221; outside the bounds of the projection.  This means that Antarctica is in the center while Arctic Circle is not visible.</p>
+<p>If we apply the equirectangular to stereographic projection function to my image at the top of the post, but sample from the highest latitude for the center of the output image (by inverting the viewing distance in the code below), we can create another visually compelling projection:</p>
+<p><a href="/wp-content/uploads/2014/04/worldSky.jpg"><img decoding="async" src="/wp-content/uploads/2014/04/worldSky-1024x575.jpg" alt="worldSky" /></a></p>
+<p>For anyone who is interested, here is the function used to generate the equirectangular to stereographic projections (&#8220;Little Planets&#8221;) in MATLAB.  Note that this function requires the <a href="http://www.mathworks.com/matlabcentral/fileexchange/4551-inpaint-nans">inpaint_nans</a> function:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/6087cb900352c7a6e2ce.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/04/20/equirectangular-to-stereographic-projections-little-planets-in-matlab/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GoPro SuperView-like adaptive aspect ratio</title>
+		<link>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/</link>
+					<comments>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 16 Mar 2014 19:41:11 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Photos]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">/?p=4174</guid>
+
+					<description><![CDATA[For Christmas, my parents got me a fantastic gift for photographers and outdoors enthusiasts, a GoPro Hero3+ Silver Edition digital camera (Amazon). If you are not familiar with GoPros, they are small action cameras that have a very wide-angle lens and come with a water-resistant case. It&#8217;s a fantastic little camera that packs a lot [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>For Christmas, my parents got me a fantastic gift for photographers and outdoors enthusiasts, a GoPro Hero3+ Silver Edition digital camera (<a href="http://amzn.to/1dsiptE">Amazon</a>).  If you are not familiar with GoPros, they are small action cameras that have a very wide-angle lens and come with a water-resistant case.  It&#8217;s a fantastic little camera that packs a lot of punch for such a compact package.</p>
+<p>There are a number of GoPro editions, but the newest one are the Hero3+ Silver and Black. The Silver Edition is very similar to the GoPro Hero3+ Black Edition (<a href="http://amzn.to/1gyGTTW">Amazon</a>), but omits a few features, including some very high-resolution video recording modes and a feature that GoPro calls &#8220;Superview&#8221;.  This post talks about a way that I attempted to emulate their Superview mode in MATLAB and put together an adaptive aspect ratio function that allows one to change the image&#8217;s aspect ratio while maintaining &#8220;safe regions&#8221; with minimal distortion.</p>
+<p>This function allowed me to resize 4:3 images and video, like this one:</p>
+<p><iframe title="Example of 4:3 GoPro footage from train" width="648" height="486" src="https://www.youtube.com/embed/Z_cAN_pH3Mo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>To a wider aspect ratio, for example 16:9:</p>
+<p><iframe title="Example of 4:3 GoPro footage converted to 16:9" width="648" height="365" src="https://www.youtube.com/embed/z8hIHEO3Qd0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Click through for info on how I implemented the code.</p>
+<p><span id="more-4174"></span></p>
+<p>Let&#8217;s say we have an original, 4:3 image or frame from a camera (GoPro in this instance):</p>
+<p><a href="/wp-content/uploads/2014/03/GOPR5666.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5666-1024x768.jpg" alt="DCIM105GOPRO" /></a></p>
+<p>If we want to convert it to 4:3 format, we have a couple of options.  The simplest is cropping out the top and bottom of the image:</p>
+<p><a href="/wp-content/uploads/2014/03/GOPR5666_cropped_shaded.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5666_cropped_shaded-1024x768.jpg" alt="GOPR5666_cropped_shaded" /></a></p>
+<p><a href="/wp-content/uploads/2014/03/GOPR5666_cropped.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5666_cropped-1024x768.jpg" alt="GOPR5666_cropped" /></a></p>
+<p>The issue with cropping is that it cuts down on the vertical field of view.  We could alternatively scale the image in the horizontal direction (or compress in the vertical, the effect is the same):</p>
+<p><a href="/wp-content/uploads/2014/03/GOPR5666_linearstretch_white.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5666_linearstretch_white-1024x768.jpg" alt="GOPR5666_linearstretch_white" /></a></p>
+<p><a href="/wp-content/uploads/2014/03/GOPR5666_linearstretch.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5666_linearstretch-1024x768.jpg" alt="GOPR5666_linearstretch" /></a></p>
+<p>As you can see, scaling causes distortion in the image that can be distracting, especially when there are known points of reference (like people) in the frame.</p>
+<p>An alternative to cropping or linear scaling, is the GoPro Hero3+ Black&#8217;s Superview mode, which is intended to non-linearly scale the image to retain as much vertical image information while attempting to minimize the perceived scaling distortion, especially in the center of the image frame.</p>
+<p>Here is a description of the GoPro Superview feature, according to <a href="https://gopro.com/help/articles/question_answer/What-is-SuperView">GoPro</a>:</p>
+<blockquote><p>
+  SuperView is a new feature introduced with HERO3+ Black Edition which allows you to capture an immersive wide angle perspective. What this mode does is it takes a 4:3 aspect ratio and dynamically stretches it to a 16:9 aspect ratio. This can be a great choice because it uses the height of the camera&#8217;s sensor that you get with 4:3 meaning that you will see more of the sky and ground assuming you are pointed at the horizon.  &#8230; The way it works is that the camera automatically stretches out the sides of the video to fit into the 16:9 frame. The center of the frame is unchanged, only the edges are adjusted.
+</p></blockquote>
+<p>This sounds as though there is 1:1 mapping of pixels in the center of the frame with gradual distortion/interpolation towards the right and left edges.  This would maintain the total field of view and information content in the image, while attempting to conform to a widescreen aspect ratio.</p>
+<p>Abe Kislevitz has a <a href="http://abekislevitz.com/43-gopro-footage-explained/">nice discussion</a> of 4:3 to 16:9 footage conversion with the GoPro and specifically discusses a plugin called Elastic Aspect.  I chose to do a similar transformation in MATLAB to see if I could reproduce the Superview effect in &#8220;post production&#8221; (after an image or video has been captured).</p>
+<p>To do this, I created a 1-Dimensional mapping of the input pixels to the output pixels along the y-axis and remapped the locations of pixels that were not linearly mapped to &#8220;Safe Zones&#8217; using cubic spline interpolation.</p>
+<p>Let&#8217;s say I want to stretch GoPro image of my wife and I from 4:3 to 16:9 widescreen aspect ratio. Here&#8217;s the original 4:3 image:<br />
+<a href="/wp-content/uploads/2014/03/GOPR4843.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR4843-1024x768.jpg" alt="DCIM112GOPRO" /></a></p>
+<p>Using linear interpolation, this would be the expected mapping (and resulting image).  Note the distortion in our faces:<br />
+<a href="/wp-content/uploads/2014/03/PlotLinearInterp.png"><img decoding="async" src="/wp-content/uploads/2014/03/PlotLinearInterp.png" alt="PlotLinearInterp" /></a><br />
+<a href="/wp-content/uploads/2014/03/GOPR4843_linearstretch.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR4843_linearstretch-1024x576.jpg" alt="GOPR4843_linearstretch" /></a><br />
+Created using the following code (from the below function):</p>
+<p>[code lang=matlab]<br />
+    outImage = bSplineResizeWidth([1080,1920], inImage, [50 50]);<br />
+[/code]</p>
+<p>With cubic spline mapping with a very small &#8220;Safe Zone&#8221; that is linearly mapped (5% of the image width), we would have this mapping and resulting image:<br />
+<a href="/wp-content/uploads/2014/03/PlotCubicInterp5.png"><img decoding="async" src="/wp-content/uploads/2014/03/PlotCubicInterp5.png" alt="PlotCubicInterp5" /></a><br />
+<a href="/wp-content/uploads/2014/03/GOPR4843_cubicstretch_5.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR4843_cubicstretch_5-1024x576.jpg" alt="GOPR4843_cubicstretch_5" /></a><br />
+Created using the following code (from the below function):</p>
+<p>[code lang=matlab]<br />
+    outImage = bSplineResizeWidth([1080,1920], inImage, [47.5 52.5]);<br />
+[/code]</p>
+<p>Notice the difference in perceived quality already? Now, let&#8217;s protect the center 25% of the image:<br />
+<a href="/wp-content/uploads/2014/03/PlotCubicInterp25.png"><img decoding="async" src="/wp-content/uploads/2014/03/PlotCubicInterp25.png" alt="PlotCubicInterp25" /></a><br />
+<a href="/wp-content/uploads/2014/03/GOPR4843_cubicstretch_25.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR4843_cubicstretch_25-1024x576.jpg" alt="GOPR4843_cubicstretch_25" /></a><br />
+Created using the following code (from the below function):</p>
+<p>[code lang=matlab]<br />
+    outImage = bSplineResizeWidth([1080,1920], inImage, [37.5,62.5]);<br />
+[/code]</p>
+<p>Looking good! Let&#8217;s say our subject is off to the side of the image, we can explicitly choose those regions to &#8220;protect&#8221; by ensuring a 1:1 mapping to avoid any distortion for our subject. For example, here&#8217;s a picture of my cousin&#8217;s husband, located slightly off-center:<br />
+<a href="/wp-content/uploads/2014/03/GOPR5642.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5642-1024x768.jpg" alt="DCIM105GOPRO" /></a></p>
+<p>I can explicitly select a &#8220;Safe Zone&#8221; around his body to avoid distorting him further.  Here&#8217;s the remapping and resulting image:<br />
+<a href="/wp-content/uploads/2014/03/GOPR5642_offcenterstretch_plot.png"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5642_offcenterstretch_plot.png" alt="GOPR5642_offcenterstretch_plot" /></a><br />
+<a href="/wp-content/uploads/2014/03/GOPR5642_offcenterstretch.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR5642_offcenterstretch-1024x576.jpg" alt="GOPR5642_offcenterstretch" /></a><br />
+Created using the following code (from the below function):</p>
+<p>[code lang=matlab]<br />
+    outImage = bSplineResizeWidth([1080,1920], inImage, [], 1);<br />
+[/code]</p>
+<p>So, although there is still inevitable distortion around the outside of the image, it seems as this may be an effective way to emulate GoPro&#8217;s Superview mode and perform an adaptive aspect ratio adjustment.</p>
+<p>For the sake of discussion, there is another method called <a href="http://en.wikipedia.org/wiki/Seam_carving">seam carving</a> (commonly known as content-aware scaling with Adobe Photoshop), but this can introduce some artifacts, depending on the scene.  It is also quite slow. Here is an example implementation in MATLAB by Danny Luong: <a href="http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing-gui-implementation-demo">Seam Carving for content aware image resizing: GUI implementation demo</a>. In general, it appears as though seam carving is better suited for images rather that videos (note that the original authors of the algorithm developed a <a href="http://www.faculty.idc.ac.il/arik/SCWeb/vidret/">similar method for processing video</a>):<br />
+<a href="/wp-content/uploads/2014/03/GOPR4843_seamcarved.jpg"><img decoding="async" src="/wp-content/uploads/2014/03/GOPR4843_seamcarved-1024x576.jpg" alt="GOPR4843_seamcarved" /></a></p>
+<p>Here is the code for both procedures:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/e0759d84106084fea0e5.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Magic Lantern HDR video to tonemapped video with MATLAB scripts</title>
+		<link>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/</link>
+					<comments>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2013 20:40:06 +0000</pubDate>
+				<category><![CDATA[Cooking]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3713</guid>
+
+					<description><![CDATA[I have a Canon T3i with a Canon EF 50mm f1.4 lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called Magic Lantern that provides a some interesting (and useful!) functions. One of them is HDR video. Here&#8217;s a beautiful example [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have a <a href="http://www.amazon.com/gp/product/B004J3V90Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004J3V90Y&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon T3i</a> with a <a href="http://www.amazon.com/gp/product/B00009XVCZ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00009XVCZ&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon EF 50mm f1.4</a> lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called <a href="http://www.magiclantern.fm/">Magic Lantern</a> that provides a some interesting (and useful!) <a href="http://www.magiclantern.fm/features.html">functions</a>.  One of them is HDR video.  Here&#8217;s a beautiful example of what can be done:</p>
+<p>http://www.youtube.com/watch?v=bLxYTT_0GEI</p>
+<p>I tried my hand at processing the HDR video output and was able to get a reasonably nice tone-mapped video:</p>
+<p><iframe title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>After the break, you&#8217;ll find how I processed the initial Magic Lantern video using MATLAB and exiftool and tone-mapped the output using Luminance HDR.</p>
+<p><span id="more-3713"></span></p>
+<p>First, we need to process the video with a function I (poorly) named &#8216;Step1MovieToInterpolatedFrames.m&#8217; to separate the dark and light frames.  The video is first loaded using the VideoReader object.  Then we check to see if the first frame is darker or lighter than the second. This is admittedly a bit of a hack, but given the gross differences in exposure, seems to work well enough.  After determining whether the first is light or dark, we then loop through all the frames of the movie, saving the real frames and appending an &#8220;L&#8221; to signify they are &#8220;light&#8221; and, also, interpolate between the frames.  Why go through the bother of interpolation? Well, there will be image registration problems with the tone-mapping if we assume that a given dark frame matches the earlier or later light frame, especially with high-speed motion. Interpolation helps us &#8220;smooth&#8221; these errors out. Note that ideally we would use a morphing algorithm (similar to the one used by Twixtor), but this is the quickest method for the time being. After saving each frame, I use <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a> to assign an aperture value.  Note that this has <em>nothing</em> to do with the real aperture value, but helps Luminance HDR tonemap the composite image. We do this for the dark frames as well, but now we take into account the EV shift in the video&#8217;s ISO when writing the aperture value using exiftool.</p>
+<p>The second function, &#8216;Step2FramesToHDRFrames.m&#8217;, takes the individual light and dark frames and generates tone-mapped images.  We go through every frame and use the Luminance HDR CLI (command line interface) to generate an HDR image and tone-map it (here using the mantiuk08 tone-mapping operator).</p>
+<p>And the final function (&#8216;Step3HDRFramesToVideos.m&#8217;) compiles all of the tone-mapped images into videos (one for the light frames, one for the dark frames, and one for the tonemapped frames).</p>
+<p>The code can be found at the bottom of the post.</p>
+<p>So, what do each of the Luminance HDR <a href="http://osp.wikidot.com/parameters-for-photographers">tonemapping operators</a> look like (with their default parameters) when applied to a video?  Here&#8217;s the source (note that YouTube strips out the alternating frames, you can find the original MOV <a href="/wp-content/uploads/2013/10/MVI_7961.MOV">here</a>):</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - RAW" width="648" height="365" src="https://www.youtube.com/embed/HxZaAu9Y2KQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Ashikhmin</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Ashikmin" width="648" height="365" src="https://www.youtube.com/embed/L43U3v2Eg_o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Drago</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Drago" width="648" height="365" src="https://www.youtube.com/embed/ZahHcLbSieg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Durand</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Durand" width="648" height="365" src="https://www.youtube.com/embed/TAgFLnN038g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Fattal</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Fattal" width="648" height="365" src="https://www.youtube.com/embed/3GeijU30Uu8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 06</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk06" width="648" height="365" src="https://www.youtube.com/embed/NnG-rZrbAGA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 08</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk08" width="648" height="365" src="https://www.youtube.com/embed/r16tT6ZO8os?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Pattanaik</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Pattanaik" width="648" height="365" src="https://www.youtube.com/embed/gqaQjkBCvtc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 02</p>
+<p><iframe title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 05</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard05" width="648" height="365" src="https://www.youtube.com/embed/6HeQBwKgzB0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><script src="https://gist.github.com/OrganicIrradiation/4d63a870c3ac852f4a0f.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="/wp-content/uploads/2013/10/MVI_7961.MOV" length="87059684" type="video/quicktime" />
+
+			</item>
+		<item>
+		<title>Effect of Environment Map Blur on Perceived Surface Properties</title>
+		<link>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/</link>
+					<comments>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2012 22:45:22 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1723</guid>
+
+					<description><![CDATA[Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects. I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on Google Code). Starting with the Debevec light probes, I applied a [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects.</p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 01 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3gaONCvBJRQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on <a href="http://code.google.com/p/cubemapgen/" target="_blank">Google Code</a>).  Starting with the <a href="http://www.pauldebevec.com/Probes/" target="_blank">Debevec light probes</a>, I applied a Gaussian blur with increasing kernel size (10&deg;, 20&deg;, 30&deg;, 40&deg;, and 50&deg;), creating 6 cube maps (one for each blur).  In the videos, the cube maps have increasing blur from left-to-right, top-to-bottom.  Note that I did not tone-map or account for changes in overall exposure (so the specular reflections can appear blown-out, especially for the higher blurs).  After the break, you can see the effect using different light probes (and different shapes).</p>
+<p><span id="more-1723"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 02 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/0eRuVMIyd_I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 03 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/TZHuzYsSQWk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 04 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/iwtzi6ceIQk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 05 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/UL6pS8uJkKs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 06 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/IUTFkdQKlZQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 07 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/Sq9I9ljXJk0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 08 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3tKv_fHs_tQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 09 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/hs6D8yxKURQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Misperceived axis of rotation for objects with specular reflections</title>
+		<link>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/</link>
+					<comments>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 15 Dec 2012 12:00:12 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1608</guid>
+
+					<description><![CDATA[Katja Dörschner visited JLU last week and talked about her work investigating structure from motion with specular reflections and textures (see more info in her recent paper: Doerschner, Fleming, Yilmaz, Schrater, Hartung, &#38; Kersten, 2011). She showed an interesting situation where the axis of rotation of a 3D teapot was misperceived due to the motion [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.bilkent.edu.tr/~katja/" target="_blank">Katja Dörschner</a> visited <a href="http://www.uni-giessen.de/" target="_blank">JLU</a> last week and talked about her work investigating structure from motion with specular reflections and textures (see more info in her recent paper: <a href="https://www.cell.com/current-biology/retrieve/pii/S0960982211011973" target="_blank">Doerschner, Fleming, Yilmaz, Schrater, Hartung, &amp; Kersten, 2011</a>).  She showed an interesting situation where the axis of rotation of a 3D teapot was misperceived due to the motion of the specular reflections on the surface of the teapot (see: <a href="http://www.perceptionweb.com/abstract.cgi?id=v110297" target="_blank">Yilmaz, Kucukoglu, Fleming, &amp; Doerschner, 2011</a>), an effect first demonstrated by <a href="http://vision.psych.umn.edu/users/kersten/kersten-lab/demos/MatteOrShiny.html" target="_blank">Hartung and Kersten (2002)</a>.</p>
+<p>Using the OpenGL/Psychtoolbox framework I have previously described, I replicated this interesting effect.  When you play the following movie, a 3D sphere (with sinusoidal perturbations) is rotated.  Note the axis of perceived rotation when the object has specular reflections (1st half of the movie) and when the environment map is &#8220;painted&#8221; onto the surface (2nd half of the movie).</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12" width="648" height="365" src="https://www.youtube.com/embed/YSl8G7IRgrg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The physical motion of the object is the same in both cases &#8212; the object rotates around the vertical axis.  When the object only has specular reflections, it appears to rotate around an <a href="https://en.wikipedia.org/wiki/Angle#Types_of_angles" target="_blank">oblique</a> 45&deg; axis, but when textured it rotates around the vertical axis.  After the break, I show similar effects when the object is rotated around the horizontal axis, 45&deg; axis, and when the spatial frequency of the perturbation is manipulated.</p>
+<p><span id="more-1608"></span></p>
+<p>Here is the same object, now rotated around the horizontal axis.  We have the same perceived effect, rotation around the oblique 45&deg; axis when only specular reflections are present.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12 - 90 degree" width="648" height="365" src="https://www.youtube.com/embed/p9-gLIITRrw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Here is the same sphere, now rotated around an axis 45&deg; off-vertical.  Note that the motion for the specular case appears the same when the object is rotated around the vertical and horizontal axis (as shown above) or around the 45&deg; axis (shown below).  However, the motion is clearly different when the object is textured.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12 - 45 degree" width="648" height="365" src="https://www.youtube.com/embed/QF98JRZsmR0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Neat, right?</p>
+<p>Now, here&#8217;s a series of videos illustrating the effect for perturbations with different spatial frequencies.  Note the changes in perceived object geometry and axis of rotation for low and high frequency perturbations.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 3" width="648" height="365" src="https://www.youtube.com/embed/uepPmnfGMxU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 6" width="648" height="365" src="https://www.youtube.com/embed/bg1Qg0U32lo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12" width="648" height="365" src="https://www.youtube.com/embed/YSl8G7IRgrg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 24" width="648" height="365" src="https://www.youtube.com/embed/EwLs_hCkp2I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Blobby Eye Candy</title>
+		<link>/2012/12/07/blobby-eye-candy/</link>
+					<comments>/2012/12/07/blobby-eye-candy/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 08 Dec 2012 00:23:11 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1590</guid>
+
+					<description><![CDATA[Using the building blocks previously described (see 1, 2, 3, &#38; 4) along with some other creative coding, I have been able to generate some nice stimuli. Here is an example of a random shape being spun along the 3 axes while its surface properties (texture, shading, and specular reflections) are manipulated: 2 8 more [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Using the building blocks previously described (see <a href="http://semifluid.com/2012/12/05/2d-and-3d-perlin-noise-in-matlab/">1</a>, <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-continued/">2</a>, <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/">3</a>, &amp; <a href="http://semifluid.com/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">4</a>) along with some other creative coding, I have been able to generate some nice stimuli.  Here is an example of a <a href="http://semifluid.com/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">random shape</a> being spun along the 3 axes while its surface properties (<a href="https://en.wikipedia.org/wiki/Texture_mapping" target="_blank">texture</a>, <a href="https://en.wikipedia.org/wiki/Shading" target="_blank">shading</a>, and <a href="https://en.wikipedia.org/wiki/Specular_reflection" target="_blank">specular reflections</a>) are manipulated:</p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 1" width="648" height="365" src="https://www.youtube.com/embed/cRcvENhoq5Y?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><del datetime="2012-12-08T11:19:01+00:00">2</del> 8 more videos (with different shapes and illumination conditions) after the break.<br />
+<span id="more-1590"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 2" width="648" height="365" src="https://www.youtube.com/embed/stdSW7qyKyQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 3" width="648" height="365" src="https://www.youtube.com/embed/dYcfbcRwTAA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 4" width="648" height="365" src="https://www.youtube.com/embed/PK_IKJ_MUOY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 5" width="648" height="365" src="https://www.youtube.com/embed/x3KkPRY8Kgo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 6" width="648" height="365" src="https://www.youtube.com/embed/6cHsGiK0V1Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 7" width="648" height="365" src="https://www.youtube.com/embed/jdGNWhGXD4w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 8" width="648" height="365" src="https://www.youtube.com/embed/Y_EhCrb761w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 9" width="648" height="365" src="https://www.youtube.com/embed/hevD9gFs9UE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/07/blobby-eye-candy/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>3D &#8220;Potato&#8221; Generation using Sinusoidal Pertubations</title>
+		<link>/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/</link>
+					<comments>/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 07 Dec 2012 15:00:52 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1555</guid>
+
+					<description><![CDATA[Generating unique 3D stimuli can be an art-form. In order to generate &#8220;organic&#8221; stimuli with smooth undulations, I needed to systematically manipulate the surface meshes of 3D spheres to create smooth peaks and valleys. To generate 3D &#8220;potatoes,&#8221; I start with an icosahedron whose mesh is refined to approximate a sphere. The Bioelectromagnetism Matlab Toolbox [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Generating unique 3D stimuli can be an art-form.</p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/BlobbyShape.png" alt="" title="BlobbyShape" width="400" height="400" class="aligncenter size-full wp-image-1581" srcset="/wp-content/uploads/2012/12/BlobbyShape.png 520w, /wp-content/uploads/2012/12/BlobbyShape-150x150.png 150w, /wp-content/uploads/2012/12/BlobbyShape-300x300.png 300w" sizes="auto, (max-width: 400px) 100vw, 400px" /></p>
+<p>In order to generate &#8220;organic&#8221; stimuli with smooth undulations, I needed to systematically manipulate the surface meshes of 3D spheres to create smooth peaks and valleys.</p>
+<p><span id="more-1555"></span></p>
+<p>To generate 3D &#8220;potatoes,&#8221; I start with an icosahedron whose mesh is refined to approximate a sphere.  The <a href="http://eeg.sourceforge.net/" target="_blank">Bioelectromagnetism Matlab Toolbox</a> has a function that is incredibly useful for producing icospheres in MATLAB:</p>
+<ul>
+<li><a href="http://eeg.sourceforge.net/doc_m2html/bioelectromagnetism/sphere_tri.html" target="_blank">sphere_tri.m</a></li>
+</ul>
+<p>sphere_tri.m requires the following subfunctions (also available in the toolbox):</p>
+<ul>
+<li><a href="http://eeg.sourceforge.net/doc_m2html/bioelectromagnetism/mesh_refine_tri4.html" target="_blank">mesh_refine_tri4</a></li>
+<li><a href="http://eeg.sourceforge.net/doc_m2html/bioelectromagnetism/sphere_project.html" target="_blank">sphere_project.m</a></li>
+</ul>
+<p>Calling sphere_tri with no recursive refinement, we get an icosahedron:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/f8bde9e0520d35defbc4.js?file=demo_ico.m"></script></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse0.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse0-300x224.png" alt="" title="icosphere_nRecurse0" width="300" height="224" class="aligncenter size-medium wp-image-1558" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse0-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse0.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>With further refinement (increasing nRecurse), we can approximate a sphere.  Here&#8217;s nRecurse = 1:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse1.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse1-300x224.png" alt="" title="icosphere_nRecurse1" width="300" height="224" class="aligncenter size-medium wp-image-1560" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse1-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse1.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>nRecurse = 2:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse2.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse2-300x224.png" alt="" title="icosphere_nRecurse2" width="300" height="224" class="aligncenter size-medium wp-image-1561" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse2-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse2.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>nRecurse = 3:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse3.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse3-300x224.png" alt="" title="icosphere_nRecurse3" width="300" height="224" class="aligncenter size-medium wp-image-1562" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse3-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse3.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>nRecurse = 4:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse4.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse4-300x224.png" alt="" title="icosphere_nRecurse4" width="300" height="224" class="aligncenter size-medium wp-image-1563" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse4-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse4.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>nRecurse = 5:</p>
+<p><a href="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse5.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/icosphere_nRecurse5-300x224.png" alt="" title="icosphere_nRecurse5" width="300" height="224" class="aligncenter size-medium wp-image-1564" srcset="/wp-content/uploads/2012/12/icosphere_nRecurse5-300x224.png 300w, /wp-content/uploads/2012/12/icosphere_nRecurse5.png 561w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>I like to use nRecurse = 5 because it produces an icosphere with 10242 vertices (and 20480 faces), which is usually adequate to generate nice-looking &#8220;potatoes&#8221;.  Increasing nRecurse to 6 produces a icosphere with 40962 vertices (and 81920 faces), which is usually more than necessary.</p>
+<p>Once we have our icosphere, we want to apply some sinusoidal perturbations to change its shape.  The easiest way is to apply a sinusoidal grating to each axis.  First let&#8217;s define y as vertical, x as horizontal, and z as depth.  First, here are some example gratings applied to the X-axis (note that I hold the amplitude of the perturbations constant for these illustrations, but change the angle and frequency):</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/f8bde9e0520d35defbc4.js?file=demo_multiplefreqsandamps_x.m"></script></p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/gratingXAxis.png" alt="" title="gratingXAxis" width="561" height="420" class="aligncenter size-full wp-image-1566" srcset="/wp-content/uploads/2012/12/gratingXAxis.png 561w, /wp-content/uploads/2012/12/gratingXAxis-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p>Y-axis:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/f8bde9e0520d35defbc4.js?file=demo_multiplefreqsandamps_y.m"></script></p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/gratingYAxis.png" alt="" title="gratingYAxis" width="561" height="420" class="aligncenter size-full wp-image-1567" srcset="/wp-content/uploads/2012/12/gratingYAxis.png 561w, /wp-content/uploads/2012/12/gratingYAxis-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p>And Z-axis:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/f8bde9e0520d35defbc4.js?file=demo_multiplefreqsandamps_z.m"></script></p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/gratingZAxis.png" alt="" title="gratingZAxis" width="561" height="420" class="aligncenter size-full wp-image-1568" srcset="/wp-content/uploads/2012/12/gratingZAxis.png 561w, /wp-content/uploads/2012/12/gratingZAxis-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p>Note that the only thing changing from example to example is the line where the perturbation is applied to the shape&#8217;s vertices:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/f8bde9e0520d35defbc4.js?file=demo_verticeaxes.m"></script></p>
+<p>By stacking multiple sinusoidal perturbations, you can produce some nice &#8220;blobby potato&#8221; stimuli (please excuse the quality of these examples, they were generated using the MATLAB <a href="http://www.mathworks.com/help/matlab/ref/patch.html" target="_blank">patch command</a>):</p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/randomShapes1.png" alt="" title="randomShapes1" width="561" height="420" class="aligncenter size-full wp-image-1576" srcset="/wp-content/uploads/2012/12/randomShapes1.png 561w, /wp-content/uploads/2012/12/randomShapes1-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/randomShapes2.png" alt="" title="randomShapes2" width="561" height="420" class="aligncenter size-full wp-image-1577" srcset="/wp-content/uploads/2012/12/randomShapes2.png 561w, /wp-content/uploads/2012/12/randomShapes2-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>3D MATLAB noise &#8211; effect of changing Gaussian convolution kernel size</title>
+		<link>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/</link>
+					<comments>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 06 Dec 2012 23:00:59 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1502</guid>
+
+					<description><![CDATA[To illustrate the effect of changing the Gaussian convolution kernel size, I generated a series of 64x64x64 3D noise texture arrays using the code from my 3D MATLAB noise (continued) post: After the break, see how increasing the size of the convolution kernel affects the quality of the 3D noise. Note that &#8220;Time to Process&#8221; [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>To illustrate the effect of changing the Gaussian convolution kernel size, I generated a series of 64x64x64 3D noise texture arrays using the code from my <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-continued">3D MATLAB noise (continued)</a> post:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/bcba07a2c11c1a93cf54.js?file=gen_64x64x64_noise.m"></script></p>
+<p>After the break, see how increasing the size of the convolution kernel affects the quality of the 3D noise.<br />
+<span id="more-1502"></span></p>
+<p>Note that &#8220;Time to Process&#8221; was calculated tic and toc (see above) on a quad-core <a href="http://ark.intel.com/products/41313/Intel-Xeon-Processor-W3530-8M-Cache-2_80-GHz-4_80-GTs-Intel-QPI" target="_blank">Xeon W3530</a> @ 2.80GHz with 12 GB of RAM.  In addition, the 2D FFT animations were generated using each frame of the GIF animations using the following code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/bcba07a2c11c1a93cf54.js?file=gen_64x64x64_noise_animations.m"></script></p>
+<p><center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>k</td>
+<td></td>
+<td>Time to Process</td>
+<td>2D FFT</td>
+</tr>
+<tr>
+<td>1</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k1.gif" alt="" title="noise3Dwrap_s64k1" width="64" height="64" class="aligncenter size-full wp-image-1508" /></td>
+<td>0.4167</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k1.gif" alt="" title="noise3Dwrap2DFFT_s64k1" width="65" height="65" class="aligncenter size-full wp-image-1531" /></td>
+</tr>
+<tr>
+<td>3</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k3.gif" alt="" title="noise3Dwrap_s64k3" width="64" height="64" class="aligncenter size-full wp-image-1509" /></td>
+<td>0.8670</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k3.gif" alt="" title="noise3Dwrap2DFFT_s64k3" width="65" height="65" class="aligncenter size-full wp-image-1532" /></td>
+</tr>
+<tr>
+<td>5</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k5.gif" alt="" title="noise3Dwrap_s64k5" width="64" height="64" class="aligncenter size-full wp-image-1510" /></td>
+<td>2.2663</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k5.gif" alt="" title="noise3Dwrap2DFFT_s64k5" width="65" height="65" class="aligncenter size-full wp-image-1533" /></td>
+</tr>
+<tr>
+<td>7</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k7.gif" alt="" title="noise3Dwrap_s64k7" width="64" height="64" class="aligncenter size-full wp-image-1511" /></td>
+<td>5.7784</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k7.gif" alt="" title="noise3Dwrap2DFFT_s64k7" width="65" height="65" class="aligncenter size-full wp-image-1534" /></td>
+</tr>
+<tr>
+<td>9</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k9.gif" alt="" title="noise3Dwrap_s64k9" width="64" height="64" class="aligncenter size-full wp-image-1511" /></td>
+<td>11.2293</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k9.gif" alt="" title="noise3Dwrap2DFFT_s64k9" width="65" height="65" class="aligncenter size-full wp-image-1535" /></td>
+</tr>
+<tr>
+<td>11</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k11.gif" alt="" title="noise3Dwrap_s64k11" width="64" height="64" class="aligncenter size-full wp-image-1512" /></td>
+<td>20.8108</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k11.gif" alt="" title="noise3Dwrap2DFFT_s64k11" width="65" height="65" class="aligncenter size-full wp-image-1536" /></td>
+</tr>
+<tr>
+<td>13</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k13.gif" alt="" title="noise3Dwrap_s64k13" width="64" height="64" class="aligncenter size-full wp-image-1513" /></td>
+<td>33.3277</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k13.gif" alt="" title="noise3Dwrap2DFFT_s64k13" width="65" height="65" class="aligncenter size-full wp-image-1537" /></td>
+</tr>
+<tr>
+<td>15</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k15.gif" alt="" title="noise3Dwrap_s64k15" width="64" height="64" class="aligncenter size-full wp-image-1514" /></td>
+<td>52.0085</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k15.gif" alt="" title="noise3Dwrap2DFFT_s64k15" width="65" height="65" class="aligncenter size-full wp-image-1537" /></td>
+</tr>
+<tr>
+<td>17</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k17.gif" alt="" title="noise3Dwrap_s64k17" width="64" height="64" class="aligncenter size-full wp-image-1515" /></td>
+<td>82.3220</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k17.gif" alt="" title="noise3Dwrap2DFFT_s64k17" width="65" height="65" class="aligncenter size-full wp-image-1538" /></td>
+</tr>
+<tr>
+<td>19</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k19.gif" alt="" title="noise3Dwrap_s64k19" width="64" height="64" class="aligncenter size-full wp-image-1516" /></td>
+<td>187.6235</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k19.gif" alt="" title="noise3Dwrap2DFFT_s64k19" width="65" height="65" class="aligncenter size-full wp-image-1539" /></td>
+</tr>
+<tr>
+<td>21</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k21.gif" alt="" title="noise3Dwrap_s64k21" width="64" height="64" class="aligncenter size-full wp-image-1517" /></td>
+<td>397.4730</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k21.gif" alt="" title="noise3Dwrap2DFFT_s64k21" width="65" height="65" class="aligncenter size-full wp-image-1540" /></td>
+</tr>
+<tr>
+<td>23</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k23.gif" alt="" title="noise3Dwrap_s64k23" width="64" height="64" class="aligncenter size-full wp-image-1518" /></td>
+<td>615.1934</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k23.gif" alt="" title="noise3Dwrap2DFFT_s64k23" width="65" height="65" class="aligncenter size-full wp-image-1541" /></td>
+</tr>
+<tr>
+<td>25</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k25.gif" alt="" title="noise3Dwrap_s64k25" width="64" height="64" class="aligncenter size-full wp-image-1519" /></td>
+<td>852.5891</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k25.gif" alt="" title="noise3Dwrap2DFFT_s64k25" width="65" height="65" class="aligncenter size-full wp-image-1542" /></td>
+</tr>
+<tr>
+<td>27</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k27.gif" alt="" title="noise3Dwrap_s64k27" width="64" height="64" class="aligncenter size-full wp-image-1520" /></td>
+<td>1190.7</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k27.gif" alt="" title="noise3Dwrap2DFFT_s64k27" width="65" height="65" class="aligncenter size-full wp-image-1543" /></td>
+</tr>
+<tr>
+<td>29</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k29.gif" alt="" title="noise3Dwrap_s64k29" width="64" height="64" class="aligncenter size-full wp-image-1521" /></td>
+<td>1641.1</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k29.gif" alt="" title="noise3Dwrap2DFFT_s64k29" width="65" height="65" class="aligncenter size-full wp-image-1544" /></td>
+</tr>
+<tr>
+<td>31</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k31.gif" alt="" title="noise3Dwrap_s64k31" width="64" height="64" class="aligncenter size-full wp-image-1522" /></td>
+<td>1822.3</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k31.gif" alt="" title="noise3Dwrap2DFFT_s64k31" width="65" height="65" class="aligncenter size-full wp-image-1545" /></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Subjectively, there is diminishing return as the convolution kernel increases past 13-15 pixels.  Objectively, it makes little sense to spend the computational time processing past 15:<br />
+<img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/graphTimeToComplete.png" alt="" title="graphTimeToComplete" width="561" height="420" class="aligncenter size-full wp-image-1553" srcset="/wp-content/uploads/2012/12/graphTimeToComplete.png 561w, /wp-content/uploads/2012/12/graphTimeToComplete-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p>Here is a MAT file with these 3D noise arrays:<br />
+<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap64_k1_31.mat" target="_blank">noise3Dwrap64_k1_31.mat</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

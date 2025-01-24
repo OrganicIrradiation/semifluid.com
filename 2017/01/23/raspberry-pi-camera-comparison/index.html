@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-US"> <![endif]--><!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-US"> <![endif]--><!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-US"> <![endif]--><!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-US"> <![endif]--><!--[if gt IE 9]><!--><html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Raspberry Pi Camera Comparison &#8211; semifluid.com</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Raspberry Pi Camera Comparison Comments Feed" href="/2017/01/23/raspberry-pi-camera-comparison/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="sparkling-bootstrap-css" href="/wp-content/themes/sparkling/assets/css/bootstrap.min.css?ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-icons-css" href="/wp-content/themes/sparkling/assets/css/fontawesome-all.min.css?ver=5.1.1." type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-style-css" href="/wp-content/themes/sparkling/style.css?ver=2.4.2" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=6.7.1" id="sparkling-bootstrapjs-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/functions.js?ver=20180503" id="sparkling-functions-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/5916">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.1">
+<link rel="canonical" href="/2017/01/23/raspberry-pi-camera-comparison/">
+<link rel="shortlink" href="/?p=5916">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2017%2F01%2F23%2Fraspberry-pi-camera-comparison%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2017%2F01%2F23%2Fraspberry-pi-camera-comparison%2F#038;format=xml">
+<style type="text/css">.entry-content {font-size:14px}</style>
+<link rel="pingback" href="/xmlrpc.php">		<style type="text/css">caca,
+		.site-name,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}</style>
+	
+</head>
+
+<body class="post-template-default single single-post postid-5916 single-format-standard">
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default
+		" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+
+
+														<div id="logo">
+																																<a href="/"><img src="/wp-content/uploads/2017/01/semifluid.com-banner.png" height="500" width="3900" alt="semifluid.com"></a>
+																																</div>
+<!-- end of #logo -->
+
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+
+
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main-menu" class="nav navbar-nav">
+<li id="menu-item-6759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6759"><a href="/">Home</a></li>
+<li id="menu-item-6760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760"><a href="/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-6761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761"><a href="/about/">About Me</a></li>
+<li id="menu-item-6762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6762"><a href="/contact-me/">Contact Me</a></li>
+</ul></div>
+
+
+					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-5916" class="post-5916 post type-post status-publish format-standard hentry category-electronics category-personal">
+		<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">Raspberry Pi Camera Comparison</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar-alt"></i> <a href="/2017/01/23/raspberry-pi-camera-comparison/" rel="bookmark"><time class="entry-date published" datetime="2017-01-23T06:46:36-08:00">January 23, 2017</time><time class="updated" datetime="2017-01-23T06:46:36-08:00">January 23, 2017</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="/author/admin/">Steven A. Cholewiak</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open"></i>
+				 <a href="/category/electronics/" rel="category tag">Electronics</a>, <a href="/category/personal/" rel="category tag">Personal</a>				</span>
+								
+			</div>
+<!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>I use a number of <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B</a> ARM-based Linux computers to help simplify my day-to-day life. Because I live in an urban area, I have been interested in setting up a security camera that could alert me to any issues that might arise when I&#8217;m not in the house. Most recent Raspberry Pis also include a <a href="https://en.wikipedia.org/wiki/Camera_Serial_Interface">CSI</a> connector, meaning that it is easy to connect a high-resolution camera that can be easily accessed via <a href="https://picamera.readthedocs.io/">python</a> or via <a href="https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md">bash</a>. This would also be helpful for any other computer vision setup, including <a href="http://octoprint.org/">OctoPrint</a>. Since the <a href="http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/">Raspberry Pi runs OpenCV</a>, I can use open source computer vision source code to quick and easily setup a security system. The first step is selecting a camera.</p>
+<p>I plan on using a <a href="http://amzn.to/2jH3h5K">Raspberry Pi 3</a> or <a href="http://amzn.to/2iq8YDZ">Raspberry Pi Zero v1.3 (with camera connector)</a> as the base machine. However, there are a number of 3rd party cameras available. As is often the case, I was not able to find a comparison of the options available online, so today I am going to do a quick and dirty look at the following cameras:</p>
+<table class=" table table-hover">
+<thead>
+<tr>
+<th>Model</th>
+<th>Chipset</th>
+<th>Megapixels</th>
+<th>Advertised FOV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://amzn.to/2iqbMRo" title="Raspberry Pi Camera">Raspberry Pi Camera</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>54° (h) x 41° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGTeO6" title="Raspberry Pi v2 Camera">Raspberry Pi v2 Camera</a></td>
+<td>IMX219</td>
+<td>8MP</td>
+<td>62.2° (h) x 48.8° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>54° (h) x 41° (v)</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGUktd" title="Waveshare RPi Camera (I)">Waveshare RPi Camera (I)</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>170°</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>222°</td>
+</tr>
+<tr>
+<td><a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a></td>
+<td>OV5647</td>
+<td>5MP</td>
+<td>75.7°</td>
+</tr>
+</tbody>
+</table>
+<p><a href="/wp-content/uploads/2017/01/rpi-cameras-in-a-row.jpg"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2017/01/rpi-cameras-in-a-row-1024x557.jpg" alt="" width="648" height="352" class="aligncenter size-large wp-image-6008" srcset="/wp-content/uploads/2017/01/rpi-cameras-in-a-row-1024x557.jpg 1024w, /wp-content/uploads/2017/01/rpi-cameras-in-a-row-300x163.jpg 300w, /wp-content/uploads/2017/01/rpi-cameras-in-a-row-768x418.jpg 768w" sizes="(max-width: 648px) 100vw, 648px"></a></p>
+<p>In this post, I provide some demonstration photos for outdoor, indoor, and low-light scenarios for the modules.</p>
+<p><span id="more-5916"></span></p>
+<p>The basic testing rig uses a <a href="http://amzn.to/2jH3h5K">Raspberry Pi 3</a> as the processor. I mounted the cameras onto a piece of cardboard so that they would have roughly the same origin and orientation. Images were captured through an SSH connection to my laptop and transferred via <a href="http://www.hypexr.org/linux_scp_help.php"><code>scp</code></a>. Finally, I strapped on a portable battery (<a href="https://www.amazon.com/gp/product/B00SSY1AJU">AUKEY 12000mAh powerbank</a>) and the entire setup was portable. Since this is a headless machine, I streamed video from the Raspberry Pi to my laptop with the <a href="http://www.linux-projects.org/uv4l/tutorials/rtsp-server/">UV4L</a> package to make sure that the image was sharp, especially for the Waveshare cameras, which required some focusing. Here&#8217;s a photo of the &#8220;test setup&#8221;:</p>
+<p><a href="/wp-content/uploads/2017/01/rpi-cameras-setup.jpg"><img decoding="async" src="/wp-content/uploads/2017/01/rpi-cameras-setup-1024x599.jpg" alt="" width="648" height="379" class="aligncenter size-large wp-image-6009" srcset="/wp-content/uploads/2017/01/rpi-cameras-setup-1024x599.jpg 1024w, /wp-content/uploads/2017/01/rpi-cameras-setup-300x176.jpg 300w, /wp-content/uploads/2017/01/rpi-cameras-setup-768x449.jpg 768w, /wp-content/uploads/2017/01/rpi-cameras-setup.jpg 1993w" sizes="(max-width: 648px) 100vw, 648px"></a></p>
+<p>Each module has different specifications and features, so it&#8217;s worthwhile to weigh the pros and cons when choosing one for your application. All of the modules are effectively plug-and-play with the CSI connector; however, the <a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a> also has a neat feature where the LED signal toggles a mechanical IR filter. This means that with some creative coding, you can use it as a day and night camera (it even includes high power IR LEDs, which I did not include in the comparison shots). However, the image quality is a bit worse and the IR filter is not terribly effective (meaning colors are washed-out in daytime shots).</p>
+<p>All photos were taken with:</p>
+<pre><code>raspistill -o photo.jpg --vflip --hflip
+</code></pre>
+<p>Here are all of photos in a mosaic for quick comparison:</p>
+<p><a href="/wp-content/uploads/2017/01/semifluid.com-camera-comparison.jpg"><img decoding="async" src="/wp-content/uploads/2017/01/semifluid.com-camera-comparison-1024x635.jpg" alt="" width="648" height="402" class="aligncenter size-large wp-image-6007" srcset="/wp-content/uploads/2017/01/semifluid.com-camera-comparison-1024x635.jpg 1024w, /wp-content/uploads/2017/01/semifluid.com-camera-comparison-300x186.jpg 300w, /wp-content/uploads/2017/01/semifluid.com-camera-comparison-768x476.jpg 768w" sizes="(max-width: 648px) 100vw, 648px"></a></p>
+<p>Image quality for the <a href="http://amzn.to/2iqbMRo" title="Raspberry Pi Camera">Raspberry Pi Camera</a> and the <a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a> were practically identical, which would be expected since they share the same sensor and lens setup. The <a href="http://amzn.to/2jGZnK2" title="Waveshare RPi Camera IR-CUT">Waveshare RPi Camera IR-CUT</a> was disappointing and even after dialing in the focus there were still regions that were blurry when the IR filter was enabled. I really liked the field-of-view for the <a href="http://amzn.to/2jGUktd" title="Waveshare RPi Camera (I)">Waveshare RPi Camera (I)</a> and <a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a> and the image was quite sharp once the focus was adjusted. These would be ideal cameras for a home security solution. The <a href="http://amzn.to/2jGTeO6" title="Raspberry Pi v2 Camera">Raspberry Pi v2 Camera</a> performance was anti-climactic. Its dynamic range appears to be a bit wider, but it would often under-expose photos. This could probably be corrected by adjusting the parameters in <code>raspistill</code>.  Bang for buck, the <a href="http://amzn.to/2jGSRmj" title="Arducam 5MP Camera">Arducam 5MP RPi Camera</a> is best, but for shear field-of-view, the <a href="http://amzn.to/2jGYrW9" title="Waveshare RPi Camera (J)">Waveshare RPi Camera (J)</a> is pretty awesome.</p>
+<p>And here are the full-resolution shots in each of the situations:</p>
+<h3>Outdoor (day)</h3>
+<table class=" table table-hover">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5998" srcset="/wp-content/uploads/2017/01/cam_day_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi Camera</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5997" srcset="/wp-content/uploads/2017/01/cam_day_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6001" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (on)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6002" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6000" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (I)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-6003" srcset="/wp-content/uploads/2017/01/cam_day_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_day_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_day_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_day_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5999" srcset="/wp-content/uploads/2017/01/cam_day_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_day_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_day_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Outdoor (night)</h3>
+<table class=" table table-hover">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5989" srcset="/wp-content/uploads/2017/01/cam_carport_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi Camera</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5988" srcset="/wp-content/uploads/2017/01/cam_carport_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5992" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (on)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5993" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5991" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (I)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5994" srcset="/wp-content/uploads/2017/01/cam_carport_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_carport_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_carport_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_carport_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5990" srcset="/wp-content/uploads/2017/01/cam_carport_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_carport_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_carport_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Indoor (day)</h3>
+<table class=" table table-hover">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5961" srcset="/wp-content/uploads/2017/01/cam_indoors_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a> <br> Raspberry Pi Camera</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5960" srcset="/wp-content/uploads/2017/01/cam_indoors_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a> <br> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5964" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (on)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5965" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5963" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (I)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5966" srcset="/wp-content/uploads/2017/01/cam_indoors_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_indoors_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_indoors_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5962" srcset="/wp-content/uploads/2017/01/cam_indoors_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_indoors_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_indoors_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Indoor (night)</h3>
+<table class=" table table-hover">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_rpi.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_rpi-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5981" srcset="/wp-content/uploads/2017/01/cam_nightindoors_rpi-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_rpi-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_rpi-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi Camera</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_arducam.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_arducam-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5980" srcset="/wp-content/uploads/2017/01/cam_nightindoors_arducam-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_arducam-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_arducam-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Arducam 5MP RPi Camera</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5984" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_ir-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (on)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5985" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_iroff-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera IR-CUT (off)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5983" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_i-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (I)</td>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5986" srcset="/wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-768x576.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_waveshare_j-1024x768.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Waveshare RPi Camera (J)</td>
+</tr>
+<tr>
+<td>
+<a href="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2-300x225.jpg" alt="" width="300" height="225" class="aligncenter size-medium wp-image-5982" srcset="/wp-content/uploads/2017/01/cam_nightindoors_rpiv2-300x225.jpg 300w, /wp-content/uploads/2017/01/cam_nightindoors_rpiv2-768x577.jpg 768w, /wp-content/uploads/2017/01/cam_nightindoors_rpiv2-1024x769.jpg 1024w" sizes="auto, (max-width: 300px) 100vw, 300px"></a><br> Raspberry Pi v2 Camera</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><!-- I also tested the accuracy of the advertised FOVs for most of the lenses (&lt;170°). I used OpenCV to calculate the [intrinsic camera matrix](https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters) and [lens distortion parameters](https://en.wikipedia.org/wiki/Distortion_(optics)). To do this, I took 40 images of a calibration grid at different orientations and locations and then bootstrap 1000 samples of the 40 images (with replacement) to calculate the camera's horizontal, vertical, and diagonal field of view, focal length, [principal point](https://en.wikipedia.org/wiki/Pinhole_camera_model#The_geometry_and_mathematics_of_the_pinhole_camera), and aspect ratio. The 5MP OV5647 modules were tested at 1296x972 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)) and the Raspberry Pi v2 Camera was tested at 1640x1232 ([2x2 binning](https://picamera.readthedocs.io/en/release-1.12/fov.html#camera-modes)). Both picture modes record at the full field of view. --></p>
+					</div>
+<!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			17 thoughts to &ldquo;Raspberry Pi Camera Comparison&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-212459" class="comment even thread-even depth-1">
+			<article id="div-comment-212459" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/6d5d7477ec13201b1a47c9bd76b0e5a4?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/6d5d7477ec13201b1a47c9bd76b0e5a4?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">as in email address</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-212459"><time datetime="2017-02-05T01:24:40-08:00">February 5, 2017 at 01:24</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks for this really useful review.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=212459#respond" data-commentid="212459" data-postid="5916" data-belowelement="div-comment-212459" data-respondelement="respond" data-replyto="Reply to as in email address" aria-label="Reply to as in email address">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-212461" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-212461" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/d80d38388d3ddbe40c50ba682f59c9b2?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/d80d38388d3ddbe40c50ba682f59c9b2?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Mal</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-212461"><time datetime="2017-02-05T06:00:33-08:00">February 5, 2017 at 06:00</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>As you     have already stated it seems that the RPi2 camera needs a different exposure setting. otherwise I love the extra detail that is in the pictures. Personally I am not enamoured with the fisheye effect  of the waveshare images.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=212461#respond" data-commentid="212461" data-postid="5916" data-belowelement="div-comment-212461" data-respondelement="respond" data-replyto="Reply to Mal" aria-label="Reply to Mal">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-212513" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://blog.adafruit.com/2017/02/10/raspberry-pi-camera-comparison-piday-raspberrypi-raspberry_pi/" class="url" rel="ugc external nofollow">Raspberry Pi Camera Comparison #piday #raspberrypi @Raspberry_Pi &laquo; Adafruit Industries &#8211; Makers, hackers, artists, designers and engineers!</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-212527" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-212527" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/4d6546d11061eb9321019eca5357f983?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/4d6546d11061eb9321019eca5357f983?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Mathijs Affourtit</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-212527"><time datetime="2017-02-12T09:17:08-08:00">February 12, 2017 at 09:17</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is great, just what I needed! Thanks!</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=212527#respond" data-commentid="212527" data-postid="5916" data-belowelement="div-comment-212527" data-respondelement="respond" data-replyto="Reply to Mathijs Affourtit" aria-label="Reply to Mathijs Affourtit">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-213153" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-213153" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/b00b24f84e292708c6653bffde63037d?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/b00b24f84e292708c6653bffde63037d?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Mess</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-213153"><time datetime="2017-05-23T05:43:10-07:00">May 23, 2017 at 05:43</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>HI, I have a late 2012 Retina and i keep hearing only this will work? Is that true</p>
+<p><a href="https://eshop.macsales.com/item/Other%20World%20Computing/SSDA12R960/" rel="nofollow ugc">https://eshop.macsales.com/item/Other%20World%20Computing/SSDA12R960/</a></p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=213153#respond" data-commentid="213153" data-postid="5916" data-belowelement="div-comment-213153" data-respondelement="respond" data-replyto="Reply to Mess" aria-label="Reply to Mess">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-213241" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-213241" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steven A. Cholewiak</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-213241"><time datetime="2017-06-02T15:05:25-07:00">June 2, 2017 at 15:05</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I&#8217;m not sure who is telling you that this is the only option, because it is not. See here: <a href="/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/" rel="ugc">/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</a></p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=213241#respond" data-commentid="213241" data-postid="5916" data-belowelement="div-comment-213241" data-respondelement="respond" data-replyto="Reply to Steven A. Cholewiak" aria-label="Reply to Steven A. Cholewiak">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-213702" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-213702" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/a1c63e1ea7fa2e13fcb8894203828e72?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a1c63e1ea7fa2e13fcb8894203828e72?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Connor R</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-213702"><time datetime="2017-07-31T19:52:40-07:00">July 31, 2017 at 19:52</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello,</p>
+<p>I&#8217;m a Computer Engineering student at the University of Central Florida and I&#8217;m writing a technical paper on my Senior design project. I found some really useful information here and I was hoping to get permission to use some of the images found in this article.</p>
+<p>Thank you</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=213702#respond" data-commentid="213702" data-postid="5916" data-belowelement="div-comment-213702" data-respondelement="respond" data-replyto="Reply to Connor R" aria-label="Reply to Connor R">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-213770" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-213770" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steven A. Cholewiak</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-213770"><time datetime="2017-08-14T14:45:24-07:00">August 14, 2017 at 14:45</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Sure, you&#8217;re welcome to include them in your paper! I would appreciate a note attributing the source.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=213770#respond" data-commentid="213770" data-postid="5916" data-belowelement="div-comment-213770" data-respondelement="respond" data-replyto="Reply to Steven A. Cholewiak" aria-label="Reply to Steven A. Cholewiak">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-214776" class="comment even thread-even depth-1">
+			<article id="div-comment-214776" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/65a46073045999340b7897b16ad7bee1?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/65a46073045999340b7897b16ad7bee1?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="https://tedder.me/" class="url" rel="ugc external nofollow">Ted Timmons</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-214776"><time datetime="2017-12-28T22:08:56-08:00">December 28, 2017 at 22:08</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Did you make any notes or notice minimum focus distance? It&#8217;s useful for the Pi focuses at 6&#8243;.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=214776#respond" data-commentid="214776" data-postid="5916" data-belowelement="div-comment-214776" data-respondelement="respond" data-replyto="Reply to Ted Timmons" aria-label="Reply to Ted Timmons">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-215177" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://denor.daa.jp/raspberry-pi%e3%82%ab%e3%83%a1%e3%83%a9%e3%81%ab%e6%9c%9b%e9%81%a0%e3%83%ac%e3%83%b3%e3%82%ba" class="url" rel="ugc external nofollow">Raspberry Piカメラに望遠レンズ</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-215742" class="comment even thread-even depth-1">
+			<article id="div-comment-215742" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2b8cd7d06be82803aff09c57de95082c?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/2b8cd7d06be82803aff09c57de95082c?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Andrew</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-215742"><time datetime="2018-05-29T10:58:25-07:00">May 29, 2018 at 10:58</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can you please update and post more photos of the IR Cut in action in comparison to the other cameras? An IR Light source would also be great for this comparison.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=215742#respond" data-commentid="215742" data-postid="5916" data-belowelement="div-comment-215742" data-respondelement="respond" data-replyto="Reply to Andrew" aria-label="Reply to Andrew">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-216401" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-216401" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2a59be6b207358744b07a32f168484bc?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/2a59be6b207358744b07a32f168484bc?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">khin thida san</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-216401"><time datetime="2018-08-07T18:34:46-07:00">August 7, 2018 at 18:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thank you very much for the useful review ~</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=216401#respond" data-commentid="216401" data-postid="5916" data-belowelement="div-comment-216401" data-respondelement="respond" data-replyto="Reply to khin thida san" aria-label="Reply to khin thida san">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-216712" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://allstack.net/wordpress/post-3819.html" class="url" rel="ugc external nofollow">Raspberry Pi Camera Comparison | All Stack</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-218255" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-218255" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/8569de6277f11af6a29b3e7c5f74614e?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/8569de6277f11af6a29b3e7c5f74614e?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Box</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-218255"><time datetime="2019-03-22T00:58:35-07:00">March 22, 2019 at 00:58</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks!!</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=218255#respond" data-commentid="218255" data-postid="5916" data-belowelement="div-comment-218255" data-respondelement="respond" data-replyto="Reply to Box" aria-label="Reply to Box">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-221239" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://hgunluk.com/2020/05/01/raspberry-pi-ve-pi-kamera-kurulumu-baglatisi/" class="url" rel="ugc external nofollow">Raspberry pi ve pi kamera kurulumu bağlatısı &#8211; bazı şeyler hakkında</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-222463" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-222463" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/ed78cf6bc2a7c6be8803c9724da5b94b?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/ed78cf6bc2a7c6be8803c9724da5b94b?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Paul L Fancher</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-222463"><time datetime="2020-12-07T20:19:52-08:00">December 7, 2020 at 20:19</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi. thanks for your thorough comparison of the camera modules for the RPi.</p>
+<p>I&#8217;m thinking about using a RPi with one of these modules as a surveillance camera and i want it to be able to capture car license plates at night (Using some IR lighting to illuminate the alley).<br>
+We have a nervy thief who regularly does a comeback in neighborhood.</p>
+<p>I&#8217;m trying to not make a wrong purchase and your review is very valuable.</p>
+<p>which one of these modules do you think can capture license plates at night? I&#8217;m gonna mount it right on my wall next to the alley and probably mount an IR projector under it.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=222463#respond" data-commentid="222463" data-postid="5916" data-belowelement="div-comment-222463" data-respondelement="respond" data-replyto="Reply to Paul L Fancher" aria-label="Reply to Paul L Fancher">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-222709" class="comment even thread-even depth-1">
+			<article id="div-comment-222709" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/1e2e3a6c9fbe31cad898cfdcb11671a7?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/1e2e3a6c9fbe31cad898cfdcb11671a7?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Willem</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2017/01/23/raspberry-pi-camera-comparison/#comment-222709"><time datetime="2021-03-15T01:16:10-07:00">March 15, 2021 at 01:16</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Very useful!<br>
+Thank you for putting the effort in<br>
+Greetings, Willem, Netherlands</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/?replytocom=222709#respond" data-commentid="222709" data-postid="5916" data-belowelement="div-comment-222709" data-respondelement="respond" data-replyto="Reply to Willem" aria-label="Reply to Willem">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		</ol>
+<!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2017/01/23/raspberry-pi-camera-comparison/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="5916" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+</div>
+<!-- #comments -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2017/01/13/replacing-battery-in-apple-macbook-pro-retina-late-2012/" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">Replacing Battery in Apple MacBook Pro Retina (Late 2012)</span></a></div>
+<div class="nav-next"><a href="/2019/04/27/2019-vss-dna/" rel="next"><span class="post-title">2019 VSS DNA <i class="fa fa-chevron-right"></i></span></a></div>
+</div>
+	</nav>
+		</main><!-- #main -->
+	</div>
+<!-- #primary -->
+
+</div>
+<!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+				<aside id="search-4" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:">
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside><aside id="categories-9" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-3">
+<a href="/category/electronics/">Electronics</a>
+<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/electronics/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/electronics/glcd/">GLCD</a>
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/electronics/gps/">GPS</a>
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/electronics/high-voltage/">High Voltage</a>
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/electronics/leds/">LEDs</a>
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/electronics/rf/">RF</a>
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/electronics/usb/">USB</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/personal/">Personal</a>
+<ul class="children">
+	<li class="cat-item cat-item-22">
+<a href="/category/personal/consumerism/">Consumerism</a>
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/personal/cooking/">Cooking</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/photos/">Photos</a>
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/pic-projects/">PIC Projects</a>
+<ul class="children">
+	<li class="cat-item cat-item-21">
+<a href="/category/pic-projects/c-projects/">C Projects</a>
+</li>
+	<li class="cat-item cat-item-23">
+<a href="/category/pic-projects/jal-projects/">JAL Projects</a>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/pic-projects/pic12f675/">PIC12F675</a>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/pic-projects/pic12f683/">PIC12F683</a>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/pic-projects/pic16f628/">PIC16F628</a>
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/pic-projects/pic16f88/">PIC16F88</a>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/pic-projects/pic18f2550/">PIC18F2550</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/programming/">Programming</a>
+<ul class="children">
+	<li class="cat-item cat-item-24">
+<a href="/category/programming/mathematica/">Mathematica</a>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/programming/matlab/">MATLAB</a>
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/programming/python/">Python</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/research/">Research</a>
+<ul class="children">
+	<li class="cat-item cat-item-48">
+<a href="/category/research/3d-shape/">3D Shape</a>
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/research/stability-research/">Stability</a>
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/research/texture/">Texture</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-18">
+<a href="/category/software/">Software</a>
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/software/mac-os-x/">Mac OS X</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1">
+<a href="/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside>	</div>
+</div>
+<!-- #secondary -->
+		</div>
+<!-- close .row -->
+	</div>
+<!-- close .container -->
+</div>
+<!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+	
+	<div class="footer-widget-area">
+				<div class="col-sm-4 footer-widget" role="complementary">
+					</div>
+<!-- .widget-area .first -->
+		
+		
+			</div>
+			</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						sparkling						Theme by <a href="http://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div>
+<!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div>
+<!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div>
+<!-- #page -->
+
+		<script type="text/javascript">jQuery(document).ready(function ($) {
+			if ($(window).width() >= 767) {
+			  $('.navbar-nav > li.menu-item > a').click(function () {
+				if ($(this).attr('target') !== '_blank') {
+				  window.location = $(this).attr('href')
+				}
+			  })
+			}
+		  })</script>
+	<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222" id="sparkling-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.7.1" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+
+</body>
+</html>

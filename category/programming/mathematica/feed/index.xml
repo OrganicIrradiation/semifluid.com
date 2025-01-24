@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mathematica &#8211; semifluid.com</title>
+	<atom:link href="/category/programming/mathematica/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Sat, 26 Oct 2013 09:34:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Calculating the COM of a Spherical Plot</title>
+		<link>/2010/06/30/calculating-the-com-of-a-spherical-plot/</link>
+					<comments>/2010/06/30/calculating-the-com-of-a-spherical-plot/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 30 Jun 2010 21:15:39 +0000</pubDate>
+				<category><![CDATA[Mathematica]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Center of Gravity]]></category>
+		<category><![CDATA[Center of Mass]]></category>
+		<category><![CDATA[COG]]></category>
+		<category><![CDATA[COM]]></category>
+		<category><![CDATA[Coordinates]]></category>
+		<category><![CDATA[Integral]]></category>
+		<category><![CDATA[Spherical]]></category>
+		<guid isPermaLink="false">/?p=319</guid>
+
+					<description><![CDATA[What is everyone excited for??? More math! Ok, maybe not, but I&#8217;ll come back to the electronics projects later (including investigating the Parallax RFID reader, Arduino FIO, and heck, maybe even some more LED fun). In the meantime, let&#8217;s get back to math. What do the volume calculations look like, and how would one go [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>What is everyone excited for??? More math! Ok, maybe not, but I&#8217;ll come back to the electronics projects later (including investigating the <a href="http://www.parallax.com/product/28140">Parallax RFID reader</a>, <a href="http://arduino.cc/en/Main/ArduinoBoardFio">Arduino FIO</a>, and heck, maybe even some more <a href="http://semifluid.com/2010/06/28/8x8-rgb-led-display/">LED fun</a>). In the meantime, let&#8217;s get back to math.</p>
+<p><a href="/wp-content/uploads/2010/06/sphere.png"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-326" title="sphere" src="/wp-content/uploads/2010/06/sphere.png" alt="" width="360" height="402" /></a></p>
+<p>What do the volume calculations look like, and how would one go about calculating the center of mass/geometric centroid of a spherical plot? More after the break&#8230;<br />
+<span id="more-319"></span><br />
+So, using our good buddy, Wolfram Mathworld, we know that the spherical coordinate <a href="http://mathworld.wolfram.com/VolumeElement.html">volume element</a>, basically the volume we will be using when integrating the solid, is equal to:</p>
+<p style="text-align: center;">$latex dV = \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta$</p>
+<p>Note that we are going to use the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/ISO_31-11">ISO 31-11 convention</a> for our coordinate system, meaning that $latex \theta$ is the &#8220;longitude&#8221; and ranges from $latex 0$ to $latex 2\pi$, $latex \phi$ is the &#8220;latitude&#8221; and ranges from $latex 0$ to $latex \pi$, and $latex \rho$ is the radius at any given point.</p>
+<p>Integrating this around a sphere gives us the volume of the sphere:</p>
+<p style="text-align: center;">$latex V = \int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta$</p>
+<p style="text-align: center;">$latex V = \int_0^{2\pi} \! \int_o^{\pi} \! \frac{1}{3} r^3 \sin(\phi) \, d\phi \, d\theta$</p>
+<p style="text-align: center;">$latex V = \int_0^{2\pi} \! \frac{2}{3} r^3 \, d\theta$</p>
+<p style="text-align: center;">$latex V = \frac{4}{3} \pi r^3$</p>
+<p>To convert from spherical to Cartesian coordinates, we have to simply use the following:</p>
+<p style="text-align: center;">$latex x = \rho\sin(\phi)\cos(\theta)$</p>
+<p style="text-align: center;">$latex y = \rho\sin(\phi)\sin(\theta)$</p>
+<p style="text-align: center;">$latex z = \rho\cos(\phi)$</p>
+<p>So, to solve for the x, y, and z centers of mass, we will need to convert from spherical cooridnates to Cartesian coordinates. We will do this while calculating the <a href="http://mathworld.wolfram.com/FunctionCentroid.html">function centroid</a> for each axis. The basic formula is:</p>
+<p style="text-align: center;">$latex COM = \frac{\int \! x f(x) \, dx}{\int \! f(x) \, dx}$</p>
+<p>Our $latex f(x) \, dx$ in this case is the $latex dV$ from above and so the basic forms for the COM for each of the three axes is:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! x \, dV}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} dV}$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! y \, dV}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} dV}$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! z \, dV}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} dV}$</p>
+<p>So, substituting our Cartesian coordinate conversions and our $latex dV$ from above:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho\sin(\phi)\cos(\theta) \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} d\rho \, d\phi \, d\theta}$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho\sin(\phi)\sin(\theta) \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} d\rho \, d\phi \, d\theta}$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho\cos(\phi) \rho^2 \sin(\phi) \, d\rho \, d\phi \, d\theta}{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} d\rho \, d\phi \, d\theta}$</p>
+<p>Simplified:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho^3 \sin(\phi)^2 \cos(\theta) \, d\rho \, d\phi \, d\theta}{V}$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho^3 \sin(\phi)^2 \sin(\theta) \, d\rho \, d\phi \, d\theta}{V}$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{\int_0^{2\pi} \! \int_o^{\pi} \! \int_0^{r} \! \rho^3 \sin(\phi) \cos(\phi) \, d\rho \, d\phi \, d\theta}{V}$</p>
+<p>Solving these for a constant (i.e., $latex r$) leads to:</p>
+<p style="text-align: center;">$latex COM_{x} = 0$</p>
+<p style="text-align: center;">$latex COM_{y} = 0$</p>
+<p style="text-align: center;">$latex COM_{z} = 0$</p>
+<p>No big surprise, because, as we would assume, the center of mass for a sphere should be at the origin, $latex (0,0,0)$.</p>
+<p>Now, instead of a perfect circle, let&#8217;s try a different shape, say defined by:</p>
+<p style="text-align: center;">$latex r(\phi,\theta) = 1+\sin(\frac{\theta}{2})\sin(\phi)$</p>
+<p>A shape that looks somewhat like a peach and leads to COM values of:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{-\frac{784}{225}-\frac{41\pi^2}{128}}{5\pi} \approx -0.423$</p>
+<p style="text-align: center;">$latex COM_{y} = 0$</p>
+<p style="text-align: center;">$latex COM_{z} = 0$</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/06/Peach1.png"><img decoding="async" class="size-medium wp-image-354 alignnone" title="Peach1" src="/wp-content/uploads/2010/06/Peach1-273x300.png" alt="" width="273" height="300" /></a><a href="/wp-content/uploads/2010/06/Peach2.png"><img decoding="async" class="size-medium wp-image-354 alignnone" title="Peach2" src="/wp-content/uploads/2010/06/Peach2-273x300.png" alt="" width="273" height="300" /></a></p>
+<p>Or a spiraling shell:</p>
+<p style="text-align: center;">$latex r(\phi,\theta) = 1+\theta$</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{6\pi^2(-3+6\pi+4\pi^2)}{-1+(1+2\pi)^4} \approx 1.165$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{6\pi^2(1+\pi)(-5+2\pi+2\pi^2)}{-1+(1+2\pi)^4} \approx -1.833$</p>
+<p style="text-align: center;">$latex COM_{z} = 0$</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/06/Shell1.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-361" title="Shell1" src="/wp-content/uploads/2010/06/Shell1-207x300.png" alt="" width="207" height="300" /></a><a href="/wp-content/uploads/2010/06/Shell2.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-360" title="Shell2" src="/wp-content/uploads/2010/06/Shell2-207x300.png" alt="" width="207" height="300" /></a></p>
+<p>Or perhaps something really out there:</p>
+<p style="text-align: center;">$latex r(\phi,\theta) = 1+\sin(3\theta)\sin(4\phi)+\sin(\theta)\sin(\frac{\phi}{3})$</p>
+<p>With COM values of:</p>
+<p style="text-align: center;">$latex COM_{x} = 0$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{32383290752127}{62456794017280} \approx 0.518$</p>
+<p style="text-align: center;">$latex COM_{z} = -\frac{359881023}{2416474112} \approx -0.149$</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/06/Weird1.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-366" title="Weird1" src="/wp-content/uploads/2010/06/Weird1-251x300.png" alt="" width="251" height="300" /></a><a href="/wp-content/uploads/2010/06/Weird2.png"><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-367" title="Weird2" src="/wp-content/uploads/2010/06/Weird2-251x300.png" alt="" width="251" height="300" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/06/30/calculating-the-com-of-a-spherical-plot/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Calculating the COM of a 3D Surface of Revolution</title>
+		<link>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/</link>
+					<comments>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 20:10:53 +0000</pubDate>
+				<category><![CDATA[Mathematica]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">/?p=242</guid>
+
+					<description><![CDATA[My current research at Rutgers focuses on identifying the cognitive mechanisms that are employed when perceiving the shape and structure of 3D objects. One of the little problems that I had to overcome was finding out how to calculate the center of mass/gravity of a 3D surface of revolution analytically. Specifically, I needed to calculate [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>My current research at Rutgers focuses on identifying the cognitive mechanisms that are employed when perceiving the shape and structure of 3D objects. One of the little problems that I had to overcome was finding out how to calculate the center of mass/gravity of a 3D <a href="http://mathworld.wolfram.com/SurfaceofRevolution.html">surface of revolution</a> analytically. Specifically, I needed to calculate the COM for <a href="http://mathworld.wolfram.com/ConicalFrustum.html">conical frustums</a> with and without an attached part (which was also analytically generated).</p>
+<p><a href="/wp-content/uploads/2010/06/Cylinders-with-Parts-COM-Calculate-v9-Low-Salience.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-245" title="Cylinders with Parts COM Calculate v9 - Low Salience" src="/wp-content/uploads/2010/06/Cylinders-with-Parts-COM-Calculate-v9-Low-Salience.png" alt="" width="362" height="353" /></a></p>
+<p>Unfortunately, it wasn&#8217;t as easy to derive as I assumed, but the steps toward that end are pretty straightforward.  After the break you can see the general equation I ultimately derived for calculating the COM in 3D-space.<br />
+<span id="more-242"></span><br />
+A conical frustum will be defined with attributes $latex R_{1}$ (the top radius), $latex R_{2}$ (the bottom radius), and $latex h$ (the height of the truncated cone).</p>
+<p>The radius of the frustum at any given height $latex z$ is:</p>
+<p style="text-align: center;">$latex r_{fr}(z)=\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2}$</p>
+<p>The area of this slice at any given height $latex z$ is:</p>
+<p style="text-align: center;">$latex A(z) = \int_0^{2\pi} \! \int_0^{r_{fr}(z)} \! r \, dr \, d\theta = \pi r_{fr}(z)^2$</p>
+<p>Then the volume can be calculated by integrating across all heights:</p>
+<p style="text-align: center;">$latex V = \int_0^{h} \! A(z) , dz$</p>
+<p>Combine these three equations together and we have:</p>
+<p style="text-align: center;">$latex V = \int_0^{h} \! \pi (\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2})^2 \, dz = \frac{1}{3} h \pi (R_{1}^2 + R_{1} R_{2} + R_{2}^2)$</p>
+<p>Ok, so now we have the radius, area, and volume of the conical frustum. Using this information, we can now calculate the center of mass.</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{1}{V} \int_0^h \! \int_0^{2\pi} \! \int_0^{r_{fr}(z)} \! r^2 \cos(\theta) A(z) \, dr \, d\theta \, dz = 0$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{1}{V} \int_0^h \! \int_0^{2\pi} \! \int_0^{r_{fr}(z)} \! r^2 \sin(\theta) A(z) \, dr \, d\theta \, dz = 0$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{1}{V} \int_0^h \! z A(z) \, dz$</p>
+<p>Doing a little substitution with $latex COM_{z}$:</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{1}{V} \int_0^{h} \! z \pi (\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2})^2 \, dz$</p>
+<p style="text-align: center;">$latex = \frac{1}{V} \frac{h^2 \pi (R_{1}^2 + 2 R_{1} R_{2} + 3 R_{2}^2)}{12}$</p>
+<p style="text-align: center;">$latex = \frac{h (R_{1}^2 + 2 R_{1} R_{2} + 3 R_{2}^2)}{4(R_{1}^2 + R_{1} R_{2} + R_{2}^2)}$</p>
+<p>Note that because the conical frustum is radially symmetric around the z-axis, the COM for both x and y will be 0. This obviously will not be the case for shapes with more complex surfaces of revolution, but is a nice little proof.</p>
+<p>Complex, you want complex??</p>
+<p>So, we will add a simple part onto the shape (like the one in the image above), defined using both a radial function, $latex f_{rad}(\theta)$, and a vertical function, $latex f_{vert}(z)$. The functions themselves can be any analytical functions, as long as they are continuous. And frankly, it doesn&#8217;t matter for this proof, so we&#8217;ll leave them undefined for the time being.</p>
+<p>Remember how simple the radius at any given height was? (Just to remind you: $latex r_{fr}(z)=\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2}$). Now we need to add our radial and vertical functions, making the function dependent upon not only height, but also angle:</p>
+<p style="text-align: center;">$latex r_{fr}(z,\theta)=\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(theta)$</p>
+<p>Given that the radius is now a bit more complex, the area of this slice at any given height $latex z$ is now:</p>
+<p style="text-align: center;">$latex A(z) = \int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r \, dr \, d\theta$</p>
+<p>Then the volume is now a bit more complicated:</p>
+<p style="text-align: center;">$latex V = \int_0^{h} \! \int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r \, dr \, d\theta \, dz$</p>
+<p>And now we can calculate the COMs:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{1}{V} \int_0^h \! \int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r^2 \cos(\theta) (\int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r \, dr \, d\theta) \, dr \, d\theta \, dz$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{1}{V} \int_0^h \! \int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r^2 \sin(\theta) (\int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r \, dr \, d\theta) \, dr \, d\theta \, dz$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{1}{V} \int_0^h \! z (\int_0^{2\pi} \! \int_0^{r_{fr}(z,\theta)} \! r \, dr \, d\theta) \, dz$</p>
+<p>The good news, all you really need to define is $latex r_{fr}(z,theta)$ and h. The bad news, pentuple integrals. Substituting all of the necessary equations, we get these monstrosities:</p>
+<p style="text-align: center;">$latex COM_{x} = \frac{\int_0^h \! \int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r^2 \cos(\theta) (\int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta) \, dr \, d\theta \, dz}{\int_0^{h} \! \int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta \, dz}$</p>
+<p style="text-align: center;">$latex COM_{y} = \frac{\int_0^h \! \int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r^2 \sin(\theta) (\int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta) \, dr \, d\theta \, dz}{\int_0^{h} \! \int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta \, dz}$</p>
+<p style="text-align: center;">$latex COM_{z} = \frac{\int_0^h \! z (\int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta) \, dz}{\int_0^{h} \! \int_0^{2\pi} \! \int_0^{\frac{h-z}{h} R_{1} + \frac{z}{h} R_{2} + f_{vert}(z) f_{rad}(\theta)} \! r \, dr \, d\theta \, dz}$</p>
+<p>Not very pretty, ehh? Well, in the meantime, I&#8217;ll leave the final calculations for you to work on. Suffice to say, it is a pain in the butt.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/06/29/calculating-the-com-of-a-3d-surface-of-revolution/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

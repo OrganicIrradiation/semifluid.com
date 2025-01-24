@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python &#8211; semifluid.com</title>
+	<atom:link href="/category/programming/python/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Fri, 26 Apr 2019 22:11:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>2019 VSS DNA</title>
+		<link>/2019/04/27/2019-vss-dna/</link>
+					<comments>/2019/04/27/2019-vss-dna/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 27 Apr 2019 16:00:00 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=6345</guid>
+
+					<description><![CDATA[It&#8217;s been a while since I last posted one, but here&#8217;s a new Vision Sciences Society force-directed diagram of co-authorships (see past graphs here: 2014, 2015, &#38; 2016). This year has 1293 abstracts for analysis. The graph was generated in Python using NetworkX, with authors and abstracts as nodes and edges corresponding to authorship. Individuals [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>It&#8217;s been a while since I last posted one, but here&#8217;s a new <a href="http://www.visionsciences.org/">Vision Sciences Society</a> force-directed diagram of co-authorships (see past graphs here: <a href="/2014/05/03/vss-2014-dna-v1/">2014</a>, <a href="/2015/03/23/2015-vss-dna/">2015</a>, &amp; <a href="/2016/05/12/2016-vss-dna/">2016</a>). This year has 1293 abstracts for analysis. The graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1024" height="1024" src="/wp-content/uploads/2019/04/vss2019-1024x1024.png" alt="" class="wp-image-6347" srcset="/wp-content/uploads/2019/04/vss2019-1024x1024.png 1024w, /wp-content/uploads/2019/04/vss2019-150x150.png 150w, /wp-content/uploads/2019/04/vss2019-300x300.png 300w, /wp-content/uploads/2019/04/vss2019-768x768.png 768w, /wp-content/uploads/2019/04/vss2019-60x60.png 60w, /wp-content/uploads/2019/04/vss2019.png 1820w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors on an abstract, and dark blue dots correspond to the other author(s). You can view an interactive version <a href="http://steven.cholewiak.com/code/visvssrelationships_2019/">here</a>.<br /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2019/04/27/2019-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>2015 VSS DNA</title>
+		<link>/2015/03/23/2015-vss-dna/</link>
+					<comments>/2015/03/23/2015-vss-dna/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 23 Mar 2015 19:54:41 +0000</pubDate>
+				<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=5660</guid>
+
+					<description><![CDATA[Another year, another Vision Sciences Society force-directed diagram of co-authorships (see last year&#8217;s 2014 VSS DNA). This year, we have 1419 abstracts being analyzed. The graph was generated in Python using NetworkX, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Another year, another <a href="http://www.visionsciences.org/">Vision Sciences Society</a> force-directed diagram of co-authorships (see last year&#8217;s <a href="/2014/05/03/vss-2014-dna-v1/">2014 VSS DNA</a>).  This year, we have 1419 abstracts being analyzed. The graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+<p><img decoding="async" src="/wp-content/uploads/2015/03/VSS2015DNA.png" alt="Illustrating co-authorship for the Vision Sciences Society abstracts" width="700" height="700" class="aligncenter size-full wp-image-5677" srcset="/wp-content/uploads/2015/03/VSS2015DNA.png 700w, /wp-content/uploads/2015/03/VSS2015DNA-150x150.png 150w, /wp-content/uploads/2015/03/VSS2015DNA-300x300.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p>Orange dots are abstracts, light blue dots correspond to individuals who are first authors, and dark blue dots correspond to the other author(s). This visualisation should not to be interpreted as sets of in-groups/out-groups. It ignores past/future VSS co-authorships, casual collaborations, professional collaborations outside of VSS, and likely has inaccuracies due to the way authors&#8217; names are analysed (see after the break for more). I am intrigued by the &#8220;scholarly social network&#8221; and this visualization is just one piece of a very incomplete puzzle.</p>
+<p><span id="more-5660"></span></p>
+<p>There are often inconsistencies in author names (e.g., &#8220;Steven Cholewiak&#8221; vs. &#8220;Steven A. Cholewiak&#8221; vs. &#8220;Stëvèn Chólëwìäk&#8221;), so I use the <a href="https://docs.python.org/2/library/difflib.html">difflib</a> <a href="https://docs.python.org/2/library/difflib.html#sequencematcher-objects">SequenceMatcher</a> to calculate ratios of the names&#8217; similarities and names that are very similar (a ratio of 0.9 or higher) are assumed to be the same.  That is admittedly a very naïve method of dealing with naming inconsistencies (e.g., is &#8220;John Smith&#8221; the same person as &#8220;John Q. Smith&#8221; or &#8220;John H. Smith&#8221;?) but I&#8217;d love to see a favourable alternative.</p>
+<p>You can view an interactive force-directed d3.js version <a href="http://steven.cholewiak.com/code/visvssrelationships_2015">here</a>. The code for the graph and force-directed diagram generation is available on GitHub <a href="https://github.com/OrganicIrradiation/visvssrelationships">here</a>.  The notebooks can also be viewed using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a>:</p>
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships_scrape.ipynb">visvssrelationships_scrape.ipynb</a></li>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships.ipynb">visvssrelationships.ipynb</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2015/03/23/2015-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Calories as a function of alcohol in popular beers</title>
+		<link>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/</link>
+					<comments>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 14 Dec 2014 15:23:36 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=5329</guid>
+
+					<description><![CDATA[In the USA, a standard drink is defined as including 0.6 fluid ounce (18 mL or 14 g) of ethanol (see Alcohol equivalence), meaning that a &#8220;standard&#8221; 12 oz beer has about 5% ABV. However, beers vary quite a bit in their alcohol content as well as their caloric content, so it seems reasonable to [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>In the USA, a standard drink is defined as including 0.6 fluid ounce (18 mL or 14 g) of ethanol (see <a href="https://en.wikipedia.org/wiki/Alcohol_equivalence#United_States">Alcohol equivalence</a>), meaning that a &#8220;standard&#8221; 12 oz beer has about 5% ABV.  However, beers vary quite a bit in their alcohol content as well as their caloric content, so it seems reasonable to ask: If I have a beer with a given ABV, approximately how many calories does it have?</p>
+<p>While browsing the web, I found a <a href="http://www.beer100.com/calories_in_beer.htm">table</a> listing the calories in a number of beers and thought it would be interesting to visualize using Python and <a href="http://www.plot.ly/">plot.ly</a>. It is a simple visualization, but one I find neat. Without further adieu:</p>
+<p><center></p>
+<p><iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/97.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+<p>Each blue point on the plot is a beer from the beer100.com domestic and international tables &#8212; feel free to explore the plot with your mouse. As you can see, unsurprisingly, as a beer&#8217;s alcohol content increases, so do the number of calories. Fitting a linear regression to the data, we see that a linear trend fits quite well: $latex f(x) = (28.2)*x + (8.25)$, where $latex x$ is the beer&#8217;s ABV (in percent).  This means that if a beer has an alcoholic content of 5%, we can expect it to have approximately 150 calories (149.25 as predicted by the fit).  However, there is quite a bit of variability between different beers of the same ABV. For example, Bud Ice Light and Kronenbourg Imported Dark Beer (whose label is a bit ambiguous, but I am assuming may be Kronenbourg 1664 Brune) are both 5% ABV, but have 115 and 163 calories per 12 oz, respectively.</p>
+<p><span id="more-5329"></span></p>
+<p>In addition to the data points, I&#8217;ve also included a line illustrating the <a href="http://getdrunknotfat.com/info/">calories for pure ethanol</a> as a function of ABV (assuming it is mixed with water to dilute it). This could be considered the &#8220;alcohol purity line&#8221; for empty calories (i.e., this would be the closest to a neutral spirit). If you compare light to non-light beers (done using a simple if &#8220;Light&#8221; is in <em>name</em>), you can see that the light beers are shifted closer to the pure ethanol line:</p>
+<p><center></p>
+<p><iframe loading="lazy" width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/99.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+<p>This simple string comparison misses a number of light beers (like Miller Genuine Draft 64 and Budweiser Select 55 which are also closest to the &#8220;alcohol purity line&#8221;), but captures the general trend. However, note that the more (in my humble opinion) flavorful and interesting beers lie above the original linear fit line.</p>
+<p>Finally, I wanted to quickly compare the beer100.com data to brewer-supplied information. Unfortunately, most brewers avoid disclosing their nutritional facts; however, <a href="http://www.anheuser-busch.com/s/uploads/Anheuser-Busch-Nutritional-Information.pdf">Anheuser-Busch</a> and <a href="http://www.millercoors.com/our-beers/nutrition-facts-codes.aspx">MillerCoors</a> are relatively transparent, providing some facts about their beers and malt beverages.  After normalizing the data to a 12oz serving size, we can see that, like the beer100.com data, there is quite a bit of variability.</p>
+<p><center></p>
+<p><iframe loading="lazy" width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~render/102.embed?width=640&#038;height=480"></iframe></p>
+<p></center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/12/14/calories-as-a-function-of-alcohol-in-popular-beers/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>2 Degrees of Academic Separation using Google Scholar v1</title>
+		<link>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/</link>
+					<comments>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 19 Jun 2014 09:15:40 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">/?p=5031</guid>
+
+					<description><![CDATA[Another post, another neat force-directed graph. This one illustrates the interconnections between professors and students who have been co-authors on some of my papers and presentations, as scrapped from Google Scholar citations.  It could be described as the first version of a rough illustration of my 2 degrees of separation in academia. The dark orange circle in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="/2014/05/03/vss-2014-dna-v1/">Another post</a>, another neat force-directed graph. This one illustrates the interconnections between professors and students who have been co-authors on some of my papers and presentations, as scrapped from <a href="http://scholar.google.com/citations?user=4bahYMkAAAAJ&amp;hl=en">Google Scholar citations</a>.  It could be described as the first version of a rough illustration of my 2 <a href="http://en.wikipedia.org/wiki/Six_degrees_of_separation">degrees of separation</a> in academia.</p>
+<p><img decoding="async" src="/wp-content/uploads/2014/06/2-Degrees-of-Academic-Seperation-v1.1-1024x1024.png" alt="2-Degrees-of-Academic-Seperation-v1.1" /></p>
+<p>The dark orange circle in the center is myself, light blue circles are papers/presentations, light orange circles are co-authors, and dark-blue circles are co-authors of my co-authors (i.e., have not necessarily directly worked with me on a project).</p>
+<p>Unfortunately, as of today, not all of my co-authors have Google Scholar pages, so there are a number of co-authors whose connections and branches are under-represented.  In addition, Google Scholar does not necessarily accumulate all of a given author&#8217;s papers/presentations and often makes mistakes misattributing papers to profiles.  So, the veracity of the information represented here should be taken with a grain of salt unless I find a better service for generating these networks.</p>
+<p>For some more information on how this was created, click-through to the post.</p>
+<p><span id="more-5031"></span></p>
+<p>As with the <a href="/2014/05/03/vss-2014-dna-v1/">VSS DNA graph</a> I made before the Visual Sciences Society Annual Meeting this past May, I used <span style="color: #404040;">Python, </span><a href="https://networkx.github.io/">NetworkX</a><span style="color: #404040;">, and </span><a href="http://d3js.org/">D3.js</a>.  In addition, I took advantage of another Python module, <a href="https://pypi.python.org/pypi/GoogleScholar">GoogleScholar</a>, to screen-scrape information from the Google Scholar profiles.</p>
+<p>Starting with <a href="http://scholar.google.com/citations?user=4bahYMkAAAAJ&amp;hl=en">my Google Scholar citation profile</a>, I loop through the individual entries and extract the titles and co-authors of each entry.  The names and titles are connected as nodes using NetworkX.  I then had a list of co-authors:</p>
+<ul>
+<li><a href="http://scholar.google.com/citations?user=MnUboHYAAAAJ&amp;hl=en">Ari Weinstein</a></li>
+<li><a href="http://scholar.google.com/citations?user=JPZWLKQAAAAJ&amp;hl=en">Benjamin Kunsberg</a></li>
+<li>Bernard D Adelstein</li>
+<li>Bina Pastakia</li>
+<li><a href="http://scholar.google.com/citations?user=dqokykoAAAAJ&amp;hl=en">Chia-Chien Wu</a></li>
+<li><a href="http://scholar.google.com/citations?user=bTdT7hAAAAAJ&amp;hl=en">Chris L Baker</a></li>
+<li>David S Ebert</li>
+<li>E Daniel Hirleman</li>
+<li>Flip Phillips</li>
+<li>Gaurav Kharkwal</li>
+<li>Hong Z Tan</li>
+<li>Jacob Feldman</li>
+<li><a href="http://scholar.google.com/citations?user=rRJ9wTJMUB8C&amp;hl=en">Joshua B Tenenbaum</a></li>
+<li>Julia E. Mazzarella</li>
+<li>Kevin Sanik</li>
+<li>Kristina Denisova</li>
+<li>Kwangtaek Kim</li>
+<li>Manish Singh</li>
+<li>Matthew B Kocsis</li>
+<li><a href="http://scholar.google.com/citations?user=NN4GKo8AAAAJ&amp;hl=en">Melissa M Kibbe</a></li>
+<li>Paul Ringstad</li>
+<li><a href="http://scholar.google.com/citations?user=FoVvIK0AAAAJ&amp;hl=en">Peter C Pantelis</a></li>
+<li><a href="http://scholar.google.com/citations?user=LgU3FXIAAAAJ&amp;hl=en">Roger W. Cholewiak</a></li>
+<li><a href="http://scholar.google.com/citations?user=ruUKktgAAAAJ&amp;hl=en">Roland W Fleming</a></li>
+<li>Ryan M Traylor</li>
+<li><a href="http://scholar.google.com/citations?user=rNTIQXYAAAAJ&amp;hl=en">Steven W Zucker</a></li>
+<li>Sung-Ho Kim</li>
+<li><a href="http://scholar.google.com/citations?user=23w3sSMAAAAJ&amp;hl=en">Tim Gerstner</a></li>
+</ul>
+<p>To create the connections, I search for the co-authors names on Google Scholar (the profiles that were used are linked above) and do the same thing, extracting the titles and (co-?)co-authors names.  This allowed me to produce a network diagram illustrating individuals who have been my co-authors, along with co-authors of those co-authors.  Many of my co-authors did not have profiles when I generated this first version and there were a few with technical problems (e.g., one profile was populated with a large number of papers from another individual with the same name as my co-author, but a different person, and pruning these problematic entries would have been labor intensive).  Still, it is a neat illustration worth sharing.</p>
+<p>I am not currently including the code on this page because it is quite messy and &#8220;non-pythonic&#8221;, but I&#8217;m happy to share it if there is interest.  In addition, since this image was produced with D3.js, there is an interactive version of the graph available. I chose not to include it because it can be quite computationally taxing with the large number of nodes and connections and therefore not the best for directly including on the blog.</p>
+<p><strong>UPDATE June 20, 2014</strong>: I removed the co-author labels from the lead image because I don&#8217;t want to give the false impression that specific co-authors are better connected than others.  Since this visualization is dependent on a 3rd party scraping service, it is problematic to draw any conclusions about &#8220;connectedness&#8221; from this representation.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>VSS 2014 &#8220;DNA&#8221; v1</title>
+		<link>/2014/05/03/vss-2014-dna-v1/</link>
+					<comments>/2014/05/03/vss-2014-dna-v1/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 03 May 2014 18:20:29 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">/?p=4872</guid>
+
+					<description><![CDATA[Here&#8217;s an illustration I pulled together using Python, NetworkX, and D3.js to illustrate the interconnections between abstracts that will be presented at the Vision Sciences Society 2014 annual meeting in approximately 2 weeks. Orange dots represent abstracts, Light Blue dots represent authors with at least one first authorship, and Dark Blue dots represent other authors (second [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here&#8217;s an illustration I pulled together using Python, <a href="https://networkx.github.io/">NetworkX</a>, and <a href="http://d3js.org/">D3.js</a> to illustrate the interconnections between abstracts that will be presented at the <a href="http://www.visionsciences.org/">Vision Sciences Society</a> 2014 annual meeting in approximately 2 weeks. Orange dots represent abstracts, Light Blue dots represent authors with at least one first authorship, and Dark Blue dots represent other authors (second through last).</p>
+<p><a href="/wp-content/uploads/2014/05/VSS-DNA.png"><img decoding="async" src="/wp-content/uploads/2014/05/VSS-DNA-1024x1024.png" alt="VSS DNA v1" /></a></p>
+<p>As you can see, there are large numbers of abstracts that have few shared authors.  Those abstracts that share authors often join together to create &#8220;chains&#8221; of students, advisors, and colleagues.</p>
+<p>This is a first version, hastily pulled together, so there are a few problems.  The nodes are assigned to authors by name, which can be a problem for authors sharing the same name (which creates more connections than appropriate for a given node) or who  have inconsistent reporting of their name (for example, omitting the middle initial or alternate spelling, which can create another erroneous node). I am thinking of addressing the duplicate node issue by using a string similarity metric (e.g., <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>) to find strings that contain similar names to combine the connections, but this could be an issue if the names are truly different people. Alternatively, I could incorporate the authors&#8217; affiliations, but this carries similar issues (e.g., I report my affiliation as &#8220;University of Giessen&#8221; while colleagues report it as &#8220;Justus-Liebig-Universität Gießen&#8221;).</p>
+<p>Although there are lingering issues, it is still an interesting illustration of the connections between the different abstracts being presented at VSS 2014.</p>
+<p>Here&#8217;s the code on GitHub: <a href="https://github.com/OrganicIrradiation/visvssrelationships">visvssrelationships</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/05/03/vss-2014-dna-v1/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Batch Handbrake video file conversion with Python</title>
+		<link>/2014/04/11/batch-handbrake-video-file-conversion-with-python/</link>
+					<comments>/2014/04/11/batch-handbrake-video-file-conversion-with-python/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 11 Apr 2014 07:01:15 +0000</pubDate>
+				<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">/?p=4739</guid>
+
+					<description><![CDATA[I needed a quick little piece of code that would go recursively iterate through a folder and its subfolders and convert all of the video files to H.264, so I took advantage of the Handbrake command line interface (CLI) and Python 2.7.x to do the work for me. This code snippet is not long or [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I needed a quick little piece of code that would go recursively iterate through a folder and its subfolders and convert all of the video files to H.264, so I took advantage of the Handbrake command line interface (<a href="https://handbrake.fr/docs/en/latest/cli/cli-options.html">CLI</a>) and <a href="https://www.python.org/">Python 2.7.x</a> to do the work for me.  This code snippet is not long or elaborate, but does the job, so hopefully it will be helpful to others.</p>
+<p>Note that the Handbrake CLI options are defined in <em>runstr</em>.  As-is, the script will convert videos with AVI, DIVX, FLV, M4V, MKV, MOV, MPG, MPEG, and WMV extensions to H.264 MP4s with the following options:</p>
+<ul>
+<li><a href="https://handbrake.fr/docs/en/latest/technical/official-presets.html">&#8220;Normal&#8221; preset</a></li>
+<li>Two-pass encoding</li>
+<li>Turbo first pass, which &#8220;significantly boost[s] the speed of the first pass &#8211; with minimal effect on quality&#8221;</li>
+</ul>
+<p><script src="https://gist.github.com/OrganicIrradiation/9343ca746807a71693c9.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/04/11/batch-handbrake-video-file-conversion-with-python/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

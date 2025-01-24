@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Stability &#8211; semifluid.com</title>
+	<atom:link href="/category/research/stability-research/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:20:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Visual perception of the physical stability of asymmetric three-dimensional objects</title>
+		<link>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/</link>
+					<comments>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2013 13:28:17 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Stability]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3062</guid>
+
+					<description><![CDATA[I recently published an article in the Journal of Vision with my PhD advisor, Manish Singh, and my current Postdoctoral advisor, Roland W. Fleming: Cholewiak, S. A., Fleming, R. W., &#038; Singh, M. (2013). Visual perception of the physical stability of asymmetric three-dimensional objects. Journal of Vision, 13(4), 1–13. doi: 10.1167/13.4.12 Here&#8217;s the abstract: Visual [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently published an article in the Journal of Vision with my PhD advisor, <a href="http://ruccs.rutgers.edu/manish">Manish Singh</a>, and my current Postdoctoral advisor, <a href="http://www.allpsych.uni-giessen.de/roland/">Roland W. Fleming</a>:</p>
+<div style="position:relative;">
+<div style="float:right;">
+<a href="http://dx.doi.org/10.1167/13.4.12" target="_blank"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2013/04/JOV-03375-2012R1-3.gif" alt="JOV-03375-2012R1-3" width="96" height="96" class="alignright size-full wp-image-3067" /></a>
+</div>
+<p>Cholewiak, S. A., <a href="http://www.allpsych.uni-giessen.de/roland/">Fleming, R. W.</a>, &#038; <a href="http://ruccs.rutgers.edu/manish">Singh, M.</a> (2013). <a href="http://dx.doi.org/10.1167/13.4.12" target="_blank">Visual perception of the physical stability of asymmetric three-dimensional objects.</a> <em>Journal of Vision, 13(4)</em>, 1–13. doi: <a href="http://dx.doi.org/10.1167/13.4.12">10.1167/13.4.12</a>
+</div>
+<div style="clear:both;"></div>
+<p>Here&#8217;s the abstract:</p>
+<blockquote><p>Visual estimation of object stability is an ecologically important judgment that allows observers to predict the physical behavior of objects. A natural method that has been used in previous work to measure perceived object stability is the estimation of perceived “critical angle”—the angle at which an object appears equally likely to fall over versus return to its upright stable position. For an asymmetric object, however, the critical angle is not a single value, but varies with the direction in which the object is tilted. The current study addressed two questions: (a) Can observers reliably track the change in critical angle as a function of tilt direction? (b) How do they visually estimate the overall stability of an object, given the different critical angles in various directions? To address these questions, we employed two experimental tasks using simple asymmetric 3D objects (skewed conical frustums): settings of critical angle in different directions relative to the intrinsic skew of the 3D object (Experiment 1), and stability matching across 3D objects with different shapes (Experiments 2 and 3). Our results showed that (a) observers can perceptually track the varying critical angle in different directions quite well; and (b) their estimates of overall object stability are strongly biased toward the minimum critical angle (i.e., the critical angle in the least stable direction). Moreover, the fact that observers can reliably match perceived object stability across 3D objects with different shapes suggests that perceived stability is likely to be represented along a single dimension.</p></blockquote>
+<p>Want to cite us? Click through for the BibTeX source.<br />
+<span id="more-3062"></span></p>
+<p>[code]@ARTICLE{Cholewiak2013,<br />
+  author = {Cholewiak, Steven A. and Fleming, Roland W. and Singh, Manish},<br />
+  title = {Visual perception of the physical stability of asymmetric three-dimensional<br />
+    objects},<br />
+  journal = {Journal of Vision},<br />
+  year = {2013},<br />
+  volume = {13},<br />
+  pages = {1&#8211;13},<br />
+  number = {4},<br />
+  abstract = {Visual estimation of object stability is an ecologically important<br />
+    judgment that allows observers to predict the physical behavior of<br />
+    objects. A natural method that has been used in previous work to<br />
+    measure perceived object stability is the estimation of perceived<br />
+    &#8220;critical angle&#8221; &#8212; the angle at which an object appears equally<br />
+    likely to fall over versus return to its upright stable position.<br />
+    For an asymmetric object, however, the critical angle is not a single<br />
+    value, but varies with the direction in which the object is tilted.<br />
+    The current study addressed two questions: (a) Can observers reliably<br />
+    track the change in critical angle as a function of tilt direction?<br />
+    (b) How do they visually estimate the overall stability of an object,<br />
+    given the different critical angles in various directions? To address<br />
+    these questions, we employed two experimental tasks using simple<br />
+    asymmetric 3D objects (skewed conical frustums): settings of critical<br />
+    angle in different directions relative to the intrinsic skew of the<br />
+    3D object (Experiment 1), and stability matching across 3D objects<br />
+    with different shapes (Experiments 2 and 3). Our results showed that<br />
+    (a) observers can perceptually track the varying critical angle in<br />
+    different directions quite well; and (b) their estimates of overall<br />
+    object stability are strongly biased toward the minimum critical<br />
+    angle (i.e., the critical angle in the least stable direction). Moreover,<br />
+    the fact that observers can reliably match perceived object stability<br />
+    across 3D objects with different shapes suggests that perceived stability<br />
+    is likely to be represented along a single dimension.},<br />
+  doi = {10.1167/13.4.12},<br />
+  eprint = {http://www.journalofvision.org/content/13/4/12.full.pdf+html},<br />
+  file = {Article:http&#58;&#92;semifluid.com&#92;wp-content&#92;uploads&#92;2013\&#92;&#48;3&#92;Cholewiak-Fleming-Singh-2013-Visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects.pdf:URL},<br />
+  owner = {Steven A. Cholewiak},<br />
+  url = {http://www.journalofvision.org/content/13/4/12.abstract}<br />
+}<br />
+[/code]</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Balancing Bricks</title>
+		<link>/2012/09/10/balancing-bricks/</link>
+					<comments>/2012/09/10/balancing-bricks/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 11 Sep 2012 04:10:36 +0000</pubDate>
+				<category><![CDATA[Stability]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1382</guid>
+
+					<description><![CDATA[I included this image of balancing bricks in my qualifying exam, so I need to give credit where credit is due&#8230; It seems as though billbalance practices the art of Rock Balancing: Rock balancing is an art, discipline, or hobby (depending upon the intent of the practitioner) in which rocks are balanced on top of [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I included this image of balancing bricks in my qualifying exam, so I need to give credit where credit is due&#8230;</p>
+<p><a title="Balancing Bricks . . . again . . . by billbalance - off a while, on Flickr" href="http://www.flickr.com/photos/rocker/2068407802/"><img fetchpriority="high" decoding="async" class="aligncenter" src="http://farm3.staticflickr.com/2048/2068407802_35f3576ba2.jpg" alt="Balancing Bricks . . . again . . ." width="356" height="500" /></a></p>
+<p>It seems as though <a href="http://www.flickr.com/photos/rocker/">billbalance</a> practices the art of <a href="http://en.wikipedia.org/wiki/Rock_balancing">Rock Balancing</a>:</p>
+<blockquote><p>Rock balancing is an art, discipline, or hobby (depending upon the intent of the practitioner) in which rocks are balanced on top of one another in various positions. There are no tricks involved to aid in the balancing, such as adhesives, wires, supports, or rings.</p></blockquote>
+<p><span id="more-1382"></span></p>
+<p>Which appears to be a very short-term example of <a href="http://en.wikipedia.org/wiki/Cairn">cairns</a>:</p>
+<blockquote><p>Cairn is a term used mainly in the English-speaking world for a man-made pile (or stack) of stones. It comes from the Scottish Gaelic: càrn (plural càirn). Cairns are found all over the world in uplands, on moorland, on mountaintops, near waterways and on sea cliffs, and also in barren desert and tundra areas. They vary in size from small stone markers to entire artificial hills, and in complexity from loose, conical rock piles to delicately balanced sculptures and elaborate feats of megalithic engineering. Cairns may be painted or otherwise decorated, e.g. for increased visibility or for religious reasons.</p>
+<p>In modern times, cairns are often erected as landmarks, a use they have had since ancient times. Since prehistory, they have also been built as sepulchral monuments, or used for defensive, hunting, ceremonial, astronomical and other purposes.</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/10/balancing-bricks/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Desk &#8220;supported&#8221; by balloons</title>
+		<link>/2012/09/09/desk-supported-by-balloons/</link>
+					<comments>/2012/09/09/desk-supported-by-balloons/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 10 Sep 2012 03:00:31 +0000</pubDate>
+				<category><![CDATA[Stability]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1378</guid>
+
+					<description><![CDATA[Another whimsical project that fits perfectly with my research is the &#8220;Hot Desk&#8221; that the creative agency Boys and Girls created for their reception area: &#8230; Plans were drawn, crayons sharpened and collaborators consulted to come up with a reception desk that would put “small and routine” in its place for once and for all. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Another whimsical project that fits perfectly with my research is the &#8220;<a href="https://www.dezeen.com/2012/06/01/hot-desk-by-boys-and-girls/">Hot Desk</a>&#8221; that the creative agency <a href="http://boysandgirls.ie/">Boys and Girls</a> created for their reception area:</p>
+<p><a href="https://www.dezeen.com/2012/06/01/hot-desk-by-boys-and-girls/"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/BoysandGirlsDesk-1024x380.jpg" alt="" title="BoysandGirls.ie Hot Desk" width="600" height="222" class="aligncenter size-large wp-image-1380" srcset="/wp-content/uploads/2012/09/BoysandGirlsDesk-1024x380.jpg 1024w, /wp-content/uploads/2012/09/BoysandGirlsDesk-300x111.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<blockquote><p>&#8230;<br />
+Plans were drawn, crayons sharpened and collaborators consulted to come up with a reception desk that would put “small and routine” in its place for once and for all. This is the result of months of planning and some fairly heavy scientific research.</p>
+<p>A company called Twisted Image finally started production in February. Their job was to fabricate permanent hot air balloons strong enough to carry the weight of the desk. A new type of rubber composite was used to make balloons that were genuinely air-tight and would never degrade, and Caltech were called upon to supply a Heluim/Hydrogen [sic] hybrid gas with an atomic weight 150 times lighter than Helium alone.</p>
+<p>Ribbons reinforced with Carbo-Titanium (and in pretty colours) were used to secure the table top to the balloons, tied off on an aerospace grade titanium cleat.<br />
+Finally, giant Jenga blocks were carved from solid wood and placed on the reinforced floor.<br />
+&#8230;</p></blockquote>
+<p>I&#8217;m sure it&#8217;s pretty obvious that the claims of a &#8220;Helium/Hydrogen hybrid gas&#8221; and &#8220;Carbo-Titanium ribbons&#8221; are dubious (to say the least ;-)), but still, a very nice piece of artwork that makes you go, &#8220;Hmmm.&#8221;</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/09/desk-supported-by-balloons/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>9,5° (&#8220;unstable&#8221; chair)</title>
+		<link>/2012/09/08/95-unstable-chair/</link>
+					<comments>/2012/09/08/95-unstable-chair/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 09 Sep 2012 02:58:57 +0000</pubDate>
+				<category><![CDATA[Research]]></category>
+		<category><![CDATA[Stability]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1371</guid>
+
+					<description><![CDATA[My research on the perception of stability often leads me down roads (especially on the information superhighway) that turn up very interesting objects and projects. 9,5° by B°Fex is one of those projects that makes you do a double-take. From the designer: &#8230; The chair is tilted at 9,5 degrees. By tilting the chair and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>My research on the perception of stability often leads me down roads (especially on the <a href="http://en.wikipedia.org/wiki/Information_superhighway">information superhighway</a>) that turn up very interesting objects and projects.  <a href="http://www.bfex.dk/95.html">9,5°</a> by <a href="http://www.bfex.dk/">B°Fex</a> is one of those projects that makes you do a double-take.</p>
+<p><a href="http://www.bfex.dk/95.html"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1372" title="9,5_01" src="http://semifluid.com/wp-content/uploads/2012/09/95_01.jpg" alt="" width="450" height="285" srcset="/wp-content/uploads/2012/09/95_01.jpg 450w, /wp-content/uploads/2012/09/95_01-300x190.jpg 300w" sizes="auto, (max-width: 450px) 100vw, 450px" /></a></p>
+<p>From the designer:</p>
+<blockquote><p>&#8230;<br />
+The chair is tilted at 9,5 degrees. By tilting the chair and then elevating one end of the seat back to a straight angle, a triangle was created. This actually made the construction stronger and reduced the need for a stabilising cross rod.<br />
+In conclusion, it&#8217;s not always wrong to be wrong. The deconstruction of the original design served a higher purpose.<br />
+&#8230;</p></blockquote>
+<p><span id="more-1371"></span></p>
+<p><a href="http://www.bfex.dk/">B°Fex</a> also created a fantastic &#8220;unstable&#8221; table (<a href="http://www.bfex.dk/85.html">8,5°</a>) that compliments the chair:</p>
+<p><a href="http://www.bfex.dk/85.html"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/09/95_Table06.jpg" alt="" title="9,5_Table06" width="452" height="300" class="aligncenter size-full wp-image-1373" srcset="/wp-content/uploads/2012/09/95_Table06.jpg 452w, /wp-content/uploads/2012/09/95_Table06-300x199.jpg 300w" sizes="auto, (max-width: 452px) 100vw, 452px" /></a></p>
+<blockquote><p>8,5° is a work table designed for the chair 9,5°, created in the same mindset as the chair.<br />
+When the table is tilted at exactly 8,5 degrees, the transverse pin meet the tabletop which makes a very strong construction. The table tilts opposite to the chair, for visual balance.</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/09/08/95-unstable-chair/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

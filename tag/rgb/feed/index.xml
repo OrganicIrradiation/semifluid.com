@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>RGB &#8211; semifluid.com</title>
+	<atom:link href="/tag/rgb/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 21 Jan 2016 05:09:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>8&#215;8 RGB LED Display</title>
+		<link>/2010/06/28/8x8-rgb-led-display/</link>
+					<comments>/2010/06/28/8x8-rgb-led-display/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2010 02:21:23 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Controller]]></category>
+		<category><![CDATA[LED]]></category>
+		<category><![CDATA[Processing]]></category>
+		<category><![CDATA[RGB]]></category>
+		<guid isPermaLink="false">/?p=213</guid>
+
+					<description><![CDATA[So, this project was sidelined until I had to make another BatchPCB purchase.  Thankfully it wasn&#8217;t too long until I had the opportunity to work on it again! The current setup is basically 4 of the original 4 RGB LED Controller boards and 12 of the updated DR1r3 boards. All 16 are wired in parallel [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="text-align: left;">So, this project was sidelined until I had to make another BatchPCB purchase.  Thankfully it wasn&#8217;t too long until I had the opportunity to work on it again!  The current setup is basically 4 of the <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/">original 4 RGB LED Controller boards</a> and 12 of the <a href="http://semifluid.com/2010/02/16/4-rgb-led-controller-update/">updated DR1r3 boards</a>.  All 16 are wired in parallel and being controlled by my desktop machine.  You can see an extended version of this RGB test sequence after the break and I&#8217;m also including the (uncommented, sorry!) <a href="http://processing.org/" target="_blank">Processing 1.1</a> code that I used to control the boards.</p>
+<p><center><br />
+<iframe title="8x8 RGB LED Display - Closeup" width="648" height="486" src="https://www.youtube.com/embed/ImFNgAgYKUY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-213"></span></p>
+<p>Here&#8217;s an extended cut of the video display (which is displaying an RGB Test Sequence).  Note that the current maximum throughput is approximately 12-13 frames per second due to the RS-232 baud rate bottleneck, but I&#8217;m looking for ways to speed up the data transfer without requiring a faster oscillator.:</p>
+<p><center><br />
+<iframe title="8x8 RGB LED Display" width="648" height="486" src="https://www.youtube.com/embed/gtfMJSERY3o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The <a href="http://processing.org/" target="_blank">Processing 1.1</a> code:<br />
+<a href="/wp-content/uploads/2010/06/VideoDisplay.zip">VideoDisplay</a> (includes the .pde file and the video used)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/06/28/8x8-rgb-led-display/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>4 RGB LED Controller Update</title>
+		<link>/2010/02/16/4-rgb-led-controller-update/</link>
+					<comments>/2010/02/16/4-rgb-led-controller-update/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 16 Feb 2010 17:44:18 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Controller]]></category>
+		<category><![CDATA[LED]]></category>
+		<category><![CDATA[Lights]]></category>
+		<category><![CDATA[RGB]]></category>
+		<guid isPermaLink="false">/?p=191</guid>
+
+					<description><![CDATA[I recently began working on a consulting project that required the creation of some PCBs.  Since I have had such great success with BatchPCB.com in the past, I decided to use them again to fab the custom PCBs.  The BatchPCB purchasing system adds a few static fees (set-up, handling, and shipping), so I felt that [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently began working on a consulting project that required the creation of some PCBs.  Since I have had such great success with BatchPCB.com in the <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/" target="_self">past</a>, I decided to use them again to fab the custom PCBs.  The BatchPCB purchasing system adds a few static fees (set-up, handling, and shipping), so I felt that this was as good a time as any to make some additional of my <a href="http://semifluid.com/2009/01/06/pic16f628-4-rgb-led-pwm-controller/" target="_self">PIC16F628 4 RGB LED PWM Controller</a> boards with a couple of modifications.</p>
+<p><a href="/wp-content/uploads/2010/02/DSC_1877.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-medium wp-image-197" title="4 RGB LED Controller Boards" src="/wp-content/uploads/2010/02/DSC_1877-300x200.jpg" alt="" width="300" height="200" /></a></p>
+<p><span id="more-191"></span>As I noted in the previous post, there was an error on the first revision of the board and a pull-up resistor on RA5 (pin 4 in the schematic above) was necessary.  I added the MCLR resistor to the board along with a couple of other modifications:</p>
+<ul>
+<li>Removed the extraneous capacitors, we only need one.</li>
+<li>Added a breakout for the one remaining I/O pin.</li>
+<li>Added a small perfboard to the PCB with +5V and ground lines.</li>
+<li>Relocated the resistors to make them <em>much easier </em>to solder.  I may use a SIL resistor array in the future.</li>
+</ul>
+<p>I kept the LED locations exactly the same because, hey, if I put all of the time and effort into the 4 boards that I previously ordered, then I might as well keep the same form factor.  My scheme for the short-term is to create a 4&#215;4 array of the 4 RGB LED Controller boards, which will give me a 20cmx20cm 8&#215;8 RGB LED display.</p>
+<p>Here are some pictures of the boards:</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/02/DSC_1874.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-196 alignnone" title="4 RGB LED Controller Board Front" src="/wp-content/uploads/2010/02/DSC_1874-150x150.jpg" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/DSC_1872.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-195 alignnone" title="4 RGB LED Controller Board Back" src="/wp-content/uploads/2010/02/DSC_1872-150x150.jpg" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/DSC_1871.jpg"><img loading="lazy" decoding="async" class="size-thumbnail wp-image-194 alignnone" title="4 RGB LED Controller Board Front and Back" src="/wp-content/uploads/2010/02/DSC_1871-150x150.jpg" alt="" width="150" height="150" /></a><a href="/wp-content/uploads/2010/02/DSC_1868.jpg"> <img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-193" title="4 RGB LED Controller Boards Group" src="/wp-content/uploads/2010/02/DSC_1868-150x150.jpg" alt="" width="150" height="150" /></a></p>
+<p style="text-align: left;">Here is the updated schematic and board (note, you can open the BRD and SCH files in <a href="http://www.cadsoftusa.com/" target="_blank">Eagle Layout Editor</a>):</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Schematic.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-206" title="PIC16F628 4 RGB LED DR1r3 Eagle Schematic" src="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Schematic-150x150.png" alt="" width="150" height="150" /></a> <a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Board.png"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-205" title="PIC16F628 4 RGB LED DR1r3 Eagle Board" src="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3-Eagle-Board-150x150.png" alt="" width="150" height="150" /></a></p>
+<ul>
+<li><a href="/wp-content/uploads/2010/02/PIC16F628-4-RGB-LED-DR1r3.brd">PIC16F628 4 RGB LED DR1r3 Eagle Board</a></li>
+</ul>
+<p style="text-align: left;">And finally, here is an updated firmware that improves the PWM performance:</p>
+<ul>
+<li><a href="/wp-content/uploads/2010/02/16F628-Serial-4-LED-PWM-4-bit-exp-DR1r8.c">16F628 Serial 4 LED PWM &#8211; 4-bit exp DR1r8.c</a></li>
+<li><a href="/wp-content/uploads/2010/02/16F628-Serial-4-LED-PWM-4-bit-exp-DR1r8.hex">16F628 Serial 4 LED PWM &#8211; 4-bit exp DR1r8.hex</a></li>
+</ul>
+<p>I will make sure to post when I have the full array put together (I currently only have 12 of the 16 boards I need for the 4&#215;4 array).</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/02/16/4-rgb-led-controller-update/feed/</wfw:commentRss>
+			<slash:comments>13</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

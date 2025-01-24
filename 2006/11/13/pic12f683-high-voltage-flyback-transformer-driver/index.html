@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-US"> <![endif]--><!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-US"> <![endif]--><!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-US"> <![endif]--><!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-US"> <![endif]--><!--[if gt IE 9]><!--><html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>PIC12F683 High Voltage Flyback Transformer Driver &#8211; semifluid.com</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; PIC12F683 High Voltage Flyback Transformer Driver Comments Feed" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="sparkling-bootstrap-css" href="/wp-content/themes/sparkling/assets/css/bootstrap.min.css?ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-icons-css" href="/wp-content/themes/sparkling/assets/css/fontawesome-all.min.css?ver=5.1.1." type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-style-css" href="/wp-content/themes/sparkling/style.css?ver=2.4.2" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=6.7.1" id="sparkling-bootstrapjs-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/functions.js?ver=20180503" id="sparkling-functions-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/34">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.1">
+<link rel="canonical" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/">
+<link rel="shortlink" href="/?p=34">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2006%2F11%2F13%2Fpic12f683-high-voltage-flyback-transformer-driver%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2006%2F11%2F13%2Fpic12f683-high-voltage-flyback-transformer-driver%2F#038;format=xml">
+<style type="text/css">.entry-content {font-size:14px}</style>
+<link rel="pingback" href="/xmlrpc.php">		<style type="text/css">caca,
+		.site-name,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}</style>
+	
+</head>
+
+<body class="post-template-default single single-post postid-34 single-format-standard">
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default
+		" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+
+
+														<div id="logo">
+																																<a href="/"><img src="/wp-content/uploads/2017/01/semifluid.com-banner.png" height="500" width="3900" alt="semifluid.com"></a>
+																																</div>
+<!-- end of #logo -->
+
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+
+
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main-menu" class="nav navbar-nav">
+<li id="menu-item-6759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6759"><a href="/">Home</a></li>
+<li id="menu-item-6760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760"><a href="/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-6761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761"><a href="/about/">About Me</a></li>
+<li id="menu-item-6762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6762"><a href="/contact-me/">Contact Me</a></li>
+</ul></div>
+
+
+					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-34" class="post-34 post type-post status-publish format-standard hentry category-c-projects category-electronics category-high-voltage category-pic-projects category-pic12f683">
+		<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">PIC12F683 High Voltage Flyback Transformer Driver</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar-alt"></i> <a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/" rel="bookmark"><time class="entry-date published" datetime="2006-11-13T14:00:01-08:00">November 13, 2006</time><time class="updated" datetime="2017-01-26T13:21:46-08:00">January 26, 2017</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="/author/admin/">Steven A. Cholewiak</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open"></i>
+				 <a href="/category/pic-projects/c-projects/" rel="category tag">C Projects</a>, <a href="/category/electronics/" rel="category tag">Electronics</a>, <a href="/category/electronics/high-voltage/" rel="category tag">High Voltage</a>, <a href="/category/pic-projects/" rel="category tag">PIC Projects</a>, <a href="/category/pic-projects/pic12f683/" rel="category tag">PIC12F683</a>				</span>
+								
+			</div>
+<!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p><img decoding="async" class="alignleft" title="PIC12F683 High Voltage Flyback Transformer Driver" src="http://static.flickr.com/86/229774371_151043a913_m.jpg" alt="PIC12F683 High Voltage Flyback Transformer Driver">A friend at <a href="http://www.purdue.edu/" target="_blank">Purdue University</a> (Sumanth Peddamatham) helped motivate and inspire me to create a high voltage <a href="https://en.wikipedia.org/wiki/Flyback_transformer" target="_blank">flyback transformer</a> driver for a computer <a href="https://en.wikipedia.org/wiki/Cathode_ray_tube" target="_blank">CRT</a> flyback transformer. While the schematic and code for driving the transformer are extremely straightforward and simple, finding and obtaining a high quality solid state flyback transformer can be difficult. Please note that the voltages generated by the flyback transformer are potentially very dangerous, so extreme care must be exercised when building and/or using the schematic presented in this project. Diode split flyback transformers (like the one used in this project) can output 25kV or more.<span id="more-34"></span></p>
+<p><strong>Disclaimer</strong>: <em>The high voltage devices and schematics presented on this website (<a href="http://semifluid.com/"></a>) and the pages herein are for educational and experimental purposes only. Build and/or use at your own risk. I cannot be held liable or responsible and will not accept any type of liability in any event, in case of injury, damage to persons or property, or even death by building and/or using this device or any other high voltage device posted on this website. By accessing, reading, and/or printing the articles presented here you agree to be solely responsible and exempt me from any criminal and/or lability charges and/or suits. Please note that safety is the primary concern when working with high voltage circuits. Always be careful, use extreme caution with high voltage circuits, and play it safe!</em></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/11/Full-Circuit.gif"><img decoding="async" class="alignright size-medium wp-image-984" title="PIC12F683 High Voltage Flyback Transformer Driver Full Circuit" src="http://semifluid.com/wp-content/uploads/2006/11/Full-Circuit-300x128.gif" alt="" width="300" height="128" srcset="/wp-content/uploads/2006/11/Full-Circuit-300x128.gif 300w, /wp-content/uploads/2006/11/Full-Circuit-1024x438.gif 1024w, /wp-content/uploads/2006/11/Full-Circuit.gif 1564w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>Here is the full schematic for the driver. Yes, it is this simple. All that is needed is a power supply (preferably &gt;9V), a <a href="https://www.fairchildsemi.com/products/power-management/voltage-regulators/positive-voltage-linear-regulators/LM7805.html" target="_blank">7805</a> +5V linear voltage regulator, decoupling capacitors (C1, C2, &amp; C3), a PIC12F683, a suitable logic level <a href="https://en.wikipedia.org/wiki/MOSFET#Power_MOSFET" target="_blank">power MOSFET</a> (I used an IRL530), and a flyback transformer. It is important to note that the MOSFET needs to be heatsinked, otherwise it could overheat.</p>
+<p>JP2 (FBPriP) is the positive input of the primary winding, JP3 (FBPriG) is the ground/negative input of the primary winding, and JP4 (FBSecP) and JP5 (FBSecG) are the positive and negative outputs of the secondary winding where the high voltage is generated.</p>
+<p>The flyback transformer was found in a broken 21&#8243; CRT monitor. An alternative to opening a CRT and exposing yourself to potentially <a href="https://en.wikipedia.org/wiki/Cathode_ray_tube#Health_danger" target="_blank">harmful voltages</a> is to purchase a replacement flyback transformer from a surplus store or from eBay. I experimented with the driving frequency to find the optimal output and found that 20kHz produced the longest arcs for this flyback transformer.</p>
+<p>As always, please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any questions about the setup and as the disclaimer above says:<em> Always be careful, use extreme caution with high voltage circuits, and play it safe!</em></p>
+<p><strong>Source Code</strong><br>
+This is the source code for the driver. Please note that the driving frequency can be adjusted by changing the following line:</p>
+<blockquote><p><em>delay_us(25);</em></p></blockquote>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/11/12F683-Flyback-Driver.c">12F683 Flyback Driver.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/11/12F683-Flyback-Driver.hex">hex</a>)</p>
+<p><strong>Videos<br>
+</strong><a href="http://semifluid.com/2006/11/11/high-voltage-flyback-transformer-videos/">Here</a> are three videos of the PIC12F683 High Voltage Flyback Transformer Driver in action. The first video demonstrates the high voltage arcing through a beercap-ful of beer (<a href="http://www.stellaartois.com/" target="_blank">Stella Artois</a>) with a power supply voltage of 9V. The second video demonstrates the high voltage arcing through a cap-ful of rum (<a href="http://sailorjerry.com/the-rum/" target="_blank">Sailor Jerry</a>) with a 24V supply voltage. The third video demonstrates the high voltage arcing through a cap-ful of pancake syrup with a 24V supply voltage.</p>
+<p><strong>Pictures</strong><br>
+Here are a couple of pictures from experimenting with the driver:</p>
+<div align="center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/229774371/"><img decoding="async" title="High Voltage Over and Through Red LED" src="http://static.flickr.com/86/229774371_151043a913.jpg" alt="High Voltage Over and Through Red LED"></a></div>
+<div style="height: 16px;"></div>
+<div align="center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/229774372/"><img fetchpriority="high" decoding="async" src="http://static.flickr.com/97/229774372_6cd271ffd9.jpg" alt="High Voltage Sparks" width="273" height="500"></a></div>
+					</div>
+<!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			25 thoughts to &ldquo;PIC12F683 High Voltage Flyback Transformer Driver&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-573" class="comment even thread-even depth-1">
+			<article id="div-comment-573" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/dc43cd520bf4eb12f473d1903230eab2?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/dc43cd520bf4eb12f473d1903230eab2?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" decoding="async">						<b class="fn">Jason</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-573"><time datetime="2006-12-05T06:46:33-08:00">December 5, 2006 at 06:46</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hey anyway you could send me a pic of the finished circuit board and flyback attached?</p>
+<p>Thanks, Jason</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=573#respond" data-commentid="573" data-postid="34" data-belowelement="div-comment-573" data-respondelement="respond" data-replyto="Reply to Jason" aria-label="Reply to Jason">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-574" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-574" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Olivier</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-574"><time datetime="2007-02-11T13:50:28-08:00">February 11, 2007 at 13:50</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi,</p>
+<p>Your idea is very interesting and I will build such a generator once I get a HV transformer!<br>
+However, I think that you should add a so-called &#8220;freewheel&#8221; diod across the transformers&#8217;primary to protect the power MOSFET against high voltage spikes occuring when the transistor blocks.<br>
+Use a fast-recovery, several-amps-forward-current-diod, you can find such a diod in a roasted switching power supply for example.</p>
+<p>Regards,</p>
+<p>Olivier<br>
+PhD student,<br>
+LIRMM, Montpellier, France<br>
+<a href="http://www.lirmm.fr/" rel="nofollow ugc">http://www.lirmm.fr</a></p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=574#respond" data-commentid="574" data-postid="34" data-belowelement="div-comment-574" data-respondelement="respond" data-replyto="Reply to Olivier" aria-label="Reply to Olivier">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-575" class="comment even thread-even depth-1">
+			<article id="div-comment-575" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/521f5e811f749fa6951b0cf27465c98d?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/521f5e811f749fa6951b0cf27465c98d?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">GIOVANNI</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-575"><time datetime="2007-03-08T19:06:30-08:00">March 8, 2007 at 19:06</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>HI EXCELENT WORK AND PROJECT CONGRATULATIONS,</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=575#respond" data-commentid="575" data-postid="34" data-belowelement="div-comment-575" data-respondelement="respond" data-replyto="Reply to GIOVANNI" aria-label="Reply to GIOVANNI">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-576" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-576" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/51c5b778cfb47fd94bd4731a89814f2a?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/51c5b778cfb47fd94bd4731a89814f2a?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Doug</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-576"><time datetime="2007-05-29T08:36:57-07:00">May 29, 2007 at 08:36</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Just a note to Olivier &#8211; If you check the data sheet for the the IRL530 you will note that it has a suppression diode built in, as do many &#8220;power&#8221; FET&#8217;s</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=576#respond" data-commentid="576" data-postid="34" data-belowelement="div-comment-576" data-respondelement="respond" data-replyto="Reply to Doug" aria-label="Reply to Doug">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-577" class="comment even thread-even depth-1">
+			<article id="div-comment-577" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Olivier</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-577"><time datetime="2007-08-09T10:56:40-07:00">August 9, 2007 at 10:56</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Doug (from comment n°4)</p>
+<p>Datasheets give you some data about the device, but it’s far from being a complete description of it. Here is an interesting &#8220;Power MOSFET basics&#8221;, from the manufacturer of the IRL530, International Rectifier:<br>
+<a href="http://www.irf.com/technical-info/appnotes/mosfet.pdf" rel="nofollow ugc">http://www.irf.com/technical-info/appnotes/mosfet.pdf</a><br>
+The &#8220;protection diod&#8221;, or more precisely &#8220;body diod&#8221; seen in the datasheet simply comes from the structure of the power MOSFET. In our case, where we switch a coil, that is, an inductive load, this &#8220;body diod&#8221; is useless, since the inductive overshoot appearing while you turn off the MOS will tie the drain up to dramatically high voltages, exceeding the drain-to-source breakdown voltage specified in the datasheet (only 100V), thus leading to a short lifetime of the MOSFET. Consequently, I think that a protection diod would be more effective in parallel to the coil instead of the MOSFET channel. You often see such protection diodes mounted across relay coils, for example.</p>
+<p>Regards,</p>
+<p>Olivier<br>
+PhD student,<br>
+LIRMM, Montpellier, France<br>
+<a href="http://www.lirmm.fr/" rel="nofollow ugc">http://www.lirmm.fr</a></p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=577#respond" data-commentid="577" data-postid="34" data-belowelement="div-comment-577" data-respondelement="respond" data-replyto="Reply to Olivier" aria-label="Reply to Olivier">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-578" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-578" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2de3c3d9bf980477401989da9ce6a1b5?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/2de3c3d9bf980477401989da9ce6a1b5?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Kilijawa</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-578"><time datetime="2007-08-31T18:41:49-07:00">August 31, 2007 at 18:41</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>To Oliver : These protection diodes are not to be use! Flyback transformers use the inductive kick to boost up primary voltage, and then the kick is amplified by turn ratio. By adding a clipping diode you will weaken the voltage of the secondary.</p>
+<p>To page writer : Sorry but you&#8217;re using a pretty weird circuit to drive your flyback. Why use PIC? A simple astable 555 would be just right because you could power the IC with a higher voltage (and so drive the mosfet with higher voltage). Also, use better mosfet, 100 V is way to low. you need at least 200 V, 600 V would be better, so you could have BIG kickbacks. Also use higher primary voltage (60 V is great). All of this is to boost at maximum the primary voltage by using the maximum shutdown speed of the mosfet.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=578#respond" data-commentid="578" data-postid="34" data-belowelement="div-comment-578" data-respondelement="respond" data-replyto="Reply to Kilijawa" aria-label="Reply to Kilijawa">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-579" class="comment even thread-even depth-1">
+			<article id="div-comment-579" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/0392a7e20eada61c440d058ece6c1160?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Olivier</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-579"><time datetime="2007-10-08T10:47:35-07:00">October 8, 2007 at 10:47</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Sorry, that&#8217;s right, the protection diode in parallel with the primary would simply annihilate the inductive energy. But anyway, in the flyback converter, inductive energy has to be collected by the secondary when the power transistor blocks at the primary. In our case, the secondary collects energy by sparking, but as long as there&#8217;s no spark, then the primary undergoes a potentially high inductive kick. A MOS with high breakdown may not be enough, a transient suppressor might be helpfull in parallel to the primary coil (transil diod, &#8230;)<br>
+Playing with unclamped inductive overshoots is somewhat like playing with fire 😉<br>
+Another idea: put a capacitance in parallel to the secondary coil to make a resonant LC circuit. Driven by the primary nearly it&#8217;s resonant frequency, it would produce a great overvoltage. Of course it requires a high voltage cap&#8230; and great care.<br>
+Tesla coils are also cool stuff.</p>
+<p>Olivier</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=579#respond" data-commentid="579" data-postid="34" data-belowelement="div-comment-579" data-respondelement="respond" data-replyto="Reply to Olivier" aria-label="Reply to Olivier">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-580" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-580" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/e7c7c873f9cf3c8bafca0a9125843528?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/e7c7c873f9cf3c8bafca0a9125843528?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Nick</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-580"><time datetime="2007-10-23T15:27:23-07:00">October 23, 2007 at 15:27</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The ideal flyback driver will use a current-limited control IC.<br>
+Several issues are important to efficiency and safety (to the circuit).</p>
+<p>1. if you drive the core into saturation, it will blow up the mosfet. Since saturation flux is more or less fixed (about 0.3 tesla for ferrite materials), the current you can drive through the core is determined by the air gap in the core and number of turns in the primary. Current in the primary is determined by switch on-time and power supply voltage.</p>
+<p>The point is, the on-time of the switch should vary with the input voltage. The easy way to do this is just to have a boost-converter controller IC with built-in mosfet gate driver, which measures the current across a small sense resistor under the source of the mosfet. If you don&#8217;t want to do that, then use the PIC with some kind of a peak-holder circuit to measure the peak current. You will see as you increase the duty-cycle of the FET that the current increases linearly at first, then starts upwards on an exponential climb. This is the stairway to FET heaven! Don&#8217;t let the duty cycle go beyond the linear region of the core, for good efficiency and healthy FET lifetimes.</p>
+<p>2. You need a gate driver for the mosfet. A PIC is not strong enough to switch it on and off fast enough for good efficiency. Ideally there should be above an amp of instantaneous current. Most fets have more than 1000 pF of gate capacitance. Particularly when switching large drain voltages, the &#8220;miller effect&#8221; makes the apparent capacitance at the gate much larger. In a flyback, on turnoff the leakage inductance of the transformer creates a very large spike, which makes gate turnoff slow. Don&#8217;t neglect this!</p>
+<p>3. use a high-voltage fet. as mentioned before, 600 V would be excellent. The higher the clamping voltage, the less efficiency lost!</p>
+<p>4. generally, a high-power flyback driver will not clamp the transient by using the FET in avalanche mode. I think this is for reasons of speed. Generally, a zener diode clamp is used a lower powers, and at higher voltages (where it is hard to find zener diodes), a &#8220;freewheeling diode&#8221; in series with a parallel R/C filter is used.<br>
+There are also power transistor-based &#8220;zener boosters&#8221; that can be used. (details on request 😉</p>
+<p>5. because the copper losses are proportional to I^2 * R, the delicate secondary windings are probably the limiting factor for your power output. This implies the flyback should be driven in &#8220;continuous conduction mode&#8221;, rather than &#8220;discontinuous conduction mode&#8221;&#8211;this reduces the ripple current through the windings and diodes, and ought to maximize output power the windings can handle.</p>
+<p>6. best efficiency is said to be achieved when core and winding losses are equal. To my thoughts, this implies increasing the switching frequency until core losses become significant.</p>
+<p>7. output regulation! It is very difficult to directly regulate the high-voltage output. Perhaps for current-sensing the output you could make a floating optocoupler in opaque plastic tubing using an LED&#8217;s pretty linear current-to-light output, driving a photocell. For measuring voltage, either a voltage divider made from PVC pipe filled with a calculated concentration of copper sulfate solution (this allows very high resistances to be made), or else sense the reflected voltage from a low-voltage winding. Subject to the limits of transformer coupling, the voltage wave obtained from another coil on the transformer will tell you what voltage is &#8220;seen&#8221; by the secondary coil. If you regulate this voltage, it will also regulate the secondary. This is called &#8220;cross-regulation&#8221;. It&#8217;s not perfect, but a whole lot better than nothing at all. One limitation to this method is that without any load, regulation will suck. For a high-voltage output, I will guess that corona losses will load it enough that this is not a problem.</p>
+<p>With a PIC in there, you can have cool stuff like digital HV output meter (voltage, current, and power), and with a high enough switching frequency, the possibility of making controlled output waveforms.</p>
+<p>Good luck&#8230;.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=580#respond" data-commentid="580" data-postid="34" data-belowelement="div-comment-580" data-respondelement="respond" data-replyto="Reply to Nick" aria-label="Reply to Nick">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-581" class="comment even thread-even depth-1">
+			<article id="div-comment-581" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/4c8353e1daeeb493760ddf0b79c0034c?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/4c8353e1daeeb493760ddf0b79c0034c?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">ELIE</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-581"><time datetime="2008-03-13T10:56:42-07:00">March 13, 2008 at 10:56</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hi, good workman, nice project.<br>
+i have a project that gives a variable output high voltage<br>
+e.g from 0 till 25kv.<br>
+what you did, is great, but if i change the frequency that<br>
+drives the mosfet, could that gives variable high voltage on<br>
+the secondary flyback?<br>
+thanks .</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=581#respond" data-commentid="581" data-postid="34" data-belowelement="div-comment-581" data-respondelement="respond" data-replyto="Reply to ELIE" aria-label="Reply to ELIE">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-582" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.energeticforum.com/water-fuel/2242-water-sparkplug-15.html#post25833" class="url" rel="ugc external nofollow">Water Sparkplug - Page 15</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-583" class="comment even thread-even depth-1">
+			<article id="div-comment-583" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/9e963a717c96448abac6418ac0eb8c93?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/9e963a717c96448abac6418ac0eb8c93?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">amer</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-583"><time datetime="2008-09-05T17:34:16-07:00">September 5, 2008 at 17:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>pleas how make this flyback and what materials used in to make this flyback please help me in that</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=583#respond" data-commentid="583" data-postid="34" data-belowelement="div-comment-583" data-respondelement="respond" data-replyto="Reply to amer" aria-label="Reply to amer">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-584" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.electronics-lab.com/blog/" class="url" rel="ugc external nofollow">Electronics-Lab.com Blog &raquo; Blog Archive &raquo; PIC12F683 High Voltage Flyback Transformer Driver</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-585" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: This High Voltage Flyback Transformer Driver is Remarkable! - CircuitGeek 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-586" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-586" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/4243f8ef9afe0dd46593e54995759732?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/4243f8ef9afe0dd46593e54995759732?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">aziz el kabboury</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-586"><time datetime="2008-11-24T08:34:03-08:00">November 24, 2008 at 08:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>best greetings </p>
+<p>  dear sir<br>
+ thank you for your best site , it&#8217;s give me much pleasure to benefit of your experiments and </p>
+<p> development My ideas. </p>
+<p> dear sir ,can you assistance me  about ; how to transformer to high volts of flyback to simple </p>
+<p> volts ; please any assistance contact me soon </p>
+<p>  <a href="mailto:mora_1236@hotmail.com">mora_1236@hotmail.com</a>                   mY name : aziz from Morocco age 32 years<br>
+                                                                                            thank you with best wishes</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=586#respond" data-commentid="586" data-postid="34" data-belowelement="div-comment-586" data-respondelement="respond" data-replyto="Reply to aziz el kabboury" aria-label="Reply to aziz el kabboury">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-587" class="comment even thread-even depth-1">
+			<article id="div-comment-587" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/95c7d7b88329498ace1495d45a989b13?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/95c7d7b88329498ace1495d45a989b13?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Dr. Mario</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-587"><time datetime="2009-02-26T00:12:32-08:00">February 26, 2009 at 00:12</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Well, you can use a small Radio-frequency tunable transformer to pump up the Gate drive voltage, however, you can use MOSFET driver if you want to.</p>
+<p>Regarding to the MOSFET voltage, the Japanese MOSFET (Mitsubishi or Toshiba) is the way to go, since these are the most common brand used by power supply in TV and monitor, regarding the low chance of failure. Just use the largest of all if you can (TO-220AB or 227)</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=587#respond" data-commentid="587" data-postid="34" data-belowelement="div-comment-587" data-respondelement="respond" data-replyto="Reply to Dr. Mario" aria-label="Reply to Dr. Mario">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-588" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-588" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/536226ad879a4b2ca84c2b9908085472?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/536226ad879a4b2ca84c2b9908085472?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Nickado</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-588"><time datetime="2009-07-09T19:20:29-07:00">July 9, 2009 at 19:20</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hey, great job.<br>
+I need a little help here. I have e17865 and I&#8217;m really confused which pin is &#8220;FBPriP&#8221;, &#8220;FBPriG&#8221; and so I have no idea where to connect the microcontroller.<br>
+Can you help me? Thanks.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=588#respond" data-commentid="588" data-postid="34" data-belowelement="div-comment-588" data-respondelement="respond" data-replyto="Reply to Nickado" aria-label="Reply to Nickado">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-589" class="comment even thread-even depth-1">
+			<article id="div-comment-589" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/55b4e0ca9cecf3c3332400fc9a505dd1?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/55b4e0ca9cecf3c3332400fc9a505dd1?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">james</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-589"><time datetime="2009-12-18T13:13:50-08:00">December 18, 2009 at 13:13</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>good job!!!!<br>
+but what is “FBPriP”, “FBPriG” etc. ?<br>
+help please<br>
+               tnx</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=589#respond" data-commentid="589" data-postid="34" data-belowelement="div-comment-589" data-respondelement="respond" data-replyto="Reply to james" aria-label="Reply to james">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-590" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-590" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/79d75bc1ef07118bb570afeebc6d7e21?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/79d75bc1ef07118bb570afeebc6d7e21?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Santiago</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-590"><time datetime="2010-04-06T10:43:10-07:00">April 6, 2010 at 10:43</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>FBPri = Flyback primary winding (thin pins on the bottom of the flyback, you must find it out wich pair to use)</p>
+<p>FBSec = Flyback secondary winding (one thick wire that comes out on the top of the flyback, and the other, the ground, is a pin located on the bottom of the flyback, you must find this too)</p>
+<p>to find the pairs that match, use a voltimeter, you should read a very low resistance for the primary, i think that should have less than 5 ohms, becouse the primary has less than 100 turns of wire, it works with 150v, and more than 20 ohm for the secondary, becouse has more than 1000 turns of wire, the relation between primary and secondary is how much the flyback will amplify the voltage, i don&#8217;t have a flyback right here to test it. there are special pins on the bottom for different propouses, this give us different voltages too, but not as much as 10kv. some flybacks has a voltage doubler / triplier to elevate even more the voltage up to 25kv / 30kv, also if you wish to increase even more the voltage you can use the marx generator at the output of the secondary&#8230; it&#8217;s very interesting.</p>
+<p>i&#8217;m sorry if my english is not clear enough, i&#8217;m out of practice&#8230;</p>
+<p>regards from argentina!!!</p>
+<p>PD: steven, very good ideas, i&#8217;m learning a lot reading all your projects, i&#8217;m making the osciloscope and other stuff too&#8230;</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=590#respond" data-commentid="590" data-postid="34" data-belowelement="div-comment-590" data-respondelement="respond" data-replyto="Reply to Santiago" aria-label="Reply to Santiago">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-4904" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2006/11/11/high-voltage-flyback-transformer-videos/" class="url" rel="ugc external nofollow">&raquo; High Voltage Flyback Transformer Videos semifluid.com</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-4907" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2006/11/16/some-more-high-voltage-videos/" class="url" rel="ugc external nofollow">&raquo; Some More High Voltage Videos semifluid.com</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-4912" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/01/18/website-host-transfer-complete-sparks/" class="url" rel="ugc external nofollow">&raquo; Website Host Transfer Complete + Sparks semifluid.com</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-14049" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-14049" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/dac297629a7e0848da59d3056ac4852f?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/dac297629a7e0848da59d3056ac4852f?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Aristotle</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-14049"><time datetime="2012-11-07T04:04:09-08:00">November 7, 2012 at 04:04</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi<br>
+most mains-operated CRT-TVs used bipolar transistors for H-output stage, with Vcs ratings of 1100-1500V. I suggest take a good hard look at Service Manuals and any other supporting literature of large TVs, with particular attention to the base-drive arrangements because it is crucial to survival of these devices.<br>
+The many auxiliary windings are variously used to drive dynamic-convergence, East-West modulator/vertical output stage, etc. Partly for cost reasons but also in absence of perfect regulation o fEHT, the deflection-circuits need to DECREASE their output as EHT load increases with brightness &#8211; this maintains picture at correct size (more or less!) as picture-content and user-set brightness varies.<br>
+TV scanning uses roughly 52 us scan (&#8220;ON&#8221;) time and 12us flyback (&#8220;OFF&#8221;) &#8211; this is probably the best way to run these LOPTs.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=14049#respond" data-commentid="14049" data-postid="34" data-belowelement="div-comment-14049" data-respondelement="respond" data-replyto="Reply to Aristotle" aria-label="Reply to Aristotle">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-19660" class="comment even thread-even depth-1">
+			<article id="div-comment-19660" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/d9c9f568e1f2b4dd36e78b01ae86f2ec?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/d9c9f568e1f2b4dd36e78b01ae86f2ec?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">atlandic</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-19660"><time datetime="2013-11-02T04:34:15-07:00">November 2, 2013 at 04:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>GOOD WORK PLEASE DO IT ONLY THING IS THE SKY LIMIT<br>
+GOOD DAY</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=19660#respond" data-commentid="19660" data-postid="34" data-belowelement="div-comment-19660" data-respondelement="respond" data-replyto="Reply to atlandic" aria-label="Reply to atlandic">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-21863" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-21863" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/854ff9efc53c6d22b99027fc1f63238b?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/854ff9efc53c6d22b99027fc1f63238b?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">m</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-21863"><time datetime="2013-12-04T21:49:43-08:00">December 4, 2013 at 21:49</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>should i leave all the other pins floating like in the schematic? I have no oscillation from pin 3 / gp4.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=21863#respond" data-commentid="21863" data-postid="34" data-belowelement="div-comment-21863" data-respondelement="respond" data-replyto="Reply to m" aria-label="Reply to m">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-21924" class="comment even thread-even depth-1">
+			<article id="div-comment-21924" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/854ff9efc53c6d22b99027fc1f63238b?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/854ff9efc53c6d22b99027fc1f63238b?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">M</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comment-21924"><time datetime="2013-12-08T01:57:29-08:00">December 8, 2013 at 01:57</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I had good success with this after changing PIN_A1 to PIN_A4 in the code. Initially I made a mistake in my PCB layout based on the schematic for pin 3 signal out.  PIN_A4 corresponds to the pin shown in the schematic.</p>
+<p>I see super good efficiency running .6 amps from 15v across the primary with a 5/8&#8243; arc.  I&#8217;m very impressed by how well this works with a N channel irf840 mosfet, sony color tv flyback xformer and delay_us (28) ; </p>
+<p>Great design.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/?replytocom=21924#respond" data-commentid="21924" data-postid="34" data-belowelement="div-comment-21924" data-respondelement="respond" data-replyto="Reply to M" aria-label="Reply to M">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		</ol>
+<!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="34" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+</div>
+<!-- #comments -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2006/11/11/high-voltage-flyback-transformer-videos/" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">High Voltage Flyback Transformer Videos</span></a></div>
+<div class="nav-next"><a href="/2006/11/15/luxeon-k2-led-show-off/" rel="next"><span class="post-title">Luxeon K2 LED show-off <i class="fa fa-chevron-right"></i></span></a></div>
+</div>
+	</nav>
+		</main><!-- #main -->
+	</div>
+<!-- #primary -->
+
+</div>
+<!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+				<aside id="search-4" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:">
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside><aside id="categories-9" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-3">
+<a href="/category/electronics/">Electronics</a>
+<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/electronics/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/electronics/glcd/">GLCD</a>
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/electronics/gps/">GPS</a>
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/electronics/high-voltage/">High Voltage</a>
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/electronics/leds/">LEDs</a>
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/electronics/rf/">RF</a>
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/electronics/usb/">USB</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/personal/">Personal</a>
+<ul class="children">
+	<li class="cat-item cat-item-22">
+<a href="/category/personal/consumerism/">Consumerism</a>
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/personal/cooking/">Cooking</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/photos/">Photos</a>
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/pic-projects/">PIC Projects</a>
+<ul class="children">
+	<li class="cat-item cat-item-21">
+<a href="/category/pic-projects/c-projects/">C Projects</a>
+</li>
+	<li class="cat-item cat-item-23">
+<a href="/category/pic-projects/jal-projects/">JAL Projects</a>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/pic-projects/pic12f675/">PIC12F675</a>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/pic-projects/pic12f683/">PIC12F683</a>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/pic-projects/pic16f628/">PIC16F628</a>
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/pic-projects/pic16f88/">PIC16F88</a>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/pic-projects/pic18f2550/">PIC18F2550</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/programming/">Programming</a>
+<ul class="children">
+	<li class="cat-item cat-item-24">
+<a href="/category/programming/mathematica/">Mathematica</a>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/programming/matlab/">MATLAB</a>
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/programming/python/">Python</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/research/">Research</a>
+<ul class="children">
+	<li class="cat-item cat-item-48">
+<a href="/category/research/3d-shape/">3D Shape</a>
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/research/stability-research/">Stability</a>
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/research/texture/">Texture</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-18">
+<a href="/category/software/">Software</a>
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/software/mac-os-x/">Mac OS X</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1">
+<a href="/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside>	</div>
+</div>
+<!-- #secondary -->
+		</div>
+<!-- close .row -->
+	</div>
+<!-- close .container -->
+</div>
+<!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+	
+	<div class="footer-widget-area">
+				<div class="col-sm-4 footer-widget" role="complementary">
+					</div>
+<!-- .widget-area .first -->
+		
+		
+			</div>
+			</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						sparkling						Theme by <a href="http://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div>
+<!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div>
+<!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div>
+<!-- #page -->
+
+		<script type="text/javascript">jQuery(document).ready(function ($) {
+			if ($(window).width() >= 767) {
+			  $('.navbar-nav > li.menu-item > a').click(function () {
+				if ($(this).attr('target') !== '_blank') {
+				  window.location = $(this).attr('href')
+				}
+			  })
+			}
+		  })</script>
+	<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222" id="sparkling-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.7.1" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+
+</body>
+</html>

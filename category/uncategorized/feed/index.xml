@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorized &#8211; semifluid.com</title>
+	<atom:link href="/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Fri, 13 May 2016 03:34:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>2016 VSS DNA</title>
+		<link>/2016/05/12/2016-vss-dna/</link>
+					<comments>/2016/05/12/2016-vss-dna/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 13 May 2016 03:34:17 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=5832</guid>
+
+					<description><![CDATA[This year, I am not attending the Vision Sciences Society annual meeting. Although I wish I could be there, a number of life events meant that I was not able to submit an abstract this year. However, I was able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s 2015 VSS DNA and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>This year, I am not attending the <a href="http://www.visionsciences.org/">Vision Sciences Society</a> annual meeting. Although I wish I could be there, a number of life events meant that I was not able to submit an abstract this year. However, I <strong>was</strong> able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s <a href="/2015/03/23/2015-vss-dna/">2015 VSS DNA</a> and the year before&#8217;s <a href="/2014/05/03/vss-2014-dna-v1/">2014 VSS DNA</a>).  This year, we have 1462 abstracts being analyzed (43 more than last year). As with the previous visualizations, the graph was generated in Python using <a href="https://networkx.github.io/">NetworkX</a>, with authors and abstracts as nodes and edges corresponding to authorship. Individuals who are authors on more than one abstract will have edges connecting to those abstracts.</p>
+<p><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2016/05/VSS2016DNA.png" alt="Illustration of the co-authorships for the Vision Sciences Society 2016 annual meeting abstracts." width="700" height="700" class="size-full wp-image-5835" srcset="/wp-content/uploads/2016/05/VSS2016DNA.png 700w, /wp-content/uploads/2016/05/VSS2016DNA-150x150.png 150w, /wp-content/uploads/2016/05/VSS2016DNA-300x300.png 300w, /wp-content/uploads/2016/05/VSS2016DNA-60x60.png 60w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p>In this visualization, orange dots are abstracts, light blue dots correspond to individuals who are first authors, and dark blue dots correspond to the other author(s). You can view an interactive force-directed d3.js version <a href="http://steven.cholewiak.com/code/visvssrelationships_2016">here</a>. The code for the graph and force-directed diagram generation is available on GitHub <a href="https://github.com/OrganicIrradiation/visvssrelationships">here</a>. The scraping is notably faster this year because I am using Python 3.4+&#8217;s <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> package. The notebooks can also be viewed using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a>:</p>
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships_scrape.ipynb">visvssrelationships_scrape.ipynb</a></li>
+<li><a href="http://nbviewer.ipython.org/github/OrganicIrradiation/visvssrelationships/blob/master/visvssrelationships.ipynb">visvssrelationships.ipynb</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2016/05/12/2016-vss-dna/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

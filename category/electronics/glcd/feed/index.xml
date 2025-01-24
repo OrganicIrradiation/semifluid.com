@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GLCD &#8211; semifluid.com</title>
+	<atom:link href="/category/electronics/glcd/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:21:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>WiFi-Enabled Arduino Fio using the WiFly RN-XV (RN171XV)</title>
+		<link>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/</link>
+					<comments>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sun, 20 Oct 2013 17:31:12 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<guid isPermaLink="false">/?p=3759</guid>
+
+					<description><![CDATA[The Arduino Fio is a nice little Arduino board designed specifically to interface with XBee devices. I think it&#8217;s a great little board and have used it quite a bit in the past. BUT, I haven&#8217;t talked too much about the XBee interface, so for this post, I wanted to demonstrate an example utilizing the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The <a href="http://arduino.cc/en/Main/ArduinoBoardFio">Arduino Fio</a> is a nice little Arduino board designed specifically to interface with XBee devices. I think it&#8217;s a great little board and have used it quite a bit in the past. BUT, I haven&#8217;t talked too much about the XBee interface, so for this post, I wanted to demonstrate an example utilizing the XBee socket to get an Arduino Fio onto the web. This is a simple example, just demonstrating communication with the Microchip RN171XV (previously Roving Networks RN-XV) wifi module.</p>
+<p><a href="/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/"><img decoding="async" src="/wp-content/uploads/2013/10/IMG_8040-1024x623.jpg" alt="WiFlyTimeWithConsole Example" /></a></p>
+<p>Click through the break for information on the setup and source code to get the Arduino Fio onto the web.<br />
+<span id="more-3759"></span></p>
+<p>The project uses an Arduino Fio as the microcontroller, a <a href="https://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en560635">Microchip RN171XV</a> wifi module to connect to the internet (hereafter described using the old part name, RN-XV), and a Mini12864 graphical LCD to show debug information.  Here&#8217;s a part list for this project (assuming you already have a USB -&gt; Micro USB cable):</p>
+<ul>
+<li>Arduino Fio (available on <a href="https://www.amazon.com/dp/B005K0O1PA/?tag=semifluidcom-20">Amazon</a> &amp; <a href="https://www.sparkfun.com/products/10116">Sparkfun</a>)</li>
+<li>Mini12864 graphical LCD (available on <a href="http://www.amazon.com/dp/B005K0O1PA/?tag=semifluidcom-20">Amazon</a> &amp; <a href="http://dx.com/p/153821?utm_rid=62305252&amp;utm_source=affiliate">DX</a>)</li>
+<li>Microchip RN171XV/Roving Networks RN-XV (available on <a href="http://www.amazon.com/gp/product/B007R9U4VM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B007R9U4VM&amp;linkCode=as2&amp;tag=semifluidcom-20">Amazon</a> &amp; <a href="https://www.sparkfun.com/products/10822">Sparkfun</a>)</li>
+<li>XBee USB adapter &#8211; for programming RN-XV (available on <a href="http://www.amazon.com/gp/product/B004G4XUXU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004G4XUXU&amp;linkCode=as2&amp;tag=semifluidcom-20">Amazon</a>, <a href="http://dx.com/p/140960?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>, &amp; <a href="https://www.sparkfun.com/products/8687">SparkFun</a>)</li>
+<li>FTDI 3.3V USB cable &#8211; for programming Fio (available on <a href="http://www.amazon.com/gp/product/B004LBXO2A/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004LBXO2A&amp;linkCode=as2&amp;tag=semifluidcom-20">Amazon</a>, <a href="http://dx.com/p/397477?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>, &amp; <a href="https://www.sparkfun.com/products/9717">SparkFun</a>)</li>
+</ul>
+<p>Want to make it completely wireless? I also used a Lithium Ion Polymer battery (available at <a href="https://www.sparkfun.com/products/341">Sparkfun</a>).</p>
+<p>When you first get the RN-XV, it needs to be updated to the latest firmware. First, it needs to be plugged into the XBee USB adapter and connected to your computer. These days, I&#8217;m working on a Mac, so I use <a href="http://freeware.the-meiers.org/">CoolTerm</a> to communicate with the RN-XV. Here are the settings (basically 9600 baud serial communication):</p>
+<p><a href="/wp-content/uploads/2013/10/Screen-Shot-2013-10-20-at-14.50.08.png"><img decoding="async" src="/wp-content/uploads/2013/10/Screen-Shot-2013-10-20-at-14.50.08-1024x858.png" alt="CoolTerm Setup Screenshot" /></a></p>
+<p>Then the RN-XV needs to be connected to your wireless access point and updated. Type in <code>$$$</code> to enter the command mode and you should see the RN-XV respond <code>CMD</code>. You can then enter the commands one by one (carriage returns after each line) to connect the RN-XV to your WiFi access point. Here is my basic setup (see the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/rn-wiflycr-ug-v1.2r.pdf">RN-XV datasheet</a> for additional information):</p>
+<p>[code lang=&#8221;text&#8221;]<br />
+factory RESET<br />
+reboot<br />
+set wlan auth 4<br />
+set wlan ssid XXXX<br />
+set wlan phrase XXXX<br />
+set wlan join 1<br />
+save<br />
+reboot<br />
+[/code]</p>
+<p>The RN-XV should associate (connect) with your wifi network and then you can test the connectivity by pinging the Microchip FTP server:</p>
+<p>[code lang=&#8221;text&#8221;]<br />
+ping 198.175.253.161 10<br />
+[/code]</p>
+<p>Then, update the RN-XV to the latest firmware (4.00.1 as of this article&#8217;s publish date):</p>
+<p>[code lang=&#8221;text&#8221;]<br />
+set ftp address 198.175.253.161<br />
+set ftp user roving<br />
+set ftp pass Pass123<br />
+save<br />
+ftp update<br />
+[/code]</p>
+<p>Once the update downloads, you can reset the factory defaults and reboot:</p>
+<p>[code lang=&#8221;text&#8221;]<br />
+factory RESET<br />
+reboot<br />
+[/code]</p>
+<p>After the RN-XV resets, you should again enter the basic setup information to get the RN-XV connected to your WiFi access point (see above).  If all works out, then you can disconnect the serial port and pull the RN-XV out of the XBee adapter for the time being (don&#8217;t put it into the Arduino Fio, because the Fio needs to be programmed and the TX/RX lines are shared on the board).</p>
+<p>I found a wonderful Arduino library for the RN-XV called <a href="https://github.com/harlequin-tech/WiFlyHQ">WiFlyHQ</a> by harlequin-tech.  The author includes a number of great examples, including a HTTP client, HTTP server, TCP client, UDP client, and web socket client.  Using the basic setup code in the HTTP client example, I added code from my previous <a href="/2013/08/29/arduino-fio-graphical-lcd-console/">Arduino FIO Graphical LCD Console</a> to make a simple &#8220;clock&#8221; that updates approximately every 3 seconds using the <a href="http://tf.nist.gov/tf-cgi/servers.cgi">time-c.nist.gov</a> <a href="http://www.nist.gov/pml/div688/grp40/its.cfm">time server</a>.  I used the console code because it allows for very simple debug printing (since the Fio&#8217;s serial TX/RX pins are shared with the XBee socket).  Here an admittedly boring short video illustrating the &#8220;clock&#8221; being startup and allowed to run (the value on the far left is an indicator of the wireless signal strength, <a href="https://en.wikipedia.org/wiki/Received_signal_strength_indication">RSSI</a>):</p>
+<p><iframe title="WiFi enabled Arduino Fio using the WiFly RN-XV" width="648" height="365" src="https://www.youtube.com/embed/bx8jDz5C-J8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>And finally, here&#8217;s the Arduino sketch:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/cf225ac77c26fe001f39.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/20/wifi-enabled-arduino-fio-using-the-wifly-rn-xv-rn171xv/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Arduino FIO Graphical LCD Console</title>
+		<link>/2013/08/29/arduino-fio-graphical-lcd-console/</link>
+					<comments>/2013/08/29/arduino-fio-graphical-lcd-console/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 29 Aug 2013 07:29:18 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<guid isPermaLink="false">/?p=3621</guid>
+
+					<description><![CDATA[I have previously shown how to use the Arduino Fio and the mini12864 graphical LCD to create a simple oscilloscope. For this post, I wanted to demonstrate the u8glib console demo because I plan on using the GLCD to debug some of my projects and to provide a visual interface for experiments with the Microchip [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have previously shown how to use the <a href="http://arduino.cc/en/Main/ArduinoBoardFio" target="_blank">Arduino Fio</a> and the mini12864 graphical LCD to create a <a href="/2013/05/28/arduino-fio-lcd-oscilloscope/">simple oscilloscope</a>.  For this post, I wanted to demonstrate the <a href="https://code.google.com/p/u8glib/" target="_blank">u8glib</a> console demo because I plan on using the GLCD to debug some of my projects and to provide a visual interface for experiments with the <a href="http://www.microchip.com/wwwproducts/en/RN171XV" target="_blank">Microchip RN-171-XV</a>.</p>
+<p><a href="/2013/08/29/arduino-fio-graphical-lcd-console/"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2013/08/IMG_6922_cropped-1024x595.jpg" alt="IMG_6922_cropped" width="600" height="348" class="aligncenter size-large wp-image-3636" srcset="/wp-content/uploads/2013/08/IMG_6922_cropped-1024x595.jpg 1024w, /wp-content/uploads/2013/08/IMG_6922_cropped-300x174.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>More information on the project, a video of it in operation, and its code after the break.<br />
+<span id="more-3621"></span></p>
+<p>A little while ago, I picked up an Arduino Fio (available on <a href="https://www.amazon.com/dp/B005K0O1PA/?tag=semifluidcom-20" target="_blank">Amazon.com</a>) and the mini12864 graphical LCD (available on <a href="http://dx.com/p/153821?Utm_rid=62305252&#038;Utm_source=affiliate" target="_blank">dx.com</a> &amp; <a href="http://www.amazon.com/dp/B009VILK8S/?tag=semifluidcom-20" target="_blank">Amazon.com</a>) for some microcontroller tinkering.  It turned out that a great graphical LCD library was available &#8212; <a href="https://code.google.com/p/u8glib/" target="_blank">u8glib</a> &#8212; that supports the mini12864&#8217;s controller (the <a href="http://www.lcd-module.de/eng/pdf/zubehoer/uc1701.pdf" target="_blank">UC1701</a>).</p>
+<p>Using u8glib, the Arduino and the GLCD communicate flawlessly.  Thankfully, the mini12864 is 3.3V compatible, so there are no issues setting it up with the Arduino Fio and the simple SPI connection makes setup surprisingly easy.  As mentioned, I was able to use u8glib to port my oscilloscope code from CCS C to the Arduino:</p>
+<ul>
+<li><a href="/2013/05/28/arduino-fio-lcd-oscilloscope/">Arduino FIO LCD Oscilloscope</a></li>
+<li><a href="/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/">Arduino FIO 2 Channel LCD Oscilloscope</a></li>
+</ul>
+<p>In addition to all of the functions u8glib provides, the library also comes with a nice little serial console/terminal demonstration program. The current u8glib console code can be found <a href="https://code.google.com/p/u8glib/source/browse/sys/arduino/Console/Console.pde" target="_blank">here</a>.</p>
+<p>I added four functions that would allow me to quickly and easily debug my applications u8g_print, u8g_println, u8g_print_P, and u8g_println_P.  u8g_print allows one to print a character array, u8g_println does the same, but then adds a new line to the end of the string, u8g_print_P allows you to print a character array saved in program memory, and u8g_println_P does the same but adds a new line.  Here are the new functions:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/21422d7cec87ebe5ef7b.js?file=new_functions.ino"></script></p>
+<p>This allowed me to create this simple demo of the GLCD debug console code:</p>
+<p><center><br />
+<iframe title="Arduino Fio GLCD Console Demo" width="648" height="365" src="https://www.youtube.com/embed/EAcKEw0Ciu4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>And last but not least, here is the Arduino Sketch used to produce the above output:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/21422d7cec87ebe5ef7b.js?file=u8glib_FioConsole.ino"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/08/29/arduino-fio-graphical-lcd-console/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Arduino FIO 2 Channel LCD Oscilloscope</title>
+		<link>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/</link>
+					<comments>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 02 Aug 2013 23:25:42 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3391</guid>
+
+					<description><![CDATA[After using my Arduino Fio to make an Arduino LCD oscilloscope, I wanted to try adding a second channel. Using the single channel Arduino FIO LCD Oscilloscope code as a template, I modified the project and added a second channel. Here&#8217;s a short demonstration video of the new two channel project: Click through the break [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>After using my Arduino Fio to make an <a href="/2013/05/28/arduino-fio-lcd-oscilloscope/">Arduino LCD oscilloscope</a>, I wanted to try adding a second channel.  Using the single channel Arduino FIO LCD Oscilloscope code as a template, I modified the project and added a second channel.</p>
+<p><a href="/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Arduino-Fio-2-Channel-LCD-Oscilloscope-1024x576.jpg" alt="Arduino-Fio-2-Channel-LCD-Oscilloscope" width="600" height="337" class="aligncenter size-large wp-image-3525" srcset="/wp-content/uploads/2013/08/Arduino-Fio-2-Channel-LCD-Oscilloscope-1024x576.jpg 1024w, /wp-content/uploads/2013/08/Arduino-Fio-2-Channel-LCD-Oscilloscope-300x168.jpg 300w, /wp-content/uploads/2013/08/Arduino-Fio-2-Channel-LCD-Oscilloscope.jpg 1920w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Here&#8217;s a short demonstration video of the new two channel project:</p>
+<p><center><br />
+<iframe loading="lazy" title="Arduino FIO 2 Channel LCD Oscilloscope" width="648" height="486" src="https://www.youtube.com/embed/JH9s9POwMFg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Click through the break to check out the code.<br />
+<span id="more-3391"></span></p>
+<p>The project used an Arduino Fio (available on <a href="https://www.amazon.com/dp/B005K0O1PA/?tag=semifluidcom-20" target="_blank">Amazon.com</a>) and the mini12864 128&#215;64 pixel graphical LCD (available on <a href="http://dx.com/p/153821?Utm_rid=62305252&#038;Utm_source=affiliate" target="_blank">dx.com</a> &amp; <a href="http://www.amazon.com/dp/B009VILK8S/?tag=semifluidcom-20" target="_blank">Amazon.com</a>).</p>
+<p>The basic modification was to include a second set of variables that is used to store the second channel&#8217;s readings.  A more elegant solution would have been to make each variable an N-channel array (so that one could easily scale to more channels), but the low-resolution monochrome display really limits the possibilities, unfortunately.  In addition, the sampling rate for the single channel oscilloscope was already quite low (with a maximum sampling rate of approximately 28kHz), but two channels could allow for some interesting possibilities as long as one can deal with the slower acquisition speed.</p>
+<p>The display refresh is triggered by a rising signal (useThreshold == 1) on the channel A input (analog pin 7, as defined by theAnalogPinA = 7), but you could easily modify the code to make this switchable so that either channel acts as the trigger. The code is very similar to my previous code, including the serial port parameter controls, so I recommend taking a look at that post first, if you have any questions: <a href="/2013/05/28/arduino-fio-lcd-oscilloscope/">Arduino FIO LCD Oscilloscope</a></p>
+<p>As with the previous single channel project, you need to make sure that you have the <a href="https://code.google.com/p/u8glib/" target="_blank">u8glib</a> library installed to compile the code.</p>
+<p>Here&#8217;s the Arduino sketch for the oscilloscope:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/e6cc9f132bc17ab97243.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/08/02/arduino-fio-2-channel-lcd-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Arduino FIO LCD Oscilloscope</title>
+		<link>/2013/05/28/arduino-fio-lcd-oscilloscope/</link>
+					<comments>/2013/05/28/arduino-fio-lcd-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 28 May 2013 15:08:23 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3376</guid>
+
+					<description><![CDATA[It has been 7 years (!) since I posted my PIC18F2550 KS0108 Graphical LCD Oscilloscope code and schematics. I have long since taken the circuit apart, sold my PIC microcontrollers, and moved on in my life (as one can surmise from my most recent posts detailing my graduate and postdoctoral work). However, I still get [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>It has been 7 years (!) since I posted my <a href="http://semifluid.com/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/">PIC18F2550 KS0108 Graphical LCD Oscilloscope</a> code and schematics.  I have long since taken the circuit apart, sold my PIC microcontrollers, and moved on in my life (as one can surmise from my most recent posts detailing my graduate and postdoctoral work).  However, I still get inquiries about the Microchip PIC oscilloscope, so I decided to recreate it using a simpler setup using my Arduino Fio.</p>
+<p><a href="/2013/05/28/arduino-fio-lcd-oscilloscope/"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/05/IMG_4199-1024x682.jpg" alt="IMG_4199" width="600" height="399"  class="aligncenter size-large wp-image-3428" srcset="/wp-content/uploads/2013/05/IMG_4199-1024x682.jpg 1024w, /wp-content/uploads/2013/05/IMG_4199-300x200.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Here&#8217;s a short teaser video just to show that, yes, it works (going through a couple different sine wave frequencies, some random noise, etc. just to illustrate it working):</p>
+<p><center><br />
+<iframe loading="lazy" title="Arduino FIO LCD Oscilloscope - Teaser" width="648" height="365" src="https://www.youtube.com/embed/Sa-n04G7uA8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Click through the break to get more information on the setup.<br />
+<span id="more-3376"></span></p>
+<p>I used an <a href="http://arduino.cc/en/Main/ArduinoBoardFio" target="_blank">Arduino Fio</a> board that I picked up from SparkFun.com (available at <a href="https://www.amazon.com/dp/B005K0O1PA/?tag=semifluidcom-20" target="_blank">Amazon.com</a>) and a small SPI graphical LCD board that I picked up for a few bucks at dx.com (SKU <a href="http://dx.com/p/153821?Utm_rid=62305252&#038;Utm_source=affiliate" target="_blank">153821</a>, also apparently available at <a href="http://www.amazon.com/dp/B009VILK8S/?tag=semifluidcom-20" target="_blank">Amazon.com</a>).  Since I don&#8217;t have a soldering iron here, I had to improvise with some female to female cables, also purchased from dx.com (SKU <a href="http://dx.com/p/151650?Utm_rid=62305252&#038;Utm_source=affiliate" target="_blank">151650</a>).</p>
+<p>Dx.com describes the LCD as a 5V module, but the GLCD board designer&#8217;s page (mini12864) states otherwise (translated from Chinese via Google Translate):</p>
+<blockquote><p>
+Dimensions (L × W × H): 47mm × 38mm × 6mm (excluding pins)<br />
+LCD sight (L × W): 33.7mm × 33.5mm<br />
+LCD Active Display Area (L × W): 30.7mm × 23mm<br />
+Backlight: White LED backlight bracket<br />
+<strong>Operating voltage: 3.3V ~ 5.5V</strong> (built-in booster circuit, without pressure)<br />
+Control IC: UC1701<br />
+Display format: 128 × 64 rows<br />
+Display: Blue on White
+</p></blockquote>
+<p>(<a href="http://semifluid.com/wp-content/uploads/2013/05/mini12864.pdf">mini12864 datasheet</a>)</p>
+<p>So, I ordered one of the graphical LCDs, waited a few weeks for delivery (because dx.com is a notoriously slow shipper), received it, hooked it up, and tried out the following simple &#8220;Hello World&#8221; script to confirm that that the GLCD/FIO combo functioned:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/e8cda31673fc12509fd0.js?file=U8glib_Hello_World.ino"></script></p>
+<p>And it worked!</p>
+<p>Thankfully, the code I <a href="http://semifluid.com/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/">previously posted</a> was written in C, so porting to the Arduino took only a few minutes.  I took advantage of a great open source graphical LCD library (<a href="https://code.google.com/p/u8glib/" target="_blank">u8glib</a>) to handle the brunt of the work and added a serial port menu for manipulating the various display parameters.  One important difference between this project and the previous one: Since the Arduino Fio is a 3.3V device, it can only handle 0-3.3V inputs, limiting its utility as an &#8220;oscilloscope&#8221; without proper input protection/voltage scaling.  However, the code is extremely portable, meaning that you should be able to program any other Arduino and have it up-and-running in no time.</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/05/IMG_4203-1024x682.jpg" alt="IMG_4203" width="600" height="399" class="aligncenter size-large wp-image-3429" srcset="/wp-content/uploads/2013/05/IMG_4203-1024x682.jpg 1024w, /wp-content/uploads/2013/05/IMG_4203-300x200.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></p>
+<p>Here&#8217;s another 2 videos of the oscilloscope in action:</p>
+<p><center><br />
+<iframe loading="lazy" title="Arduino FIO LCD Oscilloscope - In action #1" width="648" height="365" src="https://www.youtube.com/embed/ZW6zGcie58w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Arduino FIO LCD Oscilloscope - In action #2" width="648" height="365" src="https://www.youtube.com/embed/I8EWdJlqu-Y?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>And finally, here&#8217;s the Arduino sketch for the oscilloscope:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/e8cda31673fc12509fd0.js?file=U8glib_Oscilloscope.ino"></script></p>
+<p>Here&#8217;s the Arduino sketch for the square wave generator shown in the second video:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/e8cda31673fc12509fd0.js?file=arduino_square_wave_gen.ino"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/05/28/arduino-fio-lcd-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>32</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18F2550 KS0108 Graphical LCD Oscilloscope</title>
+		<link>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/</link>
+					<comments>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 21 Aug 2006 17:00:56 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=15</guid>
+
+					<description><![CDATA[Using the PIC18F2550 GLCD Text Test as a basis for further experimentation, I put together a simple and accurate graphical oscilloscope using a PIC18F2550 microcontroller and a AGM1264F graphical LCD. The oscilloscope measures the average voltage, the maximum voltage, the minimum voltage, the peak-to-peak voltage, and the zero-crossing frequency for a DC signal over 100 [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="http://semifluid.com/wp-content/uploads/2006/08/PIC18F2550_GLCD_Oscilloscope.jpg"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/PIC18F2550_GLCD_Oscilloscope.jpg" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope" width="280" height="200" class="alignleft size-full wp-image-958" /></a>Using the PIC18F2550 GLCD Text Test as a basis for further experimentation, I put together a simple and accurate graphical oscilloscope using a PIC18F2550 microcontroller and a <a href="http://www.azdisplays.com/graphic-lcd-display-module/AGM1264F/">AGM1264F</a> graphical LCD. The oscilloscope measures the <a href="https://en.wikipedia.org/wiki/Average">average</a> voltage, the <a href="https://en.wikipedia.org/wiki/Maximum">maximum</a> voltage, the <a href="https://en.wikipedia.org/wiki/Minimum">minimum</a> voltage, the <a href="https://en.wikipedia.org/wiki/Peak-to-peak">peak-to-peak</a> voltage, and the <a href="https://en.wikipedia.org/wiki/Zero_crossing">zero-crossing</a> frequency for a DC signal over 100 samples. The oscilloscope has a built in <a href="https://en.wikipedia.org/wiki/Oscilloscope#Trigger">edge trigger</a> function that can be set to capture on rise or fall (or disabled altogether). The time scale for the display is variable and can be easily redefined using the changeTimeDivision function. Likewise, the voltage range can be change to 0-5V, 0-2.5V, and 0-1.25V. The main limitations of this oscilloscope include relatively slow acquisition time and <a href="https://en.wikipedia.org/wiki/Analog-to-digital_converter#Sampling_rate">sampling rate</a> (~60kHz) and the fact that the inputs are limited by the constraints of the internal ADC. However, it is a very nice display and I highly suggest you view the <a href="http://semifluid.com/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/">videos</a> to see it in action.<span id="more-15"></span></p>
+<p><strong>Full Circuit</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/Full-Circuit2.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/Full-Circuit2-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope Full Circuit" width="300" height="110" class="alignright size-medium wp-image-965" srcset="/wp-content/uploads/2006/08/Full-Circuit2-300x110.gif 300w, /wp-content/uploads/2006/08/Full-Circuit2-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The source and firmware for the circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic. All of the sections and their components are described and discussed below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Power Supply</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/Power-Supply.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/Power-Supply-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope Power Supply" width="300" height="110" class="alignright size-medium wp-image-822" srcset="/wp-content/uploads/2006/08/Power-Supply-300x110.gif 300w, /wp-content/uploads/2006/08/Power-Supply-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The power supply uses a 9 volt battery and a TC1262-5.0V high-accuracy low-dropout linear voltage regulator to provide a stable 5 volt supply for the microcontroller and the graphical LCD. A 1uF (microFarad) polarized decoupling capacitor is necessary on the output of the voltage regulator to prevent power spikes or ripples. A <a href="https://en.wikipedia.org/wiki/Wall_wart">wall wart</a> power supply as low as 5.3V can be substituted for the 9 Volt battery.</p>
+<p><strong>AZ Displays AGM1264F</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/AGM1264F.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/AGM1264F-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope AGM1264F" width="300" height="110" class="alignright size-medium wp-image-818" srcset="/wp-content/uploads/2006/08/AGM1264F-300x110.gif 300w, /wp-content/uploads/2006/08/AGM1264F-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The <a href="http://www.ece.utexas.edu/~valvano/Datasheets/LCD1030.pdf">AGM1264F</a> is 128 x 64 pixel graphical LCD with built in controllers that allow is to be easily controlled using a PIC microcontroller. It is a 128 x 64 pixel graphical LCD and has an LED backlight, onboard negative voltage generator (LMC7660) for LCD driving, onboard Samsung <a href="http://www.alldatasheet.com/view.jsp?Searchword=KS0108">KS0108</a> controller, and an 8-Bit MPU interface.</p>
+<p><strong>Analog Input</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/Analog-Input1.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/Analog-Input1-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope Analog Input" width="300" height="110" class="alignright size-medium wp-image-964" srcset="/wp-content/uploads/2006/08/Analog-Input1-300x110.gif 300w, /wp-content/uploads/2006/08/Analog-Input1-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The 1st analog input (Pin A0) is configured to be an analog input. Please note that &#8220;The source impedance affects the offset voltage at the analog input (due to pin leakage current). The maximum recommended impedance for analog sources is 2.5 kÎ©.&#8221; (PIC18F2550, p.260)</p>
+<p><strong>Microcontroller</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/Microcontroller.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/Microcontroller-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope Microcontroller" width="300" height="110" class="alignright size-medium wp-image-821" srcset="/wp-content/uploads/2006/08/Microcontroller-300x110.gif 300w, /wp-content/uploads/2006/08/Microcontroller-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller used is a Microchip PIC18F2550. I modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 20MHz crystal/resonator at 115,200 baud (the modified bootloader can be found at the bottom of the page). The PIC18F2550 runs at 48MHz using the internal <a href="https://en.wikipedia.org/wiki/PLL">PLL</a>. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator, which is not used in this project. The component marked &#8216;RES&#8217; is a 20MHz resonator.</p>
+<p><strong>RS232 Level Converter</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/08/RS232-Level-Converter2.gif"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/08/RS232-Level-Converter2-300x110.gif" alt="" title="PIC18F2550 KS0108 Graphical LCD Oscilloscope RS232 Level Converter" width="300" height="110" class="alignright size-medium wp-image-968" srcset="/wp-content/uploads/2006/08/RS232-Level-Converter2-300x110.gif 300w, /wp-content/uploads/2006/08/RS232-Level-Converter2-1024x375.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller USART pins need to be connected to a <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a> to connect to a PC for firmware updates using the Tiny PIC Bootloader. Otherwise, after initial programming they can be left disconnected.</p>
+<p><strong>Source and Firmware</strong><br />
+The PIC must initially programmed with the &#8216;SAC_tinybld18F2550usb _20MHz_115200_48MHz&#8217; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/SAC_tinybld18F2550usb_20MHz_115200_48MHz1.hex'>SAC_tinybld18F2550usb_20MHz_115200_48MHz.hex</a></li>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/18F2550-GLCD-Oscilloscope-DR1r1.c'>18F2550 GLCD Oscilloscope DR1r1.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/08/18F2550-GLCD-Oscilloscope-DR1r1.hex'>hex</a>)</li>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/GLCD-modified.c'>GLCD &#8211; modified.c</a></li>
+</ul>
+<p><strong>Videos</strong><br />
+<a href="http://semifluid.com/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/">Here</a> are three videos of the PIC18F2550 GLCD Oscilloscope in action. The first video demonstrates sine, triangle, and square waves of different frequencies. The second video demonstrates different waves with shifting amplitudes and offsets. The third video compares the display of the PIC18F2550 GLCD Oscilloscope to the display of a Hewlett Packard 54603B oscilloscope.</p>
+<p><strong>Update (November 15, 2006)</strong><br />
+Here is the firmware without the bootloader code:</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/18F2550-GLCD-Oscilloscope-DR1r1-no-bootloader.c'>18F2550 GLCD Oscilloscope DR1r1 &#8211; no bootloader.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/08/18F2550-GLCD-Oscilloscope-DR1r1-no-bootloader.hex'>hex</a>)</li>
+</ul>
+<p><strong>Update (February 1, 2007)</strong><br />
+Here is untested firmware for the PIC18F4550 without the bootloader code:</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/18F4550-GLCD-Oscilloscope-DR1r1-no-bootloader.c'>18F4550 GLCD Oscilloscope DR1r1 &#8211; no bootloader.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/08/18F4550-GLCD-Oscilloscope-DR1r1-no-bootloader.hex'>hex</a>)</li>
+</ul>
+<p><strong>Update (April 11, 2007)</strong><br />
+Here is untested firmware for the PIC18F252 and PIC18F452 without the bootloader code. Please note that you will need to use a 10MHz crystal/resonator instead of a 20MHz one.</p>
+<ul>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/18F252-GLCD-Oscilloscope-DR1r1-no-bootloader.c'>18F252 GLCD Oscilloscope DR1r1 &#8211; no bootloader.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/08/18F252-GLCD-Oscilloscope-DR1r1-no-bootloader.hex'>hex</a>)</li>
+<li><a href='http://semifluid.com/wp-content/uploads/2006/08/18F452-GLCD-Oscilloscope-DR1r1-no-bootloader.c'>18F452 GLCD Oscilloscope DR1r1 &#8211; no bootloader.c</a> (<a href='http://semifluid.com/wp-content/uploads/2006/08/18F452-GLCD-Oscilloscope-DR1r1-no-bootloader.hex'>hex</a>)</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>168</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18F2550 KS0108 Graphical LCD Oscilloscope Videos</title>
+		<link>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/</link>
+					<comments>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 21 Aug 2006 17:00:18 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[GLCD]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=29</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 GLCD Oscilloscope - 1" width="648" height="486" src="https://www.youtube.com/embed/zBIpvzX--XE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-29"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 GLCD Oscilloscope - 2" width="648" height="486" src="https://www.youtube.com/embed/USIhyghU6yo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC18F2550 GLCD Oscilloscope - 3" width="648" height="486" src="https://www.youtube.com/embed/PC6A0N8CSRg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/08/21/pic18f2550-ks0108-graphical-lcd-oscilloscope-videos/feed/</wfw:commentRss>
+			<slash:comments>25</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JAL Projects &#8211; semifluid.com</title>
+	<atom:link href="/category/pic-projects/jal-projects/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 05 Jan 2012 19:45:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>PIC16F628 Serial 8 RGB LED Controller</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:59 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=12</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. It is controlled by sending 3 bytes to the internal USART for the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img fetchpriority="high" decoding="async" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u8RGBLED1.jpg" alt="" title="PIC16F628 Serial 8 RGB LED Controller" width="280" height="200" class="alignleft size-full wp-image-798" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. It is controlled by sending 3 bytes to the internal USART for the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time.</p>
+<p><span id="more-12"></span></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic3.gif"><img decoding="async" class="aligncenter size-medium wp-image-696" title="PIC16F628 Serial 8 RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic3-300x231.gif" alt="" width="300" height="231" srcset="/wp-content/uploads/2006/01/Schematic3-300x231.gif 300w, /wp-content/uploads/2006/01/Schematic3.gif 932w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm.jal">u8RGBm.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm.hex">hex</a>) (less optimized but higher refresh rate)<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm2.jal">u8RGBm2.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBm2.hex">hex</a>) (better optimized but lower refresh rate)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBblinkenlightsDR1r1.zip">8RGBblinkenlightsDR1r1.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>15</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>JAL Libraries</title>
+		<link>/2006/01/31/jal-libraries/</link>
+					<comments>/2006/01/31/jal-libraries/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:53 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=14</guid>
+
+					<description><![CDATA[Here are some of the libraries I have written for JAL: 675rs232_sw.jal 675rs232_sw Software serial library for the PIC12F629/675 used in the PIC12F675 Oscilloscope. jpic628a.jal jpic628a JPIC library for PIC16F628 microchips with serial routines and much more processor-specific code that allows one to take full advantage of the 628&#8217;s abilities. nibsBPs.jal nibsBPs Simple library to [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here are some of the libraries I have written for JAL:</p>
+<table  class=" table table-hover" width="400" cellpadding="5" border="0">
+<tr>
+<td valign="top"><a href='http://semifluid.com/wp-content/uploads/2006/01/675rs232_sw.jal'>675rs232_sw.jal</a></td>
+<td><strong>675rs232_sw</strong><br />
+Software serial library for the PIC12F629/675 used in the PIC12F675 Oscilloscope.</td>
+</tr>
+<tr>
+<td valign="top"><a href='http://semifluid.com/wp-content/uploads/2006/01/jpic628a.jal'>jpic628a.jal</a></td>
+<td><strong>jpic628a</strong><br />
+JPIC library for PIC16F628 microchips with serial routines and much more processor-specific code that allows one to take full advantage of the 628&#8217;s abilities.</td>
+</tr>
+<tr>
+<td valign="top"><a href='http://semifluid.com/wp-content/uploads/2006/01/nibsBPs.jal'>nibsBPs.jal</a></td>
+<td><strong>nibsBPs</strong><br />
+Simple library to convert bytes to nibbles (high and low) and bit-pairs.</td>
+</tr>
+<tr>
+<td valign="top"><a href='http://semifluid.com/wp-content/uploads/2006/01/shiftIn.jal'>shiftIn.jal</a></td>
+<td><strong>shiftIn</strong><br />
+Simple library to shift data out using a clock and a data pin. Can provide the clock or use an external clock.</td>
+</tr>
+<tr>
+<td valign="top"><a href='http://semifluid.com/wp-content/uploads/2006/01/shiftOut.jal'>shiftOut.jal</a></td>
+<td><strong>shiftOut</strong><br />
+Simple library to shift data in using a clock and a data pin. Can provide the clock or use an external clock.</td>
+</tr>
+</table>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/jal-libraries/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 8 RGB LED Controller</title>
+		<link>/2006/01/31/pic16f628-8-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic16f628-8-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:36 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=10</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. The pattern is determined by the data in the EEPROM. Upon startup, the controller loads the data into RAM and starts up the sequence. The operation is very simple and so is the wiring. The PIC selects each LED then [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_8RGBLED1.jpg" alt="" title="PIC16F628 8 RGB LED Controller" width="280" height="200" class="alignleft size-full wp-image-706" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628. The pattern is determined by the data in the EEPROM. Upon startup, the controller loads the data into RAM and starts up the sequence. The operation is very simple and so is the wiring. The PIC selects each LED then turns on/off the respective colors then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. Currently the max number of display patterns is 20 (because the bank array is 80 bytes and each pattern is 4 bytes).</p>
+<p><span id="more-10"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic4.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-707" title="PIC16F628 8 RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic4-300x259.gif" alt="" width="300" height="259" srcset="/wp-content/uploads/2006/01/Schematic4-300x259.gif 300w, /wp-content/uploads/2006/01/Schematic4.gif 832w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.jal">8RGBRAM.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBRAM.hex">hex</a>)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-8-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>20</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC12F675 Oscilloscope</title>
+		<link>/2006/01/31/pic12f675-oscilloscope/</link>
+					<comments>/2006/01/31/pic12f675-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:35 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC12F675]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=9</guid>
+
+					<description><![CDATA[This is a simple PC voltage oscilloscope using only a PIC12F675, a 20MHz oscillator, and a RS232 level shifter. The PIC takes a sample on GP2, immediately sends it to the PC at 115,200 baud using an software asynchronous serial routine, and repeats. It sends a 8-bit value that is read by the Visual Basic [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-712" title="PIC12F675 Oscilloscope" src="http://semifluid.com/wp-content/uploads/2006/01/PIC12F675_Oscilloscope.jpg" alt="" width="280" height="200" />This is a simple PC voltage oscilloscope using only a PIC12F675, a 20MHz oscillator, and a RS232 level shifter. The PIC takes a sample on GP2, immediately sends it to the PC at 115,200 baud using an software asynchronous serial routine, and repeats. It sends a 8-bit value that is read by the Visual Basic software and displayed on the screen (see examples below). The Visual Basic software deduces the time period between submissions and adjusts the display accordingly.</p>
+<p><span id="more-9"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic5.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-713" title="PIC12F675 Oscilloscope Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic5-300x155.gif" alt="" width="300" height="155" srcset="/wp-content/uploads/2006/01/Schematic5-300x155.gif 300w, /wp-content/uploads/2006/01/Schematic5.gif 471w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/uSendAnalogHS.jal">uSendAnalogHS.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/uSendAnalogHS.hex">hex</a>)</p>
+<p>Visual Basic code example: <a href="http://semifluid.com/wp-content/uploads/2006/01/675OscilloscopeDR1r1.zip">675OscilloscopeDR1r1.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic12f675-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>31</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 1 RGB LED PWM Controller</title>
+		<link>/2006/01/31/serial-1-rgb-led-pwm-controller/</link>
+					<comments>/2006/01/31/serial-1-rgb-led-pwm-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:32 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=11</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 1 LED using a PIC16F628 that has PWM control for the LED. It is controlled by sending 2 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-675" title="PIC16F628 Serial 1 RGB LED PWM Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u1RGBpwm.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 1 LED using a PIC16F628 that has PWM control for the LED. It is controlled by sending 2 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC loops and turns on the respective colors if they are less than or equal to theCount. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. The 4-bit code below has 15 linear values of PWM. The 8-bit code has 255 linear values of PWM. The 4-bit exponential PWM code has 15 values fit to an exponential curve. This allows for more &#8220;even&#8221; color levels because the human eye does not readily perceive linear changes in light intensity. For LED applications, the 4-bit exponential code is recommended.</p>
+<p><span id="more-11"></span></p>
+<p style="text-align: center;"><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic2.gif"><img loading="lazy" decoding="async" class="size-medium wp-image-676 aligncenter" title="Serial 1 RGB LED PWM Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic2-300x245.gif" alt="" width="300" height="245" srcset="/wp-content/uploads/2006/01/Schematic2-300x245.gif 300w, /wp-content/uploads/2006/01/Schematic2.gif 653w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; 4-bit PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm.jal">u1RGBpwm.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm.hex">hex</a>)<br />
+&#8211; 8-bit PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm8bit.jal">u1RGBpwm8bit.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwm8bit.hex">hex</a>)<br />
+&#8211; 4-bit exponential PWM: <a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwmE.jal">u1RGBpwmE</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u1RGBpwmE.hex">hex</a>)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/628SendRGBTestDR1r3.zip">628SendRGBTestDR1r3.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/serial-1-rgb-led-pwm-controller/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC16F628 Serial 8 RGB LED PWM Controller</title>
+		<link>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/</link>
+					<comments>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:21 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=13</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628 that has PWM control for the LEDs. It is controlled by sending 12 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-662" title="PIC16F628 Serial 8 RGB LED PWM Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC16F628_u8RGBLED.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 8 LEDs using a PIC16F628 that has PWM control for the LEDs. It is controlled by sending 12 bytes to the PIC&#8217;s internal USART for the intensities of the red, green, and blue color channels. The operation is very simple and so is the wiring. The PIC selects each LED and turns on the respective colors if they are less than or equal to theCount then goes to the next LED. Because of persistence of vision, the eye sees the LEDs as all being on at the same time. However, because this is running off the internal OSC (4MHz) and the code is not optimized, there is some flickering evident when moving one&#8217;s head from side to side.</p>
+<p><span id="more-13"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic1.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-663" title="PIC16F628 Serial 8 RGB LED PWM Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic1-300x231.gif" alt="" width="300" height="231" srcset="/wp-content/uploads/2006/01/Schematic1-300x231.gif 300w, /wp-content/uploads/2006/01/Schematic1.gif 932w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBpwm4.jal">u8RGBpwm4.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/u8RGBpwm4.hex">hex</a>)</p>
+<p>Sample VB code and test application: <a href="http://semifluid.com/wp-content/uploads/2006/01/8RGBpwmblinkenlightsDR1r1.zip">8RGBpwmblinkenlightsDR1r1</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic16f628-serial-8-rgb-led-pwm-controller/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC12F675 Single RGB LED Controller</title>
+		<link>/2006/01/31/pic12f675-single-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic12f675-single-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:15 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC12F675]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=8</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 1 RGB LED using a PIC12F675 (or PIC12F629). The pattern is determined by the data in the EEPROM. When the PIC needs a new target for the PWM, it loads it from EEPROM. Pin 4 (GP3) is pulled high because it is used to switch [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-656" title="PIC12F675 Single RGB LED Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC12F675_1RGBLED.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 1 RGB LED using a PIC12F675 (or PIC12F629). The pattern is determined by the data in the EEPROM. When the PIC needs a new target for the PWM, it loads it from EEPROM. Pin 4 (GP3) is pulled high because it is used to switch between displays. Please see the source code for more information; the structure and design is commented. The operation of the controller is very simple and so is the wiring.<span id="more-8"></span></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-658" title="PIC12F675 Single RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/Schematic-300x124.gif 300w, /wp-content/uploads/2006/01/Schematic.gif 596w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.jal">1RGBLED.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.hex">hex</a>)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic12f675-single-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

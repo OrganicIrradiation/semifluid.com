@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-US"> <![endif]--><!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-US"> <![endif]--><!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-US"> <![endif]--><!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-US"> <![endif]--><!--[if gt IE 9]><!--><html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>PIC16F88 Delorme Tripmate GPS Logger &#8211; semifluid.com</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="semifluid.com &raquo; PIC16F88 Delorme Tripmate GPS Logger Comments Feed" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="sparkling-bootstrap-css" href="/wp-content/themes/sparkling/assets/css/bootstrap.min.css?ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-icons-css" href="/wp-content/themes/sparkling/assets/css/fontawesome-all.min.css?ver=5.1.1." type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=6.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-style-css" href="/wp-content/themes/sparkling/style.css?ver=2.4.2" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=6.7.1" id="sparkling-bootstrapjs-js"></script>
+<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/functions.js?ver=20180503" id="sparkling-functions-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/43">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.1">
+<link rel="canonical" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/">
+<link rel="shortlink" href="/?p=43">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2007%2F01%2F26%2Fpic16f88-delorme-tripmate-gps-logger%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2007%2F01%2F26%2Fpic16f88-delorme-tripmate-gps-logger%2F#038;format=xml">
+<style type="text/css">.entry-content {font-size:14px}</style>
+<link rel="pingback" href="/xmlrpc.php">		<style type="text/css">caca,
+		.site-name,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}</style>
+	
+</head>
+
+<body class="post-template-default single single-post postid-43 single-format-standard">
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default
+		" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+
+
+														<div id="logo">
+																																<a href="/"><img src="/wp-content/uploads/2017/01/semifluid.com-banner.png" height="500" width="3900" alt="semifluid.com"></a>
+																																</div>
+<!-- end of #logo -->
+
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+
+
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main-menu" class="nav navbar-nav">
+<li id="menu-item-6759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6759"><a href="/">Home</a></li>
+<li id="menu-item-6760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760"><a href="/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-6761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761"><a href="/about/">About Me</a></li>
+<li id="menu-item-6762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6762"><a href="/contact-me/">Contact Me</a></li>
+</ul></div>
+
+
+					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-43" class="post-43 post type-post status-publish format-standard hentry category-c-projects category-electronics category-gps category-pic-projects category-pic16f88">
+		<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">PIC16F88 Delorme Tripmate GPS Logger</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar-alt"></i> <a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/" rel="bookmark"><time class="entry-date published" datetime="2007-01-26T17:05:56-08:00">January 26, 2007</time><time class="updated" datetime="2017-01-26T13:21:57-08:00">January 26, 2017</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="/author/admin/">Steven A. Cholewiak</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open"></i>
+				 <a href="/category/pic-projects/c-projects/" rel="category tag">C Projects</a>, <a href="/category/electronics/" rel="category tag">Electronics</a>, <a href="/category/electronics/gps/" rel="category tag">GPS</a>, <a href="/category/pic-projects/" rel="category tag">PIC Projects</a>, <a href="/category/pic-projects/pic16f88/" rel="category tag">PIC16F88</a>				</span>
+								
+			</div>
+<!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p><a href="http://semifluid.com/wp-content/uploads/2007/01/PIC16F88_GPS_Logger.jpg"><img decoding="async" src="http://semifluid.com/wp-content/uploads/2007/01/PIC16F88_GPS_Logger.jpg" alt="" title="PIC16F88 Delorme Tripmate GPS Logger" width="240" height="180" class="alignleft size-full wp-image-1019"></a>This project focused on creating a simple serial data logger for the <a href="http://www.bevhoward.com/TripMate.htm" target="_blank">Delorme Tripmate</a> (also known as the GPSTripmate).  The Tripmate is an older GPS receiver that can be purchased on eBay for &lt;$20.  I happen to have one that my family used a couple of years ago and it is still in great shape.  It has been sitting in the back of my car for the past four years, so I finally decided to put it to good use.  The plan was to create a GPS data logger that would record the position of the unit and allow me to read back the latitude and longitude after acquiring the data.  My ultimate goal will be to use a small backpack to record my runs (once the weather warms up).  This was a fun experiment because not only did I need to interface the PIC16F88 to the Tripmate, but I also needed to parse the output and implement an efficient storage solution.  Read on to find out more information about the project, see the schematic and soure code I wrote, and find out how the data was visualized.<span id="more-43"></span></p>
+<p><strong>Delorme Tripmate<br>
+</strong>The Tripmate was a GPS receiver manufactured by <a href="http://info.delorme.com/" target="_blank">Delorme</a> that was originally intended for use with their Street Atlas USA computer program.  The Tripmate uses an RS-232 serial connection to send and receive data using  the <a href="https://en.wikipedia.org/wiki/NMEA_0183" target="_blank">NMEA 0183</a> standard (i.e. 4800 baud, 8 data bits, 1 stop bit, no parity).  The one interesting quirk about the Tripmate is that it needed to receive the string &#8220;ASTRAL&#8221; before it would output any information.  I modified my Tripmate to self-start using a loopback modification.  Now the Tripmate will output the NMEA strings whenever it is powered.  More information about the self-start modification can be found on these websites:</p>
+<ul>
+<li>Modify the Delorme Tripmate to selfstart</li>
+<li><a href="http://www.ke4nyv.com/gpsstuff.htm" target="_blank">Tripmate Self-Start and External Power Mod</a></li>
+</ul>
+<p>Once the Tripmate is modified to self-start, it will automatically output position and satellite information when power is applied.  The sentences that the Tripmate outputs are GPRMC (Recommended minimum specific GPS/Transit data), GPGSA (GPS DOP and active satellites) GPGGA (GPS Fix Data), and GPGSV (GPS Satellites in view).  We are specifically interested in the GPRMC sentence for this project.</p>
+<p><strong>$GPRMC sentence information<br>
+</strong>An example $GPRMC sentence sent by the Tripmate would be:<br>
+<em>$GPRMC,123456,A,4234.4594,N,11233.2892,W,010.0,022.7,220107,015.5,W*77</em></p>
+<p>This sentence contains the following information:</p>
+<blockquote><p><strong>123456</strong> UTC Time of fix 12:34:56<br>
+<strong>A</strong>            Navigation receiver warning (A = Valid, V = Invalid)<br>
+<strong>4234.4594,N</strong>    Latitude 42 degrees, 34.4594 minutes North<br>
+<strong>11233.2892,W</strong>   Longitude 112 degrees, 33.2892 minutes West<br>
+<strong>010.0</strong>        Speed (Knots)<br>
+<strong>022.7</strong>        Course Made Good (Degrees)<br>
+<strong>220107       </strong>UTC Date of fix January 22, 2007<br>
+<strong>015.5,W</strong>      Magnetic variation, 20.3 deg. East<br>
+<strong>*77</strong> Checksum</p></blockquote>
+<p>The job of the microchip will now be to parse this data, discard any irrelevant information, and store the variables of interest (Latitude and Longitude).</p>
+<p><strong>Schematic</strong><a href="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.gif" target="_blank" title="PIC16F88 Delorme Tripmate GPS Logger Schematic"><img decoding="async" src="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.thumbnail.gif" title="PIC16F88 Delorme Tripmate GPS Logger Schematic" alt="PIC16F88 Delorme Tripmate GPS Logger Schematic" align="right"></a><br>
+<a href="/wp-content/uploads/2007/05/pic18f88-delorme-tripmate-gps-logger-dr1r2.gif" target="_blank">Here</a> is the full schematic for the driver.  I chose to use a PIC16F88 as the microcontroller it is cheap, has a high speed internal oscillator (8MHz), an internal USART, and is bootloadable.  I will discuss each of the components below. As always, the part numbers for the components are linked to websites for data and more information when available.<br>
+<em><strong>UPDATE (February 9, 2007)</strong></em><br>
+Terry pointed out that there is a mistake in the schematic.  Pin 8 on the PIC16F88 (USART RX) should go to pin 3 on the MAX233 instead of pin 2.<br>
+<em><strong>UPDATE (February 20, 2007)</strong></em><br>
+The schematic has been corrected.<br>
+<em><strong>UPDATE (May 10, 2007)</strong></em><br>
+Rogerio pointed out another mistake in the schematic.  Pin 11 on the PIC16F88 (USART TX) should go to pin 2 on the MAX233 instead of pin 1.  It looks like the original mistake that I made was to shift the two lines one pin up when drawing up the schematic. The schematic has been corrected.</p>
+<p><strong>Power Supply</strong><br>
+This is the only component that is ambiguous in the schematic.  I use 4 AA NiMH batteries in series, giving me a supply voltage of approximately 4.8V (<a href="https://en.wikipedia.org/wiki/NiMH" target="_blank">NiMH</a> AA batteries are ~1.2V cells).  This is very convenient because I can recharge 4 AA batteries for the Tripmate and 4 for the logger circuit and so far I have found that they last quite a while.  However, if you want to use a 9V battery or alkaline batteries, I would suggest using a <a href="https://en.wikipedia.org/wiki/Low_dropout_regulator" target="_blank">low-dropout voltage regulator</a> to ensure that you don&#8217;t burn out the ICs.</p>
+<p><strong>MAX233<br>
+</strong>I use a <a href="http://www.maxim-ic.com/datasheet/index.mvp/id/1798" target="_blank">MAX233</a> as I do in my <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a>.  You are more than welcome to substitute any suitable RS-232 level converter; however, the MAX233 is nice because it has internal capacitors.  The MAX233 is used to convert the logic level signals of the PIC microcontroller to RS-232 compatible voltage levels for both the Tripmate and the computer.  Although the MAX233 should nominally be run at 5 Volts, I have found that it works perfectly fine at 4.8V.  The serial connection in the schematic is set up for a computer connection.  To log data from the Tripmate, you must use a <a href="http://www.microchipc.com/make_a_solderless_RS232_crossover_cable/" target="_blank">crossover cable</a> that swaps the TX and RX serial data lines.</p>
+<p><strong>PIC16F88</strong><br>
+The microcontroller used is a Microchip PIC16F88.  I initially programmed the PIC with the <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> (<a href="http://semifluid.com/wp-content/uploads/2007/01/tinybld16F88_i8MHz-_19200.hex">tinybld16F88_i8MHz _19200.hex</a>) so that the PIC would run at 8MHz using its internal oscillator.  Whenever the firmware is updated, I can re-flash the PIC using the Tiny PIC Bootloader program.  This allows for quick and easy debugging.  R1 is a pull-up resistor necessary for operation. R4 and R5 are resistors for the status LEDs (LED1 and LED2). R6 is a pull-down resistor for the mode switch (S1).</p>
+<p><strong>24LC1025<br>
+</strong>The 24LC1025 is the EEPROM used in this project to store the latitude and longitude information.  The 24LC1025 is a 1024K bit Serial EEPROM.  The 24LC1025 can be read with a clock frequency of   400 kHz and has a 5 ms write speed.  It has a rewrite endurance of 1,000,000 cycles and can operate between 2.5V and 5.5V.  The 24AA1025 or the 24FC1025 can be substituted for the 24LC1025 in this project if necessary.   I used a custom library to read and write bytes to the EEPROM.  R2 and R3 are pull-up resistors for the Serial Data and Clock lines.</p>
+<p><strong>Theory of Operation (Aquiring and Recording GPS Data)</strong></p>
+<ol>
+<li>Crossover cable is used to connect Tripmate and circuit</li>
+<li>Tripmate is turned on (batteries are put into the case)</li>
+<li>Circuit is turned on</li>
+<li>Mode switch is pressed after power is connected to begin data logging</li>
+<li>LED1 (pinLEDSTATUS) will turn on when the GPS unit has aquired a fix (i.e. Navigation receiver warning = &#8216;A&#8217;) and is recording data to the EEPROM (Please note that it can take over 5 minutes for the Tripmate to aquire a fix)</li>
+<li>Disconnect circuit power to end data logging</li>
+<li>Turn off Tripmate</li>
+</ol>
+<p><strong>Theory of Operation (Reading GPS Data)</strong></p>
+<ol>
+<li> Normal serial cable is used to connect computer and circuit</li>
+<li>Open serial terminal application to record Latitude and Longitude data</li>
+<li>Power circuit with mode switch depressed to read back GPS data stored on EEPROM</li>
+<li> Disconnect circuit power to stop reading data</li>
+</ol>
+<p><strong>Source Code<br>
+</strong>The PIC16F88 must initially programmed with the ‘tinybld16F88_i8MHz _19200.HEX’ hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a>. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2007/01/tinybld16F88_i8MHz-_19200.hex">tinybld16F88_i8MHz _19200.hex</a></li>
+<li>
+<a href="http://semifluid.com/wp-content/uploads/2007/01/16F88-24LC1025-GPS-Compress-DR1r4.c">16F88 &#8211; 24LC1025 GPS Compress DR1r4.c</a> (<a href="http://semifluid.com/wp-content/uploads/2007/01/16F88-24LC1025-GPS-Compress-DR1r4.hex">hex</a>)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2007/01/241025multi.c">241025multi.c</a></li>
+</ul>
+<p><strong>Example Output</strong></p>
+<ul>
+<li>Raw data output from PIC16F88 Delorme Tripmate GPS Logger: <a href="http://semifluid.com/wp-content/uploads/2007/01/TestCapture.txt">TestCapture.txt</a>
+</li>
+</ul>
+					</div>
+<!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			40 thoughts to &ldquo;PIC16F88 Delorme Tripmate GPS Logger&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-609" class="comment even thread-even depth-1">
+			<article id="div-comment-609" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/febdaa8a2fb85fe51dd183b95b357e7d?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/febdaa8a2fb85fe51dd183b95b357e7d?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" decoding="async">						<b class="fn">Florian Over</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-609"><time datetime="2007-01-28T08:23:38-08:00">January 28, 2007 at 08:23</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, how about a slide modification:<br>
+Write the data to SD or CF-Card.<br>
+Using this hack: <a href="http://uanr.com/sdfloppy/" rel="nofollow ugc">http://uanr.com/sdfloppy/</a></p>
+<p>So it would easier to transfer the data.</p>
+<p>Greetings<br>
+Florian</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=609#respond" data-commentid="609" data-postid="43" data-belowelement="div-comment-609" data-respondelement="respond" data-replyto="Reply to Florian Over" aria-label="Reply to Florian Over">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-610" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-610" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/dda360249173a4857c61515b6bf16727?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/dda360249173a4857c61515b6bf16727?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" decoding="async">						<b class="fn">Francesco</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-610"><time datetime="2007-01-28T12:12:36-08:00">January 28, 2007 at 12:12</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Congratulations!</p>
+<p>Your project&#8217;s been published on engadget!<br>
+Great job&#8230;. as always<br>
+Frnacesco</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=610#respond" data-commentid="610" data-postid="43" data-belowelement="div-comment-610" data-respondelement="respond" data-replyto="Reply to Francesco" aria-label="Reply to Francesco">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-611" class="comment even thread-even depth-1">
+			<article id="div-comment-611" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/9fa2c4396ec822f280e1ef92a8a566cb?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/9fa2c4396ec822f280e1ef92a8a566cb?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Tony</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-611"><time datetime="2007-01-28T13:09:28-08:00">January 28, 2007 at 13:09</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>this is a sweet project, however I&#8217;d love to see a hack where you can add a backlit LCD screen and have it function as a simple, portable speedometer.  Maybe even add a readout for course direction.</p>
+<p>Sweet hack tho</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=611#respond" data-commentid="611" data-postid="43" data-belowelement="div-comment-611" data-respondelement="respond" data-replyto="Reply to Tony" aria-label="Reply to Tony">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-612" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-612" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Craig</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-612"><time datetime="2007-01-28T14:34:55-08:00">January 28, 2007 at 14:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>It&#8217;d be slick to exchange some of the EEPROM&#8217;s coordinate storage space for time stamps.  With time you could go back and calculate velocities. </p>
+<p>A 12v power supply would be handy for an automotive application.</p>
+<p>Very cool project!  Much appreciate your willingness to write it up and share.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=612#respond" data-commentid="612" data-postid="43" data-belowelement="div-comment-612" data-respondelement="respond" data-replyto="Reply to Craig" aria-label="Reply to Craig">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-613" class="comment even thread-even depth-1">
+			<article id="div-comment-613" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/ec46f5818d3c8e6f3ac4e920fa60d85b?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/ec46f5818d3c8e6f3ac4e920fa60d85b?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">nemi</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-613"><time datetime="2007-01-28T19:05:05-08:00">January 28, 2007 at 19:05</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I agree with #4.  Timestamps would be great. I woudl want them so I could Geotag my photos.</p>
+<p>Code to log position with time stamp once every 1 minutes is sufficient for this. Even sending the PIC into a sleep state between captures could help extend battery life.</p>
+<p>A pre-programmed PIC would be great for us novices. Any chance of selling them? Even a kit of parts?</p>
+<p>I see you can get MAX chips that work off ~3V and so will the PIC. This is great as I have a Holux GPSlim 236 which has it&#8217;s own rechargeable L-ion battery and has serial and 3.8V supply output port so no additional battery back required.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=613#respond" data-commentid="613" data-postid="43" data-belowelement="div-comment-613" data-respondelement="respond" data-replyto="Reply to nemi" aria-label="Reply to nemi">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-614" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-614" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/dda360249173a4857c61515b6bf16727?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/dda360249173a4857c61515b6bf16727?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Francesco</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-614"><time datetime="2007-01-29T06:15:02-08:00">January 29, 2007 at 06:15</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Oops&#8230; it was engadget.com</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=614#respond" data-commentid="614" data-postid="43" data-belowelement="div-comment-614" data-respondelement="respond" data-replyto="Reply to Francesco" aria-label="Reply to Francesco">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-615" class="comment even thread-even depth-1">
+			<article id="div-comment-615" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/d6d2258092fc505ab07b2504fd069202?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/d6d2258092fc505ab07b2504fd069202?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">ohararp</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-615"><time datetime="2007-01-29T08:58:02-08:00">January 29, 2007 at 08:58</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>You should check out my SD GPS data logger at <a href="http://www.ohararp.com/products" rel="nofollow ugc">http://www.ohararp.com/products</a> .  It does many of the things some of you have requested!  Ryan O&#8217;Hara</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=615#respond" data-commentid="615" data-postid="43" data-belowelement="div-comment-615" data-respondelement="respond" data-replyto="Reply to ohararp" aria-label="Reply to ohararp">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-616" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-616" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/16eec0dcaffb93a0d56040a30e1bf4e1?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/16eec0dcaffb93a0d56040a30e1bf4e1?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">drmayf</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-616"><time datetime="2007-01-29T12:39:11-08:00">January 29, 2007 at 12:39</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I was turned onto this from the Cr-4 email. I love this! I am a land speed time trials car driver/owner. This would be perfect as a stand alone speedometer in  my race car! I have very little electronics capabilities but if this were available in easy to follow steps to modify the gps receiver, and then to add a simple 3 and a half digit LCD display it would be really great. We all get timing slips, as we motor down the salt, at one mile increments but this would be great data to have in between the mile markers. Oh, how fast does the gps unit update? I drive in the 200 to 250 mph speed range and at 200 mph that covers about 300 ft every second. So update speed would be key here also.</p>
+<p>Many thanks for listening. I would love to hear from anyone else regarding the use as a speedo. you could send email to <a href="mailto:drmayf@yahoo.com">drmayf@yahoo.com</a></p>
+<p>many thanks,<br>
+drmayf</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=616#respond" data-commentid="616" data-postid="43" data-belowelement="div-comment-616" data-respondelement="respond" data-replyto="Reply to drmayf" aria-label="Reply to drmayf">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-617" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://zedomax.com/blog/2007/01/29/diy-hack-how-to-make-a-gps-logger-using-pic-and-a-20-gps-receiver/" class="url" rel="ugc external nofollow">DIY HACK - How to make a GPS Logger using PIC and a $20 GPS receiver | zedomax.com - blog about DIYs and Review on reviews of gadgets and technologies...</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-618" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-618" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f974b7930c38147961a4179b7808eadc?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/f974b7930c38147961a4179b7808eadc?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">nathan</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-618"><time datetime="2007-01-29T16:36:32-08:00">January 29, 2007 at 16:36</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Does this need a clear view of the sky? Or can it be placed with no view of the sky?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=618#respond" data-commentid="618" data-postid="43" data-belowelement="div-comment-618" data-respondelement="respond" data-replyto="Reply to nathan" aria-label="Reply to nathan">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-619" class="comment even thread-even depth-1">
+			<article id="div-comment-619" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/ec46f5818d3c8e6f3ac4e920fa60d85b?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/ec46f5818d3c8e6f3ac4e920fa60d85b?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">nemi</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-619"><time datetime="2007-01-29T23:44:01-08:00">January 29, 2007 at 23:44</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>#8 Older GPS units update about once per second. I believe SRFIII GPS (the new types) can update 3 times a second but you may need to set them up for a fast Serial speed in order to get the info to your logger that fast.</p>
+<p>#9 A clear view of the sky is best for all GPS units. The more trees, building or objects the GPS is packed underneath all degrade the signals to a point where it may no longer provide a lock / position. The Newer SRFIII type GPS unit are extremely sensitive, mine will get a fix from inside my house. Many modern GPS also allow you to boost the sensitivity by using an external antenna.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=619#respond" data-commentid="619" data-postid="43" data-belowelement="div-comment-619" data-respondelement="respond" data-replyto="Reply to nemi" aria-label="Reply to nemi">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-620" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-620" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/35bb212527901a1a7fb75fe250c3d39e?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/35bb212527901a1a7fb75fe250c3d39e?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Dave</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-620"><time datetime="2007-01-30T12:44:11-08:00">January 30, 2007 at 12:44</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Very cool project&#8230;Thinking of making robotic submarine with some sort of gps built<br>
+in. As for sending the data to lcd, it should be no problem to add this on. There is<br>
+tons of info out there on PIC&#8217;s driving LCD&#8217;s, tried it myself with minimal problems.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=620#respond" data-commentid="620" data-postid="43" data-belowelement="div-comment-620" data-respondelement="respond" data-replyto="Reply to Dave" aria-label="Reply to Dave">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-621" class="comment even thread-even depth-1">
+			<article id="div-comment-621" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Craig</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-621"><time datetime="2007-01-30T17:34:09-08:00">January 30, 2007 at 17:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>#11  Driving the LCD is the easy part, the hard part is that the PIC would need to do trigonometry math.  To get speed you have to convert two coordinates into distance, then divide by elapse time. To convert coordinates into distance, you have to look at the world as a sphere, this is where your Sin/Cos/Tan comes into play. If I&#8217;m not mistaken, the PIC would have to contain Sin/Cos/Tan tables to accomplish the math required. Perhaps there is an easier way to do this?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=621#respond" data-commentid="621" data-postid="43" data-belowelement="div-comment-621" data-respondelement="respond" data-replyto="Reply to Craig" aria-label="Reply to Craig">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-623" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-623" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/f1bb475ecaae1d0332adc3189955019a?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Craig</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-623"><time datetime="2007-02-01T12:24:35-08:00">February 1, 2007 at 12:24</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>haha.  I didn&#8217;t see the speed variable in the NMEA sequence.  I did some GPS software development work a few years back and the NMEA version we were using didn&#8217;t include speed so we had to calculate it. Your method seems like a much easier approach. (grin)</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=623#respond" data-commentid="623" data-postid="43" data-belowelement="div-comment-623" data-respondelement="respond" data-replyto="Reply to Craig" aria-label="Reply to Craig">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-622" class="comment byuser comment-author-admin bypostauthor even thread-even depth-1">
+			<article id="div-comment-622" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steve</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-622"><time datetime="2007-02-01T10:02:51-08:00">February 1, 2007 at 10:02</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hey all, please excuse the delayed response, I&#8217;ve had a nasty cold and haven&#8217;t been able to respond to the comments.  So here goes nothing!</p>
+<p>#1 (Florian) &#8211; Right now the PIC16F88 is jam-packed with code, so I&#8217;m not sure if I could efficiently add the code to read and write MMC/SD data.  In addition, I would need to use a PIC with more memory because the MMC specification requires that I write whole 512 byte pages at a time (and not fractional parts thereof).  However, if this project is transitioned to an 18F PIC, then it would not be a problem to add the necessary code.  It would even be possible to implement a simple FAT file system to save files that could be directly accessible on a computer.</p>
+<p>#2 &amp; #6 (Francesco) &#8211; Thanks Francesco!</p>
+<p>#3 (Tony) &#8211; Making this into a speedometer/bearing readout would be very easy.  The GPS outputs the heading as well as the ground speed in knots, so all that you would need to do is to add the LCD code and convert knots to km/h (1 knots = 1.85200 km/h) or mph (1 knots = 1.15077945 mph).  The only reason I did not save speed or heading was because all I wanted was position information.  To be honest, speed is also something important to include, so I&#8217;ll definitely include it in my next iteration.</p>
+<p>#4 (Craig) &#8211; The time information is a good variable to record as well.  I would be tempted to include the date too if the application is a longer-term position log.  However, if you interest is in deriving the speed from location information (literally dx/dt), then you can do that right now with ok accuracy with this firmware.  The Tripmate transmits the position and satellite information at 1 Hz (1 time per second), so you could use the latitude and longitude information, plug it into the <a href="https://en.wikipedia.org/wiki/Haversine_formula" rel="nofollow">Haversine formula</a>, and have estimate of the distance traveled per second.  Ohh, and as for the 12V power supply, that can be created using a 7805.</p>
+<p>#5 (nemi) &#8211; Timestamps are a good idea, I agree.  The only reason I did not include them was because the original intention of this project was just to record run routes, which did not require time or speed info.  However, I&#8217;d like to possibly expand this project to a more universal GPS data logger with more configurable settings.  As of right now the only options are read and write. :-p  As for selling the PICs, I have no intention of selling programmed PICs for a profit; however, I would be happy to program any PICs sent to me and send them back at-cost (i.e. postage).  I actually have a couple of PIC16F88s lying around that I would be happy to program with the bootloader and GPS firmware.  The beauty of having the bootloader is that you would be able to reprogram the PIC using any computer with a serial port.  I love it.</p>
+<p>#7 (ohararp) &#8211; Neat circuit!  It&#8217;s nice to have all of the components including the GPS receiver, logger, and battery charger onboard.  This project was an attempt at making a barebones <em>cheap</em> gps logger that worked well.  So far I feel like I&#8217;ve accomplished that goal for hobbyists and do-it-yourselfers, but you do have a very nice board.</p>
+<p>#8 (drmayf) &#8211; The Tripmate sends position and satellite information at 1 Hz.  If you cover 300 feet per second, then this might not be the best for a high speed time trials participant such as yourself.  However, these GPS units are often used by amateur pilots and their accuracy is often quite good (although you might want to look up information about <a href="https://en.wikipedia.org/wiki/WAAS" rel="nofollow">WAAS</a>).  The units send speed and heading information, so it would be very easy to capture that and output it to a screen, but the update rate would only be 1 Hz.</p>
+<p>#9 (nathan) &#8211; The Tripmate needs a clear view of the sky for its initial satellite acquisition.  It is older GPS technology, so it may not (and in my case usually does not) acquire a fix when there are any obstructions.  However, once it acquires a fix, the Tripmate is usually ok when traveling through wooded areas.</p>
+<p>#11 (Dave) &#8211; I wonder how well the GPS would work underwater.  Don&#8217;t forget, GPS signals are electromagnetic waves which are just as prone to <a href="https://en.wikipedia.org/wiki/Refraction" rel="nofollow">refraction</a> as any other wave.</p>
+<p>#12 (Craig) &#8211; I agree, the trigonometry is a pain on the PIC, requiring either lookup tables or wasteful floating point routines.  I would recommend avoiding it if possible and use the speed in the $GPRMC NMEA sentence.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=622#respond" data-commentid="622" data-postid="43" data-belowelement="div-comment-622" data-respondelement="respond" data-replyto="Reply to Steve" aria-label="Reply to Steve">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-624" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/" class="url" rel="ugc external nofollow">semifluid.com &raquo; PIC16F88 Delorme Tripmate GPS Logger with Time and Speed</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-625" class="comment even thread-even depth-1">
+			<article id="div-comment-625" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/c30abe69fb0d69f108c166b6ba7740a8?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/c30abe69fb0d69f108c166b6ba7740a8?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">john</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-625"><time datetime="2007-02-08T13:57:59-08:00">February 8, 2007 at 13:57</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>this is an interesting project that seems quite easy to make&#8230;but it would be great if you could post some more photos (close-ups of the finished product, etc.).</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=625#respond" data-commentid="625" data-postid="43" data-belowelement="div-comment-625" data-respondelement="respond" data-replyto="Reply to john" aria-label="Reply to john">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-626" class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-626" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steve</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-626"><time datetime="2007-02-09T14:16:03-08:00">February 9, 2007 at 14:16</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>#15 (john) &#8211; Thanks!  I&#8217;ll be more than happy to include some better pictures when I get home.  I have to say that my perfboard layout isn&#8217;t very pretty (tons of flywiring), but I&#8217;m more than happy to post more pictures if you are interested.  I&#8217;d love to make a PCB (either handmade or fabbed), but the costs can be prohibitive for a project like this.  Come to think of it, that would be great to have a PCB fabbed&#8230; I could add on an additional 3 24LC1025s for even more storage or alternatively I could look into using a PIC18F microcontroller with a MMC/SD card.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=626#respond" data-commentid="626" data-postid="43" data-belowelement="div-comment-626" data-respondelement="respond" data-replyto="Reply to Steve" aria-label="Reply to Steve">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-627" class="comment even thread-even depth-1">
+			<article id="div-comment-627" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/894f896dd08c0a8fca2f8bc760930e9c?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/894f896dd08c0a8fca2f8bc760930e9c?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">andrew hough</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-627"><time datetime="2007-02-23T15:25:34-08:00">February 23, 2007 at 15:25</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i was wondering if this device would work as a data logger for any rs232 devices so that it just stores the information from the machine etc to the memory card for later processing on a computer</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=627#respond" data-commentid="627" data-postid="43" data-belowelement="div-comment-627" data-respondelement="respond" data-replyto="Reply to andrew hough" aria-label="Reply to andrew hough">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-628" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-628" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/8959bf2186058a69930fc29d9c5bbb0a?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/8959bf2186058a69930fc29d9c5bbb0a?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">dno</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-628"><time datetime="2007-02-25T05:22:27-08:00">February 25, 2007 at 05:22</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I have old Holux 236 , Would love to make data loger out of it.<br>
+so it will record on SD card like # 7.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=628#respond" data-commentid="628" data-postid="43" data-belowelement="div-comment-628" data-respondelement="respond" data-replyto="Reply to dno" aria-label="Reply to dno">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-629" class="comment even thread-even depth-1">
+			<article id="div-comment-629" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/4da962d6346b610b70a53afc06f4091d?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/4da962d6346b610b70a53afc06f4091d?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">lee</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-629"><time datetime="2007-04-05T07:54:37-07:00">April 5, 2007 at 07:54</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>just wondering can this device be used to logg any serial rs232 data eg at 9600 baud???</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=629#respond" data-commentid="629" data-postid="43" data-belowelement="div-comment-629" data-respondelement="respond" data-replyto="Reply to lee" aria-label="Reply to lee">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-630" class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-630" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steve</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-630"><time datetime="2007-04-11T16:44:18-07:00">April 11, 2007 at 16:44</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>#17 (andrew hough) &#038; #19 (lee) &#8211; Yes, it could be modified to log any serial to the EEPROM.  Right now it is configured in such a manner that it will only log the GPRMC sentence, but it can easily be modified.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=630#respond" data-commentid="630" data-postid="43" data-belowelement="div-comment-630" data-respondelement="respond" data-replyto="Reply to Steve" aria-label="Reply to Steve">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-631" class="comment even thread-even depth-1">
+			<article id="div-comment-631" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/60b549da235a3da2be513100d468bfa1?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/60b549da235a3da2be513100d468bfa1?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Rogerio</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-631"><time datetime="2007-05-09T19:08:53-07:00">May 9, 2007 at 19:08</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello again Steven, you have other bug in the schematic, pin 11 from PIC goes to pin 2, not 11 to 1, check the pdf of max233, i have spend 2 hours do discover this because i dont have pulses in bootloader comming to com port, im going to try connect to a bluetouht gps, i disable the BT and found the rs232 ports in pcb, but the gps send mnea commands at 9600 bps, can you change the hex for me please, or tell me what correct program to assemble your .c (asm).<br>
+Thanks and best regards<br>
+Rogerio from Portugal</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=631#respond" data-commentid="631" data-postid="43" data-belowelement="div-comment-631" data-respondelement="respond" data-replyto="Reply to Rogerio" aria-label="Reply to Rogerio">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-632" class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-632" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/06e163be8c9c99264731455b6e3847a3?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://semifluid.com/" class="url" rel="ugc external nofollow">Steve</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-632"><time datetime="2007-05-10T11:39:01-07:00">May 10, 2007 at 11:39</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>#21 (Rogerio) &#8211; ARGH!! You&#8217;re absolutely correct!  I&#8217;ll fix the schematic immediately.  I should just make a MAX233 part in Eagle, which would eliminate all of the confusion.  I&#8217;m sorry that it caused so much frustration, but I really appreciate your double checking the MAX233 datasheet.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=632#respond" data-commentid="632" data-postid="43" data-belowelement="div-comment-632" data-respondelement="respond" data-replyto="Reply to Steve" aria-label="Reply to Steve">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-633" class="comment even thread-even depth-1">
+			<article id="div-comment-633" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/0c0c36466ae8f15aa824ba8ddf8339ab?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/0c0c36466ae8f15aa824ba8ddf8339ab?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Dave</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-633"><time datetime="2007-06-11T16:25:28-07:00">June 11, 2007 at 16:25</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, Just found your project during a websearch for a GPS datalogger.<br>
+Has anyone modified this idea to be used solely as an accurate Odometer?<br>
+I am looking for a &#8216;sure-fire&#8217; PIC based system I can build that will log 2 hours worth of travelling time and display the total miles travelled.<br>
+This is for a radio club transmitter hunting competition where competitors have to Direction Find (DF) the transmitter in the shortest time and distance.<br>
+I am pretty adept with the electronics side of this but not a PIC programmer.<br>
+Thanks in anticipation&#8230;.Dave</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=633#respond" data-commentid="633" data-postid="43" data-belowelement="div-comment-633" data-respondelement="respond" data-replyto="Reply to Dave" aria-label="Reply to Dave">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-634" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/" class="url" rel="ugc external nofollow">semifluid.com &raquo; Tracking a Bike Ride &amp; PIC16F88 GPS Logger DR1r7</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-635" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/06/16/on-gps-accuracy-with-the-tripmate/" class="url" rel="ugc external nofollow">semifluid.com &raquo; On GPS Accuracy with the Tripmate</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-636" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-636" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/e99b394e7b7050f5c4330a93ffc83433?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/e99b394e7b7050f5c4330a93ffc83433?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Sami</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-636"><time datetime="2007-09-19T23:42:27-07:00">September 19, 2007 at 23:42</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hi,<br>
+thank you for this project. i&#8217;d loke to build it, i&#8217;m new in microcontroller, could you please guys to help me.<br>
+does anybody have GPSTripmate for sale, i couldn&#8217;t get to start my first gps data logging project.<br>
+what i want to do is logging a voltage and save it with repect to the gps coordinates.<br>
+so please again help me guys<br>
+thank you very much</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=636#respond" data-commentid="636" data-postid="43" data-belowelement="div-comment-636" data-respondelement="respond" data-replyto="Reply to Sami" aria-label="Reply to Sami">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-637" class="comment even thread-even depth-1">
+			<article id="div-comment-637" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/05cb19ad33c2a2919e936f60f4009d97?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/05cb19ad33c2a2919e936f60f4009d97?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://scratchpad.wikia.com/wiki/Pubwan" class="url" rel="ugc external nofollow">Lori</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-637"><time datetime="2008-02-02T12:09:45-08:00">February 2, 2008 at 12:09</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I have no idea how to act on the information presented here, but I&#8217;m sure glad someone is tampiring with the dripmate.  It&#8217;s probably a well known fact, but the software that came with the thing had a fatal y2k bug.  A few years ago found a Qbasic routine that at least gets me back the ability to retrieve coordinates from the (expletive deleted) thing.  Will the stuff posted here allow me (should I actually somehow do the project) to lose the laptop, or simply to interface to it in a less (?) proprietary way?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=637#respond" data-commentid="637" data-postid="43" data-belowelement="div-comment-637" data-respondelement="respond" data-replyto="Reply to Lori" aria-label="Reply to Lori">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-638" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-638" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/65d09528d37edf4b4cebe7564b34a38f?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/65d09528d37edf4b4cebe7564b34a38f?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.cvtelectronics.com/" class="url" rel="ugc external nofollow">Peter</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-638"><time datetime="2008-02-14T16:42:58-08:00">February 14, 2008 at 16:42</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I have posted, with Steven’s permission, a version of his GPS with time and speed for the PIC18F2550 which also uses his graphical LCD drivers for the 128×64 pixel LCD. It will display the datum as well as log it.  It also parses the GPGGA sentence for the altitude information.  You can find it on this website: <a href="http://www.cvtelectronics.com/GPS.html" rel="nofollow ugc">http://www.cvtelectronics.com/GPS.html</a></p>
+<p>Peter</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=638#respond" data-commentid="638" data-postid="43" data-belowelement="div-comment-638" data-respondelement="respond" data-replyto="Reply to Peter" aria-label="Reply to Peter">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-639" class="comment even thread-even depth-1">
+			<article id="div-comment-639" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/8e056b63cb5331afff50a4dd7ebbc6e0?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/8e056b63cb5331afff50a4dd7ebbc6e0?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Robert</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-639"><time datetime="2008-02-29T23:34:52-08:00">February 29, 2008 at 23:34</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I picked up a trip mate for $0.50 at a yard sale.  🙂</p>
+<p>I&#8217;m going to be trying this with some modifications.  Thanks for the source code.</p>
+<p>1.  I will only store the value if the diff between values can&#8217;t be stored in a byte.  This will allow me to write over 5 days of infomation to the EEPROM.</p>
+<p>2.  I will code the PIC to send &#8220;ASTRAL&#8221; to the tripmate rather than modifying the trip mate.  (I&#8217;m really really curious why you didn&#8217;t do this, My other thought was to use a single throw double pole switch hooked inline on the serial cable to get the thing started, so modification wouldn&#8217;t be necessary and I could use it with other serial devices.)</p>
+<p>3.  I am going to try to power the tripmate and the pic off the same battery source.</p>
+<p>4.  I may use a secondary PIC and board to run an LCD screen.</p>
+<p>Abitious, maybe, but I&#8217;ve got lots and lots of time to figure things out.  If you or anyone else reading this wants to track my progress, I will be posing it online hopefully soon.</p>
+<p>I do have some questions, however, I am well aware that tons of people ask you questions feeling you are obligated in some way to answer them.  Please only respond to my questions if you are so incline.</p>
+<p>Questions:<br>
+1) I noticed on some of your other projects you mention that you use the CRC compiler.  I am quite poor and can&#8217;t aford anything but the feebies on MicroChip&#8217;s website or wherever else I happen to look.  Am I going to have a problem compiling your code with one of these?  Is there a way I can rectify any problems?</p>
+<p>2) Is there any other problems you want to warn me of?</p>
+<p>Thanks, if you are interested I&#8217;ll keep you posted.  If not&#8230; Well when I have a site set up with the project I&#8217;ll post it here then and anyone who&#8217;s intrested can have a look.</p>
+<p>Awesome project thanks for helping on a jumpstart by posting what you did.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=639#respond" data-commentid="639" data-postid="43" data-belowelement="div-comment-639" data-respondelement="respond" data-replyto="Reply to Robert" aria-label="Reply to Robert">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-640" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-640" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/bb83af6f1511f425ea98747fb9add59f?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/bb83af6f1511f425ea98747fb9add59f?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">dick clark</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-640"><time datetime="2009-08-30T20:30:44-07:00">August 30, 2009 at 20:30</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i i need help find out how to get the software for my gps and how to make a seril to usb and maybe a sd card piece to go with it can anyone help me</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=640#respond" data-commentid="640" data-postid="43" data-belowelement="div-comment-640" data-respondelement="respond" data-replyto="Reply to dick clark" aria-label="Reply to dick clark">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-641" class="comment even thread-even depth-1">
+			<article id="div-comment-641" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/842ad3b7b3bcce0bb15ad493d7441e85?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/842ad3b7b3bcce0bb15ad493d7441e85?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">mark krawczuk</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-641"><time datetime="2009-12-31T16:40:23-08:00">December 31, 2009 at 16:40</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hi,  will this work with the  earthmate hyperformance gps receiver ?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=641#respond" data-commentid="641" data-postid="43" data-belowelement="div-comment-641" data-respondelement="respond" data-replyto="Reply to mark krawczuk" aria-label="Reply to mark krawczuk">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-642" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: Remembering my Tripmate&trade; GPS&hellip; &laquo; Kuya Marc&#039;s Electronic Projects 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-643" class="comment even thread-even depth-1">
+			<article id="div-comment-643" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/5eab115148a3a94c9f2360f548a3cc4e?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/5eab115148a3a94c9f2360f548a3cc4e?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Robert</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-643"><time datetime="2010-08-26T10:18:47-07:00">August 26, 2010 at 10:18</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@mark</p>
+<p>It will sort of&#8230; </p>
+<p>The hyperformance uses &#8220;EARTHA&#8221; as the string instead of &#8220;ASTRAL&#8221;.<br>
+Also and this is where it gets complicated, the hyperformance uses binary data instead of a $GPRMC sentence.  </p>
+<p>So what does all this mean to you?  Well the code has to be rewritten to handle the binary data but the circuit is exactly the same.</p>
+<p>I know it was nearly a year ago you asked this question.  But I thought I would provide the answer in case anyone stumbled along here.  If anyone has questions about the hyperformance, you can e-mail me at hyperformance(AT)learn2think.org. Of course replace (AT) with the appropriate symbol and hopefully that won&#8217;t garner to much spam.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=643#respond" data-commentid="643" data-postid="43" data-belowelement="div-comment-643" data-respondelement="respond" data-replyto="Reply to Robert" aria-label="Reply to Robert">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-644" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-644" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/87f1c5a92960546760b9b607be49a7da?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/87f1c5a92960546760b9b607be49a7da?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">JIMMY</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-644"><time datetime="2011-12-25T19:55:47-08:00">December 25, 2011 at 19:55</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>friend, built the circuit as it is, load the pic. Button to start works, also performs the reading, but can not get the circuit to work when the GPS already has an A in the plot GPRMC, simply EEPROM LED does not light, but if it does for downloading recorded data but as no do not get anything valid, I can do?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=644#respond" data-commentid="644" data-postid="43" data-belowelement="div-comment-644" data-respondelement="respond" data-replyto="Reply to JIMMY" aria-label="Reply to JIMMY">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-4914" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/" class="url" rel="ugc external nofollow">&raquo; PIC16F88 Delorme Tripmate GPS Logger with Time and Speed semifluid.com</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-4919" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://semifluid.com/2007/06/15/tracking-a-bike-ride-pic16f88-gps-logger-dr1r7/" class="url" rel="ugc external nofollow">&raquo; Tracking a Bike Ride &amp; PIC16F88 GPS Logger DR1r7 semifluid.com</a> 			</div>
+		</li>
+<!-- #comment-## -->
+		<li id="comment-9842" class="comment even thread-even depth-1">
+			<article id="div-comment-9842" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/87f1c5a92960546760b9b607be49a7da?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/87f1c5a92960546760b9b607be49a7da?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">JIMMY</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-9842"><time datetime="2012-04-13T13:21:31-07:00">April 13, 2012 at 13:21</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>FUNCIONO!! MIL GRACIAS!!</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=9842#respond" data-commentid="9842" data-postid="43" data-belowelement="div-comment-9842" data-respondelement="respond" data-replyto="Reply to JIMMY" aria-label="Reply to JIMMY">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-202900" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-202900" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/75036d3edf5af6c3fa0cc453b64d6eb2?s=60&#038;d=retro&#038;r=pg" srcset="https://secure.gravatar.com/avatar/75036d3edf5af6c3fa0cc453b64d6eb2?s=120&#038;d=retro&#038;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">						<b class="fn">Shummy Verma</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#comment-202900"><time datetime="2014-12-29T10:32:01-08:00">December 29, 2014 at 10:32</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi,</p>
+<p>I am looking for a GPS developer who can make GPS system for my company.</p>
+<p>Please contact me on = +91-9711343010</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/?replytocom=202900#respond" data-commentid="202900" data-postid="43" data-belowelement="div-comment-202900" data-respondelement="respond" data-replyto="Reply to Shummy Verma" aria-label="Reply to Shummy Verma">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		</ol>
+<!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2007/01/26/pic16f88-delorme-tripmate-gps-logger/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="43" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+</div>
+<!-- #comments -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2007/01/18/website-host-transfer-complete-sparks/" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">Website Host Transfer Complete + Sparks</span></a></div>
+<div class="nav-next"><a href="/2007/02/01/pic16f88-delorme-tripmate-gps-logger-with-time-and-speed/" rel="next"><span class="post-title">PIC16F88 Delorme Tripmate GPS Logger with Time and Speed <i class="fa fa-chevron-right"></i></span></a></div>
+</div>
+	</nav>
+		</main><!-- #main -->
+	</div>
+<!-- #primary -->
+
+</div>
+<!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+				<aside id="search-4" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:">
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside><aside id="categories-9" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-3">
+<a href="/category/electronics/">Electronics</a>
+<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/electronics/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/electronics/glcd/">GLCD</a>
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/electronics/gps/">GPS</a>
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/electronics/high-voltage/">High Voltage</a>
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/electronics/leds/">LEDs</a>
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/electronics/rf/">RF</a>
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/electronics/usb/">USB</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/personal/">Personal</a>
+<ul class="children">
+	<li class="cat-item cat-item-22">
+<a href="/category/personal/consumerism/">Consumerism</a>
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/personal/cooking/">Cooking</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/photos/">Photos</a>
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/pic-projects/">PIC Projects</a>
+<ul class="children">
+	<li class="cat-item cat-item-21">
+<a href="/category/pic-projects/c-projects/">C Projects</a>
+</li>
+	<li class="cat-item cat-item-23">
+<a href="/category/pic-projects/jal-projects/">JAL Projects</a>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/pic-projects/pic12f675/">PIC12F675</a>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/pic-projects/pic12f683/">PIC12F683</a>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/pic-projects/pic16f628/">PIC16F628</a>
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/pic-projects/pic16f88/">PIC16F88</a>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/pic-projects/pic18f2550/">PIC18F2550</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/programming/">Programming</a>
+<ul class="children">
+	<li class="cat-item cat-item-24">
+<a href="/category/programming/mathematica/">Mathematica</a>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/programming/matlab/">MATLAB</a>
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/programming/python/">Python</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/research/">Research</a>
+<ul class="children">
+	<li class="cat-item cat-item-48">
+<a href="/category/research/3d-shape/">3D Shape</a>
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/research/stability-research/">Stability</a>
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/research/texture/">Texture</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-18">
+<a href="/category/software/">Software</a>
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/software/mac-os-x/">Mac OS X</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1">
+<a href="/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside>	</div>
+</div>
+<!-- #secondary -->
+		</div>
+<!-- close .row -->
+	</div>
+<!-- close .container -->
+</div>
+<!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+	
+	<div class="footer-widget-area">
+				<div class="col-sm-4 footer-widget" role="complementary">
+					</div>
+<!-- .widget-area .first -->
+		
+		
+			</div>
+			</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						sparkling						Theme by <a href="http://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div>
+<!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div>
+<!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div>
+<!-- #page -->
+
+		<script type="text/javascript">jQuery(document).ready(function ($) {
+			if ($(window).width() >= 767) {
+			  $('.navbar-nav > li.menu-item > a').click(function () {
+				if ($(this).attr('target') !== '_blank') {
+				  window.location = $(this).attr('href')
+				}
+			  })
+			}
+		  })</script>
+	<script type="text/javascript" src="/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222" id="sparkling-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.7.1" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+
+</body>
+</html>

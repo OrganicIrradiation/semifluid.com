@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 2015 VSS DNA	</title>
+	<atom:link href="/2015/03/23/2015-vss-dna/feed/" rel="self" type="application/rss+xml" />
+	<link>/2015/03/23/2015-vss-dna/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Fri, 13 May 2016 03:34:30 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: 2016 VSS DNA &#8211; semifluid.com		</title>
+		<link>/2015/03/23/2015-vss-dna/#comment-211217</link>
+
+		<dc:creator><![CDATA[2016 VSS DNA &#8211; semifluid.com]]></dc:creator>
+		<pubDate>Fri, 13 May 2016 03:34:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=5660#comment-211217</guid>
+
+					<description><![CDATA[[&#8230;] I was able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s 2015 VSS DNA and the year before&#8217;s 2014 VSS DNA). This year, we have 1462 abstracts being analyzed (43 [&#8230;]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] I was able to generate an updated force-directed diagram of co-authorships (see last year&#8217;s 2015 VSS DNA and the year before&#8217;s 2014 VSS DNA). This year, we have 1462 abstracts being analyzed (43 [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

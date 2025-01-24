@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PIC12F675 &#8211; semifluid.com</title>
+	<atom:link href="/category/pic-projects/pic12f675/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 05 Jan 2012 19:45:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>PIC12F675 Oscilloscope</title>
+		<link>/2006/01/31/pic12f675-oscilloscope/</link>
+					<comments>/2006/01/31/pic12f675-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:35 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC12F675]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=9</guid>
+
+					<description><![CDATA[This is a simple PC voltage oscilloscope using only a PIC12F675, a 20MHz oscillator, and a RS232 level shifter. The PIC takes a sample on GP2, immediately sends it to the PC at 115,200 baud using an software asynchronous serial routine, and repeats. It sends a 8-bit value that is read by the Visual Basic [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img fetchpriority="high" decoding="async" class="alignleft size-full wp-image-712" title="PIC12F675 Oscilloscope" src="http://semifluid.com/wp-content/uploads/2006/01/PIC12F675_Oscilloscope.jpg" alt="" width="280" height="200" />This is a simple PC voltage oscilloscope using only a PIC12F675, a 20MHz oscillator, and a RS232 level shifter. The PIC takes a sample on GP2, immediately sends it to the PC at 115,200 baud using an software asynchronous serial routine, and repeats. It sends a 8-bit value that is read by the Visual Basic software and displayed on the screen (see examples below). The Visual Basic software deduces the time period between submissions and adjusts the display accordingly.</p>
+<p><span id="more-9"></span><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic5.gif"><img decoding="async" class="aligncenter size-medium wp-image-713" title="PIC12F675 Oscilloscope Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic5-300x155.gif" alt="" width="300" height="155" srcset="/wp-content/uploads/2006/01/Schematic5-300x155.gif 300w, /wp-content/uploads/2006/01/Schematic5.gif 471w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/uSendAnalogHS.jal">uSendAnalogHS.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/uSendAnalogHS.hex">hex</a>)</p>
+<p>Visual Basic code example: <a href="http://semifluid.com/wp-content/uploads/2006/01/675OscilloscopeDR1r1.zip">675OscilloscopeDR1r1.zip</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic12f675-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>31</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC12F675 Single RGB LED Controller</title>
+		<link>/2006/01/31/pic12f675-single-rgb-led-controller/</link>
+					<comments>/2006/01/31/pic12f675-single-rgb-led-controller/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 31 Jan 2006 17:00:15 +0000</pubDate>
+				<category><![CDATA[JAL Projects]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC12F675]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=8</guid>
+
+					<description><![CDATA[This code is for a simple RGB LED controller for 1 RGB LED using a PIC12F675 (or PIC12F629). The pattern is determined by the data in the EEPROM. When the PIC needs a new target for the PWM, it loads it from EEPROM. Pin 4 (GP3) is pulled high because it is used to switch [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" class="alignleft size-full wp-image-656" title="PIC12F675 Single RGB LED Controller" src="http://semifluid.com/wp-content/uploads/2006/01/PIC12F675_1RGBLED.jpg" alt="" width="280" height="200" />This code is for a simple RGB LED controller for 1 RGB LED using a PIC12F675 (or PIC12F629). The pattern is determined by the data in the EEPROM. When the PIC needs a new target for the PWM, it loads it from EEPROM. Pin 4 (GP3) is pulled high because it is used to switch between displays. Please see the source code for more information; the structure and design is commented. The operation of the controller is very simple and so is the wiring.<span id="more-8"></span></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/01/Schematic.gif"><img loading="lazy" decoding="async" class="aligncenter size-medium wp-image-658" title="PIC12F675 Single RGB LED Controller Schematic" src="http://semifluid.com/wp-content/uploads/2006/01/Schematic-300x124.gif" alt="" width="300" height="124" srcset="/wp-content/uploads/2006/01/Schematic-300x124.gif 300w, /wp-content/uploads/2006/01/Schematic.gif 596w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller code can be downloaded here:<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.jal">1RGBLED.jal</a> (<a href="http://semifluid.com/wp-content/uploads/2006/01/1RGBLED.hex">hex</a>)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/01/31/pic12f675-single-rgb-led-controller/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

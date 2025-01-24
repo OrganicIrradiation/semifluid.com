@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PIC18LF2550 Wireless Servo Controller	</title>
+	<atom:link href="/2006/02/27/pic18lf2550-wireless-servo-controller/feed/" rel="self" type="application/rss+xml" />
+	<link>/2006/02/27/pic18lf2550-wireless-servo-controller/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:20:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: Srinivas		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-21843</link>
+
+		<dc:creator><![CDATA[Srinivas]]></dc:creator>
+		<pubDate>Mon, 02 Dec 2013 23:53:05 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-21843</guid>
+
+					<description><![CDATA[Hi all, 
+I am trying to finish my project and looking for some one that can assemble a control board for me per the below requirements. I am sorry,I am a pure mechanical engineer and dont have much idea on these control boards, but know my requirements very well, so any help or lead will be appreciated. 
+My requirements are as following. : 
+for this project: I took 12V DC motors from a toy CAR that is capable of stearing at least two kids (about 165lb)....
+To control DC motor whose specs are,
+6V/12V supply voltage,
+15 to 30A power
+Need a micro chip controller that can,
+1, Reduce the speed of the motor from to 2rpm,
+2, Handling functions like CW AND CCW (clockwise and counter cwise)
+3, time based forward and revers motion: Soft start - CW for 2seconds - soft stop- pause1sec - soft start CCW for 2seconds – soft stop – number of cycles
+4, Alternatively proximity/touch sensor based CW and CCW (the board should be capable of giving the choice to select either sensor driven or time driven
+5, ON/OFF using remote.
+6, Number of cycles be relayed to any mobile phone.
+
+Please notice that we need at least one assembly board that can be readily used]]></description>
+			<content:encoded><![CDATA[<p>Hi all,<br />
+I am trying to finish my project and looking for some one that can assemble a control board for me per the below requirements. I am sorry,I am a pure mechanical engineer and dont have much idea on these control boards, but know my requirements very well, so any help or lead will be appreciated.<br />
+My requirements are as following. :<br />
+for this project: I took 12V DC motors from a toy CAR that is capable of stearing at least two kids (about 165lb)&#8230;.<br />
+To control DC motor whose specs are,<br />
+6V/12V supply voltage,<br />
+15 to 30A power<br />
+Need a micro chip controller that can,<br />
+1, Reduce the speed of the motor from to 2rpm,<br />
+2, Handling functions like CW AND CCW (clockwise and counter cwise)<br />
+3, time based forward and revers motion: Soft start &#8211; CW for 2seconds &#8211; soft stop- pause1sec &#8211; soft start CCW for 2seconds – soft stop – number of cycles<br />
+4, Alternatively proximity/touch sensor based CW and CCW (the board should be capable of giving the choice to select either sensor driven or time driven<br />
+5, ON/OFF using remote.<br />
+6, Number of cycles be relayed to any mobile phone.</p>
+<p>Please notice that we need at least one assembly board that can be readily used</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Clarence Novak		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-283</link>
+
+		<dc:creator><![CDATA[Clarence Novak]]></dc:creator>
+		<pubDate>Wed, 27 Jul 2011 19:15:12 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-283</guid>
+
+					<description><![CDATA[I need to build an external flat surface mounted wireless volume control using a belt drive around the OEM receiver&#039;s volume control. Any suggestions are respected and appreciated.  
+
+Thank You]]></description>
+			<content:encoded><![CDATA[<p>I need to build an external flat surface mounted wireless volume control using a belt drive around the OEM receiver&#8217;s volume control. Any suggestions are respected and appreciated.  </p>
+<p>Thank You</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Travel Offers		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-282</link>
+
+		<dc:creator><![CDATA[Travel Offers]]></dc:creator>
+		<pubDate>Mon, 21 Feb 2011 19:30:46 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-282</guid>
+
+					<description><![CDATA[Hi I like this post and it was so fabulous and I am gonna bookmark it. One thing to say the Superb analysis you have done is trully remarkable.No one goes that extra mile these days? Well Done!!! Just one more suggestion you canget a Translator Application for your Global Readers .]]></description>
+			<content:encoded><![CDATA[<p>Hi I like this post and it was so fabulous and I am gonna bookmark it. One thing to say the Superb analysis you have done is trully remarkable.No one goes that extra mile these days? Well Done!!! Just one more suggestion you canget a Translator Application for your Global Readers .</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: jaaziel		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-281</link>
+
+		<dc:creator><![CDATA[jaaziel]]></dc:creator>
+		<pubDate>Thu, 05 Aug 2010 01:43:25 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-281</guid>
+
+					<description><![CDATA[sir may i ask how to connect the servo motor on the camera and how to make system on vb6 because this system is our thesis the wireless camera using vb..sir it possible to make a system on vb trough this servo controller]]></description>
+			<content:encoded><![CDATA[<p>sir may i ask how to connect the servo motor on the camera and how to make system on vb6 because this system is our thesis the wireless camera using vb..sir it possible to make a system on vb trough this servo controller</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: gonio		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-280</link>
+
+		<dc:creator><![CDATA[gonio]]></dc:creator>
+		<pubDate>Thu, 21 Jan 2010 11:38:54 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-280</guid>
+
+					<description><![CDATA[what is the aproxemate Range of system
+thanks]]></description>
+			<content:encoded><![CDATA[<p>what is the aproxemate Range of system<br />
+thanks</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Avishek		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-279</link>
+
+		<dc:creator><![CDATA[Avishek]]></dc:creator>
+		<pubDate>Mon, 03 Aug 2009 02:07:52 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-279</guid>
+
+					<description><![CDATA[Can anyone tell me How many servos could be controlled by the circuit? Pls reply me. thanks.]]></description>
+			<content:encoded><![CDATA[<p>Can anyone tell me How many servos could be controlled by the circuit? Pls reply me. thanks.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: rajesh		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-278</link>
+
+		<dc:creator><![CDATA[rajesh]]></dc:creator>
+		<pubDate>Wed, 21 Jan 2009 09:33:33 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-278</guid>
+
+					<description><![CDATA[hi frns,
+i ve one doubt... that is how to connect gps receiver wit microcontrloller]]></description>
+			<content:encoded><![CDATA[<p>hi frns,<br />
+i ve one doubt&#8230; that is how to connect gps receiver wit microcontrloller</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: michael		</title>
+		<link>/2006/02/27/pic18lf2550-wireless-servo-controller/#comment-277</link>
+
+		<dc:creator><![CDATA[michael]]></dc:creator>
+		<pubDate>Sat, 22 Nov 2008 23:50:24 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=25#comment-277</guid>
+
+					<description><![CDATA[I just saw your wireless servo controller with a wireless camera attached and would like something like this for a project I&#039;m working on.  Could you let me know how to go about making or even buying something like this?  Thanks!]]></description>
+			<content:encoded><![CDATA[<p>I just saw your wireless servo controller with a wireless camera attached and would like something like this for a project I&#8217;m working on.  Could you let me know how to go about making or even buying something like this?  Thanks!</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

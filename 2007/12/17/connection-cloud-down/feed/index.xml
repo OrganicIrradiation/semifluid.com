@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Connection Cloud Down	</title>
+	<atom:link href="/2007/12/17/connection-cloud-down/feed/" rel="self" type="application/rss+xml" />
+	<link>/2007/12/17/connection-cloud-down/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 01 Mar 2012 01:45:41 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: semifluid.com &#187; Connection Cloud Back Up		</title>
+		<link>/2007/12/17/connection-cloud-down/#comment-683</link>
+
+		<dc:creator><![CDATA[semifluid.com &#187; Connection Cloud Back Up]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 05:01:31 +0000</pubDate>
+		<guid isPermaLink="false">/?p=99#comment-683</guid>
+
+					<description><![CDATA[[...] so my last post was a little premature. I was able to modify the source code to get Connection Cloud back up and [...] ]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] so my last post was a little premature. I was able to modify the source code to get Connection Cloud back up and [&#8230;] </p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: semifluid.com &#187; Connection Cloud		</title>
+		<link>/2007/12/17/connection-cloud-down/#comment-682</link>
+
+		<dc:creator><![CDATA[semifluid.com &#187; Connection Cloud]]></dc:creator>
+		<pubDate>Mon, 17 Dec 2007 08:02:50 +0000</pubDate>
+		<guid isPermaLink="false">/?p=99#comment-682</guid>
+
+					<description><![CDATA[[...] (12/17/2007): See this post about why Connection Cloud is not online. Bookmark [...] ]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] (12/17/2007): See this post about why Connection Cloud is not online. Bookmark [&#8230;] </p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

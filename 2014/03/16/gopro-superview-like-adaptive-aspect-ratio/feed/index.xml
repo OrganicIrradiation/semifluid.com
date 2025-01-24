@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: GoPro SuperView-like adaptive aspect ratio	</title>
+	<atom:link href="/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/feed/" rel="self" type="application/rss+xml" />
+	<link>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:22:16 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: Andrea		</title>
+		<link>/2014/03/16/gopro-superview-like-adaptive-aspect-ratio/#comment-213096</link>
+
+		<dc:creator><![CDATA[Andrea]]></dc:creator>
+		<pubDate>Sat, 13 May 2017 14:26:34 +0000</pubDate>
+		<guid isPermaLink="false">/?p=4174#comment-213096</guid>
+
+					<description><![CDATA[I&#039;m now experimenting on this topic and I found your interesting post. Before reading I  used a mapping like $x + (1/3) sign(x) abs(x)^n$, for a scaled range -1 &#060; x &#060; 1, with n &#062; 1, for example to grow a 4:3 1920x1440 image to a 16:9 2560x1440 image (the inverse can be used to shrink the height also). What do you think about my approach?]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m now experimenting on this topic and I found your interesting post. Before reading I  used a mapping like $x + (1/3) sign(x) abs(x)^n$, for a scaled range -1 &lt; x &lt; 1, with n &gt; 1, for example to grow a 4:3 1920&#215;1440 image to a 16:9 2560&#215;1440 image (the inverse can be used to shrink the height also). What do you think about my approach?</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Research &#8211; semifluid.com</title>
+	<atom:link href="/category/research/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:19:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>2 Degrees of Academic Separation using Google Scholar v1</title>
+		<link>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/</link>
+					<comments>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 19 Jun 2014 09:15:40 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">/?p=5031</guid>
+
+					<description><![CDATA[Another post, another neat force-directed graph. This one illustrates the interconnections between professors and students who have been co-authors on some of my papers and presentations, as scrapped from Google Scholar citations.  It could be described as the first version of a rough illustration of my 2 degrees of separation in academia. The dark orange circle in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="/2014/05/03/vss-2014-dna-v1/">Another post</a>, another neat force-directed graph. This one illustrates the interconnections between professors and students who have been co-authors on some of my papers and presentations, as scrapped from <a href="http://scholar.google.com/citations?user=4bahYMkAAAAJ&amp;hl=en">Google Scholar citations</a>.  It could be described as the first version of a rough illustration of my 2 <a href="http://en.wikipedia.org/wiki/Six_degrees_of_separation">degrees of separation</a> in academia.</p>
+<p><img decoding="async" src="/wp-content/uploads/2014/06/2-Degrees-of-Academic-Seperation-v1.1-1024x1024.png" alt="2-Degrees-of-Academic-Seperation-v1.1" /></p>
+<p>The dark orange circle in the center is myself, light blue circles are papers/presentations, light orange circles are co-authors, and dark-blue circles are co-authors of my co-authors (i.e., have not necessarily directly worked with me on a project).</p>
+<p>Unfortunately, as of today, not all of my co-authors have Google Scholar pages, so there are a number of co-authors whose connections and branches are under-represented.  In addition, Google Scholar does not necessarily accumulate all of a given author&#8217;s papers/presentations and often makes mistakes misattributing papers to profiles.  So, the veracity of the information represented here should be taken with a grain of salt unless I find a better service for generating these networks.</p>
+<p>For some more information on how this was created, click-through to the post.</p>
+<p><span id="more-5031"></span></p>
+<p>As with the <a href="/2014/05/03/vss-2014-dna-v1/">VSS DNA graph</a> I made before the Visual Sciences Society Annual Meeting this past May, I used <span style="color: #404040;">Python, </span><a href="https://networkx.github.io/">NetworkX</a><span style="color: #404040;">, and </span><a href="http://d3js.org/">D3.js</a>.  In addition, I took advantage of another Python module, <a href="https://pypi.python.org/pypi/GoogleScholar">GoogleScholar</a>, to screen-scrape information from the Google Scholar profiles.</p>
+<p>Starting with <a href="http://scholar.google.com/citations?user=4bahYMkAAAAJ&amp;hl=en">my Google Scholar citation profile</a>, I loop through the individual entries and extract the titles and co-authors of each entry.  The names and titles are connected as nodes using NetworkX.  I then had a list of co-authors:</p>
+<ul>
+<li><a href="http://scholar.google.com/citations?user=MnUboHYAAAAJ&amp;hl=en">Ari Weinstein</a></li>
+<li><a href="http://scholar.google.com/citations?user=JPZWLKQAAAAJ&amp;hl=en">Benjamin Kunsberg</a></li>
+<li>Bernard D Adelstein</li>
+<li>Bina Pastakia</li>
+<li><a href="http://scholar.google.com/citations?user=dqokykoAAAAJ&amp;hl=en">Chia-Chien Wu</a></li>
+<li><a href="http://scholar.google.com/citations?user=bTdT7hAAAAAJ&amp;hl=en">Chris L Baker</a></li>
+<li>David S Ebert</li>
+<li>E Daniel Hirleman</li>
+<li>Flip Phillips</li>
+<li>Gaurav Kharkwal</li>
+<li>Hong Z Tan</li>
+<li>Jacob Feldman</li>
+<li><a href="http://scholar.google.com/citations?user=rRJ9wTJMUB8C&amp;hl=en">Joshua B Tenenbaum</a></li>
+<li>Julia E. Mazzarella</li>
+<li>Kevin Sanik</li>
+<li>Kristina Denisova</li>
+<li>Kwangtaek Kim</li>
+<li>Manish Singh</li>
+<li>Matthew B Kocsis</li>
+<li><a href="http://scholar.google.com/citations?user=NN4GKo8AAAAJ&amp;hl=en">Melissa M Kibbe</a></li>
+<li>Paul Ringstad</li>
+<li><a href="http://scholar.google.com/citations?user=FoVvIK0AAAAJ&amp;hl=en">Peter C Pantelis</a></li>
+<li><a href="http://scholar.google.com/citations?user=LgU3FXIAAAAJ&amp;hl=en">Roger W. Cholewiak</a></li>
+<li><a href="http://scholar.google.com/citations?user=ruUKktgAAAAJ&amp;hl=en">Roland W Fleming</a></li>
+<li>Ryan M Traylor</li>
+<li><a href="http://scholar.google.com/citations?user=rNTIQXYAAAAJ&amp;hl=en">Steven W Zucker</a></li>
+<li>Sung-Ho Kim</li>
+<li><a href="http://scholar.google.com/citations?user=23w3sSMAAAAJ&amp;hl=en">Tim Gerstner</a></li>
+</ul>
+<p>To create the connections, I search for the co-authors names on Google Scholar (the profiles that were used are linked above) and do the same thing, extracting the titles and (co-?)co-authors names.  This allowed me to produce a network diagram illustrating individuals who have been my co-authors, along with co-authors of those co-authors.  Many of my co-authors did not have profiles when I generated this first version and there were a few with technical problems (e.g., one profile was populated with a large number of papers from another individual with the same name as my co-author, but a different person, and pruning these problematic entries would have been labor intensive).  Still, it is a neat illustration worth sharing.</p>
+<p>I am not currently including the code on this page because it is quite messy and &#8220;non-pythonic&#8221;, but I&#8217;m happy to share it if there is interest.  In addition, since this image was produced with D3.js, there is an interactive version of the graph available. I chose not to include it because it can be quite computationally taxing with the large number of nodes and connections and therefore not the best for directly including on the blog.</p>
+<p><strong>UPDATE June 20, 2014</strong>: I removed the co-author labels from the lead image because I don&#8217;t want to give the false impression that specific co-authors are better connected than others.  Since this visualization is dependent on a 3rd party scraping service, it is problematic to draw any conclusions about &#8220;connectedness&#8221; from this representation.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/06/19/2-degrees-of-academic-separation-using-google-scholar-v1/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>VSS 2014 &#8220;DNA&#8221; v1</title>
+		<link>/2014/05/03/vss-2014-dna-v1/</link>
+					<comments>/2014/05/03/vss-2014-dna-v1/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 03 May 2014 18:20:29 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">/?p=4872</guid>
+
+					<description><![CDATA[Here&#8217;s an illustration I pulled together using Python, NetworkX, and D3.js to illustrate the interconnections between abstracts that will be presented at the Vision Sciences Society 2014 annual meeting in approximately 2 weeks. Orange dots represent abstracts, Light Blue dots represent authors with at least one first authorship, and Dark Blue dots represent other authors (second [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here&#8217;s an illustration I pulled together using Python, <a href="https://networkx.github.io/">NetworkX</a>, and <a href="http://d3js.org/">D3.js</a> to illustrate the interconnections between abstracts that will be presented at the <a href="http://www.visionsciences.org/">Vision Sciences Society</a> 2014 annual meeting in approximately 2 weeks. Orange dots represent abstracts, Light Blue dots represent authors with at least one first authorship, and Dark Blue dots represent other authors (second through last).</p>
+<p><a href="/wp-content/uploads/2014/05/VSS-DNA.png"><img decoding="async" src="/wp-content/uploads/2014/05/VSS-DNA-1024x1024.png" alt="VSS DNA v1" /></a></p>
+<p>As you can see, there are large numbers of abstracts that have few shared authors.  Those abstracts that share authors often join together to create &#8220;chains&#8221; of students, advisors, and colleagues.</p>
+<p>This is a first version, hastily pulled together, so there are a few problems.  The nodes are assigned to authors by name, which can be a problem for authors sharing the same name (which creates more connections than appropriate for a given node) or who  have inconsistent reporting of their name (for example, omitting the middle initial or alternate spelling, which can create another erroneous node). I am thinking of addressing the duplicate node issue by using a string similarity metric (e.g., <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>) to find strings that contain similar names to combine the connections, but this could be an issue if the names are truly different people. Alternatively, I could incorporate the authors&#8217; affiliations, but this carries similar issues (e.g., I report my affiliation as &#8220;University of Giessen&#8221; while colleagues report it as &#8220;Justus-Liebig-Universität Gießen&#8221;).</p>
+<p>Although there are lingering issues, it is still an interesting illustration of the connections between the different abstracts being presented at VSS 2014.</p>
+<p>Here&#8217;s the code on GitHub: <a href="https://github.com/OrganicIrradiation/visvssrelationships">visvssrelationships</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2014/05/03/vss-2014-dna-v1/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Preparing a &#8220;Blobby&#8221; Object for Printing with Shapeways</title>
+		<link>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/</link>
+					<comments>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2013 07:57:36 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3583</guid>
+
+					<description><![CDATA[I have been working with a 3D blobby object for some of my pilot studies on shape from shading and texture that I would like to 3D print. Back at Rutgers University, we had a MakerBot Cupcake, but now that I am in Germany, I need to find alternatives. I have been looking into getting [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have been working with a 3D blobby object for some of my pilot studies on shape from shading and texture that I would like to 3D print.  Back at <a href="http://perceptualscience.rutgers.edu/" target="_blank">Rutgers University</a>, we had a <a href="http://en.wikipedia.org/wiki/MakerBot_Industries#Cupcake_CNC" target="_blank">MakerBot Cupcake</a>, but now that I am in Germany, I need to find alternatives.  I have been looking into getting the 3D object printed using Shapeways.com but there have been a few hiccups along the way, so I wanted to describe my experiences in the hopes that it might help someone else avoid these issues in the future.  The object was generated in MATLAB using a simple script (see <a href="/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">3D “Potato” Generation using Sinusoidal Pertubations</a>) and rendered in our 3D environment:</p>
+<p><a href="/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-1024x440.png" alt="3D-Blobby-Object---Solid-(Seed--0431630057)" width="600" height="257" class="aligncenter size-large wp-image-3602" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-1024x440.png 1024w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-300x129.png 300w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057.png 1189w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>So the question is: What do I need to do to get this 3D object printed at Shapeways?  Click through to see the steps that I took to get this 3D model printed economically.<br />
+<span id="more-3583"></span></p>
+<p>Since the <a href="/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">object generation script</a> creates a MATLAB struct with vertices and faces, I was able to use the <a href="http://www.aleph.se/Nada/Ray/vertface2obj.m" target="_blank">vertface2obj</a> script by <a href="http://www.aleph.se/Nada/Ray/matlabobj.html" target="_blank">Anders Sandberg</a> to export <a href="http://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">.obj files</a>.  Here is the object at a variety of resolutions in .obj format:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_2.obj" target="_blank">162 vertices</a> (12 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_3.obj" target="_blank">642 vertices</a> (41 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_4.obj" target="_blank">2562 vertices</a> (160 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.obj" target="_blank">10242 vertices</a> (659 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_6.obj" target="_blank">40962 vertices</a> (2.8 MB)</li>
+</ul>
+<p>These .obj files can be imported directly into Shapeways.  After importing, Shapeways runs a series of sanity checks to make sure that the file can be printed and then posts it on their site.  Here&#8217;s a <a href="https://www.shapeways.com/model/1282894/3d-blobby-object-solid-seed-0431630057.html" target="_blank">link to one such imported object</a>.</p>
+<p><center></p>
+<table  class=" table table-hover" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot.png"><img decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-261x300.png" alt="3D Blobby Object - Solid (Seed- 0431630057) Screenshot" width="261" height="300" class="aligncenter size-medium wp-image-3590" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-894x1024.png 894w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot.png 977w" sizes="(max-width: 261px) 100vw, 261px" /></a>
+</td>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices.png"><img decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-261x300.png" alt="3D Blobby Object - Solid (Seed- 0431630057) Prices" width="261" height="300" class="aligncenter size-medium wp-image-3589" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-891x1024.png 891w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices.png 972w" sizes="(max-width: 261px) 100vw, 261px" /></a>
+</td>
+</tr>
+</table>
+<p></center></p>
+<p>Notice the price? (~$63 for a plastic print) Whoa! That&#8217;s a lot more than I wanted to pay for a simple blob model.</p>
+<p>It turns out that the cost of printing a model at Shapeways is proportional to the model&#8217;s volume (<a href="https://www.shapeways.com/support/pricing" target="_blank">source</a>):</p>
+<blockquote><p>Our pricing is based upon the actual amount of material used in your product and the material you choose to use. So, the actual volume of your finished product not the volume of the bounding box determines the price.</p></blockquote>
+<p>So, the way to print this shape economically is to reduce the volume of the print.  Shapeways suggests a <a href="https://www.shapeways.com/tutorials/design_for_cheaper_3d_printing" target="_blank">couple of ways</a> to reduce the cost of the 3D print, including hollowing out the model and carving it to reduce the total surface area.  Using <a href="http://www.openscad.org/" target="_blank">OpenSCAD</a>, I was able to do both.</p>
+<p>OpenSCAD allows for the importation of <a href="http://en.wikipedia.org/wiki/STL_(file_format)" target="_blank">.stl files</a>, which is another &#8220;standard&#8221; 3D file format.  Using the <a href="http://www.mathworks.com/matlabcentral/fileexchange/20922-stlwrite-write-binary-or-ascii-stl-file" target="_blank">stlwrite</a> script, I was able to export my faces/vertices from MATLAB to a file that could be imported into OpenSCAD.  Here&#8217;s the previously illustrated example file at a variety of resolutions in .stl format:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_2.stl" target="_blank">162 vertices</a> (16 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_3.stl" target="_blank">642 vertices</a> (66 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_4.stl" target="_blank">2562 vertices</a> (258 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.stl" target="_blank">10242 vertices</a> (1 MB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_6.stl" target="_blank">40962 vertices</a> (4.1 MB)</li>
+</ul>
+<p>Let&#8217;s work with the 10242 vertices file, &#8220;<a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.stl" target="_blank">0431630057_sphere_tri_5.stl</a>&#8220;.  First, we can import it into OpenSCAD using:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=import_to_openscad"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-1024x585.png" alt="OpenSCAD Screenshot 1 - Import" width="600" height="342" class="aligncenter size-large wp-image-3610" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then we can do a &#8220;difference&#8221; between the object and a downscaled version to create the shell using (note that the % &#8220;<a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters" target="_blank">background modifier</a>&#8221; is used to make the bounding object transparent gray):<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=illustrate_difference"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-1024x585.png" alt="OpenSCAD Screenshot 2 - Shell" width="600" height="342" class="aligncenter size-large wp-image-3611" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>So we now have a shell, but let&#8217;s get rid of some more of the material by carving out a <a href="http://en.wikipedia.org/wiki/Close-packing_of_equal_spheres" target="_blank">lattice of packed spheres</a>.  First, we will create a lattice of spheres (I just used the description on the Wikipedia page to create some simple procedural generation code):<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-1024x585.png" alt="OpenSCAD Screenshot 3 - Packed Spheres" width="600" height="342" class="aligncenter size-large wp-image-3612" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Now we subtract the lattice from the shell that was previously generated, again using the difference command:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube_diff"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-1024x585.png" alt="OpenSCAD Screenshot 4 - Diff with Packed Spheres" width="600" height="342" class="aligncenter size-large wp-image-3613" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>This would normally be the end of the process and you could then save the .stl and import it into Shapeways.  However, all of the OpenSCAD coding turned out to be a useless garden path because the OpenSCAD computation took far too long and too much memory to process when using higher resolution base shape files and higher resolution spheres (repeatedly crashing when I tried to compile the code).</p>
+<p>So, I tried an alternative route&#8230; <a href="http://www.blender.org/">Blender</a>.  Let&#8217;s replicate the steps above in Blender&#8217;s Python scripting interface.  First, import0431630057_sphere_tri_5.stl into Blender:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=blender_import.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import-1024x652.png" alt="Blender Screenshot 1 - Import" width="600" height="382" class="aligncenter size-large wp-image-3661" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-1-Import-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then, duplicate the object, reduce its scale, and take the boolean difference between the copy and the original to create a shell:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=blender_gen_shell.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-1024x652.png" alt="Blender Screenshot 2 - Shell" width="600" height="382" class="aligncenter size-large wp-image-3660" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then we create a lattice of spheres:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=create_lattice_of_spheres.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-1024x652.png" alt="Blender Screenshot 3 - Packed Spheres" width="600" height="382" class="aligncenter size-large wp-image-3659" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>And finally, take the boolean differences between the shell and the spheres. Putting it all together:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube_diff.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-1024x652.png" alt="Blender Screenshot 4 - Diff with Packed Spheres" width="600" height="382" class="aligncenter size-large wp-image-3658" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>This workflow uses up a lot less memory than the OpenSCAD route, but the processing time is still painfully slow.  Thankfully though, it does not crash the compiler.  To monitor the progress of the process, I simply run the script from the command line using &#8220;blender &#8211;background &#8211;python &#8216;SCRIPTLOCATION'&#8221;.  I used the same bit of code as described above to create the &#8220;production quality&#8221; model, but used a higher resolution base shape (0431630057_sphere_tri_6.stl), higher resolution spheres (sphereSubdivisions = 5;), and a higher spatial resolution lattice (r = 0.1;).  I saved it using:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=export_mesh.py"></script></p>
+<p>After importing the object at Shapeways, we see that we can save a serious chunk of change on printing the new, modified model. Here is a <a href="http://shpws.me/p8T6" target="_blank">link to the new and improved product on Shapeways</a>, now only $3.66 (vs. $63.54) for the White Strong &amp; Flexible Material.</p>
+<p><center></p>
+<table  class=" table table-hover" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-261x300.png" alt="3D Blobby Object - Small Holes (Seed- 0431630057) Screenshot" width="261" height="300" class="aligncenter size-medium wp-image-3673" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-893x1024.png 893w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot.png 976w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-261x300.png" alt="3D Blobby Object - Small Holes (Seed- 0431630057) Prices" width="261" height="300" class="aligncenter size-medium wp-image-3672" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-892x1024.png 892w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices.png 978w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+</tr>
+</table>
+<p></center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Orientation Fields of a Rotating &#8220;Blobby&#8221; Object</title>
+		<link>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/</link>
+					<comments>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 08 May 2013 10:20:26 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3042</guid>
+
+					<description><![CDATA[In research I will be presenting in a few days at VSS (the Vision Sciences Society annual meeting), I will be demonstrating how we may use orientation flow fields of texture and shading when making perceptual judgments of 3D shape structure (see Fleming, Holtmann-Rice, &#38; Bülthoff, 2011 for additional information). Since I find visualizations fun, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>In research I will be presenting in a few days at VSS (the Vision Sciences Society annual meeting), I will be demonstrating how we may use orientation flow fields of texture and shading when making perceptual judgments of 3D shape structure (see <a href="http://www.pnas.org/content/early/2011/12/05/1114619109" target="_blank">Fleming, Holtmann-Rice, &amp; Bülthoff, 2011</a> for additional information).  Since I find visualizations fun, I decided to use some spare CPU cycles overnight to visualize the orientation fields of a rotating blobby object.</p>
+<p><center><br />
+<iframe loading="lazy" title="Color Fields - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/QPOvtm0OEEc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The object on the left in the above video is a textured and shaded object with a small amount of specular reflection (lit using the <a href="http://www.pauldebevec.com/Probes/" target="_blank">Debvec Funston Beach at Sunset light probe</a>).  On the right, I&#8217;m illustrating the dominant orientations in the image, across the surface of the object.</p>
+<p>Click through for some more visualizations.<br />
+<span id="more-3042"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="OF - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/5ni6tZCUPuU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The above video illustrates the vector field&#8217;s dominant orientations as well as the kurtosis/&#8221;peakedness&#8221; of the orientated filter response distributions (reflected in the size of the vectors).</p>
+<p><center><br />
+<iframe loading="lazy" title="Gray LIC - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/y9RVw4RDIUg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Using <a href="http://en.wikipedia.org/wiki/Line_integral_convolution" target="_blank">line integral convolution</a>, we get a better visualization of the global structure of the orientation field.  Note that the above LIC images were computed in MATLAB using the <a href="http://sccn.ucsd.edu/~nima/" target="_blank">Matlab Vector Field Visualization toolkit</a>.</p>
+<p><center><br />
+<iframe loading="lazy" title="Color LIC - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/NF8ii91Vq3I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The LIC images in the video above were computed in Mathematica and colored as a function of the orientation field&#8217;s dominant orientation.</p>
+<p><center><br />
+<iframe loading="lazy" title="All Cues - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/QSGdmUTk7Wk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Finally, a video illustrating all the aforementioned visualization techniques simultaneously.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Visual perception of the physical stability of asymmetric three-dimensional objects</title>
+		<link>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/</link>
+					<comments>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2013 13:28:17 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Stability]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3062</guid>
+
+					<description><![CDATA[I recently published an article in the Journal of Vision with my PhD advisor, Manish Singh, and my current Postdoctoral advisor, Roland W. Fleming: Cholewiak, S. A., Fleming, R. W., &#038; Singh, M. (2013). Visual perception of the physical stability of asymmetric three-dimensional objects. Journal of Vision, 13(4), 1–13. doi: 10.1167/13.4.12 Here&#8217;s the abstract: Visual [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently published an article in the Journal of Vision with my PhD advisor, <a href="http://ruccs.rutgers.edu/manish">Manish Singh</a>, and my current Postdoctoral advisor, <a href="http://www.allpsych.uni-giessen.de/roland/">Roland W. Fleming</a>:</p>
+<div style="position:relative;">
+<div style="float:right;">
+<a href="http://dx.doi.org/10.1167/13.4.12" target="_blank"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2013/04/JOV-03375-2012R1-3.gif" alt="JOV-03375-2012R1-3" width="96" height="96" class="alignright size-full wp-image-3067" /></a>
+</div>
+<p>Cholewiak, S. A., <a href="http://www.allpsych.uni-giessen.de/roland/">Fleming, R. W.</a>, &#038; <a href="http://ruccs.rutgers.edu/manish">Singh, M.</a> (2013). <a href="http://dx.doi.org/10.1167/13.4.12" target="_blank">Visual perception of the physical stability of asymmetric three-dimensional objects.</a> <em>Journal of Vision, 13(4)</em>, 1–13. doi: <a href="http://dx.doi.org/10.1167/13.4.12">10.1167/13.4.12</a>
+</div>
+<div style="clear:both;"></div>
+<p>Here&#8217;s the abstract:</p>
+<blockquote><p>Visual estimation of object stability is an ecologically important judgment that allows observers to predict the physical behavior of objects. A natural method that has been used in previous work to measure perceived object stability is the estimation of perceived “critical angle”—the angle at which an object appears equally likely to fall over versus return to its upright stable position. For an asymmetric object, however, the critical angle is not a single value, but varies with the direction in which the object is tilted. The current study addressed two questions: (a) Can observers reliably track the change in critical angle as a function of tilt direction? (b) How do they visually estimate the overall stability of an object, given the different critical angles in various directions? To address these questions, we employed two experimental tasks using simple asymmetric 3D objects (skewed conical frustums): settings of critical angle in different directions relative to the intrinsic skew of the 3D object (Experiment 1), and stability matching across 3D objects with different shapes (Experiments 2 and 3). Our results showed that (a) observers can perceptually track the varying critical angle in different directions quite well; and (b) their estimates of overall object stability are strongly biased toward the minimum critical angle (i.e., the critical angle in the least stable direction). Moreover, the fact that observers can reliably match perceived object stability across 3D objects with different shapes suggests that perceived stability is likely to be represented along a single dimension.</p></blockquote>
+<p>Want to cite us? Click through for the BibTeX source.<br />
+<span id="more-3062"></span></p>
+<p>[code]@ARTICLE{Cholewiak2013,<br />
+  author = {Cholewiak, Steven A. and Fleming, Roland W. and Singh, Manish},<br />
+  title = {Visual perception of the physical stability of asymmetric three-dimensional<br />
+    objects},<br />
+  journal = {Journal of Vision},<br />
+  year = {2013},<br />
+  volume = {13},<br />
+  pages = {1&#8211;13},<br />
+  number = {4},<br />
+  abstract = {Visual estimation of object stability is an ecologically important<br />
+    judgment that allows observers to predict the physical behavior of<br />
+    objects. A natural method that has been used in previous work to<br />
+    measure perceived object stability is the estimation of perceived<br />
+    &#8220;critical angle&#8221; &#8212; the angle at which an object appears equally<br />
+    likely to fall over versus return to its upright stable position.<br />
+    For an asymmetric object, however, the critical angle is not a single<br />
+    value, but varies with the direction in which the object is tilted.<br />
+    The current study addressed two questions: (a) Can observers reliably<br />
+    track the change in critical angle as a function of tilt direction?<br />
+    (b) How do they visually estimate the overall stability of an object,<br />
+    given the different critical angles in various directions? To address<br />
+    these questions, we employed two experimental tasks using simple<br />
+    asymmetric 3D objects (skewed conical frustums): settings of critical<br />
+    angle in different directions relative to the intrinsic skew of the<br />
+    3D object (Experiment 1), and stability matching across 3D objects<br />
+    with different shapes (Experiments 2 and 3). Our results showed that<br />
+    (a) observers can perceptually track the varying critical angle in<br />
+    different directions quite well; and (b) their estimates of overall<br />
+    object stability are strongly biased toward the minimum critical<br />
+    angle (i.e., the critical angle in the least stable direction). Moreover,<br />
+    the fact that observers can reliably match perceived object stability<br />
+    across 3D objects with different shapes suggests that perceived stability<br />
+    is likely to be represented along a single dimension.},<br />
+  doi = {10.1167/13.4.12},<br />
+  eprint = {http://www.journalofvision.org/content/13/4/12.full.pdf+html},<br />
+  file = {Article:http&#58;&#92;semifluid.com&#92;wp-content&#92;uploads&#92;2013\&#92;&#48;3&#92;Cholewiak-Fleming-Singh-2013-Visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects.pdf:URL},<br />
+  owner = {Steven A. Cholewiak},<br />
+  url = {http://www.journalofvision.org/content/13/4/12.abstract}<br />
+}<br />
+[/code]</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/04/24/visual-perception-of-the-physical-stability-of-asymmetric-three-dimensional-objects/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Effect of Environment Map Blur on Perceived Surface Properties</title>
+		<link>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/</link>
+					<comments>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2012 22:45:22 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1723</guid>
+
+					<description><![CDATA[Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects. I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on Google Code). Starting with the Debevec light probes, I applied a [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects.</p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 01 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3gaONCvBJRQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on <a href="http://code.google.com/p/cubemapgen/" target="_blank">Google Code</a>).  Starting with the <a href="http://www.pauldebevec.com/Probes/" target="_blank">Debevec light probes</a>, I applied a Gaussian blur with increasing kernel size (10&deg;, 20&deg;, 30&deg;, 40&deg;, and 50&deg;), creating 6 cube maps (one for each blur).  In the videos, the cube maps have increasing blur from left-to-right, top-to-bottom.  Note that I did not tone-map or account for changes in overall exposure (so the specular reflections can appear blown-out, especially for the higher blurs).  After the break, you can see the effect using different light probes (and different shapes).</p>
+<p><span id="more-1723"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 02 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/0eRuVMIyd_I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 03 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/TZHuzYsSQWk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 04 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/iwtzi6ceIQk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 05 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/UL6pS8uJkKs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 06 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/IUTFkdQKlZQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 07 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/Sq9I9ljXJk0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 08 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3tKv_fHs_tQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 09 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/hs6D8yxKURQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Misperceived axis of rotation for objects with specular reflections</title>
+		<link>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/</link>
+					<comments>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 15 Dec 2012 12:00:12 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1608</guid>
+
+					<description><![CDATA[Katja Dörschner visited JLU last week and talked about her work investigating structure from motion with specular reflections and textures (see more info in her recent paper: Doerschner, Fleming, Yilmaz, Schrater, Hartung, &#38; Kersten, 2011). She showed an interesting situation where the axis of rotation of a 3D teapot was misperceived due to the motion [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.bilkent.edu.tr/~katja/" target="_blank">Katja Dörschner</a> visited <a href="http://www.uni-giessen.de/" target="_blank">JLU</a> last week and talked about her work investigating structure from motion with specular reflections and textures (see more info in her recent paper: <a href="https://www.cell.com/current-biology/retrieve/pii/S0960982211011973" target="_blank">Doerschner, Fleming, Yilmaz, Schrater, Hartung, &amp; Kersten, 2011</a>).  She showed an interesting situation where the axis of rotation of a 3D teapot was misperceived due to the motion of the specular reflections on the surface of the teapot (see: <a href="http://www.perceptionweb.com/abstract.cgi?id=v110297" target="_blank">Yilmaz, Kucukoglu, Fleming, &amp; Doerschner, 2011</a>), an effect first demonstrated by <a href="http://vision.psych.umn.edu/users/kersten/kersten-lab/demos/MatteOrShiny.html" target="_blank">Hartung and Kersten (2002)</a>.</p>
+<p>Using the OpenGL/Psychtoolbox framework I have previously described, I replicated this interesting effect.  When you play the following movie, a 3D sphere (with sinusoidal perturbations) is rotated.  Note the axis of perceived rotation when the object has specular reflections (1st half of the movie) and when the environment map is &#8220;painted&#8221; onto the surface (2nd half of the movie).</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12" width="648" height="365" src="https://www.youtube.com/embed/YSl8G7IRgrg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The physical motion of the object is the same in both cases &#8212; the object rotates around the vertical axis.  When the object only has specular reflections, it appears to rotate around an <a href="https://en.wikipedia.org/wiki/Angle#Types_of_angles" target="_blank">oblique</a> 45&deg; axis, but when textured it rotates around the vertical axis.  After the break, I show similar effects when the object is rotated around the horizontal axis, 45&deg; axis, and when the spatial frequency of the perturbation is manipulated.</p>
+<p><span id="more-1608"></span></p>
+<p>Here is the same object, now rotated around the horizontal axis.  We have the same perceived effect, rotation around the oblique 45&deg; axis when only specular reflections are present.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12 - 90 degree" width="648" height="365" src="https://www.youtube.com/embed/p9-gLIITRrw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Here is the same sphere, now rotated around an axis 45&deg; off-vertical.  Note that the motion for the specular case appears the same when the object is rotated around the vertical and horizontal axis (as shown above) or around the 45&deg; axis (shown below).  However, the motion is clearly different when the object is textured.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12 - 45 degree" width="648" height="365" src="https://www.youtube.com/embed/QF98JRZsmR0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Neat, right?</p>
+<p>Now, here&#8217;s a series of videos illustrating the effect for perturbations with different spatial frequencies.  Note the changes in perceived object geometry and axis of rotation for low and high frequency perturbations.</p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 3" width="648" height="365" src="https://www.youtube.com/embed/uepPmnfGMxU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 6" width="648" height="365" src="https://www.youtube.com/embed/bg1Qg0U32lo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 12" width="648" height="365" src="https://www.youtube.com/embed/YSl8G7IRgrg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Hartung and Kersten (2002) Style Motion - 24" width="648" height="365" src="https://www.youtube.com/embed/EwLs_hCkp2I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/15/misperceived-axis-of-rotation-for-objects-with-specular-reflections/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Blobby Eye Candy</title>
+		<link>/2012/12/07/blobby-eye-candy/</link>
+					<comments>/2012/12/07/blobby-eye-candy/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 08 Dec 2012 00:23:11 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1590</guid>
+
+					<description><![CDATA[Using the building blocks previously described (see 1, 2, 3, &#38; 4) along with some other creative coding, I have been able to generate some nice stimuli. Here is an example of a random shape being spun along the 3 axes while its surface properties (texture, shading, and specular reflections) are manipulated: 2 8 more [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Using the building blocks previously described (see <a href="http://semifluid.com/2012/12/05/2d-and-3d-perlin-noise-in-matlab/">1</a>, <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-continued/">2</a>, <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/">3</a>, &amp; <a href="http://semifluid.com/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">4</a>) along with some other creative coding, I have been able to generate some nice stimuli.  Here is an example of a <a href="http://semifluid.com/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">random shape</a> being spun along the 3 axes while its surface properties (<a href="https://en.wikipedia.org/wiki/Texture_mapping" target="_blank">texture</a>, <a href="https://en.wikipedia.org/wiki/Shading" target="_blank">shading</a>, and <a href="https://en.wikipedia.org/wiki/Specular_reflection" target="_blank">specular reflections</a>) are manipulated:</p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 1" width="648" height="365" src="https://www.youtube.com/embed/cRcvENhoq5Y?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><del datetime="2012-12-08T11:19:01+00:00">2</del> 8 more videos (with different shapes and illumination conditions) after the break.<br />
+<span id="more-1590"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 2" width="648" height="365" src="https://www.youtube.com/embed/stdSW7qyKyQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 3" width="648" height="365" src="https://www.youtube.com/embed/dYcfbcRwTAA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 4" width="648" height="365" src="https://www.youtube.com/embed/PK_IKJ_MUOY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 5" width="648" height="365" src="https://www.youtube.com/embed/x3KkPRY8Kgo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 6" width="648" height="365" src="https://www.youtube.com/embed/6cHsGiK0V1Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 7" width="648" height="365" src="https://www.youtube.com/embed/jdGNWhGXD4w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 8" width="648" height="365" src="https://www.youtube.com/embed/Y_EhCrb761w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Shading, Texture, and Specular Reflection Demo 9" width="648" height="365" src="https://www.youtube.com/embed/hevD9gFs9UE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/07/blobby-eye-candy/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

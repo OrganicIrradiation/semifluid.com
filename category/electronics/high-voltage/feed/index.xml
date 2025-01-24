@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>High Voltage &#8211; semifluid.com</title>
+	<atom:link href="/category/electronics/high-voltage/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:21:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Website Host Transfer Complete + Sparks</title>
+		<link>/2007/01/18/website-host-transfer-complete-sparks/</link>
+					<comments>/2007/01/18/website-host-transfer-complete-sparks/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 18 Jan 2007 15:47:33 +0000</pubDate>
+				<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[High Voltage]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=41</guid>
+
+					<description><![CDATA[I&#8217;ve completed the server move and the DNS changes, so hopefully everything will now work. There was a problem with the email program (cgiemail) during the transfer, but it seems as though I resolved the problem by using a different script (FormMail). Please feel free to send me an email or leave a comment in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve completed the server move and the DNS changes, so hopefully everything will now work.  There was a problem with the email program (<a target="_blank" href="http://web.mit.edu/wwwdev/cgiemail/">cgiemail</a>) during the transfer, but it seems as though I resolved the problem by using a different script (<a target="_blank" href="http://www.scriptarchive.com/formmail.html">FormMail</a>).  Please feel free to <a target="_blank" href="http://semifluid.com/contact-me/">send me an email</a> or leave a comment in this post if there are any problems.</p>
+<div style="text-align: center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/361611096/"><img fetchpriority="high" decoding="async" width="500" height="268" alt="High Voltage Sparks Over and Through Red LED 2/3" src="http://farm1.static.flickr.com/159/361611096_d5c9741533.jpg" /></a></div>
+<div style="height: 16px;">
+</div>
+<p>As an added bonus, I&#8217;ve attached some pictures of sparks generated with my <a href="http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/">high voltage power supply</a>, which I was able to fix.  It appears as though the old MOSFET had blown, so I was able to recreate the circuit with no issues.  Continue to the post for a few more pictures.<span id="more-41"></span></p>
+<div style="text-align: center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/361611093/"><img decoding="async" width="500" height="241" alt="High Voltage Sparks Over and Through Red LED 1/3" src="http://farm1.static.flickr.com/161/361611093_0099402b40.jpg" /></a></div>
+<div style="height: 16px;">
+</div>
+<div style="text-align: center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/361611097/"><img decoding="async" width="500" height="353" alt="High Voltage Sparks Over and Through Red LED 3/3" src="http://farm1.static.flickr.com/130/361611097_14182cae4c.jpg" /></a></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/01/18/website-host-transfer-complete-sparks/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Some More High Voltage Videos</title>
+		<link>/2006/11/16/some-more-high-voltage-videos/</link>
+					<comments>/2006/11/16/some-more-high-voltage-videos/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2006 16:12:33 +0000</pubDate>
+				<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[High Voltage]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=36</guid>
+
+					<description><![CDATA[Last night a number of events conspired against me and my geeky endeavors: My flyback transformer driver was working intermittently for a period of time then suddenly stopped working. It seems as though there is a problem with either the 7805 or the PIC12F683, but I can&#8217;t pinpoint the problem because of events 2 and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Last night a number of events conspired against me and my geeky endeavors:</p>
+<ol>
+<li>My <a href="http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/">flyback transformer driver</a> was working intermittently for a period of time then suddenly stopped working.  It seems as though there is a problem with either the 7805 or the PIC12F683, but I can&#8217;t pinpoint the problem because of events 2 and 3 below.  I&#8217;ll have to double check to make sure that I didn&#8217;t accidentally fry any components with, ironically, static discharge.</li>
+<li>My multimeter was accidentally left on the last time I used it, so the batteries were dead and I couldn&#8217;t check the voltages at different points in the circuit (to determine whether the PIC was switching the driver MOSFET).  Why does this always happen at the most inopportune times?</li>
+<li>My <a target="_blank" href="http://kitsrus.com/pdf/k128intro.pdf">PIC programmer</a> is no longer recognizing any of my PICs.  I&#8217;m hoping that there&#8217;s just a problem with the firmware and that I can fix it by borrowing a friend&#8217;s programmer to reflash it, but nothing I could do last night would make the programmer recognize PIC12F675s, PIC12F683s, or PIC16F628s.  Maybe this is a sign that I should get an ICD2&#8230;</li>
+</ol>
+<p>So, in short, it was an overall crappy night.  So, here are some of the latest videos with the high voltage flyback transformer zapping some more beer, rum, and just plain arcing just for the heck of it.  I&#8217;m heading back home tomorrow for Thanksgiving tomorrow, so I won&#8217;t be able to debug the problems until I get back.<span id="more-36"></span></p>
+<p>Beer:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Beer Part Deux" width="648" height="486" src="https://www.youtube.com/embed/p71ZV_FIjG0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Rum:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Rum Part Deux" width="648" height="486" src="https://www.youtube.com/embed/wYSpFJknKiw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Arcing:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Arcing" width="648" height="486" src="https://www.youtube.com/embed/pO61zzte_oc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/11/16/some-more-high-voltage-videos/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC12F683 High Voltage Flyback Transformer Driver</title>
+		<link>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/</link>
+					<comments>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 13 Nov 2006 19:00:01 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[High Voltage]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC12F683]]></category>
+		<guid isPermaLink="false">/?p=34</guid>
+
+					<description><![CDATA[A friend at Purdue University (Sumanth Peddamatham) helped motivate and inspire me to create a high voltage flyback transformer driver for a computer CRT flyback transformer. While the schematic and code for driving the transformer are extremely straightforward and simple, finding and obtaining a high quality solid state flyback transformer can be difficult. Please note [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" class="alignleft" title="PIC12F683 High Voltage Flyback Transformer Driver" src="http://static.flickr.com/86/229774371_151043a913_m.jpg" alt="PIC12F683 High Voltage Flyback Transformer Driver" />A friend at <a href="http://www.purdue.edu/" target="_blank">Purdue University</a> (Sumanth Peddamatham) helped motivate and inspire me to create a high voltage <a href="https://en.wikipedia.org/wiki/Flyback_transformer" target="_blank">flyback transformer</a> driver for a computer <a href="https://en.wikipedia.org/wiki/Cathode_ray_tube" target="_blank">CRT</a> flyback transformer. While the schematic and code for driving the transformer are extremely straightforward and simple, finding and obtaining a high quality solid state flyback transformer can be difficult. Please note that the voltages generated by the flyback transformer are potentially very dangerous, so extreme care must be exercised when building and/or using the schematic presented in this project. Diode split flyback transformers (like the one used in this project) can output 25kV or more.<span id="more-34"></span></p>
+<p><strong>Disclaimer</strong>: <em>The high voltage devices and schematics presented on this website (<a href="http://semifluid.com/">/</a>) and the pages herein are for educational and experimental purposes only. Build and/or use at your own risk. I cannot be held liable or responsible and will not accept any type of liability in any event, in case of injury, damage to persons or property, or even death by building and/or using this device or any other high voltage device posted on this website. By accessing, reading, and/or printing the articles presented here you agree to be solely responsible and exempt me from any criminal and/or lability charges and/or suits. Please note that safety is the primary concern when working with high voltage circuits. Always be careful, use extreme caution with high voltage circuits, and play it safe!</em></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/11/Full-Circuit.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-984" title="PIC12F683 High Voltage Flyback Transformer Driver Full Circuit" src="http://semifluid.com/wp-content/uploads/2006/11/Full-Circuit-300x128.gif" alt="" width="300" height="128" srcset="/wp-content/uploads/2006/11/Full-Circuit-300x128.gif 300w, /wp-content/uploads/2006/11/Full-Circuit-1024x438.gif 1024w, /wp-content/uploads/2006/11/Full-Circuit.gif 1564w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>Here is the full schematic for the driver. Yes, it is this simple. All that is needed is a power supply (preferably &gt;9V), a <a href="https://www.fairchildsemi.com/products/power-management/voltage-regulators/positive-voltage-linear-regulators/LM7805.html" target="_blank">7805</a> +5V linear voltage regulator, decoupling capacitors (C1, C2, &amp; C3), a PIC12F683, a suitable logic level <a href="https://en.wikipedia.org/wiki/MOSFET#Power_MOSFET" target="_blank">power MOSFET</a> (I used an IRL530), and a flyback transformer. It is important to note that the MOSFET needs to be heatsinked, otherwise it could overheat.</p>
+<p>JP2 (FBPriP) is the positive input of the primary winding, JP3 (FBPriG) is the ground/negative input of the primary winding, and JP4 (FBSecP) and JP5 (FBSecG) are the positive and negative outputs of the secondary winding where the high voltage is generated.</p>
+<p>The flyback transformer was found in a broken 21&#8243; CRT monitor. An alternative to opening a CRT and exposing yourself to potentially <a href="https://en.wikipedia.org/wiki/Cathode_ray_tube#Health_danger" target="_blank">harmful voltages</a> is to purchase a replacement flyback transformer from a surplus store or from eBay. I experimented with the driving frequency to find the optimal output and found that 20kHz produced the longest arcs for this flyback transformer.</p>
+<p>As always, please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any questions about the setup and as the disclaimer above says:<em> Always be careful, use extreme caution with high voltage circuits, and play it safe!</em></p>
+<p><strong>Source Code</strong><br />
+This is the source code for the driver. Please note that the driving frequency can be adjusted by changing the following line:</p>
+<blockquote><p><em>delay_us(25);</em></p></blockquote>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/11/12F683-Flyback-Driver.c">12F683 Flyback Driver.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/11/12F683-Flyback-Driver.hex">hex</a>)</p>
+<p><strong>Videos<br />
+</strong><a href="http://semifluid.com/2006/11/11/high-voltage-flyback-transformer-videos/">Here</a> are three videos of the PIC12F683 High Voltage Flyback Transformer Driver in action. The first video demonstrates the high voltage arcing through a beercap-ful of beer (<a href="http://www.stellaartois.com/" target="_blank">Stella Artois</a>) with a power supply voltage of 9V. The second video demonstrates the high voltage arcing through a cap-ful of rum (<a href="http://sailorjerry.com/the-rum/" target="_blank">Sailor Jerry</a>) with a 24V supply voltage. The third video demonstrates the high voltage arcing through a cap-ful of pancake syrup with a 24V supply voltage.</p>
+<p><strong>Pictures</strong><br />
+Here are a couple of pictures from experimenting with the driver:</p>
+<div align="center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/229774371/"><img decoding="async" title="High Voltage Over and Through Red LED" src="http://static.flickr.com/86/229774371_151043a913.jpg" alt="High Voltage Over and Through Red LED" /></a></div>
+<div style="height: 16px;"></div>
+<div align="center"><a title="Photo Sharing" href="http://www.flickr.com/photos/scholewiak/229774372/"><img loading="lazy" decoding="async" src="http://static.flickr.com/97/229774372_6cd271ffd9.jpg" alt="High Voltage Sparks" width="273" height="500" /></a></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/feed/</wfw:commentRss>
+			<slash:comments>25</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>High Voltage Flyback Transformer Videos</title>
+		<link>/2006/11/11/high-voltage-flyback-transformer-videos/</link>
+					<comments>/2006/11/11/high-voltage-flyback-transformer-videos/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 11 Nov 2006 21:31:10 +0000</pubDate>
+				<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[High Voltage]]></category>
+		<guid isPermaLink="false">/?p=32</guid>
+
+					<description><![CDATA[Here are a couple of videos from my high voltage flyback transformer driver. Beer: Rum: Pancake Syrup:]]></description>
+										<content:encoded><![CDATA[<p>Here are a couple of videos from my high voltage <a href="http://semifluid.com/2006/11/13/pic12f683-high-voltage-flyback-transformer-driver/">flyback transformer driver</a>.</p>
+<p>Beer:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Beer" width="648" height="486" src="https://www.youtube.com/embed/13p6FDLcWSQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-32"></span></p>
+<p>Rum:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Rum" width="648" height="486" src="https://www.youtube.com/embed/X4jSv9AUIFc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Pancake Syrup:<br />
+<center><br />
+<iframe loading="lazy" title="High Voltage Pancake Syrup" width="648" height="486" src="https://www.youtube.com/embed/nj4TVufU16E?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/11/11/high-voltage-flyback-transformer-videos/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

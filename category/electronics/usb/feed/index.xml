@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>USB &#8211; semifluid.com</title>
+	<atom:link href="/category/electronics/usb/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 26 Jan 2017 21:20:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>PIC18F2550 USB HID IO</title>
+		<link>/2006/03/28/pic18f2550-usb-hid-io/</link>
+					<comments>/2006/03/28/pic18f2550-usb-hid-io/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 28 Mar 2006 17:00:43 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[USB]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=23</guid>
+
+					<description><![CDATA[After completing the PIC18F2550 USB HID Oscilloscope, I decided to expand upon the project and firmware to include multiple analog inputs and digital i/o. The base firmware for this project is the same as the PIC18F2550 USB HID Oscilloscope&#8216;s; however, more features have been added that allow the user to access the PIC18F2550&#8217;s Port B [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img fetchpriority="high" decoding="async" class="alignleft size-full wp-image-718" title="PIC18F2550 USB HID IO" src="http://semifluid.com/wp-content/uploads/2006/03/PIC18F2550_usb_hid_io.jpg" alt="" width="280" height="210" />After completing the <a href="http://semifluid.com/2006/01/31/pic12f675-oscilloscope/">PIC18F2550 USB HID Oscilloscope</a>, I decided to expand upon the project and firmware to include multiple analog inputs and digital <a href="https://en.wikipedia.org/wiki/Input/output">i/o</a>. The base firmware for this project is the same as the <a href="http://semifluid.com/2006/01/31/pic12f675-oscilloscope/">PIC18F2550 USB HID Oscilloscope</a>&#8216;s; however, more features have been added that allow the user to access the PIC18F2550&#8217;s Port B for digital i/o. In addition, the firmware now allows the user to access the AN0-AN4 analog pins for monitoring and data acquisition.<span id="more-23"></span></p>
+<p><strong>Full Circuit</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/Full-Circuit.gif"><img decoding="async" class="alignright size-medium wp-image-723" title="PIC18F2550 USB HID IO Schematic" src="http://semifluid.com/wp-content/uploads/2006/03/Full-Circuit-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/Full-Circuit-300x139.gif 300w, /wp-content/uploads/2006/03/Full-Circuit-1024x474.gif 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>The source and firmware for the circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic. All of the sections and their components are described and discussed below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Analog Inputs</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/Analog-Inputs.gif"><img decoding="async" class="alignright size-medium wp-image-721" title="PIC18F2550 USB HID IO Analog Inputs" src="http://semifluid.com/wp-content/uploads/2006/03/Analog-Inputs-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/Analog-Inputs-300x139.gif 300w, /wp-content/uploads/2006/03/Analog-Inputs-1024x474.gif 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>The 5 analog inputs are connected to pins A0, A1, A2, A3, and A5, which are configured to be analog inputs. Please note that &#8220;The source impedance affects the offset voltage at the analog input (due to pin leakage current). The maximum recommended impedance for analog sources is 2.5 kOhms.&#8221; (PIC18F2550, p.260)</p>
+<p><strong>Digital Inputs/Outputs</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/Digital-IO.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-722" title="PIC18F2550 USB HID IO Digital IO" src="http://semifluid.com/wp-content/uploads/2006/03/Digital-IO-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/Digital-IO-300x139.gif 300w, /wp-content/uploads/2006/03/Digital-IO-1024x474.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a>The digital inputs and outputs share Port B. Please note that:<br />
+Maximum output current sunk by any I/O pin = 25 mA<br />
+Maximum output current sourced by any I/O pin = 25 mA<br />
+Maximum current sunk by all ports = 200 mA<br />
+Maximum current sourced by all ports = 200 mA</p>
+<p><strong>Microcontroller</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/Microcontroller.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-724" title="PIC18F2550 USB HID IO Microcontroller" src="http://semifluid.com/wp-content/uploads/2006/03/Microcontroller-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/Microcontroller-300x139.gif 300w, /wp-content/uploads/2006/03/Microcontroller-1024x474.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a>The microcontroller used is a Microchip PIC18F2550. I modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 20MHz crystal/resonator at 115,200 baud (the modified bootloader can be found at the bottom of the page). The PIC18F2550 runs at 48MHz using the internal <a href="https://en.wikipedia.org/wiki/PLL">PLL</a>. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator, which is used in this project. The component marked &#8216;RES&#8217; is a 20MHz resonator.</p>
+<p><strong>RS232 Level Converter</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/RS232-Level-Converter.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-726" title="PIC18F2550 USB HID IO RS232 Level Converter" src="http://semifluid.com/wp-content/uploads/2006/03/RS232-Level-Converter-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/RS232-Level-Converter-300x139.gif 300w, /wp-content/uploads/2006/03/RS232-Level-Converter-1024x474.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a>The microcontroller USART pins need to be connected to a <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a> to connect to a PC for firmware updates using the Tiny PIC Bootloader. Otherwise, after initial programming they can be left disconnected.</p>
+<p><strong>USB I/O</strong><br />
+<a href="http://semifluid.com/wp-content/uploads/2006/03/USB-IO.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-727" title="PIC18F2550 USB HID IO USB IO" src="http://semifluid.com/wp-content/uploads/2006/03/USB-IO-300x139.gif" alt="" width="300" height="139" srcset="/wp-content/uploads/2006/03/USB-IO-300x139.gif 300w, /wp-content/uploads/2006/03/USB-IO-1024x474.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a>The PIC is connected to the computer through a <a href="https://en.wikipedia.org/wiki/USB">USB</a> port and is bus-powered.</p>
+<p><strong>Source and Firmware</strong><br />
+The PIC must initially programmed with the &#8216;SAC_tinybld18F2550usb _20MHz_115200_48MHz&#8217; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/SAC_tinybld18F2550usb_20MHz_115200_48MHz.hex">SAC_tinybld18F2550usb_20MHz_115200_48MHz.HEX</a></li>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-IO.c">18F2550 USB HID CRC IO.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-IO.hex">hex</a>)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/usb_desc_hid-8-byte.h">usb_desc_hid 8-byte.h</a></li>
+<li>Visual Basic example software and source code: <a href="http://semifluid.com/wp-content/uploads/2006/03/PIC18F2550-USB-HID-IO-VB-Example.zip">PIC18F2550 USB HID IO VB Example.zip</a></li>
+</ul>
+<p><strong>Update (November 15, 2006)</strong><br />
+Here is the firmware without the bootloader code:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-IO-no-bootloader.c">18F2550 USB HID CRC IO &#8211; no bootloader.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-IO-no-bootloader.hex">hex</a>)</li>
+</ul>
+<p><strong>Update 2 (December 18, 2006)</strong><br />
+Here are untested PIC18F4550 firmwares:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/18F4550-USB-HID-CRC-IO.c">18F4550 USB HID CRC IO.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/03/18F4550-USB-HID-CRC-IO.hex">hex</a>)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2006/03/18F4550-USB-HID-CRC-IO-no-bootloader.c">18F4550 USB HID CRC IO &#8211; no bootloader.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/03/18F4550-USB-HID-CRC-IO-no-bootloader.hex">hex</a>)</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/03/28/pic18f2550-usb-hid-io/feed/</wfw:commentRss>
+			<slash:comments>90</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PIC18F2550 USB HID Oscilloscope</title>
+		<link>/2006/03/27/pic18f2550-usb-hid-oscilloscope/</link>
+					<comments>/2006/03/27/pic18f2550-usb-hid-oscilloscope/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 27 Mar 2006 17:00:35 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC18F2550]]></category>
+		<category><![CDATA[USB]]></category>
+		<guid isPermaLink="false">http://semifluid.com/blog/?p=24</guid>
+
+					<description><![CDATA[This is a project that I&#8217;ve been planning on putting together for a long time. After creating an oscilloscope using a PIC12F675, I wanted to create a simple and effective USB oscilloscope using the higher performance PIC18F2550. During the development of this project, I learned quite a bit about USB HID communication, which allows me [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-735" title="PIC18F2550 USB HID Oscilloscope" src="http://semifluid.com/wp-content/uploads/2006/03/PIC18F2550_usb_hid_oscilloscope.jpg" alt="" width="280" height="200" />This is a project that I&#8217;ve been planning on putting together for a long time. After creating an oscilloscope using a <a href="http://semifluid.com/2006/01/31/pic12f675-oscilloscope/">PIC12F675</a>, I wanted to create a simple and effective USB oscilloscope using the higher performance PIC18F2550. During the development of this project, I learned quite a bit about USB HID communication, which allows me to quickly and effectively communicate with the desktop computer. Using HID means that this oscilloscope does not require drivers (only the oscilloscope software).<span id="more-24"></span></p>
+<p><strong>Full Circuit</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/03/Full-Circuit1.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-743" title="PIC18F2550 USB HID Oscilloscope Schematic" src="http://semifluid.com/wp-content/uploads/2006/03/Full-Circuit1-300x158.gif" alt="" width="300" height="158" srcset="/wp-content/uploads/2006/03/Full-Circuit1-300x158.gif 300w, /wp-content/uploads/2006/03/Full-Circuit1-1024x541.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The source and firmware for the circuit can be found at the bottom of the page. Each section of the circuit is labeled in the schematic. All of the sections and their components are described and discussed below. The part numbers for the components are linked to websites for data and more information when available.</p>
+<p><strong>Analog Input</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/03/Analog-Input.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-742" title="PIC18F2550 USB HID Oscilloscope Analog Input" src="http://semifluid.com/wp-content/uploads/2006/03/Analog-Input-300x158.gif" alt="" width="300" height="158" srcset="/wp-content/uploads/2006/03/Analog-Input-300x158.gif 300w, /wp-content/uploads/2006/03/Analog-Input-1024x541.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The analog input for the oscilloscope is connected to the A0 pin, which is configured to be an analog input. Please note that &#8220;The source impedance affects the offset voltage at the analog input (due to pin leakage current). The maximum recommended impedance for analog sources is 2.5 kÎ©&#8221; (PIC18F2550, pp. 260).</p>
+<p><strong>Microcontroller</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/03/Microcontroller1.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-745" title="PIC18F2550 USB HID Oscilloscope Microcontroller" src="http://semifluid.com/wp-content/uploads/2006/03/Microcontroller1-300x158.gif" alt="" width="300" height="158" srcset="/wp-content/uploads/2006/03/Microcontroller1-300x158.gif 300w, /wp-content/uploads/2006/03/Microcontroller1-1024x541.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller used is a Microchip PIC18F2550. I modified the PIC18F2550 <a href="http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm">Tiny PIC Bootloader</a> assembly file so I could use a 20MHz crystal/resonator at 115,200 baud (the modified bootloader can be found at the bottom of the page). The PIC18F2550 runs at 48MHz using the internal <a href="https://en.wikipedia.org/wiki/PLL">PLL</a>. R1 is a pull-up resistor necessary for operation. C1 is a stabilizing capacitor that is used for the onboard USB voltage regulator, which is used in this project. The component marked &#8216;RES&#8217; is a 20MHz resonator.</p>
+<p><strong>RS232 Level Converter</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/03/RS232-Level-Converter1.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-747" title="PIC18F2550 USB HID Oscilloscope RS232 Level Converter" src="http://semifluid.com/wp-content/uploads/2006/03/RS232-Level-Converter1-300x158.gif" alt="" width="300" height="158" srcset="/wp-content/uploads/2006/03/RS232-Level-Converter1-300x158.gif 300w, /wp-content/uploads/2006/03/RS232-Level-Converter1-1024x541.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The microcontroller USART pins need to be connected to a <a href="http://semifluid.com/2006/01/31/rs-232-level-converter/">RS-232 Level Converter</a> to connect to a PC for firmware updates using the Tiny PIC Bootloader. Otherwise, after initial programming they can be left disconnected.</p>
+<p><strong>USB I/O</strong></p>
+<p><a href="http://semifluid.com/wp-content/uploads/2006/03/USB-IO1.gif"><img loading="lazy" decoding="async" class="alignright size-medium wp-image-738" title="PIC18F2550 USB HID Oscilloscope USB IO" src="http://semifluid.com/wp-content/uploads/2006/03/USB-IO1-300x158.gif" alt="" width="300" height="158" srcset="/wp-content/uploads/2006/03/USB-IO1-300x158.gif 300w, /wp-content/uploads/2006/03/USB-IO1-1024x541.gif 1024w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></p>
+<p>The PIC is connected to the computer through a <a href="https://en.wikipedia.org/wiki/USB">USB</a> port and is bus-powered.</p>
+<p><strong>Source and Firmware</strong></p>
+<p>The PIC must initially programmed with the &#8216;SAC_tinybld18F2550usb _20MHz_115200_48MHz&#8217; hex file to program the bootloader on the PIC. Then, using Tiny PIC Bootloader, the hex file can be placed on the chip using the Tiny PIC Bootloader <a href="http://www.etc.ugal.ro/cchiculita/software/tinybldusage.htm">frontend</a> with &#8217;12h 34h 56h 78h 90h&#8217; in the &#8216;List of codes to send first:&#8217; in the &#8216;Options&#8217; menu. Please feel free to <a href="http://semifluid.com/contact-me/">contact me</a> if you have any problems.<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/03/SAC_tinybld18F2550usb_20MHz_115200_48MHz.hex">SAC_tinybld18F2550usb_20MHz_115200_48MHz.hex</a><br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-Oscilloscope.c">18F2550 USB HID CRC Oscilloscope.c</a> (<a href="http://semifluid.com/wp-content/uploads/2006/03/18F2550-USB-HID-CRC-Oscilloscope.c">hex</a>)<br />
+&#8211; <a href="http://semifluid.com/wp-content/uploads/2006/03/usb_desc_hid-8-byte.h">usb_desc_hid 8-byte.h</a><br />
+&#8211; Visual Basic example oscilloscope software with DFT: <a href="http://semifluid.com/wp-content/uploads/2006/03/PIC18F2550-USB-HID-Oscilloscope-DR1r1-VB-Example.zip">PIC18F2550 USB HID Oscilloscope DR1r1 VB Example.zip</a></p>
+<p><strong>Example Oscilloscope Images</strong></p>
+<table  class=" table table-hover" border="0" align="center">
+<tbody>
+<tr>
+<td><a href="http://semifluid.com/wp-content/uploads/2006/03/60Hz-from-finger.gif"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-741" title="60Hz-from-finger" src="http://semifluid.com/wp-content/uploads/2006/03/60Hz-from-finger-150x150.gif" alt="" width="150" height="150" /></a></td>
+<td><a href="http://semifluid.com/wp-content/uploads/2006/03/High-Speed.gif"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-744" title="High-Speed" src="http://semifluid.com/wp-content/uploads/2006/03/High-Speed-150x150.gif" alt="" width="150" height="150" /></a></td>
+</tr>
+<tr>
+<td><a href="http://semifluid.com/wp-content/uploads/2006/03/Square-Wave.gif"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-749" title="Square-Wave" src="http://semifluid.com/wp-content/uploads/2006/03/Square-Wave-150x150.gif" alt="" width="150" height="150" /></a></td>
+<td><a href="http://semifluid.com/wp-content/uploads/2006/03/Square-Wave-through-Cap.gif"><img loading="lazy" decoding="async" class="alignnone size-thumbnail wp-image-750" title="Square-Wave-through-Cap" src="http://semifluid.com/wp-content/uploads/2006/03/Square-Wave-through-Cap-150x150.gif" alt="" width="150" height="150" /></a></td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2006/03/27/pic18f2550-usb-hid-oscilloscope/feed/</wfw:commentRss>
+			<slash:comments>170</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

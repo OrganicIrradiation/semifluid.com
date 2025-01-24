@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iPhone &#8211; semifluid.com</title>
+	<atom:link href="/tag/iphone/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 15 Oct 2015 16:04:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Boodle &#8211; A stolen iPhone locator</title>
+		<link>/2008/05/13/boodle-a-stolen-iphone-locator/</link>
+					<comments>/2008/05/13/boodle-a-stolen-iphone-locator/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 13 May 2008 05:16:40 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[boodle]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[tracking]]></category>
+		<guid isPermaLink="false">/?p=113</guid>
+
+					<description><![CDATA[I recently purchased an iPhone and have wanted software that not only gave location information, like Erica Sadun&#8217;s wonderful findme software (or my, ahem, GPS projects), and sent phone information, like Fuel&#8217;s great WeeGee anti-theft package, but combined the tools into a more robust tracking utility. In other words, I wanted both location and information [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently purchased an iPhone and have wanted software that not only gave location information, like Erica Sadun&#8217;s wonderful findme software (or my, ahem, <a href="http://semifluid.com/category/electronics/gps/" target="_blank">GPS projects</a>), and sent phone information, like Fuel&#8217;s great WeeGee anti-theft package, but combined the tools into a more robust tracking utility.  In other words, I wanted both location and information tracking in my iPhone.  So, I set about combining the utilities into a script that will send location updates periodically to twitter and will email me with call history, SMS history, web history, location, and pictures if it is stolen.  Cool!</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/05/boodle_dr1r1.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-116" title="boodle_dr1r1" src="/wp-content/uploads/2008/05/boodle_dr1r1.jpg" alt="" width="500" height="190" /></a></p>
+<p><span id="more-113"></span></p>
+<p>I recently switched from Verizon Wireless to AT&amp;T. I have wanted a PDA phone for quite a while and Verizon never had any that seemed to satisfy my needs for an afforable price (I tried the Motorola Q9m and the <a href="http://www.engadget.com/2006/09/13/htc-libra-utstarcom-5800-also-revealed/" target="_blank">HTC SMT5800</a>, but both were large and difficult to pocket). After weighing all of the options (Sprint has been floundering, T-mobile doesn&#8217;t have the rural coverage I want and need, and the <a href="http://en.wikipedia.org/wiki/Mobile_virtual_network_operator" target="_blank">MVNOs</a> just don&#8217;t have the support that I&#8217;m looking for), I decided to try out the iPhone with AT&amp;T.</p>
+<p>I picked up a refurb at an Apple store in my area for about the same price as a new iPod touch and instantly fell in love with the device. The screen is beautiful and the features are just what I wanted and needed. Although I am paying more than cell-only service ($60 vs. $45), I am paying quite a bit less than I would have with VZW ($60 vs. $85). After 4 1/2 years with VZW, I switched to AT&amp;T for the iPhone and haven&#8217;t looked back.</p>
+<p>So, after playing with the phone for a bit and trying out some web apps (I tried to make a wine pairing web app using information screen-scraped from <a href="http://www.winewebcentral.com/winepairing/" target="_blank">an interesting web site</a> and a Virginia Wine Showcase Classic Wine Pairings handout), I decided to jailbreak my iPhone. Wow. If you have an iPhone or iPod touch, don&#8217;t wait. Honestly, it has become 10x more fun now that I can play with the innerworkings!</p>
+<p>So, getting back on focus with this article, I wanted some software that would &#8220;phone home&#8221; if it was stolen. There have been some interesting stories of people who have had their <a href="http://www.nytimes.com/2008/05/10/nyregion/10laptop.html?_r=1&amp;em&amp;ex=1210564800&amp;en=1e2fca4d1701c016&amp;ei=5087%0A&amp;oref=slogin" target="_blank">Macbooks</a>, <a href="http://www.boingboing.net/2007/09/24/idiot-criminal-uploa.html" target="_blank">iMacs</a>, and even Xboxes stolen and recovered due to monitoring software, so I thought I&#8217;d give it a try!</p>
+<p>Using Erica Sadun&#8217;s findme-muchbetter and pingwifi binaries and Fuel&#8217;s great WeeGee anti-theft package, I put together a system that sends a message to a private twitter account detailing the iPhone&#8217;s location and will send emails to me with the cell phone&#8217;s contents (call history, SMS history, web history, location, and pictures) if it is stolen (which I trigger by changing a value on a website).</p>
+<p>So, if you&#8217;re interested, here&#8217;s the package, <a href="/wp-content/uploads/2008/05/boodle_dr1r1.zip">boodle_dr1r1.zip</a>, and the readme:</p>
+<hr />
+<p>Boodle DR1r1<br />
+Code based on WeeGee v0.01 by Fuel, which was based upon mailsend and squide source code</p>
+<p>NOTE: All code is copyrighted unless explicitly stated otherwise.  Although my modifications were made under the assumption that the code is distributed under an open-source license and all modified code is available without license legalese, it may still be protected, so do not modify or distribute without acknowledging the authors!  All efforts have been made to acknowledge the original authors and their contributions when possible.</p>
+<p><strong>ABOUT</strong></p>
+<p>Boodle is a simple script for iPhone firmware 1.1.4 that allows a user to monitor his/her iPhone&#8217;s location using Twitter and to potentially recover information about the phone via email once it is marked as stolen (calls, SMS, web history, and photos taken).</p>
+<p><em>THIS IS ONLY MEANT FOR PERSONAL USE. NOTE: No anti-theft device is perfect and any protection scheme can be circumvented with a little effort, so DO NOT assume that you will be able to retrieve your iPhone (or any of the information stored within) if it is stolen. The author(s) of the scripts and software in the package shall have no liability to any persons or entities with respect to any loss, liability, or damage caused by the software package (i.e., if your iPhone is stolen, don&#8217;t assume that you will be able to track it down with this software). Install ONLY if you are the owner of the phone and are willing to assume responsibility for installing unstable software. PLEASE USE RESPONSIBLY.</em></p>
+<p><strong>REQUIREMENTS</strong></p>
+<p>A jailbroken iPhone (I recommend iLiberty+) with BSD Subsystem and Erica&#8217;s Ported Utilities installed. In addition, 4 helper applications need to be downloaded and placed in the /var/root/bin/boodle/ folder (see DOWNLOADS NECESSARY).</p>
+<p><strong>DOWNLOADS NECESSARY</strong></p>
+<p>mailsend from http://iphone.natetrue.com/FuelUtils/<br />
+Command line utility that sends mail in the background. Boodle uses this binary to send your data to you. Place this in /var/root/bin/boodle/</p>
+<p>reduceJPEG from http://iphone.natetrue.com/FuelUtils/<br />
+Command line utility that resizes JPEGs to save time when uploading. Place this in /var/root/bin/boodle/</p>
+<p>pingwifi from http://ericasadun.com/ftp/TUAW/findme/<br />
+Command line utility that pings the wifi so that the location of the phone can be calculated when it is asleep. Place this in /var/root/bin/boodle/</p>
+<p>findme-muchbetter from http://ericasadun.com/ftp/TUAW/findme/<br />
+Command line utility that gets location information.  Place this in /var/root/bin/boodle/</p>
+<p><strong>INCLUDED FILES</strong></p>
+<p>boodle.sh<br />
+This is the main script that does the work. Place this in /var/root/bin/boodle/</p>
+<p>findLocation.sh<br />
+A helper script that is used to query findme-muchbetter depending on the type of location information saught (wifi/cell/ip). Place this in /var/root/bin/boodle/</p>
+<p>com.semifluid.boodle.plist<br />
+Tells the iPhone to run the script every hour. Place this in /System/Library/LaunchDaemons/</p>
+<p><strong>CONFIGURING BOODLE.SH</strong></p>
+<p>At the top of the script, there are a number of variables you need to configure:</p>
+<p style="padding-left: 30px;">watchResponse &#8211; The command to query the server.<br />
+workPath &#8211; Path for files. Default is /var/root/bin/boodle<br />
+mailsendPath &#8211; Path for mailsend binary. Default is $workPath/mailsend<br />
+resizePath &#8211; Path for reduceJPEG binary. Default is $workPath/reduceJPEG<br />
+findmePath &#8211; Path of findme-muchbetter binary. Default is $workPath/findme-muchbetter<br />
+pingwifiPath &#8211; Path of pingwifi binary. Default is $workPath/pingwifi<br />
+smtpServer &#8211; Mail server IP address. Default is 64.233.167.109 (GMail).<br />
+smtpServerPort &#8211; Mail server port. Default is 587.<br />
+emailUsername &#8211; SMTP Username<br />
+emailPassword &#8211; SMTP Password<br />
+toEmail &#8211; Email address to send reports to when phone receives &#8220;stolen&#8221; command<br />
+JPEGMaxWidth &#8211; Max width or height of image. Default is 800.<br />
+JPEGQuality &#8211; JPEG quality (1-100). Default is 75.<br />
+trackLocation &#8211; Set to true to send updates to Twitter every time script is run (once per hour, by default)<br />
+twitterUsername &#8211; Twitter username<br />
+twitterPassword &#8211; Twitter password</p>
+<p><strong>HOW SCRIPT OPERATES</strong></p>
+<p>The script checks the content of a remote web page at a regular interval (determined by com.semifluid.boodle.plist). The web page should return &#8220;0&#8221; (All clear), &#8220;1&#8221; (Stolen), &#8220;2&#8221; (All clear, reset time stamp), or &#8220;3&#8221; (Stolen, reset time stamp). If the content is &#8220;0&#8221; or &#8220;2&#8221;, the script will send a Twitter update (if trackLocation is &#8220;1&#8221;) and quit. If the webpage returns &#8220;1&#8221; or &#8220;3&#8221;, the script assumes the phone is stolen and begins its work. In addition, if the webpage returns &#8220;2&#8221; or &#8220;3&#8221;, the script will also delete the time stamp file so that a full update will be emailed the next time the phone is marked as stolen.</p>
+<p>When a phone is marked as stolen, the application will:<br />
+1. Estimate the location of the device using findme-muchbetter and save the information to a file<br />
+2. Use sqlite3 to export call history to a file<br />
+3. Use sqlite3 to export sms history to a file<br />
+4. Copy Safari&#8217;s web history plist file to a file<br />
+5. Email all of the database files to the $toEmail address<br />
+6. Check for photos taken with the camera since the last time the script ran<br />
+7. Resizes any new photos, archives them, and sends them to the $toEmail address</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/05/13/boodle-a-stolen-iphone-locator/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

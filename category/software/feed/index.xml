@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software &#8211; semifluid.com</title>
+	<atom:link href="/category/software/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 31 May 2018 17:28:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Upgrading SSD in Apple MacBook Pro Retina (Late 2012)</title>
+		<link>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/</link>
+					<comments>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 04 Apr 2016 05:37:51 +0000</pubDate>
+				<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">/?p=5798</guid>
+
+					<description><![CDATA[For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>For some time now, I have hit the storage limit on the 256GB SSD in my Late 2012 Apple MacBook Pro Retina. I&#8217;ve needed to move a significant chunk of data to external drives, which impedes access and frankly is a pain in the butt. I&#8217;ve considered a number of methods to upgrade the SSD, but Apple decided to use a proprietary connector for the SSD (rather than using the mSATA or, more recently, the M.2 standards), which has made upgrading more difficult/expensive than it should be. However, even though there were a few minor roadblocks, I ended up successfully upgrading the SSD using a combination of 3rd party modules. Since I could not find anecdotal reports of similar upgrades, I wanted to throw mine out into the ether.<br />
+<span id="more-5798"></span></p>
+<p>In late 2012, iFixit.com posted a teardown of the <a href="https://www.ifixit.com/Teardown/MacBook+Pro+13-Inch+Retina+Display+Late+2012+Teardown/11225">MacBook Pro 13&#8243; Retina Display Late 2012</a> and noted that:</p>
+<blockquote>
+<ul>
+<li>The most striking layout change resulting from the shrink from a 15&#8243; to 13&#8243; form factor is the rearranged battery cells. This allowed Apple&#8217;s designers to cleverly tuck the SSD away underneath the trackpad assembly.</li>
+<li>The empty space next to the SSD is very un-Apple. It&#8217;s not like them to leave big air gaps in their newest, sleekest designs.</li>
+<li>Our first thought was that a standard 2.5&#8243; laptop drive might fit in this space, and it almost looks like this little nook was designed with that in mind.</li>
+<li>Our 9.5mm Crucial SSD didn&#8217;t allow the bottom cover to be closed, but just by a smidge. We&#8217;ll see if a 7 mm or 5 mm super-slim hard drive could be incorporated into the space.</li>
+</ul>
+</blockquote>
+<p>iFixit later posted a guide to <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">replacing the SSD</a> in early 2013, but at the time, the only SSD alternatives appeared to be 3rd party modules like the <a href="http://amzn.to/1N4A9NF">Transcend JetDrive</a> ($280 for 480GB drive and external USB 3.0 case) or the <a href="http://eshop.macsales.com/shop/SSD/OWC/Air-Retina/Apple-MacBook-Pro-Retina-2012-Drive-Internal-Flash">OWC Aura</a> ($218 for 480GB drive only).</p>
+<p>These 3rd party options, which have been designed specifically for the MacBook Pro&#8217;s SSD form factor, have been outside of my price range. However, recently, I&#8217;ve seen adapters available that would allow me to use smaller form factor SSDs with my A1425 MacBook Pro. For example:</p>
+<ul>
+<li>mSATA SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="https://amzn.to/2J5T5Rh">Amazon</a>, <a href="http://www.dx.com/p/msata-to-apple-2012-laptop-pc-7-17-ssd-a1425-a1398-mc975-me662-419710?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+<li>M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter (<a href="http://amzn.to/1SLVDmS">Amazon</a>, <a href="http://www.dx.com/p/m-2-ngff-ssd-to-2012-version-apple-macbook-pro-a1425-a1398-ssd-adapter-card-22-x-60mm-420132?Utm_rid=62305252&amp;Utm_source=affiliate">DX</a>)</li>
+</ul>
+<p>Combine these adapters with either a <a href="http://amzn.to/25FCni7">Samsung 850 EVO mSATA SSD</a> or a <a href="http://amzn.to/25FCoCu">Transcend M.2 SSD</a> (respectively) and you could potentially upgrade the SSD for significantly less than the designed-from-scratch modules offered by Transcend and OWC. I researched the adapters a bit more and found that if I chose to go the M.2 route, that I would need to make sure the new drive was SATA rather than PCIe (such as the <a href="http://amzn.to/1SLVHDa">Samsung 950 PRO</a>). At the end of the day, I ordered a <a href="http://amzn.to/1SLVDmS">M.2 SSD to MacBook Pro Retina (A1425 A1398) Adapter</a> and a <a href="http://amzn.to/25FCoCu">512GB Transcend M.2 SSD</a> from Amazon and decided to see if I could get it up and running.</p>
+<p>I wasn&#8217;t sure if there were going to be any performance gains/penalties, so I checked the speed of the original OEM 256GB SSD using <a href="https://itunes.apple.com/us/app/blackmagic-disk-speed-test/id425264550?mt=12">Blackmagic Disk Speed Test</a>:</p>
+<p><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Apple SSD" width="648" height="697" class="aligncenter size-large wp-image-5805" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Apple-SSD.png 1260w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>Not too bad.</p>
+<p>When I received the adapter and new SSD in the mail, I backed up my old SSD onto an external drive using Time Machine. I also created an <a href="http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/">El Capitan boot drive</a> so that I could wipe the old drive and restore the Time Machine backup to the new SSD. I erased the old drive and although I tried securely wiping the drive, there are some <a href="http://apple.stackexchange.com/questions/6278/how-to-securely-erase-an-ssd-drive">lingering issues with wiping SSDs</a>. Now I was ready for the transplant. Using the iFixit <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2012+SSD+Replacement/12823">SSD Replacement guide</a>, I removed the old SSD in preparation for the new module.</p>
+<p>The M.2 drive fit perfectly into the adapter:</p>
+<p><img decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg" alt="Transcend 512GB M.2 in A1425 Adapter" width="648" height="367" class="aligncenter size-large wp-image-5809" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-1024x580.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-300x170.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-768x435.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>And I threw the whole shebang into the MacBook&#8217;s drive caddy:</p>
+<p><img decoding="async" src="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg" alt="Transcend 512GB M.2 in A1425 Adapter in HDD caddy" width="648" height="573" class="aligncenter size-large wp-image-5811" srcset="/wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-1024x906.jpg 1024w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-300x265.jpg 300w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy-768x680.jpg 768w, /wp-content/uploads/2016/04/Transcend-512GB-M.2-in-A1425-Adapter-in-HDD-caddy.jpg 1808w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>After reassembling the machine, I started up the computer using the boot disk and&#8230; It worked. Awesome. I restored the time machine backup onto the new drive and it booted up without any issues. One little hiccup is that Apple disables <a href="https://en.wikipedia.org/wiki/Trim_(computing)">TRIM</a> for 3rd party SSDs, so you need to make sure to enable it after-the-fact using <a href="http://osxdaily.com/2015/10/29/use-trimforce-trim-ssd-mac-os-x/">trimforce</a>. It&#8217;s also faster than the original OEM SSD:</p>
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png" alt="Blackmagic Disk Speed Test  - Transcend SSD" width="648" height="697" class="aligncenter size-large wp-image-5812" srcset="/wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-952x1024.png 952w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-279x300.png 279w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD-768x827.png 768w, /wp-content/uploads/2016/04/Blackmagic-Disk-Speed-Test-Transcend-SSD.png 1260w" sizes="auto, (max-width: 648px) 100vw, 648px" /></p>
+<p>If you have an older MacBook Pro that&#8217;s running out of space, this is an easy and very worthwhile upgrade.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2016/04/03/upgrading-ssd-in-apple-macbook-pro-retina-late-2012/feed/</wfw:commentRss>
+			<slash:comments>39</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Magic Lantern HDR video to tonemapped video with MATLAB scripts</title>
+		<link>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/</link>
+					<comments>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2013 20:40:06 +0000</pubDate>
+				<category><![CDATA[Cooking]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3713</guid>
+
+					<description><![CDATA[I have a Canon T3i with a Canon EF 50mm f1.4 lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called Magic Lantern that provides a some interesting (and useful!) functions. One of them is HDR video. Here&#8217;s a beautiful example [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have a <a href="http://www.amazon.com/gp/product/B004J3V90Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004J3V90Y&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon T3i</a> with a <a href="http://www.amazon.com/gp/product/B00009XVCZ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00009XVCZ&amp;linkCode=as2&amp;tag=semifluidcom-20">Canon EF 50mm f1.4</a> lens that I use for the gross majority of my day-to-day photography these days. I&#8217;ve been using a custom firmware for the Canon called <a href="http://www.magiclantern.fm/">Magic Lantern</a> that provides a some interesting (and useful!) <a href="http://www.magiclantern.fm/features.html">functions</a>.  One of them is HDR video.  Here&#8217;s a beautiful example of what can be done:</p>
+<p>http://www.youtube.com/watch?v=bLxYTT_0GEI</p>
+<p>I tried my hand at processing the HDR video output and was able to get a reasonably nice tone-mapped video:</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>After the break, you&#8217;ll find how I processed the initial Magic Lantern video using MATLAB and exiftool and tone-mapped the output using Luminance HDR.</p>
+<p><span id="more-3713"></span></p>
+<p>First, we need to process the video with a function I (poorly) named &#8216;Step1MovieToInterpolatedFrames.m&#8217; to separate the dark and light frames.  The video is first loaded using the VideoReader object.  Then we check to see if the first frame is darker or lighter than the second. This is admittedly a bit of a hack, but given the gross differences in exposure, seems to work well enough.  After determining whether the first is light or dark, we then loop through all the frames of the movie, saving the real frames and appending an &#8220;L&#8221; to signify they are &#8220;light&#8221; and, also, interpolate between the frames.  Why go through the bother of interpolation? Well, there will be image registration problems with the tone-mapping if we assume that a given dark frame matches the earlier or later light frame, especially with high-speed motion. Interpolation helps us &#8220;smooth&#8221; these errors out. Note that ideally we would use a morphing algorithm (similar to the one used by Twixtor), but this is the quickest method for the time being. After saving each frame, I use <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a> to assign an aperture value.  Note that this has <em>nothing</em> to do with the real aperture value, but helps Luminance HDR tonemap the composite image. We do this for the dark frames as well, but now we take into account the EV shift in the video&#8217;s ISO when writing the aperture value using exiftool.</p>
+<p>The second function, &#8216;Step2FramesToHDRFrames.m&#8217;, takes the individual light and dark frames and generates tone-mapped images.  We go through every frame and use the Luminance HDR CLI (command line interface) to generate an HDR image and tone-map it (here using the mantiuk08 tone-mapping operator).</p>
+<p>And the final function (&#8216;Step3HDRFramesToVideos.m&#8217;) compiles all of the tone-mapped images into videos (one for the light frames, one for the dark frames, and one for the tonemapped frames).</p>
+<p>The code can be found at the bottom of the post.</p>
+<p>So, what do each of the Luminance HDR <a href="http://osp.wikidot.com/parameters-for-photographers">tonemapping operators</a> look like (with their default parameters) when applied to a video?  Here&#8217;s the source (note that YouTube strips out the alternating frames, you can find the original MOV <a href="/wp-content/uploads/2013/10/MVI_7961.MOV">here</a>):</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - RAW" width="648" height="365" src="https://www.youtube.com/embed/HxZaAu9Y2KQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Ashikhmin</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Ashikmin" width="648" height="365" src="https://www.youtube.com/embed/L43U3v2Eg_o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Drago</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Drago" width="648" height="365" src="https://www.youtube.com/embed/ZahHcLbSieg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Durand</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Durand" width="648" height="365" src="https://www.youtube.com/embed/TAgFLnN038g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Fattal</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Fattal" width="648" height="365" src="https://www.youtube.com/embed/3GeijU30Uu8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 06</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk06" width="648" height="365" src="https://www.youtube.com/embed/NnG-rZrbAGA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Mantiuk 08</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Mantiuk08" width="648" height="365" src="https://www.youtube.com/embed/r16tT6ZO8os?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Pattanaik</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Pattanaik" width="648" height="365" src="https://www.youtube.com/embed/gqaQjkBCvtc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 02</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard02" width="648" height="365" src="https://www.youtube.com/embed/OfC8oNQ4MV8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Reinhard 05</p>
+<p><iframe loading="lazy" title="Magic Lantern HDR video - Apple being washed - Reinhard05" width="648" height="365" src="https://www.youtube.com/embed/6HeQBwKgzB0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><script src="https://gist.github.com/OrganicIrradiation/4d63a870c3ac852f4a0f.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/05/magic-lantern-hdr-video-to-tonemapped-video-with-matlab-scripts/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="/wp-content/uploads/2013/10/MVI_7961.MOV" length="87059684" type="video/quicktime" />
+
+			</item>
+		<item>
+		<title>Preparing a &#8220;Blobby&#8221; Object for Printing with Shapeways</title>
+		<link>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/</link>
+					<comments>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2013 07:57:36 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3583</guid>
+
+					<description><![CDATA[I have been working with a 3D blobby object for some of my pilot studies on shape from shading and texture that I would like to 3D print. Back at Rutgers University, we had a MakerBot Cupcake, but now that I am in Germany, I need to find alternatives. I have been looking into getting [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I have been working with a 3D blobby object for some of my pilot studies on shape from shading and texture that I would like to 3D print.  Back at <a href="http://perceptualscience.rutgers.edu/" target="_blank">Rutgers University</a>, we had a <a href="http://en.wikipedia.org/wiki/MakerBot_Industries#Cupcake_CNC" target="_blank">MakerBot Cupcake</a>, but now that I am in Germany, I need to find alternatives.  I have been looking into getting the 3D object printed using Shapeways.com but there have been a few hiccups along the way, so I wanted to describe my experiences in the hopes that it might help someone else avoid these issues in the future.  The object was generated in MATLAB using a simple script (see <a href="/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">3D “Potato” Generation using Sinusoidal Pertubations</a>) and rendered in our 3D environment:</p>
+<p><a href="/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-1024x440.png" alt="3D-Blobby-Object---Solid-(Seed--0431630057)" width="600" height="257" class="aligncenter size-large wp-image-3602" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-1024x440.png 1024w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-300x129.png 300w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057.png 1189w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>So the question is: What do I need to do to get this 3D object printed at Shapeways?  Click through to see the steps that I took to get this 3D model printed economically.<br />
+<span id="more-3583"></span></p>
+<p>Since the <a href="/2012/12/07/3d-potato-generation-using-sinusoidal-pertubations/">object generation script</a> creates a MATLAB struct with vertices and faces, I was able to use the <a href="http://www.aleph.se/Nada/Ray/vertface2obj.m" target="_blank">vertface2obj</a> script by <a href="http://www.aleph.se/Nada/Ray/matlabobj.html" target="_blank">Anders Sandberg</a> to export <a href="http://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">.obj files</a>.  Here is the object at a variety of resolutions in .obj format:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_2.obj" target="_blank">162 vertices</a> (12 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_3.obj" target="_blank">642 vertices</a> (41 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_4.obj" target="_blank">2562 vertices</a> (160 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.obj" target="_blank">10242 vertices</a> (659 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_6.obj" target="_blank">40962 vertices</a> (2.8 MB)</li>
+</ul>
+<p>These .obj files can be imported directly into Shapeways.  After importing, Shapeways runs a series of sanity checks to make sure that the file can be printed and then posts it on their site.  Here&#8217;s a <a href="https://www.shapeways.com/model/1282894/3d-blobby-object-solid-seed-0431630057.html" target="_blank">link to one such imported object</a>.</p>
+<p><center></p>
+<table  class=" table table-hover" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-261x300.png" alt="3D Blobby Object - Solid (Seed- 0431630057) Screenshot" width="261" height="300" class="aligncenter size-medium wp-image-3590" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot-894x1024.png 894w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Screenshot.png 977w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-261x300.png" alt="3D Blobby Object - Solid (Seed- 0431630057) Prices" width="261" height="300" class="aligncenter size-medium wp-image-3589" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices-891x1024.png 891w, /wp-content/uploads/2013/08/3D-Blobby-Object-Solid-Seed-0431630057-Prices.png 972w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+</tr>
+</table>
+<p></center></p>
+<p>Notice the price? (~$63 for a plastic print) Whoa! That&#8217;s a lot more than I wanted to pay for a simple blob model.</p>
+<p>It turns out that the cost of printing a model at Shapeways is proportional to the model&#8217;s volume (<a href="https://www.shapeways.com/support/pricing" target="_blank">source</a>):</p>
+<blockquote><p>Our pricing is based upon the actual amount of material used in your product and the material you choose to use. So, the actual volume of your finished product not the volume of the bounding box determines the price.</p></blockquote>
+<p>So, the way to print this shape economically is to reduce the volume of the print.  Shapeways suggests a <a href="https://www.shapeways.com/tutorials/design_for_cheaper_3d_printing" target="_blank">couple of ways</a> to reduce the cost of the 3D print, including hollowing out the model and carving it to reduce the total surface area.  Using <a href="http://www.openscad.org/" target="_blank">OpenSCAD</a>, I was able to do both.</p>
+<p>OpenSCAD allows for the importation of <a href="http://en.wikipedia.org/wiki/STL_(file_format)" target="_blank">.stl files</a>, which is another &#8220;standard&#8221; 3D file format.  Using the <a href="http://www.mathworks.com/matlabcentral/fileexchange/20922-stlwrite-write-binary-or-ascii-stl-file" target="_blank">stlwrite</a> script, I was able to export my faces/vertices from MATLAB to a file that could be imported into OpenSCAD.  Here&#8217;s the previously illustrated example file at a variety of resolutions in .stl format:</p>
+<ul>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_2.stl" target="_blank">162 vertices</a> (16 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_3.stl" target="_blank">642 vertices</a> (66 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_4.stl" target="_blank">2562 vertices</a> (258 KB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.stl" target="_blank">10242 vertices</a> (1 MB)</li>
+<li><a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_6.stl" target="_blank">40962 vertices</a> (4.1 MB)</li>
+</ul>
+<p>Let&#8217;s work with the 10242 vertices file, &#8220;<a href="http://semifluid.com/wp-content/uploads/2013/08/0431630057_sphere_tri_5.stl" target="_blank">0431630057_sphere_tri_5.stl</a>&#8220;.  First, we can import it into OpenSCAD using:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=import_to_openscad"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-1024x585.png" alt="OpenSCAD Screenshot 1 - Import" width="600" height="342" class="aligncenter size-large wp-image-3610" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-1-Import-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then we can do a &#8220;difference&#8221; between the object and a downscaled version to create the shell using (note that the % &#8220;<a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters" target="_blank">background modifier</a>&#8221; is used to make the bounding object transparent gray):<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=illustrate_difference"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-1024x585.png" alt="OpenSCAD Screenshot 2 - Shell" width="600" height="342" class="aligncenter size-large wp-image-3611" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-2-Shell-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>So we now have a shell, but let&#8217;s get rid of some more of the material by carving out a <a href="http://en.wikipedia.org/wiki/Close-packing_of_equal_spheres" target="_blank">lattice of packed spheres</a>.  First, we will create a lattice of spheres (I just used the description on the Wikipedia page to create some simple procedural generation code):<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-1024x585.png" alt="OpenSCAD Screenshot 3 - Packed Spheres" width="600" height="342" class="aligncenter size-large wp-image-3612" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-3-Packed-Spheres-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Now we subtract the lattice from the shell that was previously generated, again using the difference command:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube_diff"></script></p>
+<p><a href="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-1024x585.png" alt="OpenSCAD Screenshot 4 - Diff with Packed Spheres" width="600" height="342" class="aligncenter size-large wp-image-3613" srcset="/wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-1024x585.png 1024w, /wp-content/uploads/2013/08/OpenSCAD-Screenshot-4-Diff-with-Packed-Spheres-300x171.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>This would normally be the end of the process and you could then save the .stl and import it into Shapeways.  However, all of the OpenSCAD coding turned out to be a useless garden path because the OpenSCAD computation took far too long and too much memory to process when using higher resolution base shape files and higher resolution spheres (repeatedly crashing when I tried to compile the code).</p>
+<p>So, I tried an alternative route&#8230; <a href="http://www.blender.org/">Blender</a>.  Let&#8217;s replicate the steps above in Blender&#8217;s Python scripting interface.  First, import0431630057_sphere_tri_5.stl into Blender:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=blender_import.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import-1024x652.png" alt="Blender Screenshot 1 - Import" width="600" height="382" class="aligncenter size-large wp-image-3661" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-1-Import-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-1-Import-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then, duplicate the object, reduce its scale, and take the boolean difference between the copy and the original to create a shell:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=blender_gen_shell.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-1024x652.png" alt="Blender Screenshot 2 - Shell" width="600" height="382" class="aligncenter size-large wp-image-3660" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-2-Shell-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>Then we create a lattice of spheres:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=create_lattice_of_spheres.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-1024x652.png" alt="Blender Screenshot 3 - Packed Spheres" width="600" height="382" class="aligncenter size-large wp-image-3659" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-3-Packed-Spheres-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>And finally, take the boolean differences between the shell and the spheres. Putting it all together:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=gen_sphere_cube_diff.py"></script></p>
+<p><a href="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-1024x652.png" alt="Blender Screenshot 4 - Diff with Packed Spheres" width="600" height="382" class="aligncenter size-large wp-image-3658" srcset="/wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-1024x652.png 1024w, /wp-content/uploads/2013/08/Blender-Screenshot-4-Diff-with-Packed-Spheres-300x191.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a></p>
+<p>This workflow uses up a lot less memory than the OpenSCAD route, but the processing time is still painfully slow.  Thankfully though, it does not crash the compiler.  To monitor the progress of the process, I simply run the script from the command line using &#8220;blender &#8211;background &#8211;python &#8216;SCRIPTLOCATION'&#8221;.  I used the same bit of code as described above to create the &#8220;production quality&#8221; model, but used a higher resolution base shape (0431630057_sphere_tri_6.stl), higher resolution spheres (sphereSubdivisions = 5;), and a higher spatial resolution lattice (r = 0.1;).  I saved it using:<br />
+<script src="https://gist.github.com/OrganicIrradiation/0f67bcc2742587454d21.js?file=export_mesh.py"></script></p>
+<p>After importing the object at Shapeways, we see that we can save a serious chunk of change on printing the new, modified model. Here is a <a href="http://shpws.me/p8T6" target="_blank">link to the new and improved product on Shapeways</a>, now only $3.66 (vs. $63.54) for the White Strong &amp; Flexible Material.</p>
+<p><center></p>
+<table  class=" table table-hover" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-261x300.png" alt="3D Blobby Object - Small Holes (Seed- 0431630057) Screenshot" width="261" height="300" class="aligncenter size-medium wp-image-3673" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot-893x1024.png 893w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Screenshot.png 976w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+<td>
+<a href="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-261x300.png" alt="3D Blobby Object - Small Holes (Seed- 0431630057) Prices" width="261" height="300" class="aligncenter size-medium wp-image-3672" srcset="/wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-261x300.png 261w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices-892x1024.png 892w, /wp-content/uploads/2013/08/3D-Blobby-Object-Small-Holes-Seed-0431630057-Prices.png 978w" sizes="auto, (max-width: 261px) 100vw, 261px" /></a>
+</td>
+</tr>
+</table>
+<p></center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/10/05/preparing-a-blobby-object-for-printing-with-shapeways/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Effect of repeated JPEG compression on image quality and content</title>
+		<link>/2013/08/05/effect-of-repeated-jpeg-compression-on-image-quality-and-content/</link>
+					<comments>/2013/08/05/effect-of-repeated-jpeg-compression-on-image-quality-and-content/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 05 Aug 2013 08:02:29 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Photos]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=3531</guid>
+
+					<description><![CDATA[There are a number of videos online illustrating the effect of increasing JPEG (JPG) compression on both file size and image quality (see example 1, example 2, or example 3). I wanted to try recompression on my own data because the effect can be recreated quickly using a simple MATLAB script. It is a very [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>There are a number of videos online illustrating the effect of increasing JPEG (JPG) compression on both file size and image quality (see <a href="http://commons.wikimedia.org/wiki/File:Continuously_varied_JPEG_compression_for_an_abdominal_CT_scan_-_1471-2342-12-24-S1.ogv" target="_blank">example 1</a>, <a href="http://www.youtube.com/watch?v=Fk6kV5N1rzs">example 2</a>, or <a href="http://www.youtube.com/watch?v=r1KTWOmb9BM">example 3</a>).  I wanted to try recompression on my own data because the effect can be recreated quickly using a simple MATLAB script.  It is a very simple demonstration of the effect of lossy image compression.  For a simple demonstration of the effect of compression, I load an image into MATLAB and then progressively increase the JPEG compression (by decreasing the &#8216;Quality&#8217; parameter in <a href="http://www.mathworks.com/help/matlab/ref/imwrite.html" target="_blank">imwrite</a>), saving each incremental image as a frame.  I then load all of the frames and assemble them into a video file.  Here&#8217;s an example of increasing image compression at 10 frames per second:</p>
+<p><center><br />
+<iframe loading="lazy" title="Decreasing image quality - Flowers" width="648" height="486" src="https://www.youtube.com/embed/TB9JfgA2QAI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>In addition, I tried recompressing the image to see the effect of repeated JPEG compression on the output.  An initial image is loaded, it is compressed, then that image is loaded and compressed at a lower quality, then that image is loaded and compressed at an even lower quality, and so on and so forth.  Here&#8217;s the output at 10 frames per second when we do this from the least amount of JPEG compression (&#8216;Quality&#8217;,100) to the most amount of compression (&#8216;Quality&#8217;,0):</p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - Flowers" width="648" height="486" src="https://www.youtube.com/embed/8ivEE_1N2mk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Just to be artistic, we can then repeat the cycle 10x and observe the effect of repeated compression.  Here is an example at 30 frames per second with 10 loops of the repeated recompression:</p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - 10x - Flowers" width="648" height="486" src="https://www.youtube.com/embed/Csi9awVW2lM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Click through for the MATLAB code and a couple more example videos.<br />
+<span id="more-3531"></span></p>
+<p>Here is the MATLAB code for illustrating increasing compression:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/349db2ddd83213e55437.js?file=increasing_compression.m"></script></p>
+<p>And two more examples:</p>
+<p><center><br />
+<iframe loading="lazy" title="Decreasing image quality - Schiffenberg" width="648" height="486" src="https://www.youtube.com/embed/NNulTMdjmG8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Decreasing image quality - Homberg" width="648" height="486" src="https://www.youtube.com/embed/QHKhzDATmbo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Here is the MATLAB code for illustrating repeated compression:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/349db2ddd83213e55437.js?file=repeated_compression.m"></script></p>
+<p>And two more examples:</p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - Shiffenberg" width="648" height="486" src="https://www.youtube.com/embed/m_QfwHd7wYc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - Homberg" width="648" height="486" src="https://www.youtube.com/embed/zWjNXUs9snI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>And finally, here is the MATLAB code for illustrating repeated compression (repeated 10 times):</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/349db2ddd83213e55437.js?file=repeated_compression_10x.m"></script></p>
+<p>And two final examples:</p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - 10x - Schiffenberg" width="648" height="486" src="https://www.youtube.com/embed/qPvET0UaEbc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Repeated compression - 10x - Homberg" width="648" height="486" src="https://www.youtube.com/embed/gVWLOtS3MYU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/08/05/effect-of-repeated-jpeg-compression-on-image-quality-and-content/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="http://commons.wikimedia.org/wiki/File:Continuously_varied_JPEG_compression_for_an_abdominal_CT_scan_-_1471-2342-12-24-S1.ogv" length="10783" type="video/ogg" />
+
+			</item>
+		<item>
+		<title>PIC16F628 Serial 4 LED PWM DR1r6</title>
+		<link>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/</link>
+					<comments>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Fri, 05 Dec 2008 19:33:16 +0000</pubDate>
+				<category><![CDATA[C Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[PIC Projects]]></category>
+		<category><![CDATA[PIC16F628]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=139</guid>
+
+					<description><![CDATA[I&#8217;ve been working on a project in my spare time with two friends to create some ambient light controllers, so I thought I&#8217;d just post two short videos to demonstrate the current state of the project.  In the current iteration, they can be used as wall-washers or they can be enclosed to create ambient light [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="text-align: left;">I&#8217;ve been working on a <a href="http://semifluid.com/2008/10/06/pic16f628-serial-4-led-pwm/" target="_self">project</a> in my spare time with two friends to create some ambient light controllers, so I thought I&#8217;d just post two short videos to demonstrate the current state of the project.  In the current iteration, they can be used as wall-washers or they can be enclosed to create ambient light cubes/spheres/<a href="http://en.wikipedia.org/wiki/Pentagonal_cupola" target="_self">pentagonal cupolas</a>/<a href="http://en.wikipedia.org/wiki/Rhombo-hexagonal_dodecahedron" target="_blank">rhombo-hexagonal dodecahedrons</a>/etc.  Each module is addressable and uses a PIC16F628 to control each of the RGB LEDs (which were purchased from the eBay seller <a href="http://myworld.ebay.com/jeledhk/" target="_blank">jeledhk</a> with the description &#8220;Superflux RGB 5mm R/H LEDLamp 8Kmcd COMMON CATHODE&#8221;).  The PCBs were created using BatchPCB.com for $5 each (+ ~$15 total for S&amp;H and setup) and are beautifully etched, drilled, and silkscreened (although it took about 1.5 months to receive them).  Ok, less talk, more videos; one video on the front page and another after the jump:</p>
+<p><center><br />
+<iframe loading="lazy" title="PIC16F628 Serial 4 LED PWM DR1r6 Demo" width="648" height="486" src="https://www.youtube.com/embed/iiQMxkn_BJo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><span id="more-139"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="PIC16F628 Serial 4 LED PWM DR1r6 Random Noise" width="648" height="486" src="https://www.youtube.com/embed/Zky58Ku6aD0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/12/05/pic16f628-serial-4-led-pwm-dr1r6/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Boodle &#8211; A stolen iPhone locator</title>
+		<link>/2008/05/13/boodle-a-stolen-iphone-locator/</link>
+					<comments>/2008/05/13/boodle-a-stolen-iphone-locator/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 13 May 2008 05:16:40 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[boodle]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[tracking]]></category>
+		<guid isPermaLink="false">/?p=113</guid>
+
+					<description><![CDATA[I recently purchased an iPhone and have wanted software that not only gave location information, like Erica Sadun&#8217;s wonderful findme software (or my, ahem, GPS projects), and sent phone information, like Fuel&#8217;s great WeeGee anti-theft package, but combined the tools into a more robust tracking utility. In other words, I wanted both location and information [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently purchased an iPhone and have wanted software that not only gave location information, like Erica Sadun&#8217;s wonderful findme software (or my, ahem, <a href="http://semifluid.com/category/electronics/gps/" target="_blank">GPS projects</a>), and sent phone information, like Fuel&#8217;s great WeeGee anti-theft package, but combined the tools into a more robust tracking utility.  In other words, I wanted both location and information tracking in my iPhone.  So, I set about combining the utilities into a script that will send location updates periodically to twitter and will email me with call history, SMS history, web history, location, and pictures if it is stolen.  Cool!</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/05/boodle_dr1r1.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-116" title="boodle_dr1r1" src="/wp-content/uploads/2008/05/boodle_dr1r1.jpg" alt="" width="500" height="190" /></a></p>
+<p><span id="more-113"></span></p>
+<p>I recently switched from Verizon Wireless to AT&amp;T. I have wanted a PDA phone for quite a while and Verizon never had any that seemed to satisfy my needs for an afforable price (I tried the Motorola Q9m and the <a href="http://www.engadget.com/2006/09/13/htc-libra-utstarcom-5800-also-revealed/" target="_blank">HTC SMT5800</a>, but both were large and difficult to pocket). After weighing all of the options (Sprint has been floundering, T-mobile doesn&#8217;t have the rural coverage I want and need, and the <a href="http://en.wikipedia.org/wiki/Mobile_virtual_network_operator" target="_blank">MVNOs</a> just don&#8217;t have the support that I&#8217;m looking for), I decided to try out the iPhone with AT&amp;T.</p>
+<p>I picked up a refurb at an Apple store in my area for about the same price as a new iPod touch and instantly fell in love with the device. The screen is beautiful and the features are just what I wanted and needed. Although I am paying more than cell-only service ($60 vs. $45), I am paying quite a bit less than I would have with VZW ($60 vs. $85). After 4 1/2 years with VZW, I switched to AT&amp;T for the iPhone and haven&#8217;t looked back.</p>
+<p>So, after playing with the phone for a bit and trying out some web apps (I tried to make a wine pairing web app using information screen-scraped from <a href="http://www.winewebcentral.com/winepairing/" target="_blank">an interesting web site</a> and a Virginia Wine Showcase Classic Wine Pairings handout), I decided to jailbreak my iPhone. Wow. If you have an iPhone or iPod touch, don&#8217;t wait. Honestly, it has become 10x more fun now that I can play with the innerworkings!</p>
+<p>So, getting back on focus with this article, I wanted some software that would &#8220;phone home&#8221; if it was stolen. There have been some interesting stories of people who have had their <a href="http://www.nytimes.com/2008/05/10/nyregion/10laptop.html?_r=1&amp;em&amp;ex=1210564800&amp;en=1e2fca4d1701c016&amp;ei=5087%0A&amp;oref=slogin" target="_blank">Macbooks</a>, <a href="http://www.boingboing.net/2007/09/24/idiot-criminal-uploa.html" target="_blank">iMacs</a>, and even Xboxes stolen and recovered due to monitoring software, so I thought I&#8217;d give it a try!</p>
+<p>Using Erica Sadun&#8217;s findme-muchbetter and pingwifi binaries and Fuel&#8217;s great WeeGee anti-theft package, I put together a system that sends a message to a private twitter account detailing the iPhone&#8217;s location and will send emails to me with the cell phone&#8217;s contents (call history, SMS history, web history, location, and pictures) if it is stolen (which I trigger by changing a value on a website).</p>
+<p>So, if you&#8217;re interested, here&#8217;s the package, <a href="/wp-content/uploads/2008/05/boodle_dr1r1.zip">boodle_dr1r1.zip</a>, and the readme:</p>
+<hr />
+<p>Boodle DR1r1<br />
+Code based on WeeGee v0.01 by Fuel, which was based upon mailsend and squide source code</p>
+<p>NOTE: All code is copyrighted unless explicitly stated otherwise.  Although my modifications were made under the assumption that the code is distributed under an open-source license and all modified code is available without license legalese, it may still be protected, so do not modify or distribute without acknowledging the authors!  All efforts have been made to acknowledge the original authors and their contributions when possible.</p>
+<p><strong>ABOUT</strong></p>
+<p>Boodle is a simple script for iPhone firmware 1.1.4 that allows a user to monitor his/her iPhone&#8217;s location using Twitter and to potentially recover information about the phone via email once it is marked as stolen (calls, SMS, web history, and photos taken).</p>
+<p><em>THIS IS ONLY MEANT FOR PERSONAL USE. NOTE: No anti-theft device is perfect and any protection scheme can be circumvented with a little effort, so DO NOT assume that you will be able to retrieve your iPhone (or any of the information stored within) if it is stolen. The author(s) of the scripts and software in the package shall have no liability to any persons or entities with respect to any loss, liability, or damage caused by the software package (i.e., if your iPhone is stolen, don&#8217;t assume that you will be able to track it down with this software). Install ONLY if you are the owner of the phone and are willing to assume responsibility for installing unstable software. PLEASE USE RESPONSIBLY.</em></p>
+<p><strong>REQUIREMENTS</strong></p>
+<p>A jailbroken iPhone (I recommend iLiberty+) with BSD Subsystem and Erica&#8217;s Ported Utilities installed. In addition, 4 helper applications need to be downloaded and placed in the /var/root/bin/boodle/ folder (see DOWNLOADS NECESSARY).</p>
+<p><strong>DOWNLOADS NECESSARY</strong></p>
+<p>mailsend from http://iphone.natetrue.com/FuelUtils/<br />
+Command line utility that sends mail in the background. Boodle uses this binary to send your data to you. Place this in /var/root/bin/boodle/</p>
+<p>reduceJPEG from http://iphone.natetrue.com/FuelUtils/<br />
+Command line utility that resizes JPEGs to save time when uploading. Place this in /var/root/bin/boodle/</p>
+<p>pingwifi from http://ericasadun.com/ftp/TUAW/findme/<br />
+Command line utility that pings the wifi so that the location of the phone can be calculated when it is asleep. Place this in /var/root/bin/boodle/</p>
+<p>findme-muchbetter from http://ericasadun.com/ftp/TUAW/findme/<br />
+Command line utility that gets location information.  Place this in /var/root/bin/boodle/</p>
+<p><strong>INCLUDED FILES</strong></p>
+<p>boodle.sh<br />
+This is the main script that does the work. Place this in /var/root/bin/boodle/</p>
+<p>findLocation.sh<br />
+A helper script that is used to query findme-muchbetter depending on the type of location information saught (wifi/cell/ip). Place this in /var/root/bin/boodle/</p>
+<p>com.semifluid.boodle.plist<br />
+Tells the iPhone to run the script every hour. Place this in /System/Library/LaunchDaemons/</p>
+<p><strong>CONFIGURING BOODLE.SH</strong></p>
+<p>At the top of the script, there are a number of variables you need to configure:</p>
+<p style="padding-left: 30px;">watchResponse &#8211; The command to query the server.<br />
+workPath &#8211; Path for files. Default is /var/root/bin/boodle<br />
+mailsendPath &#8211; Path for mailsend binary. Default is $workPath/mailsend<br />
+resizePath &#8211; Path for reduceJPEG binary. Default is $workPath/reduceJPEG<br />
+findmePath &#8211; Path of findme-muchbetter binary. Default is $workPath/findme-muchbetter<br />
+pingwifiPath &#8211; Path of pingwifi binary. Default is $workPath/pingwifi<br />
+smtpServer &#8211; Mail server IP address. Default is 64.233.167.109 (GMail).<br />
+smtpServerPort &#8211; Mail server port. Default is 587.<br />
+emailUsername &#8211; SMTP Username<br />
+emailPassword &#8211; SMTP Password<br />
+toEmail &#8211; Email address to send reports to when phone receives &#8220;stolen&#8221; command<br />
+JPEGMaxWidth &#8211; Max width or height of image. Default is 800.<br />
+JPEGQuality &#8211; JPEG quality (1-100). Default is 75.<br />
+trackLocation &#8211; Set to true to send updates to Twitter every time script is run (once per hour, by default)<br />
+twitterUsername &#8211; Twitter username<br />
+twitterPassword &#8211; Twitter password</p>
+<p><strong>HOW SCRIPT OPERATES</strong></p>
+<p>The script checks the content of a remote web page at a regular interval (determined by com.semifluid.boodle.plist). The web page should return &#8220;0&#8221; (All clear), &#8220;1&#8221; (Stolen), &#8220;2&#8221; (All clear, reset time stamp), or &#8220;3&#8221; (Stolen, reset time stamp). If the content is &#8220;0&#8221; or &#8220;2&#8221;, the script will send a Twitter update (if trackLocation is &#8220;1&#8221;) and quit. If the webpage returns &#8220;1&#8221; or &#8220;3&#8221;, the script assumes the phone is stolen and begins its work. In addition, if the webpage returns &#8220;2&#8221; or &#8220;3&#8221;, the script will also delete the time stamp file so that a full update will be emailed the next time the phone is marked as stolen.</p>
+<p>When a phone is marked as stolen, the application will:<br />
+1. Estimate the location of the device using findme-muchbetter and save the information to a file<br />
+2. Use sqlite3 to export call history to a file<br />
+3. Use sqlite3 to export sms history to a file<br />
+4. Copy Safari&#8217;s web history plist file to a file<br />
+5. Email all of the database files to the $toEmail address<br />
+6. Check for photos taken with the camera since the last time the script ran<br />
+7. Resizes any new photos, archives them, and sends them to the $toEmail address</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/05/13/boodle-a-stolen-iphone-locator/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Connection Cloud Back Up</title>
+		<link>/2007/12/18/connection-cloud-back-up/</link>
+					<comments>/2007/12/18/connection-cloud-back-up/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2007 05:01:28 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=100</guid>
+
+					<description><![CDATA[Ok, so my last post was a little premature. I was able to modify the source code to get Connection Cloud back up and running! If you use Facebook, I always appreciate individuals trying out my applications (such as Connection Cloud) and giving me feedback. A snapshot of my social network on Facebook.  Red circles [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Ok, so <a href="http://semifluid.com/2007/12/17/connection-cloud-down/">my last post</a> was a little premature.  I was able to modify the source code to get <a href="http://semifluid.com/2007/08/07/connection-cloud/">Connection Cloud</a> back up and running!  If you use Facebook, I always appreciate individuals trying out my applications (such as Connection Cloud) and giving me feedback.</p>
+<p style="text-align: center"><a href="/wp-content/uploads/2007/12/connectioncloud.png" target="_blank"><img decoding="async" src="/wp-content/uploads/2007/12/connectioncloud-thumb.png" alt="Connection Cloud Back Thumb" /></a></p>
+<p style="text-align: center">A snapshot of my social network on Facebook.  Red circles are girls, Blue circles are boys, and Black circles are undefined (i.e., the individual&#8217;s privacy settings disallow 3rd party information acquisition)</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/12/18/connection-cloud-back-up/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Connection Cloud Down</title>
+		<link>/2007/12/17/connection-cloud-down/</link>
+					<comments>/2007/12/17/connection-cloud-down/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Mon, 17 Dec 2007 06:41:00 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">/?p=99</guid>
+
+					<description><![CDATA[Unfortunately, there was a code change over at Facebook and my Connection Cloud application was broken. It was causing errors left and right, so I disabled it so that I could try to debug the problem (hence why it is no-longer accessible). I have had so much work as a first year graduate student that [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Unfortunately, there was a code change over at <a href="http://www.facebook.com/" target="_blank">Facebook</a> and my <a href="http://semifluid.com/2007/08/07/connection-cloud/">Connection Cloud</a> application was broken.   It was causing errors left and right, so I disabled it so that I could try to debug the problem (hence why it is no-longer accessible).   I have had so much work as a first year graduate student that I have been unable to focus on the Connection Cloud application and fix it.   Hopefully I will have some time this winter break to look at the code (along with focusing on other prior commitments); however, I cannot guarantee that I will have the free time to get it fully debugged and working in the short-term.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/12/17/connection-cloud-down/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

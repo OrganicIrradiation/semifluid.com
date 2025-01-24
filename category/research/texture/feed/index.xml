@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Texture &#8211; semifluid.com</title>
+	<atom:link href="/category/research/texture/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 21 Jan 2016 01:11:10 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>Orientation Fields of a Rotating &#8220;Blobby&#8221; Object</title>
+		<link>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/</link>
+					<comments>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 08 May 2013 10:20:26 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=3042</guid>
+
+					<description><![CDATA[In research I will be presenting in a few days at VSS (the Vision Sciences Society annual meeting), I will be demonstrating how we may use orientation flow fields of texture and shading when making perceptual judgments of 3D shape structure (see Fleming, Holtmann-Rice, &#38; Bülthoff, 2011 for additional information). Since I find visualizations fun, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>In research I will be presenting in a few days at VSS (the Vision Sciences Society annual meeting), I will be demonstrating how we may use orientation flow fields of texture and shading when making perceptual judgments of 3D shape structure (see <a href="http://www.pnas.org/content/early/2011/12/05/1114619109" target="_blank">Fleming, Holtmann-Rice, &amp; Bülthoff, 2011</a> for additional information).  Since I find visualizations fun, I decided to use some spare CPU cycles overnight to visualize the orientation fields of a rotating blobby object.</p>
+<p><center><br />
+<iframe title="Color Fields - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/QPOvtm0OEEc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The object on the left in the above video is a textured and shaded object with a small amount of specular reflection (lit using the <a href="http://www.pauldebevec.com/Probes/" target="_blank">Debvec Funston Beach at Sunset light probe</a>).  On the right, I&#8217;m illustrating the dominant orientations in the image, across the surface of the object.</p>
+<p>Click through for some more visualizations.<br />
+<span id="more-3042"></span></p>
+<p><center><br />
+<iframe title="OF - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/5ni6tZCUPuU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The above video illustrates the vector field&#8217;s dominant orientations as well as the kurtosis/&#8221;peakedness&#8221; of the orientated filter response distributions (reflected in the size of the vectors).</p>
+<p><center><br />
+<iframe title="Gray LIC - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/y9RVw4RDIUg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Using <a href="http://en.wikipedia.org/wiki/Line_integral_convolution" target="_blank">line integral convolution</a>, we get a better visualization of the global structure of the orientation field.  Note that the above LIC images were computed in MATLAB using the <a href="http://sccn.ucsd.edu/~nima/" target="_blank">Matlab Vector Field Visualization toolkit</a>.</p>
+<p><center><br />
+<iframe loading="lazy" title="Color LIC - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/NF8ii91Vq3I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>The LIC images in the video above were computed in Mathematica and colored as a function of the orientation field&#8217;s dominant orientation.</p>
+<p><center><br />
+<iframe loading="lazy" title="All Cues - Orientation Fields of a Rotating &quot;Blobby&quot; Object" width="648" height="365" src="https://www.youtube.com/embed/QSGdmUTk7Wk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Finally, a video illustrating all the aforementioned visualization techniques simultaneously.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/05/08/orientation-fields-of-a-rotating-blobby-object/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Effect of Environment Map Blur on Perceived Surface Properties</title>
+		<link>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/</link>
+					<comments>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Tue, 18 Dec 2012 22:45:22 +0000</pubDate>
+				<category><![CDATA[3D Shape]]></category>
+		<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1723</guid>
+
+					<description><![CDATA[Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects. I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on Google Code). Starting with the Debevec light probes, I applied a [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here are a couple of quick demos, illustrating how blurring a cubic environmental map can lead to a change in the perceived roughness of the surface of 3D rendered objects.</p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 01 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3gaONCvBJRQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>I created a series of HDR cube maps using NVIDIA&#8217;s CubeMapGen (currently hosted on <a href="http://code.google.com/p/cubemapgen/" target="_blank">Google Code</a>).  Starting with the <a href="http://www.pauldebevec.com/Probes/" target="_blank">Debevec light probes</a>, I applied a Gaussian blur with increasing kernel size (10&deg;, 20&deg;, 30&deg;, 40&deg;, and 50&deg;), creating 6 cube maps (one for each blur).  In the videos, the cube maps have increasing blur from left-to-right, top-to-bottom.  Note that I did not tone-map or account for changes in overall exposure (so the specular reflections can appear blown-out, especially for the higher blurs).  After the break, you can see the effect using different light probes (and different shapes).</p>
+<p><span id="more-1723"></span></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 02 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/0eRuVMIyd_I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 03 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/TZHuzYsSQWk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 04 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/iwtzi6ceIQk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 05 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/UL6pS8uJkKs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 06 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/IUTFkdQKlZQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 07 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/Sq9I9ljXJk0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 08 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/3tKv_fHs_tQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><center><br />
+<iframe loading="lazy" title="Blur 09 - Effect of Environment Map Blur on Perceived Surface Properties" width="648" height="365" src="https://www.youtube.com/embed/hs6D8yxKURQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/18/effect-of-environment-map-blur-on-perceived-surface-properties/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>3D MATLAB noise &#8211; effect of changing Gaussian convolution kernel size</title>
+		<link>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/</link>
+					<comments>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 06 Dec 2012 23:00:59 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1502</guid>
+
+					<description><![CDATA[To illustrate the effect of changing the Gaussian convolution kernel size, I generated a series of 64x64x64 3D noise texture arrays using the code from my 3D MATLAB noise (continued) post: After the break, see how increasing the size of the convolution kernel affects the quality of the 3D noise. Note that &#8220;Time to Process&#8221; [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>To illustrate the effect of changing the Gaussian convolution kernel size, I generated a series of 64x64x64 3D noise texture arrays using the code from my <a href="http://semifluid.com/2012/12/06/3d-matlab-noise-continued">3D MATLAB noise (continued)</a> post:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/bcba07a2c11c1a93cf54.js?file=gen_64x64x64_noise.m"></script></p>
+<p>After the break, see how increasing the size of the convolution kernel affects the quality of the 3D noise.<br />
+<span id="more-1502"></span></p>
+<p>Note that &#8220;Time to Process&#8221; was calculated tic and toc (see above) on a quad-core <a href="http://ark.intel.com/products/41313/Intel-Xeon-Processor-W3530-8M-Cache-2_80-GHz-4_80-GTs-Intel-QPI" target="_blank">Xeon W3530</a> @ 2.80GHz with 12 GB of RAM.  In addition, the 2D FFT animations were generated using each frame of the GIF animations using the following code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/bcba07a2c11c1a93cf54.js?file=gen_64x64x64_noise_animations.m"></script></p>
+<p><center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>k</td>
+<td></td>
+<td>Time to Process</td>
+<td>2D FFT</td>
+</tr>
+<tr>
+<td>1</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k1.gif" alt="" title="noise3Dwrap_s64k1" width="64" height="64" class="aligncenter size-full wp-image-1508" /></td>
+<td>0.4167</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k1.gif" alt="" title="noise3Dwrap2DFFT_s64k1" width="65" height="65" class="aligncenter size-full wp-image-1531" /></td>
+</tr>
+<tr>
+<td>3</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k3.gif" alt="" title="noise3Dwrap_s64k3" width="64" height="64" class="aligncenter size-full wp-image-1509" /></td>
+<td>0.8670</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k3.gif" alt="" title="noise3Dwrap2DFFT_s64k3" width="65" height="65" class="aligncenter size-full wp-image-1532" /></td>
+</tr>
+<tr>
+<td>5</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k5.gif" alt="" title="noise3Dwrap_s64k5" width="64" height="64" class="aligncenter size-full wp-image-1510" /></td>
+<td>2.2663</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k5.gif" alt="" title="noise3Dwrap2DFFT_s64k5" width="65" height="65" class="aligncenter size-full wp-image-1533" /></td>
+</tr>
+<tr>
+<td>7</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k7.gif" alt="" title="noise3Dwrap_s64k7" width="64" height="64" class="aligncenter size-full wp-image-1511" /></td>
+<td>5.7784</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k7.gif" alt="" title="noise3Dwrap2DFFT_s64k7" width="65" height="65" class="aligncenter size-full wp-image-1534" /></td>
+</tr>
+<tr>
+<td>9</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k9.gif" alt="" title="noise3Dwrap_s64k9" width="64" height="64" class="aligncenter size-full wp-image-1511" /></td>
+<td>11.2293</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k9.gif" alt="" title="noise3Dwrap2DFFT_s64k9" width="65" height="65" class="aligncenter size-full wp-image-1535" /></td>
+</tr>
+<tr>
+<td>11</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k11.gif" alt="" title="noise3Dwrap_s64k11" width="64" height="64" class="aligncenter size-full wp-image-1512" /></td>
+<td>20.8108</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k11.gif" alt="" title="noise3Dwrap2DFFT_s64k11" width="65" height="65" class="aligncenter size-full wp-image-1536" /></td>
+</tr>
+<tr>
+<td>13</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k13.gif" alt="" title="noise3Dwrap_s64k13" width="64" height="64" class="aligncenter size-full wp-image-1513" /></td>
+<td>33.3277</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k13.gif" alt="" title="noise3Dwrap2DFFT_s64k13" width="65" height="65" class="aligncenter size-full wp-image-1537" /></td>
+</tr>
+<tr>
+<td>15</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k15.gif" alt="" title="noise3Dwrap_s64k15" width="64" height="64" class="aligncenter size-full wp-image-1514" /></td>
+<td>52.0085</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k15.gif" alt="" title="noise3Dwrap2DFFT_s64k15" width="65" height="65" class="aligncenter size-full wp-image-1537" /></td>
+</tr>
+<tr>
+<td>17</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k17.gif" alt="" title="noise3Dwrap_s64k17" width="64" height="64" class="aligncenter size-full wp-image-1515" /></td>
+<td>82.3220</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k17.gif" alt="" title="noise3Dwrap2DFFT_s64k17" width="65" height="65" class="aligncenter size-full wp-image-1538" /></td>
+</tr>
+<tr>
+<td>19</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k19.gif" alt="" title="noise3Dwrap_s64k19" width="64" height="64" class="aligncenter size-full wp-image-1516" /></td>
+<td>187.6235</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k19.gif" alt="" title="noise3Dwrap2DFFT_s64k19" width="65" height="65" class="aligncenter size-full wp-image-1539" /></td>
+</tr>
+<tr>
+<td>21</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k21.gif" alt="" title="noise3Dwrap_s64k21" width="64" height="64" class="aligncenter size-full wp-image-1517" /></td>
+<td>397.4730</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k21.gif" alt="" title="noise3Dwrap2DFFT_s64k21" width="65" height="65" class="aligncenter size-full wp-image-1540" /></td>
+</tr>
+<tr>
+<td>23</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k23.gif" alt="" title="noise3Dwrap_s64k23" width="64" height="64" class="aligncenter size-full wp-image-1518" /></td>
+<td>615.1934</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k23.gif" alt="" title="noise3Dwrap2DFFT_s64k23" width="65" height="65" class="aligncenter size-full wp-image-1541" /></td>
+</tr>
+<tr>
+<td>25</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k25.gif" alt="" title="noise3Dwrap_s64k25" width="64" height="64" class="aligncenter size-full wp-image-1519" /></td>
+<td>852.5891</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k25.gif" alt="" title="noise3Dwrap2DFFT_s64k25" width="65" height="65" class="aligncenter size-full wp-image-1542" /></td>
+</tr>
+<tr>
+<td>27</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k27.gif" alt="" title="noise3Dwrap_s64k27" width="64" height="64" class="aligncenter size-full wp-image-1520" /></td>
+<td>1190.7</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k27.gif" alt="" title="noise3Dwrap2DFFT_s64k27" width="65" height="65" class="aligncenter size-full wp-image-1543" /></td>
+</tr>
+<tr>
+<td>29</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k29.gif" alt="" title="noise3Dwrap_s64k29" width="64" height="64" class="aligncenter size-full wp-image-1521" /></td>
+<td>1641.1</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k29.gif" alt="" title="noise3Dwrap2DFFT_s64k29" width="65" height="65" class="aligncenter size-full wp-image-1544" /></td>
+</tr>
+<tr>
+<td>31</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap_s64k31.gif" alt="" title="noise3Dwrap_s64k31" width="64" height="64" class="aligncenter size-full wp-image-1522" /></td>
+<td>1822.3</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap2DFFT_s64k31.gif" alt="" title="noise3Dwrap2DFFT_s64k31" width="65" height="65" class="aligncenter size-full wp-image-1545" /></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Subjectively, there is diminishing return as the convolution kernel increases past 13-15 pixels.  Objectively, it makes little sense to spend the computational time processing past 15:<br />
+<img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/graphTimeToComplete.png" alt="" title="graphTimeToComplete" width="561" height="420" class="aligncenter size-full wp-image-1553" srcset="/wp-content/uploads/2012/12/graphTimeToComplete.png 561w, /wp-content/uploads/2012/12/graphTimeToComplete-300x224.png 300w" sizes="auto, (max-width: 561px) 100vw, 561px" /></p>
+<p>Here is a MAT file with these 3D noise arrays:<br />
+<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap64_k1_31.mat" target="_blank">noise3Dwrap64_k1_31.mat</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>3D MATLAB noise (continued)</title>
+		<link>/2012/12/06/3d-matlab-noise-continued/</link>
+					<comments>/2012/12/06/3d-matlab-noise-continued/#respond</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Thu, 06 Dec 2012 15:00:53 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1499</guid>
+
+					<description><![CDATA[So, I have figured out a way to generate some nice, 3D noise that wraps in all 3 dimensions offline, which allows it to be read into a 3D texture in OpenGL. Here is an example video of slices of the 3D texture: Continue after the break to see how this 3D noise was generated. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>So, I have figured out a way to generate some nice, 3D noise that wraps in all 3 dimensions offline, which allows it to be read into a 3D texture in OpenGL.  Here is an example video of slices of the 3D texture:</p>
+<p><center><br />
+<iframe loading="lazy" title="3D MATLAB noise - 256" width="648" height="486" src="https://www.youtube.com/embed/FhyMsbhKzHo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>Continue after the break to see how this 3D noise was generated.<br />
+<span id="more-1499"></span></p>
+<p>The noise was generated using a (relatively) simple function:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/34f1fc4355bb76ef5fd5.js?file=noise3Dwrap.m"></script></p>
+<p>This is similar to the code that I posted yesterday for <a href="http://semifluid.com/2012/12/05/2d-and-3d-perlin-noise-in-matlab/">2D and 3D Perlin Noise in MATLAB</a>; however, it basically creates a matrix that is a cube of 9 identical noise fields (i.e., a 3x3x3 cube of mxmxm cubes) and only extracts the central cube when returning the texture.  Simple, but it creates seamless wrapping &#8220;Perlin-esque&#8221; noise fields that look pretty darn good as 3D textures for my stimuli.  Since they can take a long time to generate, here&#8217;s some pre-generated matrices:</p>
+<p><strong>256x256x256 pixels with a 23 pixel convolution kernel.</strong>  The MAT file contains 2 matrices that were independently generated, &#8220;noiseStandard&#8221; and &#8220;noiseComparison&#8221;. (<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap256.mat">MAT file</a>)</p>
+<p><center><br />
+<iframe loading="lazy" title="3D MATLAB noise - 256" width="648" height="486" src="https://www.youtube.com/embed/FhyMsbhKzHo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><strong>192x192x192 pixels with a 23 pixel convolution kernel.</strong>  The MAT file contains 2 matrices that were independently generated, &#8220;noiseStandard&#8221; and &#8220;noiseComparison&#8221;. (<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap192.mat">MAT file</a>)</p>
+<p><center><br />
+<iframe loading="lazy" title="3D MATLAB noise - 192" width="648" height="486" src="https://www.youtube.com/embed/rRUcgaVYGls?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><strong>128x128x128 pixels with a 23 pixel convolution kernel.</strong>  The MAT file contains 2 matrices that were independently generated, &#8220;noiseStandard&#8221; and &#8220;noiseComparison&#8221;. (<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap128.mat">MAT file</a>)</p>
+<p><center><br />
+<iframe loading="lazy" title="3D MATLAB noise - 128" width="648" height="486" src="https://www.youtube.com/embed/qNaaDIdrmP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p><strong>64x64x64 pixels with a 23 pixel convolution kernel.</strong>  The MAT file contains 2 matrices that were independently generated, &#8220;noiseStandard&#8221; and &#8220;noiseComparison&#8221;. (<a href="http://semifluid.com/wp-content/uploads/2012/12/noise3Dwrap64.mat">MAT file</a>)</p>
+<p><center><br />
+<iframe loading="lazy" title="3D MATLAB noise - 64" width="648" height="486" src="https://www.youtube.com/embed/vDIKbj_kZ9I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+</center></p>
+<p>And just for the heck of it, here&#8217;s the MATLAB code I used to generate the AVIs and GIFs from the matrices (messy and uncommented but it worked):</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/34f1fc4355bb76ef5fd5.js?file=noise_moviegen.m"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/06/3d-matlab-noise-continued/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>2D and 3D Perlin Noise in MATLAB</title>
+		<link>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/</link>
+					<comments>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/#comments</comments>
+		
+		<dc:creator><![CDATA[Steven A. Cholewiak]]></dc:creator>
+		<pubDate>Wed, 05 Dec 2012 13:45:04 +0000</pubDate>
+				<category><![CDATA[MATLAB]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Texture]]></category>
+		<guid isPermaLink="false">http://semifluid.com/?p=1394</guid>
+
+					<description><![CDATA[I am creating random 3D shapes for my post-doctoral research and need to generate 2D and 3D Perlin noise textures in MATLAB (for later use in OpenGL). If you&#8217;re not familiar with Perlin noise, it is procedurally generated random noise that appears organic due to it high and low-frequency noise content. In my search for [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I am creating random 3D shapes for my post-doctoral research and need to generate 2D and 3D <a href="http://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin noise</a> textures in MATLAB (for later use in OpenGL). If you&#8217;re not familiar with Perlin noise, it is procedurally generated random noise that appears organic due to it high and low-frequency noise content.</p>
+<p><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/12/TexturedPotato.png" alt="" title="TexturedPotato" width="369" height="369" class="aligncenter size-full wp-image-1471" srcset="/wp-content/uploads/2012/12/TexturedPotato.png 369w, /wp-content/uploads/2012/12/TexturedPotato-150x150.png 150w, /wp-content/uploads/2012/12/TexturedPotato-300x300.png 300w" sizes="auto, (max-width: 369px) 100vw, 369px" /><br />
+<span id="more-1394"></span></p>
+<p>In my search for some MATLAB code, I found <a href="http://nullprogram.com/blog/2007/11/20/" target="_blank">a page</a> that had the following <a href="http://en.wikipedia.org/wiki/GNU_Octave" target="_blank">GNU Octave</a> 2D Perlin noise generation code:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=perlin.m"></script></p>
+<p>Since GNU Octave is so similar to MATLAB, it was very simple to translate:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=perlin2D.m"></script></p>
+<p>I added the following code to normalize the output (making all values range from 0 to 1):</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=norm_s.m"></script></p>
+<p>This code can create some nice 2D Perlin noise images, such as:<br />
+<center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>32 x 32</td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1398" title="perlin2D32-0" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-0.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1399" title="perlin2D32-1" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-1.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1400" title="perlin2D32-2" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-2.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1401" title="perlin2D32-3" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-3.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1402" title="perlin2D32-4" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-4.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1403" title="perlin2D32-5" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-5.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1404" title="perlin2D32-6" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-6.png" alt="" width="32" height="32" /></td>
+<td><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1405" title="perlin2D32-7" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D32-7.png" alt="" width="32" height="32" /></td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td colspan="2"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1406" title="perlin2D64-0" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D64-0.png" alt="" width="64" height="64" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1407" title="perlin2D64-1" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D64-1.png" alt="" width="64" height="64" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1408" title="perlin2D64-2" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D64-2.png" alt="" width="64" height="64" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1409" title="perlin2D64-3" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D64-3.png" alt="" width="64" height="64" /></td>
+</tr>
+<tr>
+<td>128 x 128</td>
+<td colspan="4"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1410" title="perlin2D128-0" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D128-0.png" alt="" width="128" height="128" /></td>
+<td colspan="4"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1411" title="perlin2D128-1" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D128-0.png" alt="" width="128" height="128" /></td>
+</tr>
+<tr>
+<td>256 x 256</td>
+<td colspan="8"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1417" title="perlin2D256-0" src="http://semifluid.com/wp-content/uploads/2012/10/perlin2D256-0.png" alt="" width="256" height="256" srcset="/wp-content/uploads/2012/10/perlin2D256-0.png 256w, /wp-content/uploads/2012/10/perlin2D256-0-150x150.png 150w" sizes="auto, (max-width: 256px) 100vw, 256px" /></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>And since interp3 (and interpn) are higher-dimensional interpolation functions available in MATLAB, it was simple to create a 3D perlin noise function:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=perlin3D.m"></script></p>
+<p>The earlier code creates 3D Perlin textures, such as: (please note that these are animated by slicing the texture in depth)<br />
+<center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>32 x 32</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-0.gif" alt="" title="perlin3D32-0" width="32" height="32" class="aligncenter size-full wp-image-1422" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-1.gif" alt="" title="perlin3D32-1" width="32" height="32" class="aligncenter  size-full wp-image-1423" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-2.gif" alt="" title="perlin3D32-2" width="32" height="32" class="aligncenter size-full wp-image-1424" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-3.gif" alt="" title="perlin3D32-3" width="32" height="32" class="aligncenter size-full wp-image-1425" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-4.gif" alt="" title="perlin3D32-4" width="32" height="32" class="aligncenter size-full wp-image-1426" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-5.gif" alt="" title="perlin3D32-5" width="32" height="32" class="aligncenter size-full wp-image-1427" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-6.gif" alt="" title="perlin3D32-6" width="32" height="32" class="aligncenter size-full wp-image-1428" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32-7.gif" alt="" title="perlin3D32-7" width="32" height="32" class="aligncenter size-full wp-image-1429" /></td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64-0.gif" alt="" title="perlin3D64-0" width="64" height="64" class="aligncenter size-full wp-image-1433" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64-1.gif" alt="" title="perlin3D64-1" width="64" height="64" class="aligncenter size-full wp-image-1434" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64-2.gif" alt="" title="perlin3D64-2" width="64" height="64" class="aligncenter size-full wp-image-1435" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64-3.gif" alt="" title="perlin3D64-3" width="64" height="64" class="aligncenter size-full wp-image-1436" /></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>However interp3 is VERY memory intensive.  Here are example MATLAB profiler outputs illustrating the peak memory used by MATLAB (note that I used the undocumented MATLAB profiler memory option &#8220;profile -memory on;&#8221;, described <a href="http://undocumentedmatlab.com/blog/undocumented-profiler-options/" target="_blank">here</a>):<br />
+<center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>32 x 32</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D32Profiler-300x217.png" alt="" title="perlin3D32Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1438" srcset="/wp-content/uploads/2012/10/perlin3D32Profiler-300x217.png 300w, /wp-content/uploads/2012/10/perlin3D32Profiler.png 965w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a></td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/perlin3D64Profiler-300x217.png" alt="" title="perlin3D64Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1439" /></a></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Replacing interp3 with smooth3, I was able to reduce the memory requirements a bit:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=noise3D.m"></script></p>
+<p>As I mentioned, smooth3 then reduces the memory requirements:<br />
+<center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>32 x 32</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/noise3D32Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32Profiler-300x217.png" alt="" title="noise3D32Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1440" /></a></td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/noise3D64Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D64Profiler-300x217.png" alt="" title="noise3D64Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1441" /></a></td>
+</tr>
+<tr>
+<td>128 x 128</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/noise3D128Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D128Profiler-300x217.png" alt="" title="noise3D128Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1442" /></a></td>
+</tr>
+<tr>
+<td>256 x 256</td>
+<td><a href="http://semifluid.com/wp-content/uploads/2012/10/noise3D256Profiler.png"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D256Profiler-300x217.png" alt="" title="noise3D256Profiler" width="300" height="217" class="aligncenter size-medium wp-image-1443" /></a></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>And produces (subjectively) similar Perlin-style noise, but with lower contrast.  We can increase the contrast by simply scaling the values using a simple cosine transform:</p>
+<p><script src="https://gist.github.com/OrganicIrradiation/2a927ab7f9cfeb1bff78.js?file=contrast_s.m"></script></p>
+<p>Producing:<center></p>
+<table  class=" table table-hover" border="0">
+<tbody>
+<tr>
+<td>32 x 32</td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-0.gif" alt="" title="noise3D32-0" width="32" height="32" class="aligncenter size-full wp-image-1448" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-1.gif" alt="" title="noise3D32-1" width="32" height="32" class="aligncenter size-full wp-image-1449" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-2.gif" alt="" title="noise3D32-2" width="32" height="32" class="aligncenter size-full wp-image-1450" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-3.gif" alt="" title="noise3D32-3" width="32" height="32" class="aligncenter size-full wp-image-1451" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-4.gif" alt="" title="noise3D32-4" width="32" height="32" class="aligncenter size-full wp-image-1452" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-5.gif" alt="" title="noise3D32-5" width="32" height="32" class="aligncenter size-full wp-image-1453" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-6.gif" alt="" title="noise3D32-6" width="32" height="32" class="aligncenter size-full wp-image-1454" /></td>
+<td><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D32-7.gif" alt="" title="noise3D32-7" width="32" height="32" class="aligncenter size-full wp-image-1455" /></td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D64-0.gif" alt="" title="noise3D64-0" width="64" height="64" class="aligncenter size-full wp-image-1456" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D64-1.gif" alt="" title="noise3D64-1" width="64" height="64" class="aligncenter size-full wp-image-1457" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D64-2.gif" alt="" title="noise3D64-2" width="64" height="64" class="aligncenter size-full wp-image-1458" /></td>
+<td colspan="2"><img loading="lazy" decoding="async" src="http://semifluid.com/wp-content/uploads/2012/10/noise3D64-3.gif" alt="" title="noise3D64-3" width="64" height="64" class="aligncenter size-full wp-image-1459" /></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>The contrast still isn&#8217;t as good as the &#8220;true&#8221; Perlin noise, so I&#8217;ll try to see how <a href="http://en.wikipedia.org/wiki/Simplex_noise" target="_blank">simplex noise</a> is implemented..</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2012/12/05/2d-and-3d-perlin-noise-in-matlab/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

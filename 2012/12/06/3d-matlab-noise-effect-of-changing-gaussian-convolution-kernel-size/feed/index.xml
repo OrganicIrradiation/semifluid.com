@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 3D MATLAB noise &#8211; effect of changing Gaussian convolution kernel size	</title>
+	<atom:link href="/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/feed/" rel="self" type="application/rss+xml" />
+	<link>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/</link>
+	<description>Intermediate in flow properties between solids and liquids; highly viscous.</description>
+	<lastBuildDate>Thu, 11 Jun 2015 15:52:46 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+	<item>
+		<title>
+		By: Leonid		</title>
+		<link>/2012/12/06/3d-matlab-noise-effect-of-changing-gaussian-convolution-kernel-size/#comment-210482</link>
+
+		<dc:creator><![CDATA[Leonid]]></dc:creator>
+		<pubDate>Thu, 11 Jun 2015 15:52:46 +0000</pubDate>
+		<guid isPermaLink="false">http://semifluid.com/?p=1502#comment-210482</guid>
+
+					<description><![CDATA[Hi, Steven!
+
+Wouldn&#039;t the running time here slowed down heavily by calls to the file system, and the hard drive recording, since you save it immediately at each step?
+
+Cheers,
+Leonid
+
+P.S. Very cool blog, I found it by looking how to generate &quot;blobify&quot; surfaces with sinusoidal transformations over parametric equations.]]></description>
+			<content:encoded><![CDATA[<p>Hi, Steven!</p>
+<p>Wouldn&#8217;t the running time here slowed down heavily by calls to the file system, and the hard drive recording, since you save it immediately at each step?</p>
+<p>Cheers,<br />
+Leonid</p>
+<p>P.S. Very cool blog, I found it by looking how to generate &#8220;blobify&#8221; surfaces with sinusoidal transformations over parametric equations.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
